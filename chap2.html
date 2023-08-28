@@ -108,6 +108,18 @@
 <li class="chapter" data-level="3.3.4" data-path="chap2.html"><a href="chap2.html#absence-of-arbitrage-opportunity"><i class="fa fa-check"></i><b>3.3.4</b> Absence of arbitrage opportunity</a></li>
 <li class="chapter" data-level="3.3.5" data-path="chap2.html"><a href="chap2.html#property-of-additivity-for-incompatible-events"><i class="fa fa-check"></i><b>3.3.5</b> Property of additivity for incompatible events</a></li>
 <li class="chapter" data-level="3.3.6" data-path="chap2.html"><a href="chap2.html#premiums-grow-with-risk"><i class="fa fa-check"></i><b>3.3.6</b> Premiums grow with risk</a></li>
+<li class="chapter" data-level="3.3.7" data-path="chap2.html"><a href="chap2.html#fairness-property"><i class="fa fa-check"></i><b>3.3.7</b> Fairness property</a></li>
+<li class="chapter" data-level="3.3.8" data-path="chap2.html"><a href="chap2.html#subadditivity-property"><i class="fa fa-check"></i><b>3.3.8</b> Subadditivity property</a></li>
+<li class="chapter" data-level="3.3.9" data-path="chap2.html"><a href="chap2.html#poincaré-equality"><i class="fa fa-check"></i><b>3.3.9</b> Poincaré equality</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="chap2.html"><a href="chap2.html#independent-events"><i class="fa fa-check"></i><b>3.4</b> Independent events</a></li>
+<li class="chapter" data-level="3.5" data-path="chap2.html"><a href="chap2.html#multiplication-rule-bayes"><i class="fa fa-check"></i><b>3.5</b> Multiplication rule (Bayes)</a></li>
+<li class="chapter" data-level="3.6" data-path="chap2.html"><a href="chap2.html#conditionally-independent-events"><i class="fa fa-check"></i><b>3.6</b> Conditionally independent events</a></li>
+<li class="chapter" data-level="3.7" data-path="chap2.html"><a href="chap2.html#total-probability-theorem"><i class="fa fa-check"></i><b>3.7</b> Total probability theorem</a></li>
+<li class="chapter" data-level="3.8" data-path="chap2.html"><a href="chap2.html#bayes-theorem"><i class="fa fa-check"></i><b>3.8</b> Bayes’ theorem</a></li>
+<li class="chapter" data-level="3.9" data-path="chap2.html"><a href="chap2.html#random-variables"><i class="fa fa-check"></i><b>3.9</b> Random variables</a>
+<ul>
+<li class="chapter" data-level="3.9.1" data-path="chap2.html"><a href="chap2.html#definition"><i class="fa fa-check"></i><b>3.9.1</b> Definition</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="chap3.html"><a href="chap3.html"><i class="fa fa-check"></i><b>4</b> Pure Premium</a></li>
@@ -273,12 +285,187 @@ so that it will always be more expensive to insure against the realization of <s
 <span class="math display">\[
 E\subseteq F\Rightarrow \Pr[E]\leq\Pr[F].
 \]</span></p>
-<p>…</p>
+</div>
+<div id="fairness-property" class="section level3 hasAnchor" number="3.3.7">
+<h3><span class="header-section-number">3.3.7</span> Fairness property<a href="chap2.html#fairness-property" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span> are two complementary events (i.e. <span class="math inline">\(F=\overline{E}\)</span>) then
+<span class="math display">\[
+\Pr[E]+Pr[F]=1.
+\]</span>
+Indeed, having taken out a policy providing for the payment of 1 Euro if <span class="math inline">\(E\)</span> occurs, and another providing for the same payment if <span class="math inline">\(E\)</span> does not occur, we are certain to receive 1 Euro whatever happens. It would therefore be unfair to have paid more or less 1 Euro for this certain transaction. Formally, as <span class="math inline">\(E\cap F=\emptyset\)</span>, <span class="math inline">\(\Pr[E\cup F]=\Pr[E]+\Pr[F]\)</span>, we get the advertised result by noting that <span class="math inline">\(\Pr[E\cup F]=\Pr[\mathcal{E}]=1\)</span>. So, whatever the event <span class="math inline">\(E\)</span>, <span class="math inline">\(\Pr[\overline{E}]=1-\Pr[E]\)</span>.</p>
+<p>Since <span class="math inline">\(\overline{\mathcal{E}}=\emptyset\)</span>, we deduce from the equity property that it costs nothing to purchase insurance coverage against an event that never occurs, i.e. <span class="math inline">\(\Pr[\emptyset]=0\)</span>. Note that this property is sometimes violated by the rates applied by insurers. This is particularly the case when the State imposes a certain degree of solidarity between policyholders. In some countries, for example, the legislator has made it compulsory for insurers to cover floods under fire policies. Quite apart from the questionable nature of such a measure (most often justified by budgetary considerations), an insured occupying an apartment on the 44th floor of a skyscraper will contribute to the cost of flood damage suffered by another insured whose building is located in a flood zone.</p>
+</div>
+<div id="subadditivity-property" class="section level3 hasAnchor" number="3.3.8">
+<h3><span class="header-section-number">3.3.8</span> Subadditivity property<a href="chap2.html#subadditivity-property" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Whatever the events <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span>, we have
+<span class="math display">\[
+\Pr[E\cup F]\leq\Pr[E]+\Pr[F].
+\]</span>
+Indeed, if we were to accept <span class="math inline">\(\Pr[E\cup F]&gt;\Pr[E]+\Pr[F]\)</span>, we’d be creating an arbitrage opportunity (i.e. the possibility of getting rich without risk), which cannot exist in a healthy market (the reader is invited to construct a strategy for getting rich without risk in such a case).</p>
+<p>By iterating this result, we easily obtain that whatever the random events <span class="math inline">\(E_1,E_2,E_ldots,E_n\)</span>, the inequality
+<span class="math display">\[
+\Pr[E_1\cup E_2\cup\ldots\cup E_n]\leq\sum_{i=1}^n\Pr[E_i]
+\]</span>
+is always satisfied.</p>
+</div>
+<div id="poincaré-equality" class="section level3 hasAnchor" number="3.3.9">
+<h3><span class="header-section-number">3.3.9</span> Poincaré equality<a href="chap2.html#poincaré-equality" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Taking out two policies, one on <span class="math inline">\(E\)</span>cup F$ and the other on <span class="math inline">\(E\)</span>cap F$ always leads to the same cash flow as taking out two policies, one on <span class="math inline">\(E\)</span> and the other on <span class="math inline">\(F\)</span>. The premiums must then be equal, i.e.
+<span class="math display" id="eq:PptPoincare">\[\begin{equation}
+\Pr[E\cup F]+Pr[E\cap F]=Pr[E]+Pr[F].
+\tag{3.3}
+\end{equation}\]</span></p>
+<p>Note that the relationship <a href="chap2.html#eq:PptPoincare">(3.3)</a> can still be written as
+<span class="math display">\[
+\Pr[E\cup F]=\Pr[E]+\Pr[F]-\Pr[E\cap F].
+\]</span>
+This last relationship is known as Poincaré’s equality.</p>
+<p>Insurers are often led to revise their premiums when additional information becomes available. Given the information at our disposal, materialized by the knowledge that an event <span class="math inline">\(F\)</span> has occurred, how do we re-evaluate the probability of an event <span class="math inline">\(E\)</span> occurring? This reassessment is called the conditional probability of <span class="math inline">\(E\)</span> knowing <span class="math inline">\(F\)</span>, denoted <span class="math inline">\(\Pr[E|F]\)</span>. Let’s start by noting that since <span class="math inline">\(F\)</span> has come true, it’s natural to have <span class="math inline">\(\Pr[F]&gt;0\)</span>. Under this condition, we can define the conditional probability as
+<span class="math display" id="eq:DefCondExp">\[\begin{equation}
+\Pr[E|F]=\frac{\Pr[E\cap F]}{\Pr[F]}\mbox{ provided that }\Pr[F]&gt;0.
+\tag{3.4}
+\end{equation}\]</span></p>
+<p>It’s important to understand the meaning of the formula <a href="chap2.html#eq:DefCondExp">(3.4)</a>, which is actually quite intuitive. Once we know that event <span class="math inline">\(F\)</span> has occurred, only those events included in <span class="math inline">\(F\)</span> retain a chance of happening. Indeed, whatever the event <span class="math inline">\(E\)</span>, <span class="math inline">\(E\cap\overline{F}\)</span> becomes impossible (and therefore <span class="math inline">\(\Pr[E\cap\overline{F}|F]=0\)</span>) and only <span class="math inline">\(E\cap F\)</span> retains a chance of occurring. So, knowing that <span class="math inline">\(F\)</span> has come true, only the simultaneous realization of <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span> is possible, which explains the numerator. What’s more, <span class="math inline">\(F\)</span> becomes a certain event, so we have to “normalize” the probabilities so that <span class="math inline">\(\Pr[F|F]=1\)</span>, which justifies division by <span class="math inline">\(\Pr[F]\)</span>.</p>
+</div>
+</div>
+<div id="independent-events" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Independent events<a href="chap2.html#independent-events" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Of course, some information does not cause the insurer to reassess the premium. This is known as independence. This is expressed as follows: events <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span> are independent when the premium claimed for the payment of 1Euro if <span class="math inline">\(E\)</span> occurs is the same whether or not we know whether <span class="math inline">\(F\)</span> has occurred, i.e..
+<span class="math display" id="eq:DefCondExp">\[
+\Pr[E|F]=\Pr[E|\overline{F}]\Leftrightarrow\Pr[E|F]=\Pr[E].
+\]</span>
+Note that by virtue of \tag{3.4} this is still equivalent to
+<span class="math display">\[
+\Pr[F|E]=\Pr[F],
+\]</span>
+or
+<span class="math display">\[
+\Pr[E|F]=\Pr[E]\Pr[F].
+\]</span>
+It is this last condition that is most often used to define the independence of two events (as it has the advantage of extending to impossible events and being symmetrical in <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span>).</p>
+<p>Let’s now extend the concept of independence to more than two events. Generally speaking, given events <span class="math inline">\(E_1,E_2,\ldots,E_n\)</span>, these are said to be independent when
+<span class="math display" id="eq:DefCondExp">\[
+\Pr\left[\cap_{i\in\mathcal{I}}E_i\right]=\prod_{i\in\mathcal{I}}\Pr[E_i]
+\]</span>
+whatever the subset <span class="math inline">\(\mathcal{I}\)</span> of <span class="math inline">\(\{1,\ldots,n\}\)</span>.</p>
+</div>
+<div id="multiplication-rule-bayes" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Multiplication rule (Bayes)<a href="chap2.html#multiplication-rule-bayes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We can easily deduce from \tag{3.4} that
+<span class="math display">\[
+\Pr[E\cap F]=\Pr[E|F]\Pr[F].
+\]</span>
+This identity sometimes makes it easy to calculate <span class="math inline">\(\Pr[E\cap F]\)</span>. This rule extends to any collection <span class="math inline">\(E_1,\ldots,E_n\)</span> of events such that <span class="math inline">\(\Pr[E_1\cap E_2\cap\ldots\cap E_n]&gt;0\)</span> as follows:
+<span class="math display">\[
+\Pr[E_1\cap E_2\cap\ldots\cap E_n]=\Pr[E_1]\Pr[E_2|E_1]\ldots\Pr[E_n|E_1\cap\ldots\cap E_{n-1}].
+\]</span></p>
+</div>
+<div id="conditionally-independent-events" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> Conditionally independent events<a href="chap2.html#conditionally-independent-events" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Two events <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span> are conditionally independent of a third event <span class="math inline">\(G\)</span> if
+<span class="math display">\[
+\Pr[E\cap F|G]=\Pr[E|G]\Pr[F|G].
+\]</span>
+This is again equivalent to requiring that
+<span class="math display">\[
+\Pr[F|E\cap G]=\Pr[F|G],
+\]</span>
+since
+<span class="math display">\[\begin{eqnarray*}
+\Pr[E\cap F|G]&amp;=&amp;\frac{\Pr[F|E\cap G]\Pr[E\cap G]}{\Pr[G]}
+&amp;=&amp;\Pr[F|E\cap G]\Pr[E|G].
+\end{eqnarray*}\]</span></p>
+</div>
+<div id="total-probability-theorem" class="section level2 hasAnchor" number="3.7">
+<h2><span class="header-section-number">3.7</span> Total probability theorem<a href="chap2.html#total-probability-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Given two events <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span> such that <span class="math inline">\(0&lt;Pr[F]&lt;1\)</span>, we can easily see that
+<span class="math display">\[\begin{eqnarray*}
+\Pr[E]&amp;=&amp;\Pr[E\cap F]+\Pr[E\cap\overline{F}]\\
+&amp;=&amp;\Pr[E|F]\Pr[F]+\Pr[E|\overline{F}]\Pr[\overline{F}]
+\end{eqnarray*}\]</span>
+which deduces <span class="math inline">\(\Pr[E]\)</span> from <span class="math inline">\(\Pr[E|F]\)</span> and <span class="math inline">\(\Pr[E|\overline{F}]\)</span>.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-1" class="example"><strong>Example 3.1  </strong></span>Let’s denote <span class="math inline">\(E\)</span> the event “<em>the insured causes at least one claim over the year</em>” and <span class="math inline">\(F\)</span> the event “<em>the insured is a woman</em>”. If 10% of women and 15% of men cause at least one claim over the year, what is the proportion of policies causing at least one claim over the year in a portfolio comprising 2/3 men and 1/3 women? This proportion is
+<span class="math display">\[\begin{eqnarray*}
+\Pr[E]&amp;=&amp;\Pr[E|F]\Pr[F]+\Pr[E|\overline{F}]\Pr[\overline{F}]\\
+&amp;=&amp;0.1\times \frac{1}{3}+0.15\times \frac{2}{3}=0.133.
+\end{eqnarray*}\]</span>}</p>
+</div>
+<p>A natural extension of this result is known as the total probability theorem and is described below. Consider an exhaustive system of events <span class="math inline">\(\{F_1,F_2,\ldots\}\)</span>; such a system is such that any two of <span class="math inline">\(F_i\)</span> cannot occur simultaneously (i. e. <span class="math inline">\(F_i\cap F_j=\emptyset\)</span> if <span class="math inline">\(i\neq j\)</span>) and such that they cover all cases (i.e. <span class="math inline">\(\Pr[\cup_{i\geq 1}F_i]=1\)</span> with <span class="math inline">\(\Pr[F_i]&gt;0\)</span> for all <span class="math inline">\(i\)</span>). Then, whatever the event
+<span class="math inline">\(E\)</span>,
+<span class="math display">\[\begin{eqnarray*}
+\Pr[E]&amp;=&amp;\Pr\Big[E\cap(\cup_{i\geq 1}F_i)\Big]\\
+&amp;=&amp;\Pr\Big[\cup_{i\geq 1}(E\cap F_i)\Big]\\
+&amp;=&amp;\sum_{i\geq 1}Pr[E\cap F_i]\\
+&amp;=&amp;\sum_{i\geq 1}\Pr[E|F_i]\Pr[F_i].
+\end{eqnarray*}\]</span></p>
+</div>
+<div id="bayes-theorem" class="section level2 hasAnchor" number="3.8">
+<h2><span class="header-section-number">3.8</span> Bayes’ theorem<a href="chap2.html#bayes-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>One of the most interesting results involving conditional probabilities is undoubtedly Bayes’ theorem. Given an exhaustive system of events <span class="math inline">\(\{F_1,F_2,\ldots\}\)</span>, and <span class="math inline">\(E\)</span> any event of positive probability, the formula
+<span class="math display">\[\begin{eqnarray*}
+\Pr[F_i|E]&amp;=&amp;\frac{\Pr[E|F_i]\Pr[F_i]}{\Pr[E]}\\
+&amp;=&amp;\frac{\Pr[E|F_i]\Pr[F_i]}
+{\sum_{j\geq 1}\Pr[E|F_j]\Pr[F_j]},~i=1,2,\ldots,
+\end{eqnarray*}\]</span>
+is valid, where the denominator is obtained using the total probability formula.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-2" class="example"><strong>Example 3.2  (Fraud detection) </strong></span>To detect fraud, many insurers use specially designed computer programs. Consider an insurance company that submits its policyholders’ claims files to such a tool. If fraud does occur, the program detects it in 99% of cases. However, experience shows that the computer tool classifies as frauds 2% of files in good standing. Extrapolations to the market as a whole suggest that 1% of all claims actually involve fraud. What is the probability that a file classified as fraud by the computer program has actually given rise to this reprehensible practice? To assess this probability, let’s define the events
+<span class="math display">\[\begin{eqnarray*}
+E&amp;=&amp;\{\text{the computer tool detects a fraud}\}\\
+F_1&amp;=&amp;\{\text{there is a fraud}\}=\overline{F}_2.
+\end{eqnarray*}\]</span>
+In this case, <span class="math inline">\(\Pr[F_1]=0.01\)</span>, <span class="math inline">\(\Pr[E|F_1]=0.99\)</span>, <span class="math inline">\(\Pr[E|F_2]=0.02\)</span>. The probability we’re looking for is
+<span class="math display">\[\begin{eqnarray*}
+\Pr[F_1|E]&amp;=&amp;\frac{\Pr[E|F_1]\Pr[F_1]}{\Pr[E|F_1]\Pr[F_1]+\Pr[E|F_2]\Pr[F_2]}\\
+&amp;=&amp;\frac{0.99\times 0.01}{0.99\times 0.01+0.02\times 0.99}=\frac{1}{3}.
+\end{eqnarray*}\]</span>}
+Note that this value is quite low. For this reason, companies submit files for further examination by an inspector before incriminating the insured. Note that only a small proportion of files are inspected, since
+<span class="math display">\[
+\Pr[E]=0.99\times 0.01+0.02\times 0.99=2.97\%.
+\]</span>
+This last value also makes it intuitively clear why a test that seems reliable (since it detects fraud in 99% of cases when it is present) is actually wrong two times out of three: on average, the test will announce fraud in 297 cases out of 1,000, when in fact fraud will only occur in an average of 100 cases, resulting in an error of around two-thirds.
+The number of cases of fraud that escape the insurer’s notice (assuming that careful inspection of the file by an employee detects any malfeasance on the part of the insured) is estimated at
+<span class="math display">\[\begin{eqnarray*}
+\Pr[F_1|\overline{E}]&amp;=&amp;\frac{\Pr[\overline{E}|F_1]\Pr[F_1]}{\Pr[\overline{E}|F_1]\Pr[F_1]+\Pr[\overline{E}|F_2]\Pr[F_2]}\\
+&amp;=&amp;\frac{0.01\times 0.01}{0.01\times 0.01+0.98\times 0.99}=0.01\%.
+\end{eqnarray*}\]</span></p>
+</div>
+<p>In the context of Bayes’ theorem, we often speak of probability <em>a priori</em> and probability <em>a posteriori</em> (or <em>prior</em> and <em>posterior</em>). The probabilities <span class="math inline">\(\Pr[F_1],\Pr[F_2],\ldots\)</span> are called <em>prior probabilities</em>, as they are calculated without any information. On the contrary, <span class="math inline">\(\Pr[F_i|E]\)</span> is a <em>posterior probability</em>, resulting from the revision of the probability <span class="math inline">\(\Pr[F_i]\)</span> on the basis of the information that <span class="math inline">\(E\)</span> has occurred. Thus, in the example above, there is <em>a priori</em> a one-in-a-hundred chance that the claim has resulted in fraud. <em>A posteriori</em>, i.e. knowing that the computer test has detected fraud, this probability increases to one in three.</p>
+</div>
+<div id="random-variables" class="section level2 hasAnchor" number="3.9">
+<h2><span class="header-section-number">3.9</span> Random variables<a href="chap2.html#random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="definition" class="section level3 hasAnchor" number="3.9.1">
+<h3><span class="header-section-number">3.9.1</span> Definition<a href="chap2.html#definition" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A random variable associates a number with each elementary event. It is therefore a function of <span class="math inline">\(\mathcal{E}\)</span> in <span class="math inline">\(\mathbb{R}\)</span> to which we impose certain conditions. From now on, we’ll denote random variables by capital letters: <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span> … and their realizations by the corresponding lower-case letters: <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>, …</p>
+<p>Formally, a random variable is defined in relation to a probability space <span class="math inline">\((\mathcal{E},\mathcal{A},\Pr)\)</span>, although we’ll see later that actuary can often do without a precise definition of this space.</p>
 <div class="definition">
 <p><span id="def:DefVA" class="definition"><strong>Definition 3.1  (Random variable) </strong></span>A random variable <span class="math inline">\(X\)</span> is a function defined on the set <span class="math inline">\(\mathcal{E}\)</span> of elementary events and with values in <span class="math inline">\(\mathbb{R}\)</span>:<span class="math display">\[X: \mathcal{E}\to{\mathbb{R}};e\mapsto x=X(e)\]</span> to which we impose a technical condition (called the measurability condition): whatever the real <span class="math inline">\(x\)</span>, we want <span class="math display">\[\{X\leq x\}\equiv \{e\in\mathcal{E}|X(e)\leq x\}\in\mathcal{A}\]</span>
 i.e. <span class="math inline">\(\{X\leq x\}\)</span> must be an event.</p>
 </div>
 <p>Test : Definition <a href="chap2.html#def:DefVA">3.1</a></p>
+<p>….</p>
+<p>In the context of this book, a random variable <span class="math inline">\(X\)</span> is said to be continuous when its distribution function <span class="math inline">\(F_X\)</span> admits the representation
+<span class="math display" id="eq:DefAbsCont">\[\begin{equation}
+F_X(x)=\int_{y\leq x}f_X(y)dy,~x\in {\mathbb{R}},
+\tag{3.5}
+\end{equation}\]</span>
+for an integrable function <span class="math inline">\(f_X:{\mathbb{R}}\to{\mathbb{R}}^+\)</span> called the probability density of <span class="math inline">\(X\)</span>. A continuous random variable therefore has a continuous distribution function <span class="math inline">\(F_X\)</span>.</p>
+<p>The function <span class="math inline">\(f_X\)</span> used in the representation <a href="chap2.html#eq:DefAbsCont">(3.5)</a> has a concrete meaning: if we plot the graph of <span class="math inline">\(f_X\)</span>, the area of the surface bounded in the plane by the graph of <span class="math inline">\(f_X\)</span>, the x-axis and the verticals at <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> (<span class="math inline">\(a&lt;b\)</span>) is the probability that <span class="math inline">\(X\)</span> takes a value in the interval <span class="math inline">\((a,b]\)</span>, i.e..
+<span class="math display">\[
+\Pr[a&lt;X\leq b]=F_X(b)-F_X(a)=\int_{x=a}^bf_X(x)dx.
+\]</span>
+Figure <a href="chap2.html#fig:FigChapI5">3.1</a> illustrates the meaning of probability density. By stretching the length <span class="math inline">\(b-a\)</span> of the interval towards 0, we can clearly see that
+<span class="math display">\[
+\lim_{b\to a}\Pr[a&lt;X\leq b]=\Pr[X=a]=0
+\]</span>
+whatever the real <span class="math inline">\(a\)</span>; a continuous random variable therefore has no mass points (the prerogative of discrete variables).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FigChapI5"></span>
+<img src="bookdown-demo_files/figure-html/FigChapI5-1.png" alt="Graph of the density function $f_X$ corresponding to a continuous variable $X$" width="768" />
+<p class="caption">
+Figure 3.1: Graph of the density function <span class="math inline">\(f_X\)</span> corresponding to a continuous variable <span class="math inline">\(X\)</span>
+</p>
+</div>
 
 </div>
 </div>
