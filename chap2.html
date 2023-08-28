@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Actuarial risk modeling | Non Life Insurance Mathematics</title>
+  <meta name="description" content="Chapter 3 Actuarial risk modeling | Non Life Insurance Mathematics" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Actuarial risk modeling | Non Life Insurance Mathematics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Actuarial risk modeling | Non Life Insurance Mathematics" />
+  
+  
+  
+
+<meta name="author" content="Arthur Charpentier and Michel Denuit" />
+
+
+<meta name="date" content="2023-08-28" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="chap1.html"/>
+<link rel="next" href="chap3.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="chap1.html"><a href="chap1.html"><i class="fa fa-check"></i><b>2</b> The risk and its contractual coverage</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="chap1.html"><a href="chap1.html#risk"><i class="fa fa-check"></i><b>2.1</b> Risk</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="chap1.html"><a href="chap1.html#did-you-say-risk"><i class="fa fa-check"></i><b>2.1.1</b> Did you say risk?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="chap1.html"><a href="chap1.html#the-reason-for-insurance-risquophobia"><i class="fa fa-check"></i><b>2.1.2</b> The reason for insurance: risquophobia</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="chap1.html"><a href="chap1.html#risk-management-methods"><i class="fa fa-check"></i><b>2.2</b> Risk management methods</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="chap1.html"><a href="chap1.html#caution-and-self-insurance"><i class="fa fa-check"></i><b>2.2.1</b> Caution and self-insurance</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="chap2.html"><a href="chap2.html"><i class="fa fa-check"></i><b>3</b> Actuarial risk modeling</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="chap2.html"><a href="chap2.html#introduction"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="chap2.html"><a href="chap2.html#probabilistic-description-of-risk"><i class="fa fa-check"></i><b>3.2</b> Probabilistic description of risk</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="chap2.html"><a href="chap2.html#events"><i class="fa fa-check"></i><b>3.2.1</b> Events</a></li>
+<li class="chapter" data-level="3.2.2" data-path="chap2.html"><a href="chap2.html#elementary-events"><i class="fa fa-check"></i><b>3.2.2</b> Elementary events</a></li>
+<li class="chapter" data-level="3.2.3" data-path="chap2.html"><a href="chap2.html#set-formalism"><i class="fa fa-check"></i><b>3.2.3</b> Set formalism</a></li>
+<li class="chapter" data-level="3.2.4" data-path="chap2.html"><a href="chap2.html#properties-satisfied-by-the-set-of-events"><i class="fa fa-check"></i><b>3.2.4</b> Properties satisfied by the set of events</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="chap2.html"><a href="chap2.html#probability-calculation-and-lack-of-arbitrage-opportunity"><i class="fa fa-check"></i><b>3.3</b> Probability calculation and lack of arbitrage opportunity</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="chap2.html"><a href="chap2.html#the-notion-of-probability"><i class="fa fa-check"></i><b>3.3.1</b> The notion of probability</a></li>
+<li class="chapter" data-level="3.3.2" data-path="chap2.html"><a href="chap2.html#risk-and-uncertainty"><i class="fa fa-check"></i><b>3.3.2</b> Risk and uncertainty</a></li>
+<li class="chapter" data-level="3.3.3" data-path="chap2.html"><a href="chap2.html#probability-and-insurance-premium"><i class="fa fa-check"></i><b>3.3.3</b> Probability and insurance premium</a></li>
+<li class="chapter" data-level="3.3.4" data-path="chap2.html"><a href="chap2.html#absence-of-arbitrage-opportunity"><i class="fa fa-check"></i><b>3.3.4</b> Absence of arbitrage opportunity</a></li>
+<li class="chapter" data-level="3.3.5" data-path="chap2.html"><a href="chap2.html#property-of-additivity-for-incompatible-events"><i class="fa fa-check"></i><b>3.3.5</b> Property of additivity for incompatible events</a></li>
+<li class="chapter" data-level="3.3.6" data-path="chap2.html"><a href="chap2.html#premiums-grow-with-risk"><i class="fa fa-check"></i><b>3.3.6</b> Premiums grow with risk</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="chap3.html"><a href="chap3.html"><i class="fa fa-check"></i><b>4</b> Pure Premium</a></li>
+<li class="chapter" data-level="5" data-path="chap4.html"><a href="chap4.html"><i class="fa fa-check"></i><b>5</b> Net Premium</a></li>
+<li class="chapter" data-level="6" data-path="chap5.html"><a href="chap5.html"><i class="fa fa-check"></i><b>6</b> Measuring and Comparing Risks</a></li>
+<li class="chapter" data-level="7" data-path="chap6.html"><a href="chap6.html"><i class="fa fa-check"></i><b>7</b> Collective Model</a></li>
+<li class="chapter" data-level="8" data-path="chap7.html"><a href="chap7.html"><i class="fa fa-check"></i><b>8</b> Solvency</a></li>
+<li class="chapter" data-level="9" data-path="chap8.html"><a href="chap8.html"><i class="fa fa-check"></i><b>9</b> Multiple Risks</a></li>
+<li class="chapter" data-level="10" data-path="chap9.html"><a href="chap9.html"><i class="fa fa-check"></i><b>10</b> Prior Ratemaking</a></li>
+<li class="chapter" data-level="11" data-path="chap10.html"><a href="chap10.html"><i class="fa fa-check"></i><b>11</b> Credibility</a></li>
+<li class="chapter" data-level="12" data-path="chap11.html"><a href="chap11.html"><i class="fa fa-check"></i><b>12</b> Bonus-Malus</a></li>
+<li class="chapter" data-level="13" data-path="chap12.html"><a href="chap12.html"><i class="fa fa-check"></i><b>13</b> Economics of Insurance</a></li>
+<li class="chapter" data-level="14" data-path="chap13.html"><a href="chap13.html"><i class="fa fa-check"></i><b>14</b> Claims Reserving</a></li>
+<li class="chapter" data-level="15" data-path="chap14.html"><a href="chap14.html"><i class="fa fa-check"></i><b>15</b> Large Risks</a></li>
+<li class="chapter" data-level="16" data-path="chap15.html"><a href="chap15.html"><i class="fa fa-check"></i><b>16</b> Monte Carlo</a></li>
+<li class="chapter" data-level="17" data-path="chap16.html"><a href="chap16.html"><i class="fa fa-check"></i><b>17</b> Conclusion</a></li>
+<li class="chapter" data-level="" data-path="postface.html"><a href="postface.html"><i class="fa fa-check"></i>Postface</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Non Life Insurance Mathematics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="chap2" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Actuarial risk modeling<a href="chap2.html#chap2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Introduction<a href="chap2.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When it comes to repairing the consequences of chance, the insurance business can only be understood through the calculation of probabilities. Its origins lie in the correspondence between Blaise Pascal and the Chevalier de Méré, before being formalized by the Russian school (led by Kolmogorov) during the Second World War.</p>
+<p>The main aim of probability calculus is to provide a scientific method for quantifying the likelihood of certain events occurring. In this context, the notion of a random variable naturally makes its appearance. For the actuary, this may represent the cost of a claim, or the number of claims. Random variables, and the associated distribution functions describing their stochastic behavior, provide the essential tools for modeling risk transfers between policyholders and insurers. The aim of this chapter is to clarify a few points of terminology and to recall the main concepts of probability calculus that will be used in the remainder of the book.</p>
+</div>
+<div id="probabilistic-description-of-risk" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Probabilistic description of risk<a href="chap2.html#probabilistic-description-of-risk" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="events" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Events<a href="chap2.html#events" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A fundamental concept for the rest of the book is that of a random event. These are events for which we cannot predict with certainty whether or not they will occur. It is to such events that the insurer’s benefits are contingent. Clearly,
+- the events considered depend on the definition of the guarantees promised by the insurer.
+- the description of events must be exhaustive, but without duplication.</p>
+</div>
+<div id="elementary-events" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Elementary events<a href="chap2.html#elementary-events" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s define the elementary events <span class="math inline">\(e_1,e_2,e_3,\ldots\)</span> as those satisfying
+the following two properties:</p>
+<ol style="list-style-type: decimal">
+<li>two distinct elementary events <span class="math inline">\(e_i\)</span> and <span class="math inline">\(e_j\)</span>, <span class="math inline">\(jneq i\)</span>, are incompatible, i.e. they cannot occur simultaneously.</li>
+<li>the union <span class="math inline">\(\mathcal{E}=\{e_1,e_2,\ldots\}\)</span> of all elementary events <span class="math inline">\(e_1,e_2,\ldots\)</span> corresponds to certainty, i.e. the event that always occurs.</li>
+</ol>
+<p>Let’s now associate with each event the set of elementary outcomes that lead to its realization. Any event <span class="math inline">\(E\)</span> can thus be expressed as the union of elementary events <span class="math inline">\(e_{i_1},\ldots,e_{i_k}\)</span>, i.e. <span class="math inline">\(E\)</span> occurs when either <span class="math inline">\(e_{i_1}\)</span>, <span class="math inline">\(e_{i_2}\)</span>, , or <span class="math inline">\(e_{i_k}\)</span> occurs. From now on, this will be noted as <span class="math inline">\(E=\{e_{i_1},\ldots,e_{i_k}\}\)</span>.</p>
+</div>
+<div id="set-formalism" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Set formalism<a href="chap2.html#set-formalism" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Having identified each event with a subset of <span class="math inline">\(\mathcal{E}\)</span>, the set formalism will play an important role in what follows. This is why, given two events <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span>, we’ll henceforth write</p>
+<ul>
+<li><span class="math inline">\(\overline{E}\)</span> (which reads “not <span class="math inline">\(E\)</span>”) the event that occurs when <span class="math inline">\(E\)</span> does not occur (<span class="math inline">\(\overline{E}\)</span> is still called the complementary of <span class="math inline">\(E\)</span>);</li>
+<li><span class="math inline">\(E\cap F\)</span> (which reads ``<span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span>“) the event that occurs when <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span> occur simultaneously;</li>
+<li><span class="math inline">\(E\cup F\)</span> (which reads ``<span class="math inline">\(E\)</span> or <span class="math inline">\(F\)</span>“) the event that occurs when <span class="math inline">\(E\)</span> or <span class="math inline">\(F\)</span> occurs;</li>
+<li><span class="math inline">\(E\smallsetminus F\)</span> (which reads ``<span class="math inline">\(E\)</span> minus <span class="math inline">\(F\)</span>“) the event that occurs when <span class="math inline">\(E\)</span> occurs, but not <span class="math inline">\(F\)</span> (so <span class="math inline">\(E\smallsetminus F=E\cap\overline{F}\)</span>);</li>
+<li><span class="math inline">\(\emptyset\)</span> (which reads “impossible event”)
+the event that never happens.</li>
+</ul>
+</div>
+<div id="properties-satisfied-by-the-set-of-events" class="section level3 hasAnchor" number="3.2.4">
+<h3><span class="header-section-number">3.2.4</span> Properties satisfied by the set of events<a href="chap2.html#properties-satisfied-by-the-set-of-events" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s denote <span class="math inline">\(\mathcal{A}\)</span> the set of events that condition the risk (i.e. those needed to determine the insurer’s benefits). Thus, <span class="math inline">\(\mathcal{A}\)</span> is a collection of subsets of <span class="math inline">\(\mathcal{E}\)</span>, a collection to which we impose the following three conditions (which make <span class="math inline">\(\mathcal{A}\)</span> what probabilists call a sigma-algebra or tribe):</p>
+<ol style="list-style-type: decimal">
+<li>the impossible event <span class="math inline">\(\emptyset\in\mathcal{A}\)</span> and the certain event <span class="math inline">\(\mathcal{E}\in\mathcal{A}\)</span>$.</li>
+<li>if <span class="math inline">\(E_1,E_2,\ldots\in\mathcal{A}\)</span> then <span class="math inline">\(\cup_{i\geq 1}E_i\in\mathcal{A}\)</span></li>
+<li>if <span class="math inline">\(E\in\mathcal{A}\)</span> then <span class="math inline">\(\overline{E}\in\mathcal{A}\)</span>.</li>
+</ol>
+<p>Whatever the events <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span> in <span class="math inline">\(\mathcal{A}\)</span>, we can check that the conditions imposed above guarantee that <span class="math inline">\(E\cap F\)</span> and <span class="math inline">\(E\smallsetminus F\)</span> also belong to <span class="math inline">\(\mathcal{A}\)</span>. More generally, whatever the sequence of events <span class="math inline">\(E_1,E_2,\ldots\)</span> in <span class="math inline">\(\mathcal{A}\)</span>, <span class="math inline">\(\cap_{i\geq 1}E_i\)</span> is also there.</p>
+<p>The three conditions imposed above (i.e. the sigma-algebra structure) in fact guarantee the consistency of the reasoning, allowing us to speak of events occurring when several occur simultaneously (intersection) or when at least one of them occurs (union).</p>
+</div>
+</div>
+<div id="probability-calculation-and-lack-of-arbitrage-opportunity" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Probability calculation and lack of arbitrage opportunity<a href="chap2.html#probability-calculation-and-lack-of-arbitrage-opportunity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="the-notion-of-probability" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> The notion of probability<a href="chap2.html#the-notion-of-probability" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>How often do we hear phrases like “<em>it’s probably going to rain tomorrow</em>”, “<em>the plane will probably land 20 minutes late</em>” or “<em>there’s a good chance he’ll be able to attend this conference</em>”? Each of these sentences involves the notion of probability, even if it may seem difficult at first sight to quantify these ideas.</p>
+<p>There are different ways of looking at the concept of probability. In the frequentist view, probability appears as the limiting value of the relative frequencies of occurrence of an event. The principle is relatively simple. It assumes that we are allowed to repeat a large number of times, under strictly identical conditions, an experiment in which a certain event may or may not occur. The ratio between the number of times the event has occurred and the total number of repetitions is called the relative frequency of occurrence of the event. This relative frequency tends to stabilize as the number of repetitions increases, and the limiting value is the probability of the event.</p>
+<p>The shortcoming of the approach described above is, of course, its limited applicability. Many events cannot be repeated, or have not yet been repeated often enough, to produce a probability. In such cases, we can think of defining subjective probabilities: expert opinions on the likelihood of a given event.</p>
+<p>Even if the notion of probability and its determination is problematic, once it has been determined, the calculation of probabilities can be used by an insurance company for risk management purposes. For example, during the first flight of the Ariane rocket, engineers calculated the probability of a successful launch on the basis of the technical file, which was used to set the insurance premium. The story goes that the risk of failure was greatly overestimated at the time.</p>
+</div>
+<div id="risk-and-uncertainty" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> Risk and uncertainty<a href="chap2.html#risk-and-uncertainty" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In his 1921 book <em>Risk, Uncertainty and Profit</em>, economist Frank Knight introduced a fundamental distinction between the notions of risk and uncertainty. Risk occurs when the law governing the phenomenon of interest is known, but the outcome is nonetheless random. This assumes that the probability associated with the various events is known. For example, the throw of a balanced die entails a risk for the individual who would have bet 1,000 Euros on the six, but no uncertainty (since he is able to assess the probability of all the events associated with the throw of this die). On the contrary, uncertainty arises when these probabilities are at least partially unknown. If the bettor is faced with the throw of a rigged die, and does not know the chance of the various faces appearing, he is in a situation of uncertainty.</p>
+</div>
+<div id="probability-and-insurance-premium" class="section level3 hasAnchor" number="3.3.3">
+<h3><span class="header-section-number">3.3.3</span> Probability and insurance premium<a href="chap2.html#probability-and-insurance-premium" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>From now on, we’ll assume risk, but not uncertainty. To each event <span class="math inline">\(E\)</span> of <span class="math inline">\(\mathcal{A}\)</span> we wish to associate a number, denoted <span class="math inline">\(\Pr[E]\)</span> and called the probability of <span class="math inline">\(E\)</span>. This number measures the degree of likelihood that we give <em>a priori</em> to the realization of <span class="math inline">\(E\)</span>: it is non-negative, and is greater the more likely the event is judged to be. The triplet <span class="math inline">\((\mathcal{E},\mathcal{A},\Pr)\)</span> is called a probabilized space, while the pair <span class="math inline">\((\mathcal{E},\mathcal{A})\)</span> is called a probabilizable space in probability theory.</p>
+<p>Following Blaise Pascal’s definition, the probability <span class="math inline">\(\Pr[E]\)</span> associated with event <span class="math inline">\(E\)</span> can be thought of as the premium to be paid to receive 1 Euro in the event of <span class="math inline">\(E\)</span> occurring, provided that the insurance market meets a minimum level of rationality (i.e. it is impossible to make a profit without taking a risk). So, if <span class="math inline">\(E=\)</span> “<em>it rains in Paris on October 15</em>”, <span class="math inline">\(\Pr[E]\)</span> is the sum to be paid to receive 1 Euro if, on October 15, it rains in Paris (which may prove useful to the organizer of an outdoor event on that date). Clearly, if the policyholder no longer wants to receive 1 Euro but <span class="math inline">\(c\)</span> Euro if the event <span class="math inline">\(E\)</span> occurs, all he has to do is pay a premium <span class="math inline">\(c\Pr[E]\)</span>; <span class="math inline">\(\Pr[\cdot]\)</span> is therefore akin to a premium rate.</p>
+<p>Clearly, the probability of any event is less than 1. Indeed, no rational policyholder would be prepared to pay a higher premium than the eventual indemnity paid by the insurer. So, whatever <span class="math inline">\(E\in\mathcal{A}\)</span>, <span class="math inline">\(\Pr[E]\leq 1\)</span>. We therefore seek to assign a probability to any eventuality, a number between 0 and 1, the lower the probability, the rarer the occurrence of the event.</p>
+<p>From now on, we’ll assume that the insurance market is complete, i.e. that it’s possible to buy or sell a policy guaranteeing payment of 1Euro in the event of any random event occurring.</p>
+</div>
+<div id="absence-of-arbitrage-opportunity" class="section level3 hasAnchor" number="3.3.4">
+<h3><span class="header-section-number">3.3.4</span> Absence of arbitrage opportunity<a href="chap2.html#absence-of-arbitrage-opportunity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>It’s worth stressing here that the premiums we’re talking about transcend companies operating in a market: they exist in the absolute. In fact, a policyholder’s loss experience does not depend on which company covers him (assuming that all companies offer the same level of cover): a building is no more likely to go up in smoke if it is covered by one company rather than another. All the reasoning that follows is based on the now classic assumptions of no taxes, no transaction costs, and access to capital under identical conditions for all market players.</p>
+<p>As financiers are wont to do, the arbitrage opportunity is the possibility of making a profit without risk. The idea is as follows: if the premium system adopted by market players does not satisfy a minimum of rationality, it becomes possible for certain players to carry out operations generating a definite profit, without an initial stake. Even if such a situation is not formally ruled out in practice, it would be unthinkable in a healthy market. Based on this simple principle, we’re going to establish a series of properties that probabilities must satisfy.</p>
+</div>
+<div id="property-of-additivity-for-incompatible-events" class="section level3 hasAnchor" number="3.3.5">
+<h3><span class="header-section-number">3.3.5</span> Property of additivity for incompatible events<a href="chap2.html#property-of-additivity-for-incompatible-events" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span> are two incompatible events (i.e. they cannot occur simultaneously, henceforth <span class="math inline">\(E\cap F=\emptyset\)</span>) for which we have defined two probabilities <span class="math inline">\(\Pr[E]\)</span> and <span class="math inline">\(\Pr[F]\)</span>, i.e. we have determined the sums to be paid to receive 1 Euro in the event of these events occurring, then
+<span class="math display" id="eq:AxAdd">\[\begin{equation}
+\Pr[E\cup F]=\Pr[E]+\Pr[F].
+\tag{3.1}
+\end{equation}\]</span>
+Let’s show that it can’t be otherwise. To do this, let’s see what would happen if <span class="math inline">\(\Pr[E\cup F]&gt;\Pr[E]+\Pr[F]\)</span>. In this case, the insurer issues a policy guaranteeing payment of 1Euro if either <span class="math inline">\(E\)</span> or <span class="math inline">\(F\)</span> is realized. With the premium <span class="math inline">\(\Pr[E\cup F]\)</span> collected, he takes out two policies (with a competitor), the first guaranteeing the payment of 1 Euro if <span class="math inline">\(E\)</span> occurs, and the second the same payment if <span class="math inline">\(F\)</span> occurs. This costs <span class="math inline">\(\Pr[E]+\Pr[F]\)</span> and requires no initial investment. At the end of the period, three situations may arise:</p>
+<ol style="list-style-type: decimal">
+<li><em>only <span class="math inline">\(E\)</span> has been realized:</em>
+the insurer receives 1as indemnity and must pay 1in execution of the policy he issued. His profit therefore amounts to
+<span class="math display">\[
+\Pr[E\cup F]-Pr[E]-Pr[F]&gt;0.
+\]</span></li>
+<li><em>only <span class="math inline">\(F\)</span> has been realized:</em>
+in this case, too, his profit amounts to
+<span class="math display">\[
+\Pr[E\cup F]-Pr[E]-Pr[F]&gt;0.
+\]</span></li>
+<li><em>neither <span class="math inline">\(E\)</span> nor <span class="math inline">\(F\)</span> are realized:</em>
+the insurer receives nothing and pays nothing. His profit amounts to
+<span class="math display">\[
+\Pr[E\cup F]-\Pr[E]-\Pr[F]&gt;0.
+\]</span></li>
+</ol>
+<p>In all cases, the insurer makes a positive profit, for an initial stake of zero, which contradicts the hypothesis of no arbitrage opportunity.</p>
+<p>The reasoning is easily adapted to the case where <span class="math inline">\(\Pr[E\cup F]&lt;\Pr[E]+\Pr[F]\)</span>. It is sufficient to issue two policies, one providing for the payment of 1Euro if <span class="math inline">\(E\)</span> occurs, and the other for the same payment if <span class="math inline">\(F\)</span> occurs. The insurer then collects <span class="math inline">\(\Pr[E]+\Pr[F]\)</span>, with which he buys a policy providing 1 Euro if either <span class="math inline">\(E\)</span> or <span class="math inline">\(F\)</span> occurs (at a cost of <span class="math inline">\(\Pr[E\cup F]\)</span>). This strategy requires no initial investment, since by hypothesis <span class="math inline">\(\Pr[E\cup F]&lt;\Pr[E]+\Pr[F]\)</span>. In the three scenarios considered above, we verify that his profit amounts to <span class="math inline">\(\Pr[E]+\Pr[F]-\Pr[E\cup F]&gt;0\)</span>, which contradicts the hypothesis of no arbitrage opportunity.</p>
+<p>More generally, considering a sequence of events <span class="math inline">\(E_1,E_2,E_3,\ldots\)</span> that are two by two incompatible (i.e. whatever <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>, <span class="math inline">\(E_i\)</span> and <span class="math inline">\(E_j\)</span> cannot occur simultaneously <span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\(E_i\cap E_j=\emptyset\)</span> for any <span class="math inline">\(i\neq j\)</span>) we have:
+<span class="math display" id="eq:SigmaAdd">\[\begin{equation}
+\Pr\left[\cup_{k\geq 1}E_k\right]=\sum_{k\geq 1}\Pr[E_k].
+\tag{3.2}
+\end{equation}\]</span>
+This sigma-additivity property is stronger than the additivity condition <a href="chap2.html#eq:AxAdd">(3.1)</a>. In particular, it allows us to calculate the probability of any event <span class="math inline">\(E={e_{i_1},\ldots,e_{i_k}}\)</span> as a function of the probabilities of the elementary events <span class="math inline">\(e_{i_1},\ldots,e_{i_k}\)</span> that make it up, since <a href="chap2.html#eq:SigmaAdd">(3.2)</a> guarantees that
+<span class="math display">\[
+\Pr[E]=\Pr[\{e_{i_1}\}]+\ldots+\Pr[\{e_{i_k}\}].
+\]</span>
+It is therefore sufficient to define the probability of each elementary event to deduce the probability of any event <span class="math inline">\(E\)</span>.</p>
+</div>
+<div id="premiums-grow-with-risk" class="section level3 hasAnchor" number="3.3.6">
+<h3><span class="header-section-number">3.3.6</span> Premiums grow with risk<a href="chap2.html#premiums-grow-with-risk" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The additivity condition <a href="chap2.html#eq:AxAdd">(3.1)</a> also guarantees that premiums grow with the likelihood of insured events. To be precise, let’s consider two events <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span>. If the occurrence of <span class="math inline">\(E\)</span> leads to the occurrence of <span class="math inline">\(F\)</span> (i.e. if <span class="math inline">\(E\)</span> has a greater chance of occurring than <span class="math inline">\(F\)</span>), it is reasonable to have <span class="math inline">\(\Pr[E]\leq\Pr[F]\)</span>. Since the insurer has a greater chance of having to pay the 1 Euro indemnity, it will demand a higher premium. From now on, we’ll note <span class="math inline">\(E\subseteq F\)</span> when the occurrence of <span class="math inline">\(F\)</span> implies that of
+of <span class="math inline">\(F\)</span> implies that of <span class="math inline">\(E\)</span>. In this case,
+<span class="math display">\[
+F=(F\cap E)\cup(F\cap\overline{E})=E\cup(F\setminus E)
+\]</span>
+which expresses the fact that <span class="math inline">\(F\)</span> occurs if either <span class="math inline">\(E\)</span> or <span class="math inline">\(F\setminus E\)</span> occurs. We have thus expressed <span class="math inline">\(F\)</span> as the union of two incompatible events. The relation <a href="chap2.html#eq:AxAdd">(3.1)</a> then allows us to write
+<span class="math display">\[
+\Pr[F]=\Pr[E]+\Pr[F\setminus E]\geq \Pr[E].
+\]</span>
+so that it will always be more expensive to insure against the realization of <span class="math inline">\(F\)</span>, i.e.
+<span class="math display">\[
+E\subseteq F\Rightarrow \Pr[E]\leq\Pr[F].
+\]</span></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="chap1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chap3.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-Modeling.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
