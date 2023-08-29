@@ -222,9 +222,9 @@ the following two properties:</p>
 <p>Having identified each event with a subset of <span class="math inline">\(\mathcal{E}\)</span>, the set formalism will play an important role in what follows. This is why, given two events <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span>, we’ll henceforth write</p>
 <ul>
 <li><span class="math inline">\(\overline{E}\)</span> (which reads “not <span class="math inline">\(E\)</span>”) the event that occurs when <span class="math inline">\(E\)</span> does not occur (<span class="math inline">\(\overline{E}\)</span> is still called the <a href="https://en.wikipedia.org/wiki/Complementary_event">complementary</a> of <span class="math inline">\(E\)</span>);</li>
-<li><span class="math inline">\(E\cap F\)</span> (which reads ``<span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span>“) the event that occurs when <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span> occur simultaneously;</li>
-<li><span class="math inline">\(E\cup F\)</span> (which reads ``<span class="math inline">\(E\)</span> or <span class="math inline">\(F\)</span>“) the event that occurs when <span class="math inline">\(E\)</span> or <span class="math inline">\(F\)</span> occurs;</li>
-<li><span class="math inline">\(E\smallsetminus F\)</span> (which reads ``<span class="math inline">\(E\)</span> minus <span class="math inline">\(F\)</span>“) the event that occurs when <span class="math inline">\(E\)</span> occurs, but not <span class="math inline">\(F\)</span> (so <span class="math inline">\(E\smallsetminus F=E\cap\overline{F}\)</span>);</li>
+<li><span class="math inline">\(E\cap F\)</span> (which reads “<span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span>”) the event that occurs when <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span> occur simultaneously;</li>
+<li><span class="math inline">\(E\cup F\)</span> (which reads “<span class="math inline">\(E\)</span> or <span class="math inline">\(F\)</span>”) the event that occurs when <span class="math inline">\(E\)</span> or <span class="math inline">\(F\)</span> occurs;</li>
+<li><span class="math inline">\(E\smallsetminus F\)</span> (which reads “<span class="math inline">\(E\)</span> minus <span class="math inline">\(F\)</span>”) the event that occurs when <span class="math inline">\(E\)</span> occurs, but not <span class="math inline">\(F\)</span> (so <span class="math inline">\(E\smallsetminus F=E\cap\overline{F}\)</span>);</li>
 <li><span class="math inline">\(\emptyset\)</span> (which reads “impossible event”)
 the event that never happens.</li>
 </ul>
@@ -364,11 +364,11 @@ This last relationship is known as <a href="https://en.wikipedia.org/wiki/Inclus
 </div>
 <div id="independent-events" class="section level2 hasAnchor" number="3.4">
 <h2><span class="header-section-number">3.4</span> Independent events<a href="chap2.html#independent-events" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Of course, some information does not cause the insurer to reassess the premium. This is known as independence. This is expressed as follows: events <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span> are independent when the premium claimed for the payment of 1Euro if <span class="math inline">\(E\)</span> occurs is the same whether or not we know whether <span class="math inline">\(F\)</span> has occurred, i.e..
-<span class="math display" id="eq:DefCondExp">\[
+<p>Of course, some information does not cause the insurer to reassess the premium. This is known as <a href="https://en.wikipedia.org/wiki/Independence_(probability_theory)">independence</a>. This is expressed as follows: events <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span> are independent when the premium claimed for the payment of 1Euro if <span class="math inline">\(E\)</span> occurs is the same whether or not we know whether <span class="math inline">\(F\)</span> has occurred, i.e..
+<span class="math display">\[
 \Pr[E|F]=\Pr[E|\overline{F}]\Leftrightarrow\Pr[E|F]=\Pr[E].
 \]</span>
-Note that by virtue of \tag{3.4} this is still equivalent to
+Note that by virtue of <a href="chap2.html#eq:DefCondExp">(3.4)</a> this is still equivalent to
 <span class="math display">\[
 \Pr[F|E]=\Pr[F],
 \]</span>
@@ -378,25 +378,25 @@ or
 \]</span>
 It is this last condition that is most often used to define the independence of two events (as it has the advantage of extending to impossible events and being symmetrical in <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span>).</p>
 <p>Let’s now extend the concept of independence to more than two events. Generally speaking, given events <span class="math inline">\(E_1,E_2,\ldots,E_n\)</span>, these are said to be independent when
-<span class="math display" id="eq:DefCondExp">\[
+<span class="math display">\[
 \Pr\left[\bigcap_{i\in\mathcal{I}}E_i\right]=\prod_{i\in\mathcal{I}}\Pr[E_i]
 \]</span>
 whatever the subset <span class="math inline">\(\mathcal{I}\)</span> of <span class="math inline">\(\{1,\ldots,n\}\)</span>.</p>
 </div>
 <div id="multiplication-rule-bayes" class="section level2 hasAnchor" number="3.5">
 <h2><span class="header-section-number">3.5</span> Multiplication rule (Bayes)<a href="chap2.html#multiplication-rule-bayes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We can easily deduce from \tag{3.4} that
+<p>We can easily deduce from <a href="chap2.html#eq:DefCondExp">(3.4)</a> that
 <span class="math display">\[
 \Pr[E\cap F]=\Pr[E|F]\Pr[F].
 \]</span>
-This identity sometimes makes it easy to calculate <span class="math inline">\(\Pr[E\cap F]\)</span>. This rule extends to any collection <span class="math inline">\(E_1,\ldots,E_n\)</span> of events such that <span class="math inline">\(\Pr[E_1\cap E_2\cap\ldots\cap E_n]&gt;0\)</span> as follows:
+This identity sometimes makes it easy to calculate <span class="math inline">\(\Pr[E\cap F]\)</span>. <a href="https://en.wikipedia.org/wiki/Chain_rule_(probability)">This rule</a> extends to any collection <span class="math inline">\(E_1,\ldots,E_n\)</span> of events such that <span class="math inline">\(\Pr[E_1\cap E_2\cap\ldots\cap E_n]&gt;0\)</span> as follows:
 <span class="math display">\[
 \Pr[E_1\cap E_2\cap\ldots\cap E_n]=\Pr[E_1]\Pr[E_2|E_1]\ldots\Pr[E_n|E_1\cap\ldots\cap E_{n-1}].
 \]</span></p>
 </div>
 <div id="conditionally-independent-events" class="section level2 hasAnchor" number="3.6">
 <h2><span class="header-section-number">3.6</span> Conditionally independent events<a href="chap2.html#conditionally-independent-events" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Two events <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span> are conditionally independent of a third event <span class="math inline">\(G\)</span> if
+<p>Two events <span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span> are <a href="https://en.wikipedia.org/wiki/Conditional_independence">conditionally independent</a> of a third event <span class="math inline">\(G\)</span> if
 <span class="math display">\[
 \Pr[E\cap F|G]=\Pr[E|G]\Pr[F|G].
 \]</span>
@@ -425,7 +425,7 @@ which deduces <span class="math inline">\(\Pr[E]\)</span> from <span class="math
 &amp;=&amp;0.1\times \frac{1}{3}+0.15\times \frac{2}{3}=0.133.
 \end{eqnarray*}\]</span></p>
 </div>
-<p>A natural extension of this result is known as the total probability theorem and is described below. Consider an exhaustive system of events <span class="math inline">\(\{F_1,F_2,\ldots\}\)</span>; such a system is such that any two of <span class="math inline">\(F_i\)</span> cannot occur simultaneously (i. e. <span class="math inline">\(F_i\cap F_j=\emptyset\)</span> if <span class="math inline">\(i\neq j\)</span>) and such that they cover all cases (i.e. <span class="math inline">\(\Pr[\cup_{i\geq 1}F_i]=1\)</span> with <span class="math inline">\(\Pr[F_i]&gt;0\)</span> for all <span class="math inline">\(i\)</span>). Then, whatever the event
+<p>A natural extension of this result is known as the <a href="https://en.wikipedia.org/wiki/Law_of_total_probability">total probability theorem</a> and is described below. Consider an exhaustive system of events <span class="math inline">\(\{F_1,F_2,\ldots\}\)</span>; such a system is such that any two of <span class="math inline">\(F_i\)</span> cannot occur simultaneously (i. e. <span class="math inline">\(F_i\cap F_j=\emptyset\)</span> if <span class="math inline">\(i\neq j\)</span>) and such that they cover all cases (i.e. <span class="math inline">\(\Pr[\cup_{i\geq 1}F_i]=1\)</span> with <span class="math inline">\(\Pr[F_i]&gt;0\)</span> for all <span class="math inline">\(i\)</span>). Then, whatever the event
 <span class="math inline">\(E\)</span>,
 <span class="math display">\[\begin{eqnarray*}
 \Pr[E]&amp;=&amp;\Pr\Big[E\cap(\cup_{i\geq 1}F_i)\Big]\\
@@ -471,8 +471,8 @@ The number of cases of fraud that escape the insurer’s notice (assuming that c
 <h2><span class="header-section-number">3.9</span> Random variables<a href="chap2.html#random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="definition" class="section level3 hasAnchor" number="3.9.1">
 <h3><span class="header-section-number">3.9.1</span> Definition<a href="chap2.html#definition" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A random variable associates a number with each elementary event. It is therefore a function of <span class="math inline">\(\mathcal{E}\)</span> in <span class="math inline">\(\mathbb{R}\)</span> to which we impose certain conditions. From now on, we’ll denote random variables by capital letters: <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span> … and their realizations by the corresponding lower-case letters: <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>, …</p>
-<p>Formally, a random variable is defined in relation to a probability space <span class="math inline">\((\mathcal{E},\mathcal{A},\Pr)\)</span>, although we’ll see later that actuary can often do without a precise definition of this space.</p>
+<p>A random variable associates a number with each elementary event. It is therefore a function of <span class="math inline">\(\mathcal{E}\)</span> in <span class="math inline">\(\mathbb{R}\)</span> to which we impose certain conditions. From now on, we’ll denote random variables by capital letters: <span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span>, … and their realizations by the corresponding lower-case letters: <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>, …</p>
+<p>Formally, a <a href="https://en.wikipedia.org/wiki/Random_variable">random variable</a> is defined in relation to a probability space <span class="math inline">\((\mathcal{E},\mathcal{A},\Pr)\)</span>, although we’ll see later that actuary can often do without a precise definition of this space.</p>
 <div class="definition">
 <p><span id="def:DefVA" class="definition"><strong>Definition 3.1  (Random variable) </strong></span>A random variable <span class="math inline">\(X\)</span> is a function defined on the set <span class="math inline">\(\mathcal{E}\)</span> of elementary events and with values in <span class="math inline">\(\mathbb{R}\)</span>:<span class="math display">\[X: \mathcal{E}\to{\mathbb{R}};e\mapsto x=X(e)\]</span> to which we impose a technical condition (called the measurability condition): whatever the real <span class="math inline">\(x\)</span>, we want <span class="math display">\[\{X\leq x\}\equiv \{e\in\mathcal{E}|X(e)\leq x\}\in\mathcal{A}\]</span>
 i.e. <span class="math inline">\(\{X\leq x\}\)</span> must be an event.</p>
@@ -516,16 +516,15 @@ is part of <span class="math inline">\(\mathcal{A}\)</span> whatever the value o
 <div id="distribution-function" class="section level2 hasAnchor" number="3.10">
 <h2><span class="header-section-number">3.10</span> Distribution function<a href="chap2.html#distribution-function" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>It is clear that for many policies, listing the elements of <span class="math inline">\(\mathcal{E}\)</span> will prove tedious and difficult: this is due to the large number of situations that can lead to a claim, and to the uncertainty surrounding the financial consequences of such a claim. In practice, the definition of <span class="math inline">\(\mathcal{E}\)</span> is not necessary for actuarial calculations, and it is sufficient to know the distribution function of <span class="math inline">\(X\)</span> to be able to estimate the quantities the actuary needs to manage the portfolio.</p>
-<p>Let’s assume that the random variable <span class="math inline">\(X\)</span> represents the amount of claims the company will have to pay out. In order to manage this risk, the actuary has information about previous claims caused by policies of the same type. This enables him to obtain a function <span class="math inline">\(F_X:{\mathbb{R}}\to[0,1]\)</span>, called the distribution function, giving for each threshold <span class="math inline">\(x\in{Reel}\)</span>, the probability (i.e. the “chance”) that <span class="math inline">\(X\)</span> will be less than or equal to <span class="math inline">\(x\)</span>.</p>
+<p>Let’s assume that the random variable <span class="math inline">\(X\)</span> represents the amount of claims the company will have to pay out. In order to manage this risk, the actuary has information about previous claims caused by policies of the same type. This enables him to obtain a function <span class="math inline">\(F_X:{\mathbb{R}}\to[0,1]\)</span>, called the <a href="https://en.wikipedia.org/wiki/Cumulative_distribution_function">(cumulative) distribution function</a>, giving for each threshold <span class="math inline">\(x\in{\mathbb{R}}\)</span>, the probability (i.e. the “chance”) that <span class="math inline">\(X\)</span> will be less than or equal to <span class="math inline">\(x\)</span>.</p>
 <div class="definition">
 <p><span id="def:DefCDF" class="definition"><strong>Definition 3.2  (Cumulative Distribution Function) </strong></span>The distribution function <span class="math inline">\(F_X\)</span> associated with the random variable <span class="math inline">\(X\)</span> is defined as
-<span class="math display">\[\begin{eqnarray}
-\label{Defcdf}
-F_X(x)&amp;=&amp;\Pr\Big[\{e\in\mathcal{E}|X(e)\leq x\}\Big]\\
-&amp; \equiv &amp;\Pr[X\leq x],\hspace{2mm}x\in{\mathbb{R}}.\nonumber
-\end{eqnarray}\]</span></p>
+<span class="math display" id="eq:Defcdf">\[\begin{equation}
+F_X(x)=\Pr\Big[\{e\in\mathcal{E}|X(e)\leq x\}\Big]\equiv \Pr[X\leq x],\hspace{2mm}x\in{\mathbb{R}}.
+\tag{3.5}
+\end{equation}\]</span></p>
 </div>
-<p>Note that the measurability condition imposed in Definition <a href="chap2.html#def:DefVA">3.1</a> is very important here, as it guarantees that the event ``<span class="math inline">\(X\)</span> is less than or equal to <span class="math inline">\(x\)</span>’’ is indeed an event whose probability can be measured. We can think of <span class="math inline">\(F_X(x)\)</span> as the premium to be paid to receive 1 Euro~if the event <span class="math inline">\(\{X\leq x\}\)</span> occurs.</p>
+<p>Note that the measurability condition imposed in Definition <a href="chap2.html#def:DefVA">3.1</a> is very important here, as it guarantees that the event “<span class="math inline">\(X\)</span> is less than or equal to <span class="math inline">\(x\)</span>’’ is indeed an event whose probability can be measured. We can think of <span class="math inline">\(F_X(x)\)</span> as the premium to be paid to receive 1 Euro~if the event <span class="math inline">\(\{X\leq x\}\)</span> occurs.</p>
 <div class="example">
 <p><span id="exm:unlabeled-div-3" class="example"><strong>Example 3.4  </strong></span>The distribution function of the random variable <span class="math inline">\(X\)</span> defined in Example <a href="chap2.html#exm:Travel">3.3</a> is
 <span class="math display">\[
@@ -568,9 +567,9 @@ is well defined. The function <span class="math inline">\(x\mapsto F_X(x-)\)</sp
 </div>
 <div id="support-of-a-random-variable" class="section level2 hasAnchor" number="3.11">
 <h2><span class="header-section-number">3.11</span> Support of a random variable<a href="chap2.html#support-of-a-random-variable" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The set of all possible values for a random variable is called its support. This notion is precisely defined as follows.</p>
+<p>The set of all possible values for a random variable is called its <a href="https://en.wikipedia.org/wiki/Support_(measure_theory)">support</a>. This notion is precisely defined as follows.</p>
 <div id="DefSupp" class="defintion" name="Support">
-<p>The support of a random variable <span class="math inline">\(X\)</span> with distribution function <span class="math inline">\(F_X\)</span> is the set of all points <span class="math inline">\(x\in{Reel}\)</span> where <span class="math inline">\(F_X\)</span> is strictly increasing, i.e.
+<p>The support of a random variable <span class="math inline">\(X\)</span> with distribution function <span class="math inline">\(F_X\)</span> is the set of all points <span class="math inline">\(x\in{\mathbb{R}}\)</span> where <span class="math inline">\(F_X\)</span> is strictly increasing, i.e.
 <span class="math display">\[
 \text{support}(X)=\big\{x\in{\mathbb{R}}|F_X(x)&gt;F_X(x-\epsilon)\text{ for all }\epsilon&gt;0\big\}.
 \]</span></p>
@@ -587,7 +586,7 @@ is well defined. The function <span class="math inline">\(x\mapsto F_X(x-)\)</sp
 <span class="math inline">\(\overline{F}_X(x)\)</span> therefore represents the probability of <span class="math inline">\(X\)</span> taking a value greater than <span class="math inline">\(x\)</span>.</p>
 </div>
 <p>We can see <span class="math inline">\(\overline{F}_X(x)\)</span> as the premium to be paid to receive a sum of 1 Euro if <span class="math inline">\(X\)</span> exceeds <span class="math inline">\(x\)</span>. Clearly, <span class="math inline">\(\overline{F}_X\)</span> is decreasing, since the event <span class="math inline">\(X&gt;x\)</span> is more likely than <span class="math inline">\(X&gt;x&#39;\)</span> when <span class="math inline">\(x&lt;x&#39;\)</span>, i.e. <span class="math inline">\(\{X&gt;x&#39;\}\subseteq\{X&gt;x\}\)</span>.</p>
-<p>When the support of the distribution function <span class="math inline">\(F\)</span> of the claim amount is <span class="math inline">\({Reel}^+\)</span>, we generally measure the risk associated with a given distribution function by the thickness of the distribution tails (i.e. by the mass of probability distributed over the regions <span class="math inline">\((c,+\infty)\)</span>, for large values of <span class="math inline">\(c\)</span>). Thus, we speak of a thick (or heavy) tail when <span class="math inline">\(\overline{F}_X\)</span> tends only slowly towards <span class="math inline">\(0\)</span> when <span class="math inline">\(x\to +\infty\)</span>. We’ll come back to distribution tails in the chapter on extreme values.</p>
+<p>When the support of the distribution function <span class="math inline">\(F\)</span> of the claim amount is <span class="math inline">\(\mathbb{R}^+\)</span>, we generally measure the risk associated with a given distribution function by the thickness of the distribution tails (i.e. by the mass of probability distributed over the regions <span class="math inline">\((c,+\infty)\)</span>, for large values of <span class="math inline">\(c\)</span>). Thus, we speak of a thick (or heavy) tail when <span class="math inline">\(\overline{F}_X\)</span> tends only slowly towards <span class="math inline">\(0\)</span> when <span class="math inline">\(x\to +\infty\)</span>. We’ll come back to distribution tails in the chapter on extreme values.</p>
 </div>
 <div id="equality-in-law" class="section level2 hasAnchor" number="3.13">
 <h2><span class="header-section-number">3.13</span> Equality in law<a href="chap2.html#equality-in-law" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -680,7 +679,7 @@ with the convention <span class="math inline">\(\inf\{\emptyset\}=+\infty\)</spa
 </div>
 <div id="quantile-functions" class="section level3 hasAnchor" number="3.14.4">
 <h3><span class="header-section-number">3.14.4</span> Quantile functions<a href="chap2.html#quantile-functions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A concept widely used in the following is the quantile. This is a threshold that will only be exceeded (by the claims burden, for example) in a fixed proportion of cases. The function that maps this threshold to the proportion in question is called a quantile function and is defined as follows (in accordance with Definition <a href="chap2.html#def:DeVylderInverses">3.5</a>.</p>
+<p>A concept widely used in the following is the <a href="https://en.wikipedia.org/wiki/Quantile">quantile</a>. This is a threshold that will only be exceeded (by the claims burden, for example) in a fixed proportion of cases. The function that maps this threshold to the proportion in question is called a quantile function and is defined as follows (in accordance with Definition <a href="chap2.html#def:DeVylderInverses">3.5</a>.</p>
 <div class="definition">
 <p><span id="def:DefQuantile" class="definition"><strong>Definition 3.7  </strong></span>The quantile of order <span class="math inline">\(p\)</span> of the random variable <span class="math inline">\(X\)</span>, denoted <span class="math inline">\(q_p\)</span>, is defined as follows:
 <span class="math display">\[
@@ -692,10 +691,10 @@ The function <span class="math inline">\(F_X^{-1}\)</span> defined in this way i
 <p>In the context of this book, a random variable <span class="math inline">\(X\)</span> is said to be continuous when its distribution function <span class="math inline">\(F_X\)</span> admits the representation
 <span class="math display" id="eq:DefAbsCont">\[\begin{equation}
 F_X(x)=\int_{y\leq x}f_X(y)dy,~x\in {\mathbb{R}},
-\tag{3.5}
+\tag{3.6}
 \end{equation}\]</span>
 for an integrable function <span class="math inline">\(f_X:{\mathbb{R}}\to{\mathbb{R}}^+\)</span> called the <a href="https://en.wikipedia.org/wiki/Probability_density_function">probability density</a> of <span class="math inline">\(X\)</span>. A continuous random variable therefore has a continuous distribution function <span class="math inline">\(F_X\)</span>.</p>
-<p>The function <span class="math inline">\(f_X\)</span> used in the representation <a href="chap2.html#eq:DefAbsCont">(3.5)</a> has a concrete meaning: if we plot the graph of <span class="math inline">\(f_X\)</span>, the area of the surface bounded in the plane by the graph of <span class="math inline">\(f_X\)</span>, the x-axis and the verticals at <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> (<span class="math inline">\(a&lt;b\)</span>) is the probability that <span class="math inline">\(X\)</span> takes a value in the interval <span class="math inline">\((a,b]\)</span>, i.e..
+<p>The function <span class="math inline">\(f_X\)</span> used in the representation <a href="chap2.html#eq:DefAbsCont">(3.6)</a> has a concrete meaning: if we plot the graph of <span class="math inline">\(f_X\)</span>, the area of the surface bounded in the plane by the graph of <span class="math inline">\(f_X\)</span>, the x-axis and the verticals at <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> (<span class="math inline">\(a&lt;b\)</span>) is the probability that <span class="math inline">\(X\)</span> takes a value in the interval <span class="math inline">\((a,b]\)</span>, i.e..
 <span class="math display">\[
 \Pr[a&lt;X\leq b]=F_X(b)-F_X(a)=\int_{x=a}^bf_X(x)dx.
 \]</span>
