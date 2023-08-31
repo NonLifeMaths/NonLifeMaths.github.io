@@ -23,7 +23,7 @@
 <meta name="author" content="Arthur Charpentier and Michel Denuit" />
 
 
-<meta name="date" content="2023-08-30" />
+<meta name="date" content="2023-08-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1892,12 +1892,12 @@ M$ represents a “common shock” simultaneously affecting <span class="math in
 The random variables <span class="math inline">\(L_1\)</span>, <span class="math inline">\(L_2\)</span> and <span class="math inline">\(M\)</span> are assumed to have independent distributions <span class="math inline">\(L_1\sim\mathcal{P}oi(\lambda_1)\)</span>, <span class="math inline">\(L_2\sim\mathcal{P}oi(\lambda_2)\)</span> and <span class="math inline">\(M\sim\mathcal{P}oi(\mu)\)</span>. The marginal distributions of the pair <span class="math inline">\((N_1,N_2)\)</span> are clearly <span class="math inline">\(\mathcal{P}oi(\lambda_1+\mu)\)</span> and <span class="math inline">\(\mathcal{P}oi(\lambda_2+\mu)\)</span>, respectively.</p>
 <p>The joint distribution of <span class="math inline">\((N_1,N_2)\)</span> is obtained as follows
 <span class="math display">\[\begin{eqnarray*}
-&amp; &amp; \Pr[N_1=n_1,N_2=n_2]\\}
+&amp; &amp; \Pr[N_1=n_1,N_2=n_2]\\
 &amp;=&amp;\sum_{k=0}^{+\infty}\Pr[N_1=n_1,N_2=n_2|M=k]\Pr[M=k]\\
 &amp;=&amp;\sum_{k=0}^{\min\{n_1,n_2\}}\Pr[L_1=n_1-k]\Pr[L_2=n_2-k]\Pr[M=k]\\
 &amp;=&amp;\exp(-\lambda_1-\lambda_2-\mu)\sum_{k=0}^{\min\{n_1,n_2\}}\frac{\mu^k}{k!}
 \frac{\lambda_1^{n_1-k}}{(n_1-k)!}\frac{\lambda_2^{n_2-k}}{(n_2-k)!}.
-\end{eqnarray*}\]</span>}
+\end{eqnarray*}\]</span>
 We can then calculate the conditional distribution of <span class="math inline">\(N_2\)</span> knowing <span class="math inline">\(N_1=n_1\)</span>:
 <span class="math display">\[\begin{eqnarray*}
 &amp; &amp; \Pr[N_2=n_2|N_1=n_1]\\\
@@ -1918,18 +1918,18 @@ k
 <p>In general, the <a href="https://en.wikipedia.org/wiki/Convolution">convolution product</a> (henceforth referred to as “<span class="math inline">\(\star\)</span>”) of distribution functions provides the distribution function of a sum of independent random variables admitting these distribution functions.</p>
 <div class="definition">
 <p><span id="def:unlabeled-div-46" class="definition"><strong>Definition 3.12  </strong></span>Given two distribution functions <span class="math inline">\(F_1\)</span> and
-<span class="math inline">\(F_2\)</span>, the convolution product <span class="math inline">\(F_1star F_2\)</span> is defined as follows:
+<span class="math inline">\(F_2\)</span>, the convolution product <span class="math inline">\(F_1\star F_2\)</span> is defined as follows:
 <span class="math display">\[
 F_1\star F_2(x)=\int_{y\in\mathbb{R}}F_1(x-y)dF_2(y),\hspace{2mm}x\in \mathbb{R}.
 \]</span></p>
 </div>
-<p>In the context of this book, the distribution functions considered will most often have a support contained in <span class="math inline">\({\mathbb{R}}^+\)</span>. In this case, the convolution product <span class="math inline">\(F_1star F_2\)</span> is given by
+<p>In the context of this book, the distribution functions considered will most often have a support contained in <span class="math inline">\({\mathbb{R}}^+\)</span>. In this case, the convolution product <span class="math inline">\(F_1\star F_2\)</span> is given by
 <span class="math display">\[
 F_1\star F_2(x)=\int_{y=0}^xF_1(x-y)dF_2(y),\hspace{2mm}x\geq 0.
 \]</span></p>
 <p>If we denote <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span> as independent random variables with distribution functions <span class="math inline">\(F_1\)</span> and <span class="math inline">\(F_2\)</span>, it is clear that
 <span class="math display">\[\begin{eqnarray*}
-F_1star F_2(x)&amp;=&amp;\Pr[X_1+X_2\leq x].
+F_1\star F_2(x)&amp;=&amp;\Pr[X_1+X_2\leq x].
 \end{eqnarray*}\]</span></p>
 <p>If <span class="math inline">\(F_1\)</span> and <span class="math inline">\(F_2\)</span> admit the probability densities <span class="math inline">\(f_1\)</span> and <span class="math inline">\(f_2\)</span>, the density of <span class="math inline">\(X_1+X_2\)</span>, denoted <span class="math inline">\(f_1star f_2\)</span>, is given by
 <span class="math display">\[
