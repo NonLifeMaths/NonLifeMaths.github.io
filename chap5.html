@@ -965,11 +965,11 @@ X\preceq_{\text{VaR}}Y &amp;\Leftrightarrow&amp; F_X(t)\geq F_Y(t) \text{ for al
 \]</span>
 This demonstrates that <span class="math inline">\(\preceq_{\text{VaR}}\)</span> focuses on comparing the magnitude of risks rather than their variability.</p>
 </div>
-<p>The stochastic order <span class="math inline">\(X\preceq Y\)</span> allows us to derive numerous interesting inequalities, as demonstrated by the following result.</p>
+<p>The stochastic order <span class="math inline">\(X\preceq_{\text{VaR}}Y\)</span> allows us to derive numerous interesting inequalities, as demonstrated by the following result.</p>
 <div id="LSTIncreasingFunc" class="property">
 <p>For two random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>,
 <span class="math display">\[
-X\preceq Y \Leftrightarrow \mathbb{E}[g(X)] \leq \mathbb{E}[g(Y)] \text{ for all increasing functions } g,
+X\preceq_{\text{VaR}}Y \Leftrightarrow \mathbb{E}[g(X)] \leq \mathbb{E}[g(Y)] \text{ for all increasing functions } g,
 \]</span>
 provided the expectations exist.</p>
 </div>
@@ -986,7 +986,7 @@ The stated result is then obtained simply by writing
 </div>
 <p>In addition to the above results, we now demonstrate that we can restrict ourselves to regular functions <span class="math inline">\(g\)</span> in Property <a href="#prp:LSTIncreasingFunc"><strong>??</strong></a>.</p>
 <div class="proposition">
-<p><span id="prp:RegularFuncTestVaR" class="proposition"><strong>Proposition 6.4  </strong></span>For two random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\preceq Y \Leftrightarrow \mathbb{E}[g(X)] \leq \mathbb{E}[g(Y)]\)</span> for any function <span class="math inline">\(g\)</span> such that <span class="math inline">\(g&#39; \geq 0\)</span>, provided the expectations exist.</p>
+<p><span id="prp:RegularFuncTestVaR" class="proposition"><strong>Proposition 6.4  </strong></span>For two random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\preceq_{\text{VaR}}Y \Leftrightarrow \mathbb{E}[g(X)] \leq \mathbb{E}[g(Y)]\)</span> for any function <span class="math inline">\(g\)</span> such that <span class="math inline">\(g&#39; \geq 0\)</span>, provided the expectations exist.</p>
 </div>
 <div class="proof">
 <p><span id="unlabeled-div-29" class="proof"><em>Proof</em>. </span>The implication ” <span class="math inline">\(\Rightarrow\)</span> ” is evident. To prove the converse, note that
@@ -1007,11 +1007,11 @@ for any <span class="math inline">\(\sigma&gt;0\)</span>. This same inequality h
 </div>
 <div id="sufficient-conditions" class="section level4 hasAnchor" number="6.4.2.1">
 <h4><span class="header-section-number">6.4.2.1</span> Sufficient Conditions<a href="chap5.html#sufficient-conditions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Property <a href="#prp:LSTVaR"><strong>??</strong></a> informs us that risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> satisfy <span class="math inline">\(X\preceq Y\)</span> when their respective tail functions mutually dominate each other. The following result provides a sufficient condition for this to hold. It suffices that the probability density functions only cross once.</p>
+<p>Property <a href="#prp:LSTVaR"><strong>??</strong></a> informs us that risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> satisfy <span class="math inline">\(X\preceq_{\text{VaR}}Y\)</span> when their respective tail functions mutually dominate each other. The following result provides a sufficient condition for this to hold. It suffices that the probability density functions only cross once.</p>
 <div class="proposition">
 <p><span id="prp:CSHesselager" class="proposition"><strong>Proposition 6.5  </strong></span>For any risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, if
 <span class="math inline">\(f_X(t) \geq f_Y(t)\)</span> for <span class="math inline">\(t&lt;c\)</span> and <span class="math inline">\(f_X(t) \leq f_Y(t)\)</span> for <span class="math inline">\(t&gt;c\)</span>, then
-<span class="math inline">\(X\preceq Y\)</span>.</p>
+<span class="math inline">\(X\preceq_{\text{VaR}}Y\)</span>.</p>
 </div>
 <div class="proof">
 <p><span id="unlabeled-div-30" class="proof"><em>Proof</em>. </span>It suffices to observe that if <span class="math inline">\(x&lt;c\)</span>,
@@ -1034,7 +1034,7 @@ Thus, we have <span class="math inline">\(X\preceq_{\text{VaR}}Y\)</span> under 
 <div class="proposition">
 <p><span id="prp:StInvIncreasingFunc" class="proposition"><strong>Proposition 6.6  </strong></span>For any random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>,
 <span class="math display">\[
-X\preceq Y \Rightarrow t(X)\preceq t(Y)
+X\preceq_{\text{VaR}}Y \Rightarrow t(X)\preceq_{\text{VaR}}t(Y)
 \]</span>
 for any non-decreasing function <span class="math inline">\(t\)</span>.</p>
 </div>
@@ -1043,14 +1043,13 @@ for any non-decreasing function <span class="math inline">\(t\)</span>.</p>
 </div>
 <p>Property <a href="chap5.html#prp:StInvIncreasingFunc">6.6</a> guarantees, among other things, that when <span class="math inline">\(X\preceq_{\text{VaR}}Y\)</span>,
 <span class="math display">\[\begin{eqnarray*}
-(X-\delta)_+ &amp; \preceq &amp;(Y-\delta)_+\text{ for any deductible }\delta\in{\mathbb{R}},\\
+(X-\delta)_+ &amp; \preceq_{\text{VaR}}&amp;(Y-\delta)_+\text{ for any deductible }\delta\in{\mathbb{R}},\\
 &amp;&amp;\text{mandatory underwriting,}\\
-\alpha X &amp; \preceq &amp;\alpha Y\text{ for any }\alpha&gt;0,\\
-X\mathbb{I}[X&gt;\kappa] &amp; \preceq &amp;Y\mathbb{I}[Y&gt;\kappa]\text{ for any threshold }\kappa\in{\mathbb{R}},\\
-\min\{X,\omega\} &amp; \preceq &amp;\min\{Y,\omega\}\text{ for any cap }\omega\in{\mathbb{R}}.
+\alpha X &amp; \preceq_{\text{VaR}}&amp;\alpha Y\text{ for any }\alpha&gt;0,\\
+X\mathbb{I}[X&gt;\kappa] &amp; \preceq_{\text{VaR}}&amp;Y\mathbb{I}[Y&gt;\kappa]\text{ for any threshold }\kappa\in{\mathbb{R}},\\
+\min\{X,\omega\} &amp; \preceq_{\text{VaR}}&amp;\min\{Y,\omega\}\text{ for any cap }\omega\in{\mathbb{R}}.
 \end{eqnarray*}\]</span>
 This implies that a comparison in the <span class="math inline">\(\preceq_{\text{VaR}}\)</span> sense is not affected by the introduction of a standard deductible clause related to damages (whether it’s a mandatory underwriting, a deductible, or an upper limit) in the policy terms.</p>
-<p>ATTENTION RELIRE !!! <span class="math inline">\(\preceq\)</span> DOIT ETRE <span class="math inline">\(\preceq_{\text{VaR}}\)</span></p>
 </div>
 <div id="stability-of-preceq_textvar-in-the-presence-of-uncertainty" class="section level4 hasAnchor" number="6.4.3.2">
 <h4><span class="header-section-number">6.4.3.2</span> Stability of <span class="math inline">\(\preceq_{\text{VaR}}\)</span> in the Presence of Uncertainty<a href="chap5.html#stability-of-preceq_textvar-in-the-presence-of-uncertainty" class="anchor-section" aria-label="Anchor link to header"></a></h4>
