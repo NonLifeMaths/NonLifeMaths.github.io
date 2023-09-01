@@ -1,0 +1,2061 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Measurement and Comparison of Risks | Non Life Insurance Mathematics</title>
+  <meta name="description" content="Chapter 6 Measurement and Comparison of Risks | Non Life Insurance Mathematics" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Measurement and Comparison of Risks | Non Life Insurance Mathematics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Measurement and Comparison of Risks | Non Life Insurance Mathematics" />
+  
+  
+  
+
+<meta name="author" content="Arthur Charpentier and Michel Denuit" />
+
+
+<meta name="date" content="2023-08-31" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="chap4.html"/>
+<link rel="next" href="chap6.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Non Life Insurance Mathematics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="chap1.html"><a href="chap1.html"><i class="fa fa-check"></i><b>2</b> The risk and its contractual coverage</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="chap1.html"><a href="chap1.html#risk"><i class="fa fa-check"></i><b>2.1</b> Risk</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="chap1.html"><a href="chap1.html#did-you-say-risk"><i class="fa fa-check"></i><b>2.1.1</b> Did you say risk?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="chap1.html"><a href="chap1.html#the-reason-for-insurance-risquophobia"><i class="fa fa-check"></i><b>2.1.2</b> The reason for insurance: risquophobia</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="chap1.html"><a href="chap1.html#risk-management-methods"><i class="fa fa-check"></i><b>2.2</b> Risk management methods</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="chap1.html"><a href="chap1.html#caution-and-self-insurance"><i class="fa fa-check"></i><b>2.2.1</b> Caution and self-insurance</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="chap2.html"><a href="chap2.html"><i class="fa fa-check"></i><b>3</b> Actuarial risk modeling</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="chap2.html"><a href="chap2.html#introduction"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="chap2.html"><a href="chap2.html#probabilistic-description-of-risk"><i class="fa fa-check"></i><b>3.2</b> Probabilistic description of risk</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="chap2.html"><a href="chap2.html#events"><i class="fa fa-check"></i><b>3.2.1</b> Events</a></li>
+<li class="chapter" data-level="3.2.2" data-path="chap2.html"><a href="chap2.html#elementary-events"><i class="fa fa-check"></i><b>3.2.2</b> Elementary events</a></li>
+<li class="chapter" data-level="3.2.3" data-path="chap2.html"><a href="chap2.html#set-formalism"><i class="fa fa-check"></i><b>3.2.3</b> Set formalism</a></li>
+<li class="chapter" data-level="3.2.4" data-path="chap2.html"><a href="chap2.html#properties-satisfied-by-the-set-of-events"><i class="fa fa-check"></i><b>3.2.4</b> Properties satisfied by the set of events</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="chap2.html"><a href="chap2.html#probability-calculation-and-lack-of-arbitrage-opportunity"><i class="fa fa-check"></i><b>3.3</b> Probability calculation and lack of arbitrage opportunity</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="chap2.html"><a href="chap2.html#the-notion-of-probability"><i class="fa fa-check"></i><b>3.3.1</b> The notion of probability</a></li>
+<li class="chapter" data-level="3.3.2" data-path="chap2.html"><a href="chap2.html#risk-and-uncertainty"><i class="fa fa-check"></i><b>3.3.2</b> Risk and uncertainty</a></li>
+<li class="chapter" data-level="3.3.3" data-path="chap2.html"><a href="chap2.html#probability-and-insurance-premium"><i class="fa fa-check"></i><b>3.3.3</b> Probability and insurance premium</a></li>
+<li class="chapter" data-level="3.3.4" data-path="chap2.html"><a href="chap2.html#absence-of-arbitrage-opportunity"><i class="fa fa-check"></i><b>3.3.4</b> Absence of arbitrage opportunity</a></li>
+<li class="chapter" data-level="3.3.5" data-path="chap2.html"><a href="chap2.html#property-of-additivity-for-incompatible-events"><i class="fa fa-check"></i><b>3.3.5</b> Property of additivity for incompatible events</a></li>
+<li class="chapter" data-level="3.3.6" data-path="chap2.html"><a href="chap2.html#premiums-grow-with-risk"><i class="fa fa-check"></i><b>3.3.6</b> Premiums grow with risk</a></li>
+<li class="chapter" data-level="3.3.7" data-path="chap2.html"><a href="chap2.html#fairness-property"><i class="fa fa-check"></i><b>3.3.7</b> Fairness property</a></li>
+<li class="chapter" data-level="3.3.8" data-path="chap2.html"><a href="chap2.html#subadditivity-property"><i class="fa fa-check"></i><b>3.3.8</b> Subadditivity property</a></li>
+<li class="chapter" data-level="3.3.9" data-path="chap2.html"><a href="chap2.html#poincaré-equality"><i class="fa fa-check"></i><b>3.3.9</b> Poincaré equality</a></li>
+<li class="chapter" data-level="3.3.10" data-path="chap2.html"><a href="chap2.html#conditional-probability"><i class="fa fa-check"></i><b>3.3.10</b> Conditional probability</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="chap2.html"><a href="chap2.html#independent-events"><i class="fa fa-check"></i><b>3.4</b> Independent events</a></li>
+<li class="chapter" data-level="3.5" data-path="chap2.html"><a href="chap2.html#multiplication-rule-bayes"><i class="fa fa-check"></i><b>3.5</b> Multiplication rule (Bayes)</a></li>
+<li class="chapter" data-level="3.6" data-path="chap2.html"><a href="chap2.html#conditionally-independent-events"><i class="fa fa-check"></i><b>3.6</b> Conditionally independent events</a></li>
+<li class="chapter" data-level="3.7" data-path="chap2.html"><a href="chap2.html#total-probability-theorem"><i class="fa fa-check"></i><b>3.7</b> Total probability theorem</a></li>
+<li class="chapter" data-level="3.8" data-path="chap2.html"><a href="chap2.html#bayes-theorem"><i class="fa fa-check"></i><b>3.8</b> Bayes’ theorem</a></li>
+<li class="chapter" data-level="3.9" data-path="chap2.html"><a href="chap2.html#random-variables"><i class="fa fa-check"></i><b>3.9</b> Random variables</a>
+<ul>
+<li class="chapter" data-level="3.9.1" data-path="chap2.html"><a href="chap2.html#definition"><i class="fa fa-check"></i><b>3.9.1</b> Definition</a></li>
+<li class="chapter" data-level="3.9.2" data-path="chap2.html"><a href="chap2.html#distribution-function"><i class="fa fa-check"></i><b>3.9.2</b> Distribution function</a></li>
+<li class="chapter" data-level="3.9.3" data-path="chap2.html"><a href="chap2.html#support-of-a-random-variable"><i class="fa fa-check"></i><b>3.9.3</b> Support of a random variable</a></li>
+<li class="chapter" data-level="3.9.4" data-path="chap2.html"><a href="chap2.html#tail-or-survival-function"><i class="fa fa-check"></i><b>3.9.4</b> Tail (or Survival) function</a></li>
+<li class="chapter" data-level="3.9.5" data-path="chap2.html"><a href="chap2.html#equality-in-distribution"><i class="fa fa-check"></i><b>3.9.5</b> Equality in distribution</a></li>
+<li class="chapter" data-level="3.9.6" data-path="chap2.html"><a href="chap2.html#quantiles-and-generalized-inverses"><i class="fa fa-check"></i><b>3.9.6</b> Quantiles and generalized inverses</a></li>
+</ul></li>
+<li class="chapter" data-level="3.10" data-path="chap2.html"><a href="chap2.html#discrete-random-variables-and-counts"><i class="fa fa-check"></i><b>3.10</b> Discrete random variables and counts</a>
+<ul>
+<li class="chapter" data-level="3.10.1" data-path="chap2.html"><a href="chap2.html#notion"><i class="fa fa-check"></i><b>3.10.1</b> Notion</a></li>
+<li class="chapter" data-level="3.10.2" data-path="chap2.html"><a href="chap2.html#uniform-discrete-variable"><i class="fa fa-check"></i><b>3.10.2</b> Uniform discrete variable</a></li>
+<li class="chapter" data-level="3.10.3" data-path="chap2.html"><a href="chap2.html#bernoulli-variables"><i class="fa fa-check"></i><b>3.10.3</b> Bernoulli variables</a></li>
+<li class="chapter" data-level="3.10.4" data-path="chap2.html"><a href="chap2.html#binomial-variable"><i class="fa fa-check"></i><b>3.10.4</b> Binomial variable</a></li>
+<li class="chapter" data-level="3.10.5" data-path="chap2.html"><a href="chap2.html#geometric-variable"><i class="fa fa-check"></i><b>3.10.5</b> Geometric variable</a></li>
+<li class="chapter" data-level="3.10.6" data-path="chap2.html"><a href="chap2.html#negative-binomial-variable"><i class="fa fa-check"></i><b>3.10.6</b> Negative binomial variable</a></li>
+<li class="chapter" data-level="3.10.7" data-path="chap2.html"><a href="chap2.html#poissons-distribution"><i class="fa fa-check"></i><b>3.10.7</b> Poisson’s distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="3.11" data-path="chap2.html"><a href="chap2.html#continuous-random-variables"><i class="fa fa-check"></i><b>3.11</b> Continuous random variables</a>
+<ul>
+<li class="chapter" data-level="3.11.1" data-path="chap2.html"><a href="chap2.html#notion-1"><i class="fa fa-check"></i><b>3.11.1</b> Notion</a></li>
+<li class="chapter" data-level="3.11.2" data-path="chap2.html"><a href="chap2.html#continuous-uniform-distribution"><i class="fa fa-check"></i><b>3.11.2</b> Continuous uniform distribution</a></li>
+<li class="chapter" data-level="3.11.3" data-path="chap2.html"><a href="chap2.html#beta-distribution"><i class="fa fa-check"></i><b>3.11.3</b> Beta Distribution</a></li>
+<li class="chapter" data-level="3.11.4" data-path="chap2.html"><a href="chap2.html#normal-or-gaussian-distribution"><i class="fa fa-check"></i><b>3.11.4</b> Normal (or Gaussian) distribution</a></li>
+<li class="chapter" data-level="3.11.5" data-path="chap2.html"><a href="chap2.html#log-normal-variable"><i class="fa fa-check"></i><b>3.11.5</b> Log-normal variable</a></li>
+<li class="chapter" data-level="3.11.6" data-path="chap2.html"><a href="chap2.html#negative-exponential-distribution"><i class="fa fa-check"></i><b>3.11.6</b> (Negative) exponential distribution</a></li>
+<li class="chapter" data-level="3.11.7" data-path="chap2.html"><a href="chap2.html#gamma-distribution"><i class="fa fa-check"></i><b>3.11.7</b> Gamma distribution</a></li>
+<li class="chapter" data-level="3.11.8" data-path="chap2.html"><a href="chap2.html#pareto-distribution"><i class="fa fa-check"></i><b>3.11.8</b> Pareto distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="3.12" data-path="chap2.html"><a href="chap2.html#random-vector"><i class="fa fa-check"></i><b>3.12</b> Random vector</a>
+<ul>
+<li class="chapter" data-level="3.12.1" data-path="chap2.html"><a href="chap2.html#definition-1"><i class="fa fa-check"></i><b>3.12.1</b> Definition</a></li>
+<li class="chapter" data-level="3.12.2" data-path="chap2.html"><a href="chap2.html#distribution-function-1"><i class="fa fa-check"></i><b>3.12.2</b> Distribution function</a></li>
+<li class="chapter" data-level="3.12.3" data-path="chap2.html"><a href="chap2.html#support-of-vector-xvec"><i class="fa fa-check"></i><b>3.12.3</b> Support of vector <span class="math inline">\(\Xvec\)</span></a></li>
+<li class="chapter" data-level="3.12.4" data-path="chap2.html"><a href="chap2.html#independence"><i class="fa fa-check"></i><b>3.12.4</b> Independence</a></li>
+<li class="chapter" data-level="3.12.5" data-path="chap2.html"><a href="chap2.html#gaussian-vector"><i class="fa fa-check"></i><b>3.12.5</b> Gaussian vector</a></li>
+<li class="chapter" data-level="3.12.6" data-path="chap2.html"><a href="chap2.html#ellipticpart"><i class="fa fa-check"></i><b>3.12.6</b> Elliptical vectors</a></li>
+<li class="chapter" data-level="3.12.7" data-path="chap2.html"><a href="chap2.html#definition-2"><i class="fa fa-check"></i><b>3.12.7</b> Definition</a></li>
+<li class="chapter" data-level="3.12.8" data-path="chap2.html"><a href="chap2.html#multinomial-vector"><i class="fa fa-check"></i><b>3.12.8</b> Multinomial vector</a></li>
+</ul></li>
+<li class="chapter" data-level="3.13" data-path="chap2.html"><a href="chap2.html#conditional-variables"><i class="fa fa-check"></i><b>3.13</b> Conditional Variables</a>
+<ul>
+<li class="chapter" data-level="3.13.1" data-path="chap2.html"><a href="chap2.html#the-case-of-counting-variables"><i class="fa fa-check"></i><b>3.13.1</b> The case of counting variables</a></li>
+<li class="chapter" data-level="3.13.2" data-path="chap2.html"><a href="chap2.html#the-case-of-continuous-variables"><i class="fa fa-check"></i><b>3.13.2</b> The case of continuous variables</a></li>
+<li class="chapter" data-level="3.13.3" data-path="chap2.html"><a href="chap2.html#the-mixed-case-one-counting-variable-and-another-continuous"><i class="fa fa-check"></i><b>3.13.3</b> The mixed case: one counting variable and another continuous</a></li>
+<li class="chapter" data-level="3.13.4" data-path="chap2.html"><a href="chap2.html#conditional-independence"><i class="fa fa-check"></i><b>3.13.4</b> Conditional independence</a></li>
+</ul></li>
+<li class="chapter" data-level="3.14" data-path="chap2.html"><a href="chap2.html#compound-distributions"><i class="fa fa-check"></i><b>3.14</b> Compound distributions</a>
+<ul>
+<li class="chapter" data-level="3.14.1" data-path="chap2.html"><a href="chap2.html#definition-4"><i class="fa fa-check"></i><b>3.14.1</b> Definition</a></li>
+<li class="chapter" data-level="3.14.2" data-path="chap2.html"><a href="chap2.html#SecProdConv"><i class="fa fa-check"></i><b>3.14.2</b> Convolution product</a></li>
+<li class="chapter" data-level="3.14.3" data-path="chap2.html"><a href="chap2.html#distribution-function-associated-with-a-compound-distribution"><i class="fa fa-check"></i><b>3.14.3</b> Distribution function associated with a compound distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="3.15" data-path="chap2.html"><a href="chap2.html#RiskTransformations"><i class="fa fa-check"></i><b>3.15</b> Transformations of risks and conventional damage clauses</a>
+<ul>
+<li class="chapter" data-level="3.15.1" data-path="chap2.html"><a href="chap2.html#concept"><i class="fa fa-check"></i><b>3.15.1</b> Concept</a></li>
+<li class="chapter" data-level="3.15.2" data-path="chap2.html"><a href="chap2.html#DecOblig"><i class="fa fa-check"></i><b>3.15.2</b> The compulsory overdraft</a></li>
+<li class="chapter" data-level="3.15.3" data-path="chap2.html"><a href="chap2.html#the-deductible"><i class="fa fa-check"></i><b>3.15.3</b> The deductible</a></li>
+<li class="chapter" data-level="3.15.4" data-path="chap2.html"><a href="chap2.html#upper-limit-of-indemnity"><i class="fa fa-check"></i><b>3.15.4</b> (Upper) limit of indemnity</a></li>
+<li class="chapter" data-level="3.15.5" data-path="chap2.html"><a href="chap2.html#technical-consequence-censored-data"><i class="fa fa-check"></i><b>3.15.5</b> Technical consequence: censored data</a></li>
+<li class="chapter" data-level="3.15.6" data-path="chap2.html"><a href="chap2.html#poissons-distribution-and-damage-clauses"><i class="fa fa-check"></i><b>3.15.6</b> Poisson’s distribution and damage clauses</a></li>
+<li class="chapter" data-level="3.15.7" data-path="chap2.html"><a href="chap2.html#perverse-effects-of-contractual-damage-clauses"><i class="fa fa-check"></i><b>3.15.7</b> Perverse effects of contractual damage clauses</a></li>
+</ul></li>
+<li class="chapter" data-level="3.16" data-path="chap2.html"><a href="chap2.html#exercises"><i class="fa fa-check"></i><b>3.16</b> Exercises</a></li>
+<li class="chapter" data-level="3.17" data-path="chap2.html"><a href="chap2.html#bibliographical-notes"><i class="fa fa-check"></i><b>3.17</b> Bibliographical notes</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="chap3.html"><a href="chap3.html"><i class="fa fa-check"></i><b>4</b> Pure Premium</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="chap3.html"><a href="chap3.html#introduction-1"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+<li class="chapter" data-level="4.2" data-path="chap3.html"><a href="chap3.html#pure-premium-and-mathematical-expectation"><i class="fa fa-check"></i><b>4.2</b> Pure Premium and Mathematical Expectation</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="chap3.html"><a href="chap3.html#mathematical-expectation"><i class="fa fa-check"></i><b>4.2.1</b> Mathematical Expectation</a></li>
+<li class="chapter" data-level="4.2.2" data-path="chap3.html"><a href="chap3.html#probabilities-and-expectations-of-indicators"><i class="fa fa-check"></i><b>4.2.2</b> Probabilities and Expectations of Indicators</a></li>
+<li class="chapter" data-level="4.2.3" data-path="chap3.html"><a href="chap3.html#determination-of-the-pure-premium"><i class="fa fa-check"></i><b>4.2.3</b> Determination of the Pure Premium</a></li>
+<li class="chapter" data-level="4.2.4" data-path="chap3.html"><a href="chap3.html#mean-squared-error-is-it-a-must"><i class="fa fa-check"></i><b>4.2.4</b> Mean Squared Error, Is It a Must?</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="chap3.html"><a href="chap3.html#variance"><i class="fa fa-check"></i><b>4.3</b> Variance</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="chap3.html"><a href="chap3.html#definition-5"><i class="fa fa-check"></i><b>4.3.1</b> Definition</a></li>
+<li class="chapter" data-level="4.3.2" data-path="chap3.html"><a href="chap3.html#actuarial-interpretation"><i class="fa fa-check"></i><b>4.3.2</b> Actuarial Interpretation</a></li>
+<li class="chapter" data-level="4.3.3" data-path="chap3.html"><a href="chap3.html#some-examples"><i class="fa fa-check"></i><b>4.3.3</b> Some Examples</a></li>
+<li class="chapter" data-level="4.3.4" data-path="chap3.html"><a href="chap3.html#properties"><i class="fa fa-check"></i><b>4.3.4</b> Properties</a></li>
+<li class="chapter" data-level="4.3.5" data-path="chap3.html"><a href="chap3.html#variance-of-common-distributions"><i class="fa fa-check"></i><b>4.3.5</b> Variance of Common Distributions</a></li>
+<li class="chapter" data-level="4.3.6" data-path="chap3.html"><a href="chap3.html#variance-of-composite-distributions"><i class="fa fa-check"></i><b>4.3.6</b> Variance of Composite Distributions</a></li>
+<li class="chapter" data-level="4.3.7" data-path="chap3.html"><a href="chap3.html#coefficient-of-variation-and-risk-pooling"><i class="fa fa-check"></i><b>4.3.7</b> Coefficient of Variation and Risk Pooling</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="chap3.html"><a href="chap3.html#insurance-and-bienaymé-chebyshev-inequality"><i class="fa fa-check"></i><b>4.4</b> Insurance and Bienaymé-Chebyshev Inequality</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="chap3.html"><a href="chap3.html#markovs-inequality"><i class="fa fa-check"></i><b>4.4.1</b> Markov’s Inequality</a></li>
+<li class="chapter" data-level="4.4.2" data-path="chap3.html"><a href="chap3.html#bienaymé-chebyshev-inequality"><i class="fa fa-check"></i><b>4.4.2</b> Bienaymé-Chebyshev Inequality</a></li>
+<li class="chapter" data-level="4.4.3" data-path="chap3.html"><a href="chap3.html#actuarial-interpretation-of-the-bienaymé-chebyshev-inequality"><i class="fa fa-check"></i><b>4.4.3</b> Actuarial Interpretation of the Bienaymé-Chebyshev Inequality</a></li>
+<li class="chapter" data-level="4.4.4" data-path="chap3.html"><a href="chap3.html#conservative-nature-of-the-bienaymé-chebyshev-inequality"><i class="fa fa-check"></i><b>4.4.4</b> Conservative Nature of the Bienaymé-Chebyshev Inequality</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="chap3.html"><a href="chap3.html#insurance-and-law-of-large-numbers"><i class="fa fa-check"></i><b>4.5</b> Insurance and Law of Large Numbers</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="chap3.html"><a href="chap3.html#convergence-in-probability"><i class="fa fa-check"></i><b>4.5.1</b> Convergence in Probability</a></li>
+<li class="chapter" data-level="4.5.2" data-path="chap3.html"><a href="chap3.html#convergence-of-average-claim-amount-per-policy-to-the-pure-premium"><i class="fa fa-check"></i><b>4.5.2</b> Convergence of Average Claim Amount per Policy to the Pure Premium</a></li>
+<li class="chapter" data-level="4.5.3" data-path="chap3.html"><a href="chap3.html#case-of-flat-indemnity"><i class="fa fa-check"></i><b>4.5.3</b> Case of Flat Indemnity</a></li>
+<li class="chapter" data-level="4.5.4" data-path="chap3.html"><a href="chap3.html#case-of-indemnity-compensation"><i class="fa fa-check"></i><b>4.5.4</b> Case of Indemnity Compensation</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="chap3.html"><a href="chap3.html#characteristic-functions"><i class="fa fa-check"></i><b>4.6</b> Characteristic Functions</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="chap3.html"><a href="chap3.html#probability-generating-function"><i class="fa fa-check"></i><b>4.6.1</b> Probability Generating Function</a></li>
+<li class="chapter" data-level="4.6.2" data-path="chap3.html"><a href="chap3.html#laplace-transform"><i class="fa fa-check"></i><b>4.6.2</b> Laplace Transform</a></li>
+<li class="chapter" data-level="4.6.3" data-path="chap3.html"><a href="chap3.html#moment-generating-function"><i class="fa fa-check"></i><b>4.6.3</b> Moment Generating Function</a></li>
+<li class="chapter" data-level="4.6.4" data-path="chap3.html"><a href="chap3.html#hazard-rate"><i class="fa fa-check"></i><b>4.6.4</b> Hazard Rate</a></li>
+<li class="chapter" data-level="4.6.5" data-path="chap3.html"><a href="chap3.html#stop-loss-premiums"><i class="fa fa-check"></i><b>4.6.5</b> Stop-Loss Premiums</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="chap3.html"><a href="chap3.html#Hetero"><i class="fa fa-check"></i><b>4.7</b> Heterogeneity and Mixtures</a></li>
+<li class="chapter" data-level="4.8" data-path="chap3.html"><a href="chap3.html#context"><i class="fa fa-check"></i><b>4.8</b> Context</a>
+<ul>
+<li class="chapter" data-level="4.8.1" data-path="chap3.html"><a href="chap3.html#a-simple-example"><i class="fa fa-check"></i><b>4.8.1</b> A Simple Example…</a></li>
+<li class="chapter" data-level="4.8.2" data-path="chap3.html"><a href="chap3.html#poisson-mixtures"><i class="fa fa-check"></i><b>4.8.2</b> Poisson Mixtures</a></li>
+<li class="chapter" data-level="4.8.3" data-path="chap3.html"><a href="chap3.html#shakeds-theorem"><i class="fa fa-check"></i><b>4.8.3</b> Shaked’s Theorem</a></li>
+<li class="chapter" data-level="4.8.4" data-path="chap3.html"><a href="chap3.html#composite-mixed-poisson-distributions"><i class="fa fa-check"></i><b>4.8.4</b> Composite Mixed Poisson Distributions</a></li>
+<li class="chapter" data-level="4.8.5" data-path="chap3.html"><a href="chap3.html#exponential-mixtures"><i class="fa fa-check"></i><b>4.8.5</b> Exponential Mixtures</a></li>
+<li class="chapter" data-level="4.8.6" data-path="chap3.html"><a href="chap3.html#identifiability-of-exponential-mixtures"><i class="fa fa-check"></i><b>4.8.6</b> Identifiability of Exponential Mixtures</a></li>
+</ul></li>
+<li class="chapter" data-level="4.9" data-path="chap3.html"><a href="chap3.html#pure-premium-in-segmented-universe"><i class="fa fa-check"></i><b>4.9</b> Pure Premium in Segmented Universe</a>
+<ul>
+<li class="chapter" data-level="4.9.1" data-path="chap3.html"><a href="chap3.html#segmentation-techniques"><i class="fa fa-check"></i><b>4.9.1</b> Segmentation Techniques</a></li>
+<li class="chapter" data-level="4.9.2" data-path="chap3.html"><a href="chap3.html#conditional-expectation"><i class="fa fa-check"></i><b>4.9.2</b> Conditional Expectation</a></li>
+<li class="chapter" data-level="4.9.3" data-path="chap3.html"><a href="chap3.html#customization-of-premiums"><i class="fa fa-check"></i><b>4.9.3</b> Customization of Premiums</a></li>
+<li class="chapter" data-level="4.9.4" data-path="chap3.html"><a href="chap3.html#segmentation-pooling-and-solidarity"><i class="fa fa-check"></i><b>4.9.4</b> Segmentation, Pooling, and Solidarity</a></li>
+<li class="chapter" data-level="4.9.5" data-path="chap3.html"><a href="chap3.html#DeWit"><i class="fa fa-check"></i><b>4.9.5</b> Formalization of the Segmentation Concept</a></li>
+<li class="chapter" data-level="4.9.6" data-path="chap3.html"><a href="chap3.html#drawbacks-resulting-from-extensive-segmentation"><i class="fa fa-check"></i><b>4.9.6</b> Drawbacks Resulting from Extensive Segmentation</a></li>
+<li class="chapter" data-level="4.9.7" data-path="chap3.html"><a href="chap3.html#segmentation-and-information-asymmetry"><i class="fa fa-check"></i><b>4.9.7</b> Segmentation and Information Asymmetry</a></li>
+</ul></li>
+<li class="chapter" data-level="4.10" data-path="chap3.html"><a href="chap3.html#exercises-1"><i class="fa fa-check"></i><b>4.10</b> Exercises</a></li>
+<li class="chapter" data-level="4.11" data-path="chap3.html"><a href="chap3.html#bibliographical-notes-1"><i class="fa fa-check"></i><b>4.11</b> Bibliographical notes</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="chap4.html"><a href="chap4.html"><i class="fa fa-check"></i><b>5</b> Net Premium</a></li>
+<li class="chapter" data-level="6" data-path="chap5.html"><a href="chap5.html"><i class="fa fa-check"></i><b>6</b> Measurement and Comparison of Risks</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="chap5.html"><a href="chap5.html#introduction-2"><i class="fa fa-check"></i><b>6.1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="chap5.html"><a href="chap5.html#measuring-risk-an-essential-task-for-actuaries"><i class="fa fa-check"></i><b>6.1.1</b> Measuring Risk: An Essential Task for Actuaries</a></li>
+<li class="chapter" data-level="6.1.2" data-path="chap5.html"><a href="chap5.html#comparing-risks-another-specialty-of-actuaries"><i class="fa fa-check"></i><b>6.1.2</b> Comparing Risks: Another Specialty of Actuaries</a></li>
+<li class="chapter" data-level="6.1.3" data-path="chap5.html"><a href="chap5.html#measuring-and-then-comparing-risks-two-related-tasks"><i class="fa fa-check"></i><b>6.1.3</b> Measuring and then Comparing Risks, Two Related Tasks</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="chap5.html"><a href="chap5.html#risk-measures"><i class="fa fa-check"></i><b>6.2</b> Risk Measures</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="chap5.html"><a href="chap5.html#definition-14"><i class="fa fa-check"></i><b>6.2.1</b> Definition</a></li>
+<li class="chapter" data-level="6.2.2" data-path="chap5.html"><a href="chap5.html#coherence"><i class="fa fa-check"></i><b>6.2.2</b> Coherence</a></li>
+<li class="chapter" data-level="6.2.3" data-path="chap5.html"><a href="chap5.html#value-at-risk"><i class="fa fa-check"></i><b>6.2.3</b> Value-at-Risk</a></li>
+<li class="chapter" data-level="6.2.4" data-path="chap5.html"><a href="chap5.html#tail-var-and-related-measures"><i class="fa fa-check"></i><b>6.2.4</b> Tail-VaR and Related Measures</a></li>
+<li class="chapter" data-level="6.2.5" data-path="chap5.html"><a href="chap5.html#esscher-risk-measure"><i class="fa fa-check"></i><b>6.2.5</b> Esscher Risk Measure</a></li>
+<li class="chapter" data-level="6.2.6" data-path="chap5.html"><a href="chap5.html#wang-risk-measures"><i class="fa fa-check"></i><b>6.2.6</b> Wang Risk Measures</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="chap5.html"><a href="chap5.html#main-properties-of-wangs-risk-measures"><i class="fa fa-check"></i><b>6.3</b> Main Properties of Wang’s Risk Measures</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="chap5.html"><a href="chap5.html#concavity-of-the-distortion-function"><i class="fa fa-check"></i><b>6.3.1</b> Concavity of the Distortion Function</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="chap5.html"><a href="chap5.html#uniform-comparison-of-var"><i class="fa fa-check"></i><b>6.4</b> Uniform Comparison of VaR</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="chap5.html"><a href="chap5.html#definition-19"><i class="fa fa-check"></i><b>6.4.1</b> Definition</a></li>
+<li class="chapter" data-level="6.4.2" data-path="chap5.html"><a href="chap5.html#equivalent-conditions"><i class="fa fa-check"></i><b>6.4.2</b> Equivalent Conditions</a></li>
+<li class="chapter" data-level="6.4.3" data-path="chap5.html"><a href="chap5.html#properties-3"><i class="fa fa-check"></i><b>6.4.3</b> Properties</a></li>
+<li class="chapter" data-level="6.4.4" data-path="chap5.html"><a href="chap5.html#hazard-rate-and-ph-risk-measure"><i class="fa fa-check"></i><b>6.4.4</b> Hazard Rate and PH Risk Measure</a></li>
+<li class="chapter" data-level="6.4.5" data-path="chap5.html"><a href="chap5.html#likelihood-ratio-and-esscher-principle"><i class="fa fa-check"></i><b>6.4.5</b> Likelihood Ratio and Esscher Principle</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="chap5.html"><a href="chap5.html#uniform-comparison-of-tvars"><i class="fa fa-check"></i><b>6.5</b> Uniform Comparison of TVaRs</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="chap5.html"><a href="chap5.html#definition-21"><i class="fa fa-check"></i><b>6.5.1</b> Definition</a></li>
+<li class="chapter" data-level="6.5.2" data-path="chap5.html"><a href="chap5.html#equivalent-conditions-1"><i class="fa fa-check"></i><b>6.5.2</b> Equivalent Conditions</a></li>
+</ul></li>
+<li class="chapter" data-level="6.9" data-path="chap5.html"><a href="chap5.html#notes-bibliographiques"><i class="fa fa-check"></i><b>6.9</b> Notes bibliographiques</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="chap6.html"><a href="chap6.html"><i class="fa fa-check"></i><b>7</b> Collective Model</a></li>
+<li class="chapter" data-level="8" data-path="chap7.html"><a href="chap7.html"><i class="fa fa-check"></i><b>8</b> Solvency</a></li>
+<li class="chapter" data-level="9" data-path="chap8.html"><a href="chap8.html"><i class="fa fa-check"></i><b>9</b> Multiple Risks</a></li>
+<li class="chapter" data-level="10" data-path="chap9.html"><a href="chap9.html"><i class="fa fa-check"></i><b>10</b> Prior Ratemaking</a></li>
+<li class="chapter" data-level="11" data-path="chap10.html"><a href="chap10.html"><i class="fa fa-check"></i><b>11</b> Credibility</a></li>
+<li class="chapter" data-level="12" data-path="chap11.html"><a href="chap11.html"><i class="fa fa-check"></i><b>12</b> Bonus-Malus</a></li>
+<li class="chapter" data-level="13" data-path="chap12.html"><a href="chap12.html"><i class="fa fa-check"></i><b>13</b> Economics of Insurance</a></li>
+<li class="chapter" data-level="14" data-path="chap13.html"><a href="chap13.html"><i class="fa fa-check"></i><b>14</b> Claims Reserving</a></li>
+<li class="chapter" data-level="15" data-path="chap14.html"><a href="chap14.html"><i class="fa fa-check"></i><b>15</b> Large Risks</a></li>
+<li class="chapter" data-level="16" data-path="chap15.html"><a href="chap15.html"><i class="fa fa-check"></i><b>16</b> Monte Carlo</a></li>
+<li class="chapter" data-level="17" data-path="chap16.html"><a href="chap16.html"><i class="fa fa-check"></i><b>17</b> Conclusion</a></li>
+<li class="chapter" data-level="" data-path="postface.html"><a href="postface.html"><i class="fa fa-check"></i>Postface</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Non Life Insurance Mathematics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="chap5" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Measurement and Comparison of Risks<a href="chap5.html#chap5" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction-2" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Introduction<a href="chap5.html#introduction-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="measuring-risk-an-essential-task-for-actuaries" class="section level3 hasAnchor" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Measuring Risk: An Essential Task for Actuaries<a href="chap5.html#measuring-risk-an-essential-task-for-actuaries" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Measuring risk is undoubtedly one of the most common tasks for actuaries. In fact, it is at the very essence of the profession. Among the measures of risk are, of course, premiums: the amount of the premium must always be proportionate to the risk, thus reflecting the danger associated with the risk transferred to the insurer. Other risk measures attempt to assess the level of economic capital. This is the capital that the company must have in order to be able to compensate for losses. As we saw in Chapter <a href="#chap05"><strong>??</strong></a>, this capital can be determined by limiting the probability of ruin of the insurer to a sufficiently low level. This is the approach based on Value-at-Risk, which we will detail later. We will see that this approach is not without criticism. Indeed, it does not take into account the magnitude of the deficit when ruin occurs. To address this issue, we will turn to tail expectation or Tail Value-at-Risk. This involves determining the capital in a way that can cover the worst scenarios on average.</p>
+</div>
+<div id="comparing-risks-another-specialty-of-actuaries" class="section level3 hasAnchor" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Comparing Risks: Another Specialty of Actuaries<a href="chap5.html#comparing-risks-another-specialty-of-actuaries" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Throughout history, actuaries have also been concerned with comparing risks. To do this, they have often relied on scalar measures of the inherent danger of a risk <span class="math inline">\(X\)</span>, considering one risk more advantageous than another if the value taken by this measure on this risk is the lowest. Of course, summarizing the entire behavior of a risk in a single scalar measure, no matter how well chosen, often leads to very basic comparisons. This is why actuaries have felt the need to use more sophisticated methods of comparison, some inspired by the expected utility theory of economists (which we will present in a chapter dedicated to economic models of insurance) and others by the simultaneous use of several risk measures.</p>
+</div>
+<div id="measuring-and-then-comparing-risks-two-related-tasks" class="section level3 hasAnchor" number="6.1.3">
+<h3><span class="header-section-number">6.1.3</span> Measuring and then Comparing Risks, Two Related Tasks<a href="chap5.html#measuring-and-then-comparing-risks-two-related-tasks" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>This chapter will be divided into two main parts. In the first part, we will present risk measures. These are measures that capture the capital needed to cover risks. The second part of the chapter will be devoted to comparing risks using the risk measures we have defined. Rather than basing the comparison on a single measure (which has the advantage of generating a total order but the disadvantage of lacking subtlety), we will consider several risk measures simultaneously, allowing for a very fine comparison of the random variables at hand.</p>
+<p>Since the risks that actuaries face usually have a significant probability mass at the origin (equal to the probability that the policy organizing the risk transfer does not lead to any loss), we must pay special attention to cases where the distribution functions involved are not continuous. This probability mass at zero greatly complicates technical developments and invalidates many results that are valid when the distribution functions involved are continuous.</p>
+</div>
+</div>
+<div id="risk-measures" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Risk Measures<a href="chap5.html#risk-measures" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="definition-14" class="section level3 hasAnchor" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Definition<a href="chap5.html#definition-14" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s start by precisely defining what is meant by a risk measure in this chapter.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-1" class="definition"><strong>Definition 6.1  </strong></span>A risk measure is a functional <span class="math inline">\(\varrho\)</span> that assigns a positive number, denoted <span class="math inline">\(\varrho[X]\)</span>, possibly infinity, to a risk <span class="math inline">\(X\)</span>.</p>
+</div>
+<p>The idea is that <span class="math inline">\(\varrho\)</span> quantifies the level of inherent danger of the risk <span class="math inline">\(X\)</span>: large values of <span class="math inline">\(\varrho[X]\)</span> will indicate that <span class="math inline">\(X\)</span> is “dangerous” (in a sense to be specified).</p>
+<p>Henceforth, we consider <span class="math inline">\(\varrho[X]\)</span> as the amount of capital that the company must have in order to face a financial loss of amount <span class="math inline">\(X\)</span>. More precisely, as long as <span class="math inline">\(\varrho\)</span> is normalized, i.e.
+<span class="math display">\[
+\varrho[0]=0,
+\]</span>
+<span class="math inline">\(\varrho[X]\)</span> is the minimum amount that, added to the loss <span class="math inline">\(X\)</span> at the beginning of the period, makes the coverage of <span class="math inline">\(X\)</span> “acceptable”. The company must therefore have the amount <span class="math inline">\(\varrho[X]\)</span>, which is partly composed of the premiums paid by the insured and, for the rest, by the contribution of capital from the shareholders.</p>
+</div>
+<div id="coherence" class="section level3 hasAnchor" number="6.2.2">
+<h3><span class="header-section-number">6.2.2</span> Coherence<a href="chap5.html#coherence" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>It is generally accepted that a risk measure must satisfy certain conditions to be useful in applications. This leads to the notion of a coherent risk measure <span class="citation">(<a href="#ref-artzner1999coherent" role="doc-biblioref"><strong>artzner1999coherent?</strong></a>)</span>.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-2" class="definition"><strong>Definition 6.2  </strong></span>A risk measure is said to be coherent when it possesses the following properties:</p>
+<ul>
+<li>(<em>Axiom 1 (translation invariance)</em>)
+<span class="math inline">\(\varrho[X+c]=\varrho[X]+c\)</span> for any risk <span class="math inline">\(X\)</span> and any constant <span class="math inline">\(c\)</span>. Translation invariance guarantees that
+<span class="math display">\[
+\varrho\big[X-\varrho[X]\big]=0.
+\]</span>
+Moreover, regardless of the constant <span class="math inline">\(c\)</span>, we should have
+<span class="math display">\[
+\varrho[c]=c.
+\]</span></li>
+<li>(<em>Axiom 2 (sub-additivity)</em>)
+<span class="math inline">\(\varrho[X+Y]\leq \varrho[X]+\varrho[Y]\)</span> for any risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. Sub-additivity reflects risk reduction through diversification. The effect of diversification is then measured by
+<span class="math display">\[
+\varrho[X]+\varrho[Y]-\varrho[X+Y]\geq 0,
+\]</span>
+which represents the capital economy achieved by simultaneously covering risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. Additivity is said to occur when there is equality, i.e. <span class="math inline">\(\varrho[X+Y]=\varrho[X]+\varrho[Y]\)</span> for any risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. In this case, the effect of diversification is null.</li>
+<li>(<em>Axiom 3 (homogeneity):</em>)
+<span class="math inline">\(\varrho[cX]=c\varrho[X]\)</span> for any risk <span class="math inline">\(X\)</span> and any positive constant <span class="math inline">\(c\)</span>.
+Homogeneity is often associated with a certain invariance with respect to monetary units (if we measure financial loss in millions of euros rather than thousands, the risk is not changed and the capital undergoes the same transformation). Homogeneity can also be seen as a limiting case of sub-additivity, when no diversification is possible. Indeed, if we assume that <span class="math inline">\(c\)</span> is a positive integer, the homogeneity property ensures that
+<span class="math display">\[\begin{eqnarray*}
+\varrho[cX]&amp;=&amp;\varrho[\underbrace{X+X+\ldots+X}_{c\text{ terms}}]\\
+&amp;=&amp;\varrho[X]+\varrho[X]+\ldots+\varrho[X]=c\varrho[X].
+\end{eqnarray*}\]</span></li>
+<li>(<em>Axiom 4 (Monotonicity)</em>)
+<span class="math inline">\(\Pr[X\leq Y]=1\Rightarrow\varrho[X]\leq\varrho[Y]\)</span> for any risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>.
+This property expresses the fact that more capital is needed when the financial loss becomes more severe. It is therefore very natural.
+\end{description}</li>
+</ul>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-3" class="remark"><em>Remark</em>. </span>In the context of risk theory, risk measures must also include a loading for safety, meaning that they must satisfy the inequality
+<span class="math display">\[
+\varrho[X]\geq\mathbb{E}[X]
+\]</span>
+for any risk <span class="math inline">\(X\)</span>. The minimum capital must exceed the expected loss, otherwise ruin becomes certain (under the conditions of the law of large numbers).</p>
+</div>
+</div>
+<div id="value-at-risk" class="section level3 hasAnchor" number="6.2.3">
+<h3><span class="header-section-number">6.2.3</span> Value-at-Risk<a href="chap5.html#value-at-risk" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="definition-15" class="section level4 hasAnchor" number="6.2.3.1">
+<h4><span class="header-section-number">6.2.3.1</span> Definition<a href="chap5.html#definition-15" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Over the past decade, quantiles have been widely used in risk management, under the now established term Value-at-Risk. The use of this risk measure has been institutionalized by the regulatory authorities in the banking sector in the successive Basel accords.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-4" class="definition"><strong>Definition 6.3  </strong></span>Given a risk <span class="math inline">\(X\)</span> and a probability level <span class="math inline">\(\alpha\in(0,1)\)</span>, the corresponding VaR, denoted <span class="math inline">\({\text{VaR}}[X;\alpha]\)</span>, is the <span class="math inline">\(\alpha\)</span> quantile of <span class="math inline">\(X\)</span>. Formally,
+<span class="math display">\[
+{\text{VaR}}[X;\alpha]=F_X^{-1}(\alpha).
+\]</span></p>
+</div>
+</div>
+<div id="var-is-translation-invariant-and-homogeneous" class="section level4 hasAnchor" number="6.2.3.2">
+<h4><span class="header-section-number">6.2.3.2</span> VaR is Translation Invariant and Homogeneous<a href="chap5.html#var-is-translation-invariant-and-homogeneous" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The fact that VaR enjoys these two properties is a direct consequence of the following results, guaranteeing that the VaR of a function <span class="math inline">\(g\)</span> of the risk <span class="math inline">\(X\)</span> is obtained by transforming the VaR of <span class="math inline">\(X\)</span> by the same function.</p>
+<div class="lemma">
+<p><span id="lem:InvGQuant" class="lemma"><strong>Lemma 6.1  </strong></span>For any <span class="math inline">\(p\in (0,1)\)</span>,</p>
+<ol style="list-style-type: decimal">
+<li>if <span class="math inline">\(g\)</span> is a strictly increasing function and left-continuous,
+<span class="math display">\[
+F_{g \left( X\right) }^{-1}\left( p\right) =g \left(
+F_{X}^{-1}\left( p\right) \right).
+\]</span></li>
+<li>if <span class="math inline">\(g\)</span> is a strictly decreasing function, right-continuous, and if <span class="math inline">\(F_{X}\)</span> is bijective,
+<span class="math display">\[
+F_{g \left( X\right) }^{-1}\left( p\right)
+=g \left( F_{X}^{-1}\left( 1-p\right) \right).
+\]</span></li>
+</ol>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-5" class="proof"><em>Proof</em>. </span>We only prove (1); the reasoning leading to (2) is analogous. If <span class="math inline">\(g\)</span> is strictly increasing and left-continuous, then, for any
+<span class="math inline">\(0&lt;p&lt;1\)</span>,
+<span class="math display">\[\begin{equation*}
+F_{g \left( X\right) }^{-1}\left( p\right) \leq x\Leftrightarrow
+p\leq F_{g \left( X\right) }\left( x\right).
+\end{equation*}\]</span>
+Since <span class="math inline">\(g\)</span> is left-continuous,
+<span class="math display">\[
+g \left(z\right) \leq x \Leftrightarrow
+z\leq \sup \left\{ y\in\mathbb{R}|g\left( y\right) \leq x\right\},
+\]</span>
+for any <span class="math inline">\(x,z\)</span>. Thus
+<span class="math display">\[\begin{equation*}
+p\leq F_{g \left( X\right) }\left( x\right) \Leftrightarrow
+p\leq F_{X}\left( \sup \left\{ y\in\mathbb{R}|g \left( y\right) \leq
+x\right\} \right).
+\end{equation*}\]</span>
+If <span class="math inline">\(\sup \left\{ y\in\mathbb{R}|g \left( y\right) \leq x\right\}\)</span> is finite, the desired equivalence is obtained, since
+<span class="math display">\[\begin{equation*}
+p\leq F_{X}\left( \sup \left\{ y\in\mathbb{R}|g \left( y\right) \leq
+x\right\} \right) \Leftrightarrow F_{g \left(
+X\right) }^{-1}\left( p\right) \leq g \left(
+F_{X}^{-1}\left( p\right) \right),
+\end{equation*}\]</span>
+using the fact that <span class="math inline">\(p\leq F_{X}\left( z\right)\)</span> is equivalent to <span class="math inline">\(F_{X}^{-1}\left( z\right) \leq z\)</span>.</p>
+<p>If <span class="math inline">\(\sup \left\{ y\in\mathbb{R}|g \left( y\right) \leq x\right\}\)</span> is infinite, the above equivalence cannot be used, but the result remains valid. Indeed, if <span class="math inline">\(\sup \left\{ y\in\mathbb{R}|g \left(y\right) \leq x\right\} =+\infty\)</span>, the equivalence becomes
+<span class="math display">\[
+p\leq 1\Leftrightarrow F_{X}^{-1}\left( p\right) \leq+\infty.
+\]</span>
+The strict increasing of <span class="math inline">\(g\)</span> and right-continuity allow us to obtain
+<span class="math display">\[\begin{equation*}
+F_{X}^{-1}\left( p\right) \leq \sup \left\{ y\in\mathbb{R}|g \left( y\right) \leq x\right\} \Leftrightarrow g \left(
+F_{X}^{-1}\left( p\right) \right) \leq x,
+\end{equation*}\]</span>%
+and by combining all inequalities, we can write
+<span class="math display">\[\begin{equation*}
+F_{g \left( X\right) }^{-1}\left( p\right) \leq x\Leftrightarrow
+g \left( F_{X}^{-1}\left( p\right) \right)\leq x,
+\end{equation*}\]</span>%
+for any <span class="math inline">\(x\)</span>, which implies <span class="math inline">\(F_{g \left( X\right) }^{-1}\left( p\right) =g \left( F_{X}^{-1}\left( p\right) \right)\)</span> for any <span class="math inline">\(p\)</span>.</p>
+</div>
+<p>Translated into terms of VaR, Lemma <a href="chap5.html#lem:InvGQuant">6.1</a> (1) gives us the following result, showing that VaR is stable under nonlinear increasing transformations.</p>
+<div id="FuncVaR" class="property">
+<p>For any probability level <span class="math inline">\(\alpha\in(0,1)\)</span> and any increasing and continuous function <span class="math inline">\(g\)</span>, we have that
+<span class="math display">\[
+{\text{VaR}}[g(X);\alpha]=g({\text{VaR}}[X;\alpha]).
+\]</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-6" class="proof"><em>Proof</em>. </span>The cumulative distribution function of the random variable <span class="math inline">\(g(X)\)</span> is
+<span class="math display">\[
+F_{g(X)}(t) = \Pr[g(X) \leq t] = \Pr[X \leq g^{-1}(t)] = F_X(g^{-1}(t)).
+\]</span>
+Hence,
+<span class="math display">\[\begin{eqnarray*}
+{\text{VaR}}[g(X);1-\alpha] &amp;=&amp; \inf\{t \in \mathbb{R} \mid F_{g(X)}(t) \geq 1-\alpha\} \\
+&amp;=&amp; \inf\{t \in \mathbb{R} \mid F_X(g^{-1}(t)) \geq 1-\alpha\} \\
+&amp;=&amp; \inf\{t \in \mathbb{R} \mid g^{-1}(t) \geq {\text{VaR}}[X;1-\alpha]\} \\
+&amp;=&amp; \inf\{t \in \mathbb{R} \mid t \geq g({\text{VaR}}[X;1-\alpha])\} \\
+&amp;=&amp; g({\text{VaR}}[X;1-\alpha]),
+\end{eqnarray*}\]</span>
+which completes the proof.</p>
+</div>
+<p>By taking <span class="math inline">\(g(x) = x+c\)</span> and <span class="math inline">\(g(x) = cx\)</span>, it is immediately deduced from this latter property that VaR is invariant under translation and homogeneous.</p>
+</div>
+<div id="var-is-not-subadditive" class="section level4 hasAnchor" number="6.2.3.3">
+<h4><span class="header-section-number">6.2.3.3</span> VaR is not subadditive<a href="chap5.html#var-is-not-subadditive" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The following example illustrates that the VaR of a sum can exceed the sum of the VaRs associated with each of the terms. Thus, the diversification effect is not always positive with VaR, and this risk measure does not consistently favor diversification.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-7" class="example"><strong>Example 6.1  </strong></span>Consider the independent risks <span class="math inline">\(X \sim \mathcal{P}ar(1,1)\)</span> and <span class="math inline">\(Y \sim \mathcal{P}ar(1,1)\)</span>, i.e.
+<span class="math display">\[
+\Pr[X &gt; t] = \Pr[Y &gt; t] = \frac{1}{1+t}, \quad t &gt; 0.
+\]</span>
+Then we have
+<span class="math display">\[
+{\text{VaR}}[X;\alpha] = {\text{VaR}}[Y;\alpha] = \frac{1}{1-\alpha} - 1.
+\]</span>
+Moreover, it can be verified that
+<span class="math display">\[
+\Pr[X+Y \leq t] = 1 - \frac{2}{2+t} + 2\frac{\ln(1+t)}{(2+t)^2}, \quad t &gt; 0.
+\]</span>
+Since
+<span class="math display">\[
+\Pr\big[X+Y \leq 2{\text{VaR}}[X;\alpha]\big] = \alpha - \frac{(1-\alpha)^2}{2}\ln\left(\frac{1+\alpha}{1-\alpha}\right) &lt; \alpha,
+\]</span>
+the inequality
+<span class="math display">\[
+{\text{VaR}}[X;\alpha] + {\text{VaR}}[Y;\alpha] &lt; {\text{VaR}}[X+Y;\alpha]
+\]</span>
+holds for any <span class="math inline">\(\alpha\)</span>, showing that VaR cannot be subadditive in this case.</p>
+</div>
+</div>
+<div id="var-is-monotone" class="section level4 hasAnchor" number="6.2.3.4">
+<h4><span class="header-section-number">6.2.3.4</span> VaR is monotone<a href="chap5.html#var-is-monotone" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Clearly, if <span class="math inline">\(\Pr[X \leq Y] = 1\)</span>, then the inequality
+<span class="math display">\[
+F_X(x) \geq F_Y(x)
+\]</span>
+holds for all <span class="math inline">\(x\)</span>. As a result, the inequality <span class="math inline">\({\text{VaR}}[X;\alpha] \leq {\text{VaR}}[Y;\alpha]\)</span> is satisfied for any probability level <span class="math inline">\(\alpha\)</span>.</p>
+</div>
+</div>
+<div id="tail-var-and-related-measures" class="section level3 hasAnchor" number="6.2.4">
+<h3><span class="header-section-number">6.2.4</span> Tail-VaR and Related Measures<a href="chap5.html#tail-var-and-related-measures" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="definition-16" class="section level4 hasAnchor" number="6.2.4.1">
+<h4><span class="header-section-number">6.2.4.1</span> Definition<a href="chap5.html#definition-16" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The VaR at level <span class="math inline">\(\alpha\)</span> informs about the loss level that will be exceeded in at most <span class="math inline">\(1-\alpha\%\)</span> of cases. However, it does not provide any information about what happens when the VaR is exceeded. On the contrary, the Tail VaR gives an idea of what happens when the VaR at the same level is exceeded. This notion is formally defined below.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-8" class="definition"><strong>Definition 6.4  </strong></span>The Tail Value-at-Risk at probability level <span class="math inline">\(\alpha\)</span>, denoted as <span class="math inline">\({\text{TVaR}}[X;\alpha]\)</span>, is defined as
+<span class="math display">\[
+{\text{TVaR}}[X;\alpha] = \frac{1}{1-\alpha} \int_{\alpha}^{1} {\text{VaR}}[X;\xi] \, d\xi.
+\]</span></p>
+</div>
+<p>In light of this definition, the Tail VaR appears as the average of VaRs at levels higher than <span class="math inline">\(\alpha\)</span>.</p>
+<div class="remark">
+<p><span id="unlabeled-div-9" class="remark"><em>Remark</em>. </span>It is interesting to note that there exists a cumulative distribution function <span class="math inline">\(\widetilde{F}_X\)</span>, called the Hardy-Littlewood transform of <span class="math inline">\(F_X\)</span>, such that
+<span class="math display">\[
+\widetilde{F}_X^{-1}(\alpha) = {\text{TVaR}}[X;\alpha].
+\]</span>
+If we denote <span class="math inline">\(\widetilde{X}\)</span> as a random variable with cumulative distribution function <span class="math inline">\(\widetilde{F}_X\)</span>, then
+<span class="math display">\[
+{\text{TVaR}}[X;\alpha] = {\text{VaR}}[\widetilde{X};\alpha].
+\]</span>
+Thus, the Tail VaR of a risk <span class="math inline">\(X\)</span> is the VaR of the Hardy-Littlewood transform of <span class="math inline">\(X\)</span>.</p>
+</div>
+</div>
+<div id="tvar-contains-a-safety-loading" class="section level4 hasAnchor" number="6.2.4.2">
+<h4><span class="header-section-number">6.2.4.2</span> TVaR Contains a Safety Loading<a href="chap5.html#tvar-contains-a-safety-loading" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Clearly, <span class="math inline">\({\text{TVaR}}[X;0] = \mathbb{E}[X]\)</span>. Furthermore, we can easily see that
+<span class="math display" id="eq:TVaR">\[\begin{equation}
+{\text{TVaR}}[X;\alpha] = \frac{1}{1-\alpha} \left\{ \mathbb{E}[X] - \int_0^{\alpha} {\text{VaR}}[X;\xi] \, d\xi \right\}. \tag{6.1}
+\end{equation}\]</span>
+It follows readily from <a href="chap5.html#eq:TVaR">(6.1)</a> that the Tail Value-at-Risk is a non-decreasing function of the level <span class="math inline">\(\alpha\)</span>. Indeed,
+<span class="math display">\[
+\frac{d}{d\alpha} {\text{TVaR}}[X;\alpha] = \frac{{\text{TVaR}}[X;\alpha]}{1-\alpha} - \frac{{\text{VaR}}[X;\alpha]}{1-\alpha}.
+\]</span>
+Since <span class="math inline">\(\alpha \mapsto {\text{VaR}}[X;\alpha]\)</span> is a non-decreasing function,
+<span class="math display">\[
+{\text{TVaR}}[X;\alpha] = \frac{1}{1-\alpha} \int_{\alpha}^{1} \underbrace{{\text{VaR}}[X;\xi]}_{\geq {\text{VaR}}[X;\alpha]} \, d\xi \geq {\text{VaR}}[X;\alpha],
+\]</span>
+which guarantees <span class="math inline">\(\frac{d}{d\alpha} {\text{TVaR}}[X;\alpha] \geq 0\)</span>, and
+<span class="math display">\[
+{\text{TVaR}}[X;\alpha] \geq {\text{TVaR}}[X;0] = \mathbb{E}[X].
+\]</span>
+Thus, the Tail VaR always contains a safety loading.</p>
+</div>
+<div id="some-risk-measures-related-to-tvar" class="section level4 hasAnchor" number="6.2.4.3">
+<h4><span class="header-section-number">6.2.4.3</span> Some Risk Measures Related to TVaR<a href="chap5.html#some-risk-measures-related-to-tvar" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>This subsection deals with some risk measures closely related to TVaR, such as Conditional Tail Expectation (CTE), Conditional VaR, and Expected Shortfall.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-10" class="definition"><strong>Definition 6.5  </strong></span>Conditional Tail Expectation at probability level <span class="math inline">\(\alpha\)</span>, denoted as <span class="math inline">\({\text{CTE}}[X;\alpha]\)</span>, represents the expected loss given that the VaR at level <span class="math inline">\(\alpha\)</span> is exceeded, i.e.
+<span class="math display">\[
+{\text{CTE}}[X;\alpha] = \mathbb{E}\Big[X \Big| X &gt; {\text{VaR}}[X;\alpha]\Big].
+\]</span></p>
+</div>
+<p>This is the mathematical transcription of the intuitive concept of the “average loss in the worst <span class="math inline">\(1-\alpha\%\)</span> of cases.”</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-11" class="definition"><strong>Definition 6.6  </strong></span>Conditional VaR at probability level <span class="math inline">\(\alpha\)</span>, denoted as <span class="math inline">\({\text{CVaR}}[X;\alpha]\)</span>, is the average value of losses that exceed VaR. In other words, it represents the average excess loss beyond VaR, or equivalently
+<span class="math display">\[\begin{eqnarray*}
+{\text{CVaR}}[X;\alpha] &amp;=&amp; \mathbb{E}\Big[X - {\text{VaR}}[X;\alpha] \Big| X &gt; {\text{VaR}}[X;\alpha]\Big] \\
+&amp;=&amp; e_X\big({\text{VaR}}[X;\alpha]\big) \\
+&amp;=&amp; {\text{CTE}}[X;\alpha] - {\text{VaR}}[X;\alpha].
+\end{eqnarray*}\]</span></p>
+</div>
+<div class="definition">
+<p><span id="def:unlabeled-div-12" class="definition"><strong>Definition 6.7  </strong></span>Expected Shortfall at probability level <span class="math inline">\(\alpha\)</span>, denoted as <span class="math inline">\({\text{ES}}[X;\alpha]\)</span>, is nothing but the stop-loss premium with a retention fixed at <span class="math inline">\({\text{VaR}}[X;\alpha]\)</span>:
+<span class="math display">\[
+{\text{ES}}[X;\alpha] = \mathbb{E}\big[(X - {\text{VaR}}[X;\alpha])_+\big] = \pi_X({\text{VaR}}[X;\alpha]).
+\]</span></p>
+</div>
+<p>The following result explains the relationships between these different risk measures.</p>
+<div id="T1" class="property">
+<p>For any probability level <span class="math inline">\(\alpha\in(0,1)\)</span>, the following identities hold:
+<span class="math display" id="eq:JanRel2" id="eq:JanRel1">\[\begin{eqnarray}
+{\text{TVaR}}[X;\alpha] &amp;=&amp; {\text{VaR}}[X;\alpha] + \frac{1}{1-\alpha} {\text{ES}}[X;\alpha], \tag{6.2} \\
+{\text{CTE}}[X;\alpha] &amp;=&amp; {\text{VaR}}[X;\alpha] + \frac{1}{\overline{F}_{X}({\text{VaR}}[X;\alpha])} {\text{ES}}[X;\alpha]. \tag{6.3}
+\end{eqnarray}\]</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-13" class="proof"><em>Proof</em>. </span>The expression <a href="chap5.html#eq:JanRel1">(6.2)</a> arises from
+<span class="math display">\[\begin{eqnarray*}
+{\text{ES}}[X;\alpha] &amp;=&amp; \int_{0}^{1} \left( {\text{VaR}}[X;\xi] - {\text{VaR}}[X;\alpha]\right)_{+} \, d\xi \\
+&amp;=&amp; \int_{\alpha}^{1} {\text{VaR}}[X;\xi] \, d\xi - {\text{VaR}}[X;\alpha](1-\alpha).
+\end{eqnarray*}\]</span>
+Expression <a href="chap5.html#eq:JanRel2">(6.3)</a> follows from
+<span class="math display">\[
+{\text{ES}}[X;\alpha] = \mathbb{E}\Big[ X - {\text{VaR}}[X;\alpha] \Big| X &gt; {\text{VaR}}[X;\alpha]\Big]
+\overline{F}_{X}\left({\text{VaR}}[X;\alpha] \right).
+\]</span></p>
+</div>
+<p>Property <a href="#prp:T1"><strong>??</strong></a> allows us to establish the following result, which provides the usual interpretation of TVaR.</p>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-14" class="proposition"><strong>Proposition 6.1  </strong></span>CTE and TVaR coincide for risks whose cumulative distribution function is continuous, i.e.
+<span class="math display" id="eq:eq4">\[\begin{equation}
+{\text{CTE}}[X;\alpha] = {\text{TVaR}}[X;\alpha], \qquad \alpha \in \left(0,1\right). \tag{6.4}
+\end{equation}\]</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-15" class="proof"><em>Proof</em>. </span>It suffices to note that if <span class="math inline">\(F_{X}\)</span> is continuous, then
+<span class="math display">\[
+F_X\big({\text{VaR}}[X;\alpha]\big) = \alpha \text{ and } \overline{F}_X\big({\text{VaR}}[X;\alpha]\big) = 1-\alpha,
+\]</span>
+so that <a href="chap5.html#eq:JanRel1">(6.2)</a>-<a href="chap5.html#eq:JanRel2">(6.3)</a> yield the claimed result.</p>
+</div>
+</div>
+<div id="tvar-is-coherent" class="section level4 hasAnchor" number="6.2.4.4">
+<h4><span class="header-section-number">6.2.4.4</span> TVaR is Coherent<a href="chap5.html#tvar-is-coherent" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>TVaR is invariant under translation and homogeneous. Indeed, since VaR is invariant under translation,
+<span class="math display">\[\begin{eqnarray*}
+{\text{TVaR}}[X+c;\alpha] &amp;=&amp; \frac{1}{1-\alpha} \int_{\alpha}^{1} {\text{VaR}}[X+c;\xi] \, d\xi \\
+&amp;=&amp; \frac{1}{1-\alpha} \int_{\alpha}^{1} \big({\text{VaR}}[X;\xi]+c\big) \, d\xi \\
+&amp;=&amp; {\text{TVaR}}[X;\alpha] + c.
+\end{eqnarray*}\]</span>
+Similarly, the homogeneity and monotonicity of VaR guarantee the homogeneity and monotonicity of TVaR. We will establish the subadditivity of TVaR later (when studying Wang risk measures).</p>
+</div>
+</div>
+<div id="esscher-risk-measure" class="section level3 hasAnchor" number="6.2.5">
+<h3><span class="header-section-number">6.2.5</span> Esscher Risk Measure<a href="chap5.html#esscher-risk-measure" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="definition-17" class="section level4 hasAnchor" number="6.2.5.1">
+<h4><span class="header-section-number">6.2.5.1</span> Definition<a href="chap5.html#definition-17" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The Esscher risk measure consists of taking the pure premium of the Esscher transform of the initial risk, formalized as follows.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-16" class="definition"><strong>Definition 6.8  </strong></span>The Esscher risk measure with parameter <span class="math inline">\(h&gt;0\)</span> of the risk <span class="math inline">\(X\)</span>, denoted as <span class="math inline">\({\text{Es}}[X;h]\)</span>, is given by
+<span class="math display">\[
+{\text{Es}}[X;h] = \frac{\mathbb{E}[X\exp(hX)]}{M_X(h)} = \frac{d}{dh}\ln M_X(h).
+\]</span></p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-17" class="remark"><em>Remark</em>. </span>In fact, <span class="math inline">\({\text{Es}}[X;h]\)</span> is none other than the expected value of the Esscher transform <span class="math inline">\(X_h\)</span> of <span class="math inline">\(X\)</span>, whose cumulative distribution function is given by <a href="#eq:DefEsscher2">(<strong>??</strong>)</a>, i.e.
+<span class="math display">\[
+{\text{Es}}[X;h] = \mathbb{E}[X_h] = \int_{\xi\in{\mathbb{R}}^+}\xi \, dF_{X,h}(\xi).
+\]</span>
+So, the initial risk <span class="math inline">\(X\)</span> is replaced by a less favorable risk <span class="math inline">\(X_h\)</span> before calculating the pure premium.</p>
+</div>
+</div>
+<div id="esscher-risk-measure-contains-safety-loading" class="section level4 hasAnchor" number="6.2.5.2">
+<h4><span class="header-section-number">6.2.5.2</span> Esscher Risk Measure Contains Safety Loading<a href="chap5.html#esscher-risk-measure-contains-safety-loading" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The Esscher risk measure is increasing in the parameter <span class="math inline">\(h\)</span>, as shown by the following result.</p>
+<div class="property">
+<p><span class="math inline">\({\text{Es}}[X;h]\)</span> is an increasing function of <span class="math inline">\(h\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-18" class="proof"><em>Proof</em>. </span>The announced result follows directly from
+<span class="math display" id="eq:OutilFour">\[\begin{eqnarray}
+\frac{d}{dh}\mathbb{E}[X_h]
+&amp;=&amp;\int_{\xi\in{\mathbb{R}}^+}x^2 \, dF_{X,h}(\xi) - \left(\int_{\xi\in{\mathbb{R}}^+}x \, dF_{X,h}(\xi)\right)^2
+\nonumber\\
+&amp;=&amp;\mathbb{V}[X_h]\geq 0.\tag{6.5}
+\end{eqnarray}\]</span></p>
+</div>
+<p>This property ensures that for any <span class="math inline">\(h&gt;0\)</span>,
+<span class="math display">\[
+{\text{Es}}[X;h]\geq{\text{Es}}[X;0]=\mathbb{E}[X],
+\]</span>
+so the Esscher risk measure contains a safety loading.</p>
+</div>
+<div id="incoherence-of-the-esscher-risk-measure" class="section level4 hasAnchor" number="6.2.5.3">
+<h4><span class="header-section-number">6.2.5.3</span> Incoherence of the Esscher Risk Measure<a href="chap5.html#incoherence-of-the-esscher-risk-measure" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The Esscher risk measure is not homogeneous (except in the trivial case <span class="math inline">\(h=0\)</span>). It is invariant under translation but not monotonic, as shown by the following example.</p>
+<div class="example">
+<p><span id="exm:EsMonot" class="example"><strong>Example 6.2  </strong></span>Consider the risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> defined as
+<span class="math display">\[\begin{eqnarray*}
+\Pr[X=0,Y=0]&amp;=&amp;\frac{1}{3},\\
+\Pr[X=0,Y=3]&amp;=&amp;\frac{1}{3},\\
+\Pr[X=6,Y=6]&amp;=&amp;\frac{1}{3}.
+\end{eqnarray*}\]</span>
+In this case, <span class="math inline">\(\Pr[X\leq Y]=1\)</span>, but
+<span class="math display">\[
+{\text{Es}}[X;1/2]=5.4567&gt;{\text{Es}}[Y;1/2]=5.2395.
+\]</span></p>
+</div>
+</div>
+</div>
+<div id="wang-risk-measures" class="section level3 hasAnchor" number="6.2.6">
+<h3><span class="header-section-number">6.2.6</span> Wang Risk Measures<a href="chap5.html#wang-risk-measures" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="definition-18" class="section level4 hasAnchor" number="6.2.6.1">
+<h4><span class="header-section-number">6.2.6.1</span> Definition<a href="chap5.html#definition-18" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>These risk measures exploit the representation of the mathematical expectation established in Property <a href="#prp:RepEsp"><strong>??</strong></a>. The idea is to transform the tail function in order to generate a safety loading. We will now call any non-decreasing function $g:$ with <span class="math inline">\(g(0)=0\)</span> and <span class="math inline">\(g(1)=1\)</span> a distortion function.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-19" class="definition"><strong>Definition 6.9  </strong></span>The Wang risk measure associated with the distortion function <span class="math inline">\(g\)</span>, denoted as $_{g}$, is defined as
+<span class="math display" id="eq:eq25">\[\begin{equation}
+\rho _{g}\left[ X\right] =\int_{0}^{\infty }g\left( \overline{F}_{X}(x)\right) \, dx.  \tag{6.6}
+\end{equation}\]</span></p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-20" class="remark"><em>Remark</em>. </span>In light of this definition, the following comments can be made:</p>
+<ol style="list-style-type: decimal">
+<li>The distortion function <span class="math inline">\(g(q)=q\)</span> corresponds to the mathematical expectation $$.</li>
+<li>Clearly, if <span class="math inline">\(g(q)\geq q\)</span> for all $q$, then <span class="math inline">\(\rho _{g}\left[ X\right] \geq \mathbb{E}\left[ X\right]\)</span>, indicating that Wang risk measures associated with such distortion functions contain a safety loading.</li>
+<li>Moreover, it is interesting to note that if <span class="math inline">\(g_{1}(q)\leq g_{2}(q)\)</span> for all $q$, then $<em>{g</em>{1}}<em>{g</em>{2}}$.</li>
+</ol>
+</div>
+</div>
+<div id="wang-risk-measures-and-var" class="section level4 hasAnchor" number="6.2.6.2">
+<h4><span class="header-section-number">6.2.6.2</span> Wang Risk Measures and VaR<a href="chap5.html#wang-risk-measures-and-var" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>By substituting <span class="math inline">\(\int_0^{\overline{F}_X(x)}dg(\alpha)\)</span> for <span class="math inline">\(g\left( \overline{F}_{X}(x)\right)\)</span> in <a href="chap5.html#eq:eq25">(6.6)</a> and interchanging the integrals, we obtain the following result.</p>
+<div class="proposition">
+<p><span id="prp:WangVar" class="proposition"><strong>Proposition 6.2  </strong></span>For any risk <span class="math inline">\(X\)</span>, the Wang risk measure associated with the distortion function <span class="math inline">\(g\)</span> can be written as
+<span class="math display" id="eq:eq26">\[\begin{equation}
+\rho _{g}\left[ X\right] =\int_{0}^{1}{\text{VaR}}[X;1-\alpha]\ dg(\alpha)\text{.}  \tag{6.7}
+\end{equation}\]</span></p>
+</div>
+<p>Thus, Wang risk measures are mixtures of VaR. In particular, if we consider the distortion function <span class="math inline">\(g:[0,1]\to [0,1]\)</span> defined as
+<span class="math display">\[
+g_\alpha(x)=\mathbb{I}[x\geq 1-\alpha]
+\]</span>
+for a fixed value of <span class="math inline">\(\alpha\in [0,1)\)</span>, then by <a href="chap5.html#eq:eq26">(6.7)</a> we have
+<span class="math display">\[
+\rho_{g_\alpha}[X]={\text{VaR}}[X;\alpha]
+\]</span>
+which shows that the VaR at probability level <span class="math inline">\(\alpha\)</span> is a particular Wang risk measure corresponding to a distortion function that increases from 0 to 1 at <span class="math inline">\(1-\alpha\)</span>.</p>
+<div class="remark">
+<p><span id="unlabeled-div-21" class="remark"><em>Remark</em>. </span>In this case, <span class="math inline">\(g_\alpha\)</span> is a cumulative distribution function corresponding to the constant <span class="math inline">\(1-\alpha\)</span>.</p>
+</div>
+</div>
+<div id="wang-risk-measures-and-tvar" class="section level4 hasAnchor" number="6.2.6.3">
+<h4><span class="header-section-number">6.2.6.3</span> Wang Risk Measures and TVaR<a href="chap5.html#wang-risk-measures-and-tvar" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Similarly, starting from <a href="chap5.html#eq:eq26">(6.7)</a> with the distortion function
+<span class="math display">\[
+g_\alpha(x)=\min\left\{\frac{x}{1-\alpha},1\right\},
+\]</span>
+for a fixed <span class="math inline">\(\alpha\in[0,1]\)</span> we obtain
+<span class="math display">\[
+\rho_{g_\alpha}[X]=\frac{1}{1-\alpha}\int_0^{1-\alpha}{\text{VaR}}[X;1-\xi]d\xi={\text{TVaR}}[X;\alpha].
+\]</span></p>
+<div class="remark">
+<p><span id="unlabeled-div-22" class="remark"><em>Remark</em>. </span>In this case as well, <span class="math inline">\(g_\alpha\)</span> is a cumulative distribution function corresponding to the uniform distribution <span class="math inline">\(\mathcal{U}ni(0,1-\alpha)\)</span>.</p>
+</div>
+</div>
+<div id="es-is-not-a-wang-risk-measure" class="section level4 hasAnchor" number="6.2.6.4">
+<h4><span class="header-section-number">6.2.6.4</span> ES is Not a Wang Risk Measure<a href="chap5.html#es-is-not-a-wang-risk-measure" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Let’s assume for a contradiction that <span class="math inline">\({\text{ES}}[X;\alpha]\)</span> can indeed be represented as a Wang risk measure associated with a distortion function <span class="math inline">\(g_\alpha\)</span>, i.e. <span class="math inline">\({\text{ES}}[X;\alpha]=\rho_{g_\alpha}[X]\)</span> for any risk <span class="math inline">\(X\)</span>. Take <span class="math inline">\(X\sim\mathcal{U}ni (0,1)\)</span>. In this case,
+<span class="math display" id="eq:B">\[\begin{eqnarray}
+{\text{ES}}[X;\alpha]&amp;=&amp;\int_\alpha^1(1-x)dx\nonumber\\
+&amp;=&amp;\frac{1}{2}(1-\alpha)^{2}\nonumber\\
+&amp;=&amp;\rho_{g_\alpha}[X]=\int_{0}^{1}g_\alpha(1-x)dx.  \tag{6.8}
+\end{eqnarray}\]</span>
+Now, consider <span class="math inline">\(Y\sim\mathcal{B}er(q)\)</span> for <span class="math inline">\(0&lt;q\leq 1-\alpha\)</span>. It’s easy to see that
+<span class="math display">\[
+{\text{ES}}[Y;\alpha]=q=\rho_{g_\alpha}[Y]=g_\alpha(q)
+\]</span>
+which implies <span class="math inline">\(g_\alpha(q)=q\)</span> for <span class="math inline">\(0&lt;q\leq 1-\alpha\)</span>. Inserting this into <a href="chap5.html#eq:B">(6.8)</a> gives us
+<span class="math display">\[\begin{eqnarray*}
+\frac{1}{2}(1-\alpha)^{2}&amp;\geq &amp;\frac{1}{2}
+(1-\alpha)^{2}+\alpha(1-\alpha),
+\end{eqnarray*}\]</span>
+which leads to a contradiction since <span class="math inline">\(0&lt;\alpha&lt;1\)</span>.</p>
+</div>
+<div id="cte-is-not-a-wang-risk-measure" class="section level4 hasAnchor" number="6.2.6.5">
+<h4><span class="header-section-number">6.2.6.5</span> CTE is Not a Wang Risk Measure<a href="chap5.html#cte-is-not-a-wang-risk-measure" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We can formally establish by contradiction that CTE is not a Wang risk measure either. We can proceed similarly to how we did for ES. Assume for a contradiction that there exists a distortion function <span class="math inline">\(g_\alpha\)</span> such that <span class="math inline">\({\text{CTE}}[X;\alpha]=\rho_{g_\alpha}[X]\)</span> for any risk <span class="math inline">\(X\)</span>. For <span class="math inline">\(X\sim\mathcal{U}ni(0,1)\)</span>, we have from <a href="chap5.html#eq:JanRel2">(6.3)</a>
+<span class="math display">\[\begin{equation*}
+{\text{CTE}}[X;\alpha]=\alpha+\frac{1}{2}(1-\alpha)=\int_{0}^{1}g_\alpha\left( 1-x\right) dx,
+\end{equation*}\]</span>
+which simplifies to
+<span class="math display" id="eq:A">\[\begin{equation}
+\int_{0}^{1}g_\alpha\left( x\right) dx=\frac{1}{2}(1+\alpha).  \tag{6.9}
+\end{equation}\]</span>
+Now, consider <span class="math inline">\(Y\sim\mathcal{B}er(q)\)</span> for <span class="math inline">\(0&lt;q\leq 1-\alpha\)</span>. We get <span class="math inline">\({\text{CTE}}[Y;\alpha]=1\)</span>. Therefore,
+<span class="math display">\[
+g_\alpha(q)=\rho_{g_\alpha}[Y]={\text{CTE}}[Y;\alpha]=1
+\]</span>
+which implies that <span class="math inline">\(g_\alpha(\cdot )\equiv 1\)</span> on <span class="math inline">\((0,1]\)</span>, contradicting equation <a href="chap5.html#eq:A">(6.9)</a> and proving that CTE is not a Wang risk measure.</p>
+</div>
+<div id="dual-power-risk-measure" class="section level4 hasAnchor" number="6.2.6.6">
+<h4><span class="header-section-number">6.2.6.6</span> Dual Power Risk Measure<a href="chap5.html#dual-power-risk-measure" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Taking
+<span class="math display">\[
+g(x)=1-(1-x)^\xi, \hspace{2mm}\xi\geq 1,
+\]</span>
+we get
+<span class="math display">\[
+\rho_g[X]=\int_{x\geq 0}(1-\{F_X(x)\}^\xi)dx.
+\]</span>
+If <span class="math inline">\(\xi\)</span> is an integer, <span class="math inline">\(\rho_g[X]\)</span> can be interpreted as the expected value of the maximum <span class="math inline">\(M_\xi=\max\{X_1,\ldots,X_\xi\}\)</span> of a set of <span class="math inline">\(\xi\)</span> independent and identically distributed random variables with the same distribution as <span class="math inline">\(X\)</span>. Indeed, the tail distribution function of <span class="math inline">\(M_\xi\)</span> is given by
+<span class="math display">\[
+\Pr[M_\xi&gt;x]=1-\Pr[X_1\leq x,\ldots,X_\xi\leq x]=1-\{F_X(x)\}^\xi,
+\]</span>
+so <span class="math inline">\(\rho_g[X]=\mathbb{E}[M_\xi]\)</span>.</p>
+</div>
+<div id="ph-risk-measure" class="section level4 hasAnchor" number="6.2.6.7">
+<h4><span class="header-section-number">6.2.6.7</span> PH Risk Measure<a href="chap5.html#ph-risk-measure" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Consider the distortion function
+<span class="math display">\[
+g(x)=x^{1/\xi},\hspace{2mm}\xi\geq 1.
+\]</span>
+The PH risk measure is given by
+<span class="math display">\[
+\text{PH}_\xi[X]=\rho_g[X]=\int_{x\geq 0}\{\overline{F}_X(x)\}^{1/\xi}dx.
+\]</span>
+Note that for <span class="math inline">\(\xi=1\)</span>, <span class="math inline">\(\text{PH}_1[X]=\mathbb{E}[X]\)</span>.</p>
+</div>
+<div id="comparison-of-major-distortion-functions" class="section level4 hasAnchor" number="6.2.6.8">
+<h4><span class="header-section-number">6.2.6.8</span> Comparison of Major Distortion Functions<a href="chap5.html#comparison-of-major-distortion-functions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The curves in Figure <a href="chap5.html#fig:fig-distorsion">6.1</a> show the shapes of the major distortion functions, where <span class="math inline">\(p\)</span> is a constant between <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span>., including:</p>
+<table>
+<caption><span id="tab:distortion">Table 6.1: </span>Standard distortion functions</caption>
+<thead>
+<tr class="header">
+<th align="center">Name</th>
+<th align="center">Mathematical function</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">VaR</td>
+<td align="center"><span class="math inline">\(g(x) = \mathbb{I}[x \geq p]\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">Tail-VaR</td>
+<td align="center"><span class="math inline">\(g(x) = \min \{x/p, 1\}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">PH</td>
+<td align="center"><span class="math inline">\(g(x) = x^{p}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">Dual Power</td>
+<td align="center"><span class="math inline">\(g(x) = 1 - (1 - x)^{1/p}\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center">Gini</td>
+<td align="center"><span class="math inline">\(g(x) = (1 + p)x - px^{2}\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">Exponential Transformation</td>
+<td align="center"><span class="math inline">\(g(x) = \frac{1 - p^{x}}{1 - p}\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig-distorsion"></span>
+<img src="bookdown-demo_files/figure-html/fig-distorsion-1.png" alt="Major Distortion Functions" width="960" />
+<p class="caption">
+Figure 6.1: Major Distortion Functions
+</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-23" class="remark"><em>Remark</em>. </span>We will delve more deeply into different distortion functions in insurance microeconomics in Volume 2.</p>
+</div>
+</div>
+<div id="properties-of-wang-risk-measures" class="section level4 hasAnchor" number="6.2.6.9">
+<h4><span class="header-section-number">6.2.6.9</span> Properties of Wang Risk Measures<a href="chap5.html#properties-of-wang-risk-measures" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
+</div>
+</div>
+<div id="main-properties-of-wangs-risk-measures" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Main Properties of Wang’s Risk Measures<a href="chap5.html#main-properties-of-wangs-risk-measures" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The main properties of Wang’s risk measures are summarized in the following result.</p>
+<div class="proposition">
+<p><span id="prp:PropWangPrime0" class="proposition"><strong>Proposition 6.3  </strong></span></p>
+<ol style="list-style-type: decimal">
+<li>The risk measures of Wang are homogeneous.</li>
+<li>The risk measures of Wang are translation invariant.</li>
+<li>The risk measures of Wang are monotonic.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-24" class="proof"><em>Proof</em>. </span>Working from Property <a href="chap5.html#prp:WangVar">6.2</a>, and considering the fact that VaR is translation invariant, we obtain
+<span class="math display">\[\begin{eqnarray*}
+\rho _{g}\left[ X+c\right] &amp;=&amp;\int_{0}^{1}\text{VaR}[X+c;1-\alpha]\ dg(\alpha)\\
+&amp;=&amp;\int_{0}^{1}\big(\text{VaR}[X;1-\alpha]+c\big)\ dg(\alpha)\\
+&amp;=&amp;\rho_g[X]+c\big(g(1)-g(0)\big)=\rho_g[X].
+\end{eqnarray*}\]</span>
+This establishes (i). Similarly, we deduce the homogeneity and monotonicity of Wang’s measures from the corresponding properties of VaR.</p>
+</div>
+<div id="concavity-of-the-distortion-function" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Concavity of the Distortion Function<a href="chap5.html#concavity-of-the-distortion-function" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If the distortion function <span class="math inline">\(g\)</span> is concave, the function <span class="math inline">\(x\mapsto g(\overline{F}_{X}(x))\)</span> is right-continuous and is thus the tail function of a certain random variable. In this situation, <span class="math inline">\(\rho_{g}\left[ X\right]\)</span> is indeed a mathematical expectation (not of <span class="math inline">\(X\)</span> but of a variable <span class="math inline">\(Y\)</span> with tail function <span class="math inline">\(\overline{F}_Y(y)=g(\overline{F}_{X}(y))\)</span>). The following result illustrates the significance of the concavity assumption on <span class="math inline">\(g\)</span>.</p>
+<div id="PropWangPrime" class="property">
+<p>When the distortion function is concave, the corresponding risk measure is subadditive.</p>
+</div>
+<div class="corollary">
+<p><span id="cor:unlabeled-div-25" class="corollary"><strong>Corollary 6.1  </strong></span>Combining Properties <a href="chap5.html#prp:PropWangPrime0">6.3</a> and <a href="#prp:PropWangPrime"><strong>??</strong></a>, we observe that Wang’s risk measures corresponding to concave distortion functions are coherent. In particular, TVaR is coherent.</p>
+</div>
+</div>
+</div>
+<div id="uniform-comparison-of-var" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Uniform Comparison of VaR<a href="chap5.html#uniform-comparison-of-var" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="definition-19" class="section level3 hasAnchor" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Definition<a href="chap5.html#definition-19" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We have extensively studied the properties of VaR. Given two risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, it is natural to compare them using the VaR corresponding to a level <span class="math inline">\(\alpha_1\)</span>, i.e., consider <span class="math inline">\(X\)</span> to be less risky than <span class="math inline">\(Y\)</span> if <span class="math inline">\(\text{VaR}[X;\alpha_1] \leq \text{VaR}[X;\alpha_1]\)</span>. However, often the choice of probability level is not immediately apparent, and it is possible to have simultaneously
+<span class="math display">\[
+\text{VaR}[X;\alpha_1]
+\leq \text{VaR}[X;\alpha_1]
+\]</span>
+and
+<span class="math display">\[
+\text{VaR}[X;\alpha_2] \geq \text{VaR}[X;\alpha_2]
+\]</span>
+for two probability levels <span class="math inline">\(\alpha_1\)</span> and <span class="math inline">\(\alpha_2\)</span>. In such a situation, which of the risks, <span class="math inline">\(X\)</span> or <span class="math inline">\(Y\)</span>, is less risky?</p>
+<p>To avoid these difficulties, we will adopt the following definition, which suggests comparing the risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> by requiring that the VaRs relative to these risks are ordered for any choice of the probability level.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-26" class="definition"><strong>Definition 6.10  </strong></span>Given two risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, we will consider <span class="math inline">\(X\)</span> less risky than <span class="math inline">\(Y\)</span> based on VaR comparison, denoted as <span class="math inline">\(X\preceq_{\text{VaR}}Y\)</span>, when
+<span class="math display">\[
+\text{VaR}[X;\alpha] \leq \text{VaR}[Y;\alpha] \text{ for all } \alpha \in (0,1).
+\]</span></p>
+</div>
+<p>The relation <span class="math inline">\(\preceq_{\text{VaR}}\)</span> that we have defined constitutes a partial order on the set of probability distributions (it can be easily verified to be reflexive, antisymmetric, and transitive). However, it is not antisymmetric with respect to random variables. Indeed, <span class="math inline">\(X\preceq_{\text{VaR}}Y\)</span> and <span class="math inline">\(Y\preceq_{\text{VaR}}X\)</span> do not imply <span class="math inline">\(X=Y\)</span>, but only <span class="math inline">\(X=_{\text{law}}Y\)</span>.</p>
+<p>The relation <span class="math inline">\(\preceq_{\text{VaR}}\)</span> has been studied extensively in probability and statistics (for example, see <span class="citation">(<a href="#ref-lehmann1955ordered" role="doc-biblioref">Lehmann 1955</a>)</span>). It is better known in these fields as the stochastic order or distribution order. Economists and actuaries have also made significant use of it, under the name of first-order stochastic dominance. Other common notations for <span class="math inline">\(\preceq_{\text{VaR}}\)</span> include <span class="math inline">\(\preceq_{st}\)</span>, <span class="math inline">\(\preceq_1\)</span>, or <span class="math inline">\(\preceq_{FSD}\)</span>.</p>
+</div>
+<div id="equivalent-conditions" class="section level3 hasAnchor" number="6.4.2">
+<h3><span class="header-section-number">6.4.2</span> Equivalent Conditions<a href="chap5.html#equivalent-conditions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We establish several equivalent conditions for having <span class="math inline">\(\preceq_{\text{VaR}}\)</span> between two risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. The first of these informs us that it is equivalent to compare VaRs or distribution functions (with the latter being the inverses of VaRs).</p>
+<div id="LSTVaR" class="property">
+<p>For two random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>,
+<span class="math display">\[\begin{eqnarray*}
+X\preceq_{\text{VaR}}Y &amp;\Leftrightarrow&amp; F_X(t)\geq F_Y(t) \text{ for all } t \in \mathbb{R},\\
+&amp;\Leftrightarrow&amp; \overline{F}_X(t) \leq \overline{F}_Y(t) \text{ for all } t \in \mathbb{R}.
+\end{eqnarray*}\]</span></p>
+</div>
+<p>Interpreting <span class="math inline">\(\overline{F}_X(t)\)</span> as the probability that <span class="math inline">\(X\)</span> takes a “large” value (i.e., a value greater than <span class="math inline">\(t\)</span>), this property shows that <span class="math inline">\(X\preceq_{\text{VaR}}Y\)</span> means that <span class="math inline">\(X\)</span> is “smaller” than <span class="math inline">\(Y\)</span>, since the probability that <span class="math inline">\(X\)</span> takes large values is always less than that of <span class="math inline">\(Y\)</span> taking large values.</p>
+<div class="remark">
+<p><span id="unlabeled-div-27" class="remark"><em>Remark</em> (Insensitivity of $\lst$ to Variance). </span>The relation <span class="math inline">\(\preceq_{\text{VaR}}\)</span> does not provide any information about the variances of the compared random variables. For example, if we take <span class="math inline">\(X\sim\text{Bernoulli}(p)\)</span> and <span class="math inline">\(Y=1\)</span>, we have <span class="math inline">\(X\preceq_{\text{VaR}}Y\)</span> even though
+<span class="math display">\[
+\text{Var}[X]=p(1-p)&gt;\text{Var}[Y]=0.
+\]</span>
+This demonstrates that <span class="math inline">\(\preceq_{\text{VaR}}\)</span> focuses on comparing the magnitude of risks rather than their variability.</p>
+</div>
+<p>The stochastic order <span class="math inline">\(X\preceq Y\)</span> allows us to derive numerous interesting inequalities, as demonstrated by the following result.</p>
+<div id="LSTIncreasingFunc" class="property">
+<p>For two random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>,
+<span class="math display">\[
+X\preceq Y \Leftrightarrow \mathbb{E}[g(X)] \leq \mathbb{E}[g(Y)] \text{ for all increasing functions } g,
+\]</span>
+provided the expectations exist.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-28" class="proof"><em>Proof</em>. </span>It suffices to recall that if <span class="math inline">\(U \sim \text{Uniform}(0,1)\)</span>, then <span class="math inline">\(X \stackrel{\text{d}}{=} \text{VaR}[X;U]\)</span> according to Property <a href="#prp:NumberAl"><strong>??</strong></a>. With this result in mind, we have the following representation, valid for any function <span class="math inline">\(g\)</span>:
+<span class="math display">\[
+\mathbb{E}[g(X)] = \mathbb{E}\left[g\left(\text{VaR}[X;U]\right)\right] = \int_0^1 g\left(\text{VaR}[X;u]\right)du.
+\]</span>
+The stated result is then obtained simply by writing
+<span class="math display">\[\begin{eqnarray*}
+\mathbb{E}[g(X)] &amp;=&amp; \int_0^1 g\left(\text{VaR}[X;u]\right)du \\
+&amp;\leq&amp; \int_0^1 g\left(\text{VaR}[Y;u]\right)du = \mathbb{E}[g(Y)].
+\end{eqnarray*}\]</span></p>
+</div>
+<p>In addition to the above results, we now demonstrate that we can restrict ourselves to regular functions <span class="math inline">\(g\)</span> in Property <a href="#prp:LSTIncreasingFunc"><strong>??</strong></a>.</p>
+<div class="proposition">
+<p><span id="prp:RegularFuncTestVaR" class="proposition"><strong>Proposition 6.4  </strong></span>For two random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\preceq Y \Leftrightarrow \mathbb{E}[g(X)] \leq \mathbb{E}[g(Y)]\)</span> for any function <span class="math inline">\(g\)</span> such that <span class="math inline">\(g&#39; \geq 0\)</span>, provided the expectations exist.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-29" class="proof"><em>Proof</em>. </span>The implication ” <span class="math inline">\(\Rightarrow\)</span> ” is evident. To prove the converse, note that
+<span class="math display">\[
+\mathbb{I}[x&gt;t] = \lim_{\sigma\to 0}\Phi\left(\frac{x-t}{\sigma}\right).
+\]</span>
+Furthermore, the function <span class="math inline">\(x \mapsto -\Phi\left(\frac{t-x}{\sigma}\right)\)</span> is increasing. Therefore, we have in particular
+<span class="math display">\[
+-\mathbb{E}\left[\Phi\left(\frac{t-Y}{\sigma}\right)\right] \leq -\mathbb{E}\left[\Phi\left(\frac{t-X}{\sigma}\right)\right],
+\]</span>
+which yields
+<span class="math display">\[\begin{eqnarray*}
+\Pr[X&gt;\text{Norm}(t,\sigma)] &amp;=&amp; \mathbb{E}\left[\Phi\left(\frac{X-t}{\sigma}\right)\right] \\
+&amp;\leq &amp; \mathbb{E}\left[\Phi\left(\frac{Y-t}{\sigma}\right)\right] \\
+&amp;=&amp; \Pr[Y&gt;\text{Norm}(t,\sigma)]
+\end{eqnarray*}\]</span>
+for any <span class="math inline">\(\sigma&gt;0\)</span>. This same inequality holds when taking the limit as <span class="math inline">\(\sigma\to 0\)</span>, resulting in <span class="math inline">\(\Pr[X&gt;t] \leq \Pr[Y&gt;t]\)</span>. Since this reasoning holds for any <span class="math inline">\(t\)</span>, this concludes the proof.</p>
+</div>
+<div id="sufficient-conditions" class="section level4 hasAnchor" number="6.4.2.1">
+<h4><span class="header-section-number">6.4.2.1</span> Sufficient Conditions<a href="chap5.html#sufficient-conditions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Property <a href="#prp:LSTVaR"><strong>??</strong></a> informs us that risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> satisfy <span class="math inline">\(X\preceq Y\)</span> when their respective tail functions mutually dominate each other. The following result provides a sufficient condition for this to hold. It suffices that the probability density functions only cross once.</p>
+<div class="proposition">
+<p><span id="prp:CSHesselager" class="proposition"><strong>Proposition 6.5  </strong></span>For any risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, if
+<span class="math inline">\(f_X(t) \geq f_Y(t)\)</span> for <span class="math inline">\(t&lt;c\)</span> and <span class="math inline">\(f_X(t) \leq f_Y(t)\)</span> for <span class="math inline">\(t&gt;c\)</span>, then
+<span class="math inline">\(X\preceq Y\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-30" class="proof"><em>Proof</em>. </span>It suffices to observe that if <span class="math inline">\(x&lt;c\)</span>,
+<span class="math display">\[
+F_X(x) = \int_0^x f_X(t)dt \geq \int_0^x f_Y(t)dt = F_Y(x)
+\]</span>
+and if <span class="math inline">\(x&gt;c\)</span>,
+<span class="math display">\[
+\overline{F}_X(x) = \int_x^{+\infty} f_X(t)dt \geq \int_x^{+\infty} f_Y(t)dt = \overline{F}_Y(x).
+\]</span>
+Thus, we have <span class="math inline">\(X\preceq_{\text{VaR}}Y\)</span> under the conditions stated above, which completes the proof.</p>
+</div>
+</div>
+</div>
+<div id="properties-3" class="section level3 hasAnchor" number="6.4.3">
+<h3><span class="header-section-number">6.4.3</span> Properties<a href="chap5.html#properties-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="stability-of-preceq_textvar-with-respect-to-standard-deductible-clauses" class="section level4 hasAnchor" number="6.4.3.1">
+<h4><span class="header-section-number">6.4.3.1</span> Stability of <span class="math inline">\(\preceq_{\text{VaR}}\)</span> with respect to standard deductible clauses<a href="chap5.html#stability-of-preceq_textvar-with-respect-to-standard-deductible-clauses" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The developments in this paragraph are based on the following result.</p>
+<div class="proposition">
+<p><span id="prp:StInvIncreasingFunc" class="proposition"><strong>Proposition 6.6  </strong></span>For any random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>,
+<span class="math display">\[
+X\preceq Y \Rightarrow t(X)\preceq t(Y)
+\]</span>
+for any non-decreasing function <span class="math inline">\(t\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-31" class="proof"><em>Proof</em>. </span>The result is immediately deduced from the following observation: for any non-decreasing function <span class="math inline">\(g\)</span>, the function <span class="math inline">\(x\mapsto g(t(x))\)</span> is non-decreasing when <span class="math inline">\(t\)</span> is non-decreasing.</p>
+</div>
+<p>Property <a href="chap5.html#prp:StInvIncreasingFunc">6.6</a> guarantees, among other things, that when <span class="math inline">\(X\preceq_{\text{VaR}}Y\)</span>,
+<span class="math display">\[\begin{eqnarray*}
+(X-\delta)_+ &amp; \preceq &amp;(Y-\delta)_+\text{ for any deductible }\delta\in{\mathbb{R}},\\
+&amp;&amp;\text{mandatory underwriting,}\\
+\alpha X &amp; \preceq &amp;\alpha Y\text{ for any }\alpha&gt;0,\\
+X\mathbb{I}[X&gt;\kappa] &amp; \preceq &amp;Y\mathbb{I}[Y&gt;\kappa]\text{ for any threshold }\kappa\in{\mathbb{R}},\\
+\min\{X,\omega\} &amp; \preceq &amp;\min\{Y,\omega\}\text{ for any cap }\omega\in{\mathbb{R}}.
+\end{eqnarray*}\]</span>
+This implies that a comparison in the <span class="math inline">\(\preceq_{\text{VaR}}\)</span> sense is not affected by the introduction of a standard deductible clause related to damages (whether it’s a mandatory underwriting, a deductible, or an upper limit) in the policy terms.</p>
+<p>ATTENTION RELIRE !!! <span class="math inline">\(\preceq\)</span> DOIT ETRE <span class="math inline">\(\preceq_{\text{VaR}}\)</span></p>
+</div>
+<div id="stability-of-preceq_textvar-in-the-presence-of-uncertainty" class="section level4 hasAnchor" number="6.4.3.2">
+<h4><span class="header-section-number">6.4.3.2</span> Stability of <span class="math inline">\(\preceq_{\text{VaR}}\)</span> in the Presence of Uncertainty<a href="chap5.html#stability-of-preceq_textvar-in-the-presence-of-uncertainty" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Regardless of the risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> and the random vector <span class="math inline">\(\boldsymbol{\Theta}\)</span>, if <span class="math inline">\(X\preceq_{\text{VaR}}Y\)</span> when <span class="math inline">\(\boldsymbol{\Theta}=\boldsymbol{\theta}\)</span>, then the stochastic inequality remains valid when <span class="math inline">\(\boldsymbol{\Theta}\)</span> is unknown. Indeed, as
+<span class="math display">\[
+\Pr[X\leq x|\boldsymbol{\Theta}=\boldsymbol{\theta}]\geq \Pr[Y\leq x|\boldsymbol{\Theta}=\boldsymbol{\theta}] \text{ for all }\boldsymbol{\theta}\text{ and }x,
+\]</span>
+we easily deduce that
+<span class="math display">\[\begin{eqnarray*}
+\Pr[X\leq x] &amp; = &amp; \int_{\boldsymbol{\theta}}\Pr[X\leq x|\boldsymbol{\Theta}=\boldsymbol{\theta}] dF_{\boldsymbol{\Theta}}(\boldsymbol{\theta})\\
+&amp; \geq  &amp; \int_{\boldsymbol{\theta}} \Pr[Y\leq x|\boldsymbol{\Theta}=\boldsymbol{\theta}] dF_{\boldsymbol{\Theta}}(\boldsymbol{\theta})=\Pr[Y\leq x],
+\end{eqnarray*}\]</span>
+which proves the announced result.</p>
+</div>
+</div>
+<div id="hazard-rate-and-ph-risk-measure" class="section level3 hasAnchor" number="6.4.4">
+<h3><span class="header-section-number">6.4.4</span> Hazard Rate and PH Risk Measure<a href="chap5.html#hazard-rate-and-ph-risk-measure" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="definition-and-equivalent-conditions" class="section level4 hasAnchor" number="6.4.4.1">
+<h4><span class="header-section-number">6.4.4.1</span> Definition and Equivalent Conditions<a href="chap5.html#definition-and-equivalent-conditions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We could be interested in comparing risks given that they exceed a certain level <span class="math inline">\(t\)</span>. Thus, we could require that
+<span class="math display">\[
+[X|X&gt;t]\preceq_{\text{VaR}}[Y|Y&gt;t]
+\]</span>
+for any level <span class="math inline">\(t\)</span>. The following example shows that this is not necessarily true when <span class="math inline">\(X\preceq_{\text{VaR}}Y\)</span>.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-32" class="example"><strong>Example 6.3  </strong></span>Show that
+<span class="math display">\[\begin{equation*}
+X\preceq_{\text{VaR}}Y\nRightarrow [X|X&gt;t] \preceq_{\text{VaR}}[Y|Y&gt;t] \text{ for any }t.
+\end{equation*}\]</span>
+Consider, for instance, the case where <span class="math inline">\(X\sim \mathcal{U}ni(0,3)\)</span> and <span class="math inline">\(Y\)</span> has the density
+<span class="math display">\[
+f_{Y}\left( x\right) =\frac{1}{6}
+\mathbb{I}_{\left] 0,1\right] }\left( x\right)+\frac{1}{2}\mathbb{I}_{\left] 1,2\right] }\left( x\right)+
+\frac{1}{3}\mathbb{I}_{\left] 2,3\right[ }\left(x\right).
+\]</span>
+Then, <span class="math inline">\(X\preceq_{\text{VaR}}Y\)</span>, but <span class="math inline">\([X|X&gt;1]\sim\mathcal{U}ni(1,3)\)</span> and <span class="math inline">\([Y|Y&gt;1]\)</span> has the density
+<span class="math display">\[
+f_{Y}^{\ast }\left( x\right) =\frac{3}{5}\mathbb{I}_{\left] 1,2\right]
+}\left( x\right)+\frac{2}{5}\mathbb{I}_{\left] 2,3\right[ }\left(x\right)
+\]</span>
+so that
+<span class="math display">\[
+[Y|Y&gt;1]\preceq_{\text{VaR}}[X|X&gt;1].
+\]</span></p>
+</div>
+<p>We can prove the following result.</p>
+<div class="proposition">
+<p><span id="prp:RH1" class="proposition"><strong>Proposition 6.7  </strong></span>Given two risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, <span class="math inline">\([X|X&gt;t]\preceq_{\text{VaR}}[Y|Y&gt;t]\)</span> for any <span class="math inline">\(t\in{\mathbb{R}}\)</span> if, and only if
+<span class="math display">\[\begin{eqnarray*}
+&amp;\Leftrightarrow &amp; t\mapsto \frac{\overline{F}_Y(t)}{\overline{F}_X(t)}\text{ is non-decreasing}(\#eq:eq1.B.3b)\\
+&amp;\Leftrightarrow &amp; \overline{F}_X(u)\overline{F}_Y(v)\ge\overline{F}_X(v)\overline{F}_Y(u)\quad
+\text{for any}\quad u\le v.(\#eq:eq1.B.4)
+\end{eqnarray*}\]</span></p>
+</div>
+<p>This comparison can be related to the hazard rates, as shown in the following result.</p>
+<div id="RH2" class="proportion">
+<p>Given two risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, <span class="math inline">\([X|X&gt;t]\preceq_{\text{VaR}}[Y|Y&gt;t]\)</span> for any <span class="math inline">\(t\in{\mathbb{R}}\)</span> if, and only if <span class="math inline">\(r_X(t)\geq r_Y(t)\)</span> for any <span class="math inline">\(t\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-33" class="proof"><em>Proof</em>. </span>The ratio <span class="math inline">\(\overline{F}_Y/\overline{F}_X\)</span> is non-decreasing if, and only if, <span class="math inline">\(\ln \overline{F}_Y/\overline{F}_X\)</span> is also non-decreasing. This further implies that <span class="math inline">\(\ln \overline{F}_Y-\ln\overline{F}_X\)</span> is non-decreasing, which is equivalent to <span class="math inline">\(r_X-r_Y&gt;0\)</span> since, according to Property <a href="#prp:TauxQueue"><strong>??</strong></a>,
+<span class="math display">\[
+\frac{d}{dt}\Big\{\ln\overline{F}_Y(t)-\ln\overline{F}_X(t)\Big\}=r_X(t)-r_Y(t).
+\]</span></p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-34" class="remark"><em>Remark</em>. </span>The method of comparing probability distributions discussed in Properties <a href="chap5.html#prp:RH1">6.7</a>-<a href="#prp:RH2"><strong>??</strong></a> is often referred to as the hazard rate order and denoted by <span class="math inline">\(\preceq_{hr}\)</span>.</p>
+</div>
+</div>
+<div id="hazard-rate-and-ph-risk-measure-1" class="section level4 hasAnchor" number="6.4.4.2">
+<h4><span class="header-section-number">6.4.4.2</span> Hazard Rate and PH Risk Measure<a href="chap5.html#hazard-rate-and-ph-risk-measure-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Let’s suppose we deflate the hazard rate by a factor <span class="math inline">\(\xi\)</span>, i.e., we transition from a rate <span class="math inline">\(r_X\)</span> to a rate <span class="math inline">\(r_{X^*}\)</span> given by
+<span class="math display">\[
+r_{X^*}(t)=\frac{r_X(t)}{\xi}\leq r_X(t),\text{ for }\xi\geq 1.
+\]</span>
+Using Property <a href="#prp:TauxQueue"><strong>??</strong></a>, we obtain a tail function
+<span class="math display">\[
+\overline{F}_{X^*}(t)=\exp\left(-\int_0^t\frac{r_X(s)}{\xi}ds\right)=\{\overline{F}_X(t)\}^{1/\xi}.
+\]</span>
+Therefore, PH<span class="math inline">\([X;\xi]=\mathbb{E}[X^*]\)</span>. The PH risk measure consists of replacing the original risk <span class="math inline">\(X\)</span> with a transformed risk <span class="math inline">\(X^*\)</span> whose hazard rate has been deflated, and then calculating the expectation associated with <span class="math inline">\(X^*\)</span>. We have
+<span class="math display">\[
+[X|X&gt;t]\preceq_{\text{VaR}}[X^*|X^*&gt;t]\text{ for any }t&gt;0.
+\]</span></p>
+</div>
+</div>
+<div id="likelihood-ratio-and-esscher-principle" class="section level3 hasAnchor" number="6.4.5">
+<h3><span class="header-section-number">6.4.5</span> Likelihood Ratio and Esscher Principle<a href="chap5.html#likelihood-ratio-and-esscher-principle" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="definition-20" class="section level4 hasAnchor" number="6.4.5.1">
+<h4><span class="header-section-number">6.4.5.1</span> Definition<a href="chap5.html#definition-20" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We could also consider imposing
+<span class="math display">\[
+[X|a\leq X\leq a+h]\preceq_{\text{VaR}}[Y|a\leq Y\leq a+h]
+\]</span>
+for any level <span class="math inline">\(a\)</span> and increment <span class="math inline">\(h&gt;0\)</span>. This corresponds to the situation of a reinsurer who would cover the interval <span class="math inline">\((a,a+h]\)</span> of a risk <span class="math inline">\(X\)</span>, i.e., who would expose themselves to a loss of
+<span class="math display">\[
+X_{(a,a+h]}=
+\left\{
+\begin{array}{l}
+0\text{ if }X&lt;a\\
+X-a\text{ if }a\leq X&lt;a+h\\
+h\text{ if }a+h\leq X,
+\end{array}
+\right.
+\]</span>
+where <span class="math inline">\(a\)</span> is the retention and <span class="math inline">\(h\)</span> is the limit.</p>
+<p>We can establish the following result.</p>
+<div class="proposition">
+<p><span id="prp:Propo5.4.10" class="proposition"><strong>(#prp:Propo5.4.10) </strong></span>Consider the random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, both continuous or discrete, with probability density functions <span class="math inline">\(f_X\)</span> and <span class="math inline">\(f_Y\)</span>. If
+<span class="math display">\[\begin{equation}
+\frac{f_X(t)}{f_Y(t)}\quad\text{decreases over the union of the supports of $X$ and $Y$}
+(\#eq:eq1.C.1)
+\end{equation}\]</span>
+(taking <span class="math inline">\(a/0\)</span> as <span class="math inline">\(+\infty\)</span> when <span class="math inline">\(a&gt;0\)</span> by convention), or equivalently, if
+<span class="math display">\[\begin{equation}
+f_X(u)f_Y(v)\ge f_X(v)f_Y(u)\quad\text{for all}\quad u\le v,
+(\#eq:eq1.C.2)
+\end{equation}\]</span>
+then <span class="math inline">\([X|a\leq X\leq a+h]\preceq_{\text{VaR}}[Y|a\leq Y\leq a+h]\)</span> for any level <span class="math inline">\(a\)</span> and increment <span class="math inline">\(h&gt;0\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-35" class="proof"><em>Proof</em>. </span>Consider <span class="math inline">\(a&lt;b\)</span>. The stochastic inequality <span class="math inline">\([X|a\leq X\leq b]\preceq_{\text{VaR}}[Y|a\leq Y\leq b]\)</span> guarantees that
+<span class="math display">\[
+\frac{\Pr[u\le X\le b]}{\Pr[a\le X\le b]}\le\frac{\Pr[u\le Y\le b]}
+{\Pr[a\le Y\le b]}\quad\text{when}\quad u\in[a,b].
+\]</span>
+This implies
+<span class="math display">\[
+\frac{\Pr[a\le X&lt;u]}{\Pr[u\le X\le b]}\ge\frac{\Pr[a\le Y&lt;u]}
+{\Pr[u\le Y\le b]}\quad\text{when}\quad u\in [a,b].
+\]</span>
+In other words,
+<span class="math display">\[
+\frac{\Pr[a\le X&lt;u]}{\Pr[a\le Y&lt;u]}\ge\frac{\Pr[u\le X\le b]}
+{\Pr[u\le Y\le b]}\quad\text{when}\quad u\in [a,b].
+\]</span>
+Particularly, for <span class="math inline">\(u&lt;b\le v\)</span>,
+<span class="math display">\[
+\frac{\Pr[u\le X&lt;b]}{\Pr[u\le Y&lt;b]}\ge\frac{\Pr[b\le X\le v]}
+{\Pr[b\le Y\le v]}.
+\]</span>
+Hence, when <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are continuous,
+<span class="math display">\[
+\frac{\Pr[a\le X&lt;u]}{\Pr[a\le Y&lt;u]}\ge\frac{\Pr[b\le X\le v]}
+{\Pr[b\le Y\le v]}\quad\text{when}\quad a&lt;u\le b\le v.
+\]</span>
+Taking limits as <span class="math inline">\(a\rightarrow u\)</span> and <span class="math inline">\(b\rightarrow v\)</span>, we obtain @ref(eq:eq1.C.2). The proof in the discrete case is similar.</p>
+</div>
+<p>The conditions @ref(eq:eq1.C.1) and @ref(eq:eq1.C.2), seemingly technical and not very intuitive, are generally easy to establish in parametric models.</p>
+<div class="remark">
+<p><span id="unlabeled-div-36" class="remark"><em>Remark</em>. </span>The method of comparing probability distributions discussed in Proposition @ref(prp:Propo5.4.10) is also called the likelihood ratio order and denoted by <span class="math inline">\(\preceq_{lr}\)</span>.</p>
+</div>
+</div>
+<div id="connection-with-the-esscher-transform" class="section level4 hasAnchor" number="6.4.5.2">
+<h4><span class="header-section-number">6.4.5.2</span> Connection with the Esscher Transform<a href="chap5.html#connection-with-the-esscher-transform" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Let <span class="math inline">\(X_h\)</span> be the Esscher transform of <span class="math inline">\(X\)</span>. The ratio of the probability densities associated with <span class="math inline">\(X\)</span> and <span class="math inline">\(X_h\)</span> is proportional to <span class="math inline">\(\exp(-hx)\)</span>, which is clearly decreasing in <span class="math inline">\(x\)</span>. This indicates that
+<span class="math display">\[
+[X|a\leq X\leq b]\preceq_{\text{VaR}}[X_h|a\leq X_h\leq b],
+\]</span>
+for any <span class="math inline">\(a&lt;b\)</span>.</p>
+<p>The following result shows under which conditions the Esscher risk measures relative to two risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are uniformly ordered.</p>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-37" class="proposition"><strong>Proposition 6.8  </strong></span>If <span class="math inline">\([X|a\leq X\leq b]\preceq_{\text{VaR}}[Y|a\leq Y\leq b]\)</span> for any <span class="math inline">\(a&lt;b\)</span>, then <span class="math inline">\({\text{Es}}[X;h]\leq{\text{Es}}[Y;h]\)</span> for any <span class="math inline">\(h&gt;0\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-38" class="proof"><em>Proof</em>. </span>Due to Proposition @ref(prp:Propo5.4.10), we know that the inequality
+<span class="math display">\[
+f_X(u)f_Y(v)\geq f_X(v)f_Y(u)
+\]</span>
+holds for any <span class="math inline">\(u\leq v\)</span>. By multiplying both sides of this inequality by
+<span class="math display">\[
+\frac{\exp(hu)}{M_X(h)}
+\frac{\exp(hv)}{M_Y(h)}
+\]</span>
+we obtain the same inequality for the probability density functions of <span class="math inline">\(X_h\)</span> and <span class="math inline">\(Y_h\)</span>, from which we conclude that <span class="math inline">\([X_h|a\leq X_h\leq b]\preceq_{\text{VaR}}[Y_h|a\leq Y_h\leq b]\)</span>, giving the desired result.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="uniform-comparison-of-tvars" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Uniform Comparison of TVaRs<a href="chap5.html#uniform-comparison-of-tvars" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="definition-21" class="section level3 hasAnchor" number="6.5.1">
+<h3><span class="header-section-number">6.5.1</span> Definition<a href="chap5.html#definition-21" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Here, we introduce a new method of comparing risks based on Tail Value-at-Risk (TVaR).</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-39" class="definition"><strong>Definition 6.11  </strong></span>For any random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> with finite mean, <span class="math inline">\(X\)</span> will be considered less risky than <span class="math inline">\(Y\)</span> based on the comparison of TVaRs, denoted as <span class="math inline">\(X\preceq_{\text{TVaR}}Y\)</span>, when
+<span class="math display">\[
+{\text{TVaR}}[X;\alpha]\leq{\text{TVaR}}[Y;\alpha]\text{ for all }\alpha\in[0,1].
+\]</span></p>
+</div>
+<p>The restriction to risks with finite mean ensures the existence of TVaRs, and thus the correctness of the definition of <span class="math inline">\(\preceq_{\text{TVaR}}\)</span>. Therefore, we now only compare risks with finite pure premium (it’s worth noting that many results we will establish in the following section depend on this assumption). This distinction also sets apart <span class="math inline">\(\preceq_{\text{VaR}}\)</span> and <span class="math inline">\(\preceq_{\text{TVaR}}\)</span>: indeed, <span class="math inline">\(\preceq_{\text{VaR}}\)</span> is defined for any variables in consideration, whereas this is not the case for <span class="math inline">\(\preceq_{\text{TVaR}}\)</span>.</p>
+<p>The <span class="math inline">\(\preceq_{\text{TVaR}}\)</span> relation is quite old (it’s a direct descendant of the relation known as “majorization” among numerical vectors, studied in the 1930s). Actuaries still refer to it as the stop-loss order (denoted <span class="math inline">\(\preceq_{sl}\)</span>), a concept closely related to the second-order stochastic dominance (often denoted as <span class="math inline">\(\preceq_2\)</span> or <span class="math inline">\(\preceq_{SSD}\)</span>) in economics. Probability theorists are more familiar with the <span class="math inline">\(\preceq_{\text{TVaR}}\)</span> relation under the name of increasing convex order (denoted <span class="math inline">\(\preceq_{icx}\)</span>).</p>
+<p>We will also use the relation denoted <span class="math inline">\(\preceq_{\text{TVaR,=}}\)</span>, which restricts <span class="math inline">\(\preceq_{\text{TVaR}}\)</span> to pairs of random variables with the same mean.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-40" class="definition"><strong>Definition 6.12  </strong></span>For any random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>,
+<span class="math display">\[\begin{eqnarray*}
+X\preceq_{\text{TVaR,=}}Y&amp;\Leftrightarrow&amp;
+\left\{
+\begin{array}{l}
+\mathbb{E}[X]=\mathbb{E}[Y],\\
+X\preceq_{\text{TVaR}}Y,
+\end{array}
+\right.
+\\
+&amp;\Leftrightarrow&amp;
+\left\{
+\begin{array}{l}
+{\text{TVaR}}[X;0]={\text{TVaR}}[Y;0],\\
+{\text{TVaR}}[X;\alpha]\leq{\text{TVaR}}[Y;\alpha]\\
+\hspace{20mm}\text{for all }\alpha\in(0,1).
+\end{array}
+\right.
+\end{eqnarray*}\]</span></p>
+</div>
+<p>The <span class="math inline">\(\preceq_{\text{TVaR,=}}\)</span> relation is known as the convex order among probability theorists (denoted <span class="math inline">\(\preceq_{cx}\)</span>). It is closely related to other relations, such as the Lorenz order.</p>
+<div class="remark">
+<p><span id="unlabeled-div-41" class="remark"><em>Remark</em>. </span>Note that <span class="math inline">\(\preceq_{\text{VaR}}\)</span> did not allow the comparison of random variables with the same mean. Indeed, for any risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>,
+<span class="math display">\[
+\left.
+\begin{array}{l}
+X\preceq_{\text{VaR}}Y\\
+\mathbb{E}[X]=\mathbb{E}[Y]
+\end{array}
+\right\}
+\Rightarrow X=_{\text{law}} Y.
+\]</span>
+To prove this result, it suffices to examine the identity
+<span class="math display">\[
+\mathbb{E}[Y]-\mathbb{E}[X]=\int_{x=0}^{+\infty} \underbrace{\{\Pr[Y&gt;x]-\Pr[X&gt;x]\}}_{\geq 0
+\text{ for all }x}dx=0,
+\]</span>
+which implies <span class="math inline">\(\Pr[Y&gt;x]=\Pr[X&gt;x]\)</span> for all <span class="math inline">\(x\)</span> and concludes the verification.</p>
+</div>
+</div>
+<div id="equivalent-conditions-1" class="section level3 hasAnchor" number="6.5.2">
+<h3><span class="header-section-number">6.5.2</span> Equivalent Conditions<a href="chap5.html#equivalent-conditions-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="tail-var-and-stop-loss-premiums" class="section level4 hasAnchor" number="6.5.2.1">
+<h4><span class="header-section-number">6.5.2.1</span> Tail-VaR and Stop-Loss Premiums<a href="chap5.html#tail-var-and-stop-loss-premiums" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The <span class="math inline">\(\preceq_{\text{TVaR}}\)</span> and <span class="math inline">\(\preceq_{\text{TVaR,=}}\)</span> relations introduced above can also be characterized using stop-loss premiums, as shown by the following result.</p>
+<div class="proposition">
+<p><span id="prp:CharCxSL" class="proposition"><strong>Proposition 6.9  </strong></span></p>
+<ol style="list-style-type: decimal">
+<li>For given two risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>,
+<span class="math display">\[
+X\preceq_{\text{TVaR}}Y\Leftrightarrow\mathbb{E}[(X-t)_+]\leq \mathbb{E}[(Y-t)_+] \text{ for all }
+t \in {\mathbb{R}}.
+\]</span></li>
+<li>For given two risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> with the same finite mean <span class="math inline">\(\mu\)</span>,
+<span class="math display">\[
+X\preceq_{\text{TVaR,=}}Y\Leftrightarrow\mathbb{E}[(X-t)_+]\leq \mathbb{E}[(Y-t)_+] \text{ for all }
+t \in {\mathbb{R}}.
+\]</span></li>
+</ol>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-61" class="proof"><em>Proof</em>. </span>We only prove (i); the reasoning for (ii) is similar. First, assume that the stop-loss premiums for <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are ordered for any <span class="math inline">\(t\)</span>, and consider the function
+<span class="math display">\[\begin{eqnarray*}
+h(t)&amp;=&amp;(1-\alpha)t+\mathbb{E}[(X-t)_+]\\
+&amp;=&amp;(1-\alpha)t+\int_t^{+\infty}\overline{F}_X(x)dx
+\end{eqnarray*}\]</span>
+for fixed <span class="math inline">\(0&lt;\alpha&lt;1\)</span>. As
+<span class="math display">\[
+\overline{F}_X\Big({\text{VaR}}[X;\alpha]\Big)\leq 1-\alpha\leq \Pr\Big[X\geq {\text{VaR}}[X;\alpha]\Big],
+\]</span>
+the function <span class="math inline">\(h\)</span> achieves its minimum at <span class="math inline">\(t={\text{VaR}}[X;\alpha]\)</span>, and the same holds for the function <span class="math inline">\(\frac{h(t)}{1-\alpha}\)</span>. This allows us to write using <a href="chap5.html#eq:JanRel1">(6.2)</a>,
+<span class="math display">\[\begin{eqnarray*}
+{\text{TVaR}}[X;\alpha]&amp;=&amp;{\text{VaR}}[X;\alpha]+\frac{1}{1-\alpha}{\text{ES}}[X;\alpha]\\
+&amp;=&amp;\frac{h\Big({\text{VaR}}[X;\alpha]\Big)}{1-\alpha}\\
+&amp;\leq &amp;\frac{h\Big({\text{VaR}}[Y;\alpha]\Big)}{1-\alpha}\\
+&amp;=&amp;{\text{VaR}}[Y;\alpha]+\frac{1}{1-\alpha}\mathbb{E}\Big[\Big(X-{\text{VaR}}[Y;\alpha]\Big)_+\Big]\\
+&amp;\leq&amp;{\text{VaR}}[Y;\alpha]+\frac{1}{1-\alpha}\mathbb{E}\Big[\Big(Y-{\text{VaR}}[Y;\alpha]\Big)_+\Big]\\
+&amp;=&amp;{\text{TVaR}}[Y;\alpha].
+\end{eqnarray*}\]</span>
+Therefore, the TVaRs for <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are ordered for any probability level <span class="math inline">\(\alpha\)</span>.</p>
+<p>Conversely, assume that the TVaRs are ordered, and show that then the stop-loss premiums must also be ordered. We saw in exercise @ref(eq:ExoSL} that
+<span class="math display">\[
+\mathbb{E}[(X-t)_+]=\int_{\alpha=F_X(t)}^1{\text{VaR}}[X;\alpha]d\alpha-t\overline{F}_X(t),
+\]</span>
+then for <span class="math inline">\(t\)</span> such that <span class="math inline">\(0&lt;F_X(t)&lt;1\)</span>,
+<span class="math display">\[\begin{eqnarray*}
+\mathbb{E}[(X-t)_+]&amp;=&amp;\overline{F}_X(t)\Big\{{\text{TVaR}}\big[X;F_X(t)\big]-t\Big\}\\
+&amp;\leq&amp;\overline{F}_X(t)\Big\{{\text{TVaR}}\big[Y;F_X(t)\big]-t\Big\}\\
+&amp;=&amp;\int_{\alpha=F_X(t)}^1{\text{VaR}}[Y;\alpha]d\alpha-t\overline{F}_X(t)\\
+&amp;=&amp;\int_{\alpha=F_Y(t)}^1{\text{VaR}}[Y;\alpha]d\alpha-t\overline{F}_Y(t)\\
+&amp;&amp;+\int_{\alpha=F_X(t)}^{F_Y(t)}{\text{VaR}}[Y;\alpha]d\alpha-t\Big(F_Y(t)-F_X(t)\Big)\\
+&amp;=&amp;\mathbb{E}[(Y-t)_+]+\int_{\alpha=F_X(t)}^{F_Y(t)}\Big({\text{VaR}}[Y;\alpha]-t\Big)d\alpha.
+\end{eqnarray*}\]</span>
+As <span class="math inline">\(\alpha\leq F_Y(t)\Leftrightarrow t\geq{\text{VaR}}[Y;\alpha]\)</span>, the second term is negative, which guarantees that <span class="math inline">\(\mathbb{E}[(X-t)_+]\leq \mathbb{E}[(Y-t)_+]\)</span>, concluding the proof.
+\end{proof}</p>
+<p>We now know that the <span class="math inline">\(\preceq_{\text{TVaR,=}}\)</span> and <span class="math inline">\(\preceq_{\text{TVaR}}\)</span> relations can be interpreted using reinsurance premiums relative to a stop-loss treaty. A comparison in the <span class="math inline">\(\preceq_{\text{TVaR}}\)</span> or <span class="math inline">\(\preceq_{\text{TVaR,=}}\)</span> sense boils down to comparing stop-loss premiums for different retentions. Therefore, when it comes to choosing between two risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, reinsurers are consulted: they are asked about their pure stop-loss rates, and preference is given to the risk for which reinsurance premiums are always more advantageous, while keeping the mean constant.</p>
+<div id="tail-var-and-convex-functions" class="section level4 hasAnchor" number="6.5.2.2">
+<h4><span class="header-section-number">6.5.2.2</span> Tail-VaR and Convex Functions<a href="chap5.html#tail-var-and-convex-functions" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Similar to <span class="math inline">\(\preceq_{\text{VaR}}\)</span> being linked to increasing functions, the <span class="math inline">\(\preceq_{\text{TVaR,=}}\)</span> and <span class="math inline">\(\preceq_{\text{TVaR}}\)</span> relations are related to convex and convex increasing functions, as shown by the following results.</p>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-42" class="proposition"><strong>Proposition 6.10  </strong></span>For any two random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> with finite means, we have</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(X\preceq_{\text{TVaR,=}}Y\Leftrightarrow \mathbb{E}[g(X)]\leq\mathbb{E}[g(Y)]\)</span> for any convex function <span class="math inline">\(g\)</span>, provided the expectations exist.</li>
+<li><span class="math inline">\(X\preceq_{\text{TVaR,=}}Y\Leftrightarrow \mathbb{E}[g(X)]\leq\mathbb{E}[g(Y)]\)</span> for any function <span class="math inline">\(g\)</span> such that <span class="math inline">\(g&#39;&#39;\geq 0\)</span>, provided the expectations exist.</li>
+</ol>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-43" class="proof"><em>Proof</em>. </span>Let’s prove (i). The implication ” <span class="math inline">\(\Leftarrow\)</span> ” is evident since the function <span class="math inline">\(x\mapsto(x-t)_+\)</span> is convex for any <span class="math inline">\(t\in {\mathbb{R}}^+\)</span>. To prove ” <span class="math inline">\(\Rightarrow\)</span> “, proceed as follows. Any convex function <span class="math inline">\(g\)</span> can be approximated uniformly by a sequence <span class="math inline">\(\{g_n,\hspace{2mm}n=1,2,\ldots\}\)</span> of convex functions defined by
+<span class="math display">\[
+g_n(x)=\alpha_1^{(n)}+\alpha_2^{(n)} x+\sum_{j=0}^n\beta_j^{(n)}(x-t_j^{(n)})_+,
+\]</span>
+where <span class="math inline">\(\alpha_1^{(n)},\alpha_2^{(n)}\in {\mathbb{R}}\)</span>, <span class="math inline">\(\beta_j^{(n)}\geq 0\)</span> for <span class="math inline">\(j=0,1,\ldots,n\)</span>, and <span class="math inline">\(0&lt;t_0^{(n)}&lt;t_1^{(n)}&lt;\ldots&lt;t_n^{(n)}\)</span>. Thus, as the inequality
+<span class="math display">\[\begin{eqnarray*}
+\mathbb{E}[g_n(X)] &amp; = &amp; \alpha_1^{(n)}+\alpha_2^{(n)} \mathbb{E}[X]+\sum_{j=0}^n\beta_j^{(n)}
+\mathbb{E}[(X-t_j^{(n)})_+] \\
+&amp; \leq &amp; \alpha_1^{(n)}+\alpha_2^{(n)} \mathbb{E}[X]+\sum_{j=0}^n\beta_j^{(n)}
+\mathbb{E}[(Y-t_j^{(n)})_+]=\mathbb{E}[g_n(Y)]
+\end{eqnarray*}\]</span>
+is satisfied for any <span class="math inline">\(n\)</span>, it follows that <span class="math inline">\(\mathbb{E}[g(X)]\leq \mathbb{E}[g(Y)]\)</span> when passing to the limit, which completes the proof of (i). The proof of (ii) is similar to that of Property <a href="#prp:FuncTestRegVaR"><strong>??</strong></a>.</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-44" class="remark"><em>Remark</em> (Variability). </span>Roughly speaking, convex functions are those that attain their highest values in regions of the form <span class="math inline">\(]-\infty ,a[ \cup ]b, +\infty[\)</span>, where <span class="math inline">\(a&lt;b\)</span>. For this reason, if <span class="math inline">\(X\preceq_{\text{TVaR,=}}Y\)</span>, <span class="math inline">\(Y\)</span> takes on values that are more “extreme” than those of <span class="math inline">\(X\)</span>, meaning that <span class="math inline">\(Y\)</span> is more “variable” than <span class="math inline">\(X\)</span>. This can also be justified by the fact that if <span class="math inline">\(X\preceq_{\text{TVaR,=}}Y\)</span>, then necessarily
+<span class="math display">\[
+\mathbb{V}[X]\leq \mathbb{V}[Y];
+\]</span>
+this stems from the fact that the function <span class="math inline">\(x\mapsto g(x)=x^2\)</span> is convex.</p>
+</div>
+<p>By proceeding similarly, we can establish the following result.</p>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-45" class="proposition"><strong>Proposition 6.11  </strong></span>For any two random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> with finite means, we have</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(X\preceq_{\text{TVaR}}Y\Leftrightarrow \mathbb{E}[g(X)]\leq\mathbb{E}[g(Y)]\)</span> for any convex increasing function <span class="math inline">\(g\)</span>, provided the expectations exist.</li>
+<li><span class="math inline">\(X\preceq_{\text{TVaR}}Y\Leftrightarrow \mathbb{E}[g(X)]\leq\mathbb{E}[g(Y)]\)</span> for any function <span class="math inline">\(g\)</span> such that <span class="math inline">\(g&#39;\geq 0\)</span> and <span class="math inline">\(g&quot;\geq 0\)</span>, provided the expectations exist.</li>
+</ol>
+</div>
+</div>
+<div id="strassens-characterization" class="section level4 hasAnchor" number="6.5.2.3">
+<h4><span class="header-section-number">6.5.2.3</span> Strassen’s Characterization<a href="chap5.html#strassens-characterization" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The following characterization was obtained by Strassen in 1965. It shows that Tail-VaR is decreased by taking conditional expectations.</p>
+<div class="proposition">
+<p><span id="prp:CharacCouplingCx" class="proposition"><strong>Proposition 6.12  </strong></span>For given two risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\preceq_{\text{TVaR,=}}Y\)</span> if and only if we can find two random variables <span class="math inline">\(\widetilde{X}\)</span> and <span class="math inline">\(\widetilde{Y}\)</span> (defined on the same probability space) such that <span class="math inline">\(\widetilde{X}=_{\text{law}}X\)</span>, <span class="math inline">\(\widetilde{Y}=_{\text{law}}Y\)</span>, and <span class="math inline">\(\mathbb{E}[\widetilde{Y}|\widetilde{X}]=\widetilde{X}\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-46" class="proof"><em>Proof</em>. </span>Constructing the variables <span class="math inline">\(\widetilde{X}\)</span> and <span class="math inline">\(\widetilde{Y}\)</span> (i.e., proving the necessity of Strassen’s condition) is challenging; we refer interested readers to <span class="citation">(<a href="#ref-muller2002comparison" role="doc-biblioref">Müller and Stoyan 2002</a>)</span> for an interesting proof. The sufficiency is easy to establish. Indeed, if such variables <span class="math inline">\(\widetilde{X}\)</span> and <span class="math inline">\(\widetilde{Y}\)</span> exist, then for any convex function <span class="math inline">\(g\)</span>,
+<span class="math display">\[\begin{eqnarray*}
+\mathbb{E}[g(X)] &amp; = &amp; \mathbb{E}[g(\widetilde{X})]=\mathbb{E}
+\Big[g\Big(\mathbb{E}[\widetilde{Y}|\widetilde{X}]\Big)\Big] \\
+&amp; \leq &amp; \mathbb{E}\Big[\Big(\mathbb{E}[g(\widetilde{Y})|\widetilde{X}]\Big)\Big]
+=\mathbb{E}[g(\widetilde{Y})]=\mathbb{E}[g(Y)]
+\end{eqnarray*}\]</span>
+by virtue of Jensen’s inequality.</p>
+</div>
+<div class="corollary">
+<p><span id="cor:unlabeled-div-47" class="corollary"><strong>Corollary 6.2  </strong></span>In particular, overlaying an additional centered randomness <span class="math inline">\(\epsilon\)</span> onto a risk <span class="math inline">\(X\)</span> makes the situation riskier (in fact, more variable). Formally, for any risk <span class="math inline">\(X\)</span> and a random variable <span class="math inline">\(\epsilon\)</span> independent of <span class="math inline">\(X\)</span> with <span class="math inline">\(\mathbb{E}[\epsilon]=0\)</span>,
+<span class="math display">\[
+X\preceq_{\text{TVaR,=}}X+\epsilon.
+\]</span></p>
+</div>
+</div>
+<div id="sufficient-condition" class="section level3 hasAnchor" number="6.5.3">
+<h3><span class="header-section-number">6.5.3</span> Sufficient Condition<a href="chap5.html#sufficient-condition" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We provide sufficient conditions for <span class="math inline">\(\preceq_{\text{TVaR,=}}\)</span> and <span class="math inline">\(\preceq_{\text{TVaR}}\)</span> based on the number of crossings of cumulative distribution functions.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:FIG-SINGLE-CROSSING"></span>
+<img src="bookdown-demo_files/figure-html/FIG-SINGLE-CROSSING-1.png" alt="Two cumulative distribution functions $F_X$ and $F_Y$ satisfying the single crossing property" width="960" />
+<p class="caption">
+Figure 6.2: Two cumulative distribution functions <span class="math inline">\(F_X\)</span> and <span class="math inline">\(F_Y\)</span> satisfying the single crossing property
+</p>
+</div>
+<div class="proposition">
+<p><span id="prp:p2.c.2" class="proposition"><strong>(#prp:p2.c.2) </strong></span>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be two random variables such that <span class="math inline">\(\mathbb{E}[X]=\mathbb{E}[Y]\)</span>. If there exists a constant <span class="math inline">\(c\)</span> such that
+<span class="math display">\[
+F_Y(x)\geq F_X(x)\text{ for all } x&lt;c,
+\]</span>
+and
+<span class="math display">\[
+F_Y(x)\leq F_X(x) \text{ for all } x&gt;c,
+\]</span>
+then <span class="math inline">\(X\preceq_{\text{TVaR,=}}Y\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-48" class="proof"><em>Proof</em>. </span>For <span class="math inline">\(t&gt;c\)</span>, we have
+<span class="math display">\[\begin{eqnarray*}
+\mathbb{E}[(X-t)_+] &amp; = &amp; \int_{x=t}^{+\infty}\Pr[X&gt;x]dx\\
+&amp; \leq &amp; \int_{x=t}^{+\infty}\Pr[Y&gt;x]dx\\
+&amp; = &amp; \mathbb{E}[(Y-t)_+].
+\end{eqnarray*}\]</span>
+For <span class="math inline">\(t\leq c\)</span>, it suffices to note that
+<span class="math display">\[\begin{eqnarray*}
+\mathbb{E}[(X-t)_+]&amp;=&amp;\mathbb{E}[X]-\int_{x=0}^{t}\Pr[X&gt;x]dx\\
+&amp;=&amp;\mathbb{E}[X]-\int_{x=0}^{t}\Pr[Y&gt;x]dx,
+\end{eqnarray*}\]</span>
+which yields the result as <span class="math inline">\(\mathbb{E}[X]=\mathbb{E}[Y]\)</span>.</p>
+</div>
+<p>Similarly, we can prove the following result.</p>
+<div class="proposition">
+<p><span id="prp:2.c.2" class="proposition"><strong>(#prp:2.c.2) </strong></span>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be two random variables such that <span class="math inline">\(\mathbb{E}[X]\leq\mathbb{E}[Y]\)</span>. If there exists a constant <span class="math inline">\(c\)</span> such that
+<span class="math display">\[
+F_Y(x)\geq F_X(x)\text{ for all } x&lt;c,
+\]</span>
+and
+<span class="math display">\[
+F_Y(x)\leq F_X(x) \text{ for all } x&gt;c,
+\]</span>
+then <span class="math inline">\(X\preceq_{\text{TVaR}}Y\)</span>.</p>
+</div>
+</div>
+<div id="properties-4" class="section level3 hasAnchor" number="6.5.4">
+<h3><span class="header-section-number">6.5.4</span> Properties<a href="chap5.html#properties-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="revisited-law-of-large-numbers" class="section level4 hasAnchor" number="6.5.4.1">
+<h4><span class="header-section-number">6.5.4.1</span> Revisited Law of Large Numbers<a href="chap5.html#revisited-law-of-large-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>We reexamine the law of large numbers here. Specifically, we show that there is actually a decreasing sense of <span class="math inline">\(\preceq_{\text{TVaR,=}}\)</span> for the arithmetic means as <span class="math inline">\(n\)</span> increases.</p>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-49" class="proposition"><strong>Proposition 6.13  </strong></span>For independent and identically distributed risks <span class="math inline">\(X_1,X_2,X_3,\ldots\)</span> with the same finite mean, we denote
+<span class="math display">\[
+\overline{X}^{(n)}=\frac{1}{n}\sum_{i=1}^n X_i.
+\]</span>
+We then have
+<span class="math display">\[
+\overline{X}^{(n+1)}\preceq_{\text{TVaR,=}}\overline{X}^{(n)}.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-50" class="proof"><em>Proof</em>. </span>It suffices to observe that
+<span class="math display">\[
+\mathbb{E}\big[X_i\big|\overline{X}^{(n)}\big]=\overline{X}^{(n)}
+\]</span>
+for any <span class="math inline">\(i=1,\ldots,n\)</span>. Thus,
+<span class="math display">\[
+\mathbb{E}\big[\overline{X}^{(n-1)}\big|\overline{X}^{(n)}\big]=\overline{X}^{(n)},
+\]</span>
+which gives the result using Proposition <a href="chap5.html#prp:CharacCouplingCx">6.12</a>.</p>
+</div>
+<p>It’s worth mentioning that this gives an interesting interpretation of the law of large numbers. Indeed, the convergence of <span class="math inline">\(\overline{X}^{(n)}\)</span> to <span class="math inline">\(\mathbb{E}[X_1]\)</span> is accompanied by a monotonic reduction of risk (as measured by Tail-VaR). Furthermore, for any <span class="math inline">\(n\)</span>,
+<span class="math display">\[
+\mathbb{E}[X_1]\preceq_{\text{TVaR,=}}\overline{X}^{(n)}.
+\]</span></p>
+<p>This result also illustrates the reduction in variability resulting from pooling an increasing number of identical risks. The stability of the company’s outcome will be even greater when the number of risks in the portfolio is large.</p>
+</div>
+<div id="advantages-of-policy-standardization" class="section level4 hasAnchor" number="6.5.4.2">
+<h4><span class="header-section-number">6.5.4.2</span> Advantages of Policy Standardization<a href="chap5.html#advantages-of-policy-standardization" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>On the market, it’s noticeable that policy conditions are standardized. Even though the individual situations of insured parties are all different, insurers refuse to take this into account and organize the transfer of risks under similar conditions for all insured parties. They only personalize certain risk features in specific conditions. One could legitimately question the relevance of this practice: beyond the administrative management simplification benefits, is it always appropriate to treat insured parties identically? The following result provides an answer to this question.</p>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-51" class="proposition"><strong>Proposition 6.14  </strong></span>For independent and identically distributed risks <span class="math inline">\(X_1,X_2,X_3,\ldots\)</span>, regardless of the functions <span class="math inline">\(g_1, g_2, g_3,\ldots\)</span>,<br />
+<span class="math display">\[
+\sum_{i=1}^{n} \overline{g}(X_i)\preceq_{\text{TVaR,=}}\sum_{i=1}^n
+g_i(X_i)\text{ where }
+\overline{g}(x)=\frac{1}{n} \sum_{i=1}^n g_i(x).
+\]</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-52" class="proof"><em>Proof</em>. </span>Let <span class="math inline">\(\pi=\{\pi(1),\pi(2),\ldots,\pi(n)\}\)</span> be a random permutation of <span class="math inline">\(\{1,2,\ldots,n\}\)</span>, independent of the <span class="math inline">\(X_i\)</span>. Let <span class="math inline">\(\mathcal{P}\)</span> be the set of such permutations. Then,
+<span class="math display">\[\begin{eqnarray*}
+&amp;&amp;\mathbb{E}\left[\left.\sum_{i=1}^ng_{\pi(i)}(X_i)\right|
+X_1,X_2,\ldots,X_n\right] \\
+&amp; = &amp;
+\frac{1}{n!}\sum_{\{\xi_1,\ldots,\xi_n\}\in\cal P}
+\left\{g_{\xi_1}(X_1)+g_{\xi_2}(X_2)+\ldots
++g_{\xi_n}(X_n)\right\} \\
+\\
+&amp; = &amp; \sum_{i=1}^n{\bar g}(X_i),
+\end{eqnarray*}\]</span>
+which implies
+<span class="math display">\[\begin{eqnarray*}
+&amp;&amp;\mathbb{E}\left[\left.\sum_{i=1}^ng_{\pi(i)}(X_i)\right|
+\sum_{i=1}^n{\bar g}(X_i)\right]
+\\
+&amp; = &amp;
+\mathbb{E}\left[\mathbb{E}\left[\left.\sum_{i=1}^ng_{\pi(i)}(X_i)\right|
+X_1,X_2,\ldots,X_n\right]\left|
+\sum_{i=1}^n{\bar g}(X_i)\right.\right] \\
+\\
+&amp; = &amp; \sum_{i=1}^n{\bar g}(X_i).
+\end{eqnarray*}\]</span>
+Then, using Strassen’s characterization, we can state that
+<span class="math display">\[\begin{equation}
+\sum_{i=1}^n{\bar g}(X_i)\preceq_{\text{TVaR,=}}\sum_{i=1}^ng_{\pi(i)}(X_i).
+(\#eq:eq1.4)
+\end{equation}\]</span>
+Finally, the result follows from @ref(eq:eq1.4) since <span class="math inline">\(\sum_{i=1}^ng_{\pi(i)}(X_i)\)</span> and <span class="math inline">\(\sum_{i=1}^ng_i(X_i)\)</span> are identically distributed.</p>
+</div>
+<p>This result explains why insurance contracts are standardized (in addition to the management facilitation benefits, of course). Indeed, if the actuary has to manage <span class="math inline">\(n\)</span> identical risks resulting in annual costs <span class="math inline">\(X_1,X_2,\ldots,X_n\)</span>, they always have an interest in applying the same treatment to these risks.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-53" class="example"><strong>Example 6.4  </strong></span>For example, if the insurer decides to leave a percentage of the claim amount to the insured, this percentage must be the same for all insured parties in the same category. Indeed, if the insurer leaves <span class="math inline">\(\alpha_i\%\)</span> of the claims at the expense of insured party number <span class="math inline">\(i\)</span>, their situation will always be worse than that of the insurer who leaves <span class="math inline">\(\overline{\alpha}\%\)</span> of the claims at the expense of each insured party, where
+<span class="math display">\[
+\overline{\alpha}=\frac{1}{n}\sum_{i=1}^n\alpha_i
+\]</span>
+since
+<span class="math display">\[
+\sum_{i=1}^n\overline{\alpha}X_i\preceq_{\text{TVaR,=}}\sum_{i=1}^n\alpha_iX_i.
+\]</span></p>
+</div>
+<p>To increase the stability of the company’s outcomes, the actuary will always have an interest in applying the same treatment to all identical policies in their portfolio.</p>
+</div>
+<div id="stability-of-preferences" class="section level4 hasAnchor" number="6.5.4.3">
+<h4><span class="header-section-number">6.5.4.3</span> Stability of Preferences<a href="chap5.html#stability-of-preferences" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>For any risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> such that <span class="math inline">\(X\preceq_{\text{TVaR}}Y\)</span>, the same relationship holds for <span class="math inline">\(t(X)\)</span> compared to <span class="math inline">\(t(Y)\)</span> for any convex increasing function <span class="math inline">\(t\)</span>, i.e., <span class="math inline">\(t(X)\preceq_{\text{TVaR}}t(Y)\)</span>. Note that <span class="math inline">\(\preceq_{\text{TVaR}}\)</span> is thus less stable than <span class="math inline">\(\preceq_{\text{VaR}}\)</span> (for which it was sufficient for <span class="math inline">\(t\)</span> to be increasing).</p>
+</div>
+<div id="separation-theorem" class="section level4 hasAnchor" number="6.5.4.4">
+<h4><span class="header-section-number">6.5.4.4</span> Separation Theorem<a href="chap5.html#separation-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The separation theorem allows for the “<em>separation</em>” of risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> such that <span class="math inline">\(X\preceq_{\text{TVaR}}Y\)</span>.</p>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-54" class="proposition"><strong>Proposition 6.15  </strong></span>For two risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, <span class="math inline">\(X\preceq_{\text{TVaR}}Y\)</span> if and only if there exists a random variable <span class="math inline">\(Z\)</span> such that <span class="math inline">\(X\preceq_{\text{VaR}}Z\preceq_{\text{TVaR,=}}Y\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-55" class="proof"><em>Proof</em>. </span>Let’s define the risk
+<span class="math display">\[
+X_b=\max\{X,b\}.
+\]</span>
+Clearly, <span class="math inline">\(\Pr[X\leq X_b]=1\)</span>, and thus <span class="math inline">\(X\preceq_{\text{VaR}}X_b\)</span>. Choose <span class="math inline">\(b\)</span> such that <span class="math inline">\(\mathbb{E}[X_b]=\mathbb{E}[Y]\)</span>. Then it’s easy to see that whether <span class="math inline">\(t\geq b\)</span> or <span class="math inline">\(t&lt;b\)</span>,
+<span class="math display">\[
+\mathbb{E}[(X_b-t)_+]\leq\mathbb{E}[(Y-t)_+].
+\]</span>
+Therefore, we have constructed a risk <span class="math inline">\(Z=X_b\)</span> satisfying the stated conditions.</p>
+</div>
+<p>The stochastic dominance <span class="math inline">\(X\preceq_{\text{TVaR}}Y\)</span> thus means that <span class="math inline">\(X\)</span> is both “smaller” and “less variable” than <span class="math inline">\(Y\)</span>.</p>
+</div>
+</div>
+<div id="optimal-form-of-risk-transfer" class="section level2 hasAnchor" number="6.6">
+<h2><span class="header-section-number">6.6</span> Optimal Form of Risk Transfer<a href="chap5.html#optimal-form-of-risk-transfer" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="the-problem" class="section level3 hasAnchor" number="6.6.1">
+<h3><span class="header-section-number">6.6.1</span> The Problem<a href="chap5.html#the-problem" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>As early as 1971, Kenneth Arrow showed that when insurers include a safety loading in premiums (using the principle of mathematical expectation), the policy providing a compulsory deductible is optimal for any risk-averse decision-maker among policies of the same cost. Beyond the compulsory deductible, each euro of loss is compensated by a euro of indemnity. Thus, the insured can limit their net loss to the compulsory deductible. This results in small losses not being compensated, while significant losses are well covered, unlike in a proportional coverage system. The compulsory deductible intuitively appears as the best compromise between the desire to limit insurance costs and the desire to reduce risk. This section is dedicated to comparing different types of policies. We will see that under fairly general conditions, the guarantees associated with various forms of insurance can be compared in the sense of <span class="math inline">\(\preceq_{\text{TVaR,=}}\)</span>. To do this, we first need to model the coverage associated with a policy.</p>
+</div>
+<div id="admissible-indemnity-functions" class="section level3 hasAnchor" number="6.6.2">
+<h3><span class="header-section-number">6.6.2</span> Admissible Indemnity Functions<a href="chap5.html#admissible-indemnity-functions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Consider an insured facing a risk <span class="math inline">\(X\)</span> with cumulative distribution function <span class="math inline">\(F_X\)</span>. An insurance contract can be represented by a function <span class="math inline">\(I\)</span> where <span class="math inline">\(I(x)\)</span> represents the amount of indemnity received by the insured if a claim of amount <span class="math inline">\(x\)</span> occurs; such a function is called an indemnity function. It is natural to assume that <span class="math inline">\(I\)</span> is non-decreasing and satisfies
+<span class="math display">\[
+0\leq I(x)\leq x\text{ for all }x\in{\mathbb{R}}^+.
+\]</span></p>
+<p>Suppose the insured has to choose, given a premium <span class="math inline">\(\pi\)</span> and a risk <span class="math inline">\(X\)</span>, between different policies described by a function <span class="math inline">\(I\)</span> belonging to the class
+<span class="math display">\[\begin{eqnarray*}
+\mathcal{I}&amp;=&amp;\Big\{I:{\mathbb{R}}^+\to{\mathbb{R}}^+\Big|0\leq I(x)\leq x,\hspace{2mm}0\leq I&#39;\leq 1,\\
+&amp;  &amp; \hspace{30mm}
+\text{$I$ non-decreasing and convex, }\\
+&amp;  &amp; \hspace{30mm}
+\mathbb{E}[I(X)]=\pi/(1+\theta)\Big\}.
+\end{eqnarray*}\]</span>
+The convexity of <span class="math inline">\(I\)</span> appears as a natural constraint. Indeed, it is reasonable for the insurer’s largest payments to correspond to the most severe claims.</p>
+<p>In this section, we will compare different forms of insurance. Specifically, we will search for conditions under which the risks remaining in the insured’s portfolio are comparable in the <span class="math inline">\(\preceq_{\text{TVaR,=}}\)</span> sense. To do this, we need Property @ref(prp:2.c.2), which provides a convenient sufficient condition to establish <span class="math inline">\(\preceq_{\text{TVaR,=}}\)</span>.</p>
+</div>
+<div id="ordering-of-contracts" class="section level3 hasAnchor" number="6.6.3">
+<h3><span class="header-section-number">6.6.3</span> Ordering of Contracts<a href="chap5.html#ordering-of-contracts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Now we’ll show that if the indemnity functions related to two policies intersect only once, the risk associated with one will be deemed lower than the other.</p>
+<div class="proposition">
+<p><span id="prp:LemMarteau" class="proposition"><strong>Proposition 6.16  </strong></span>For any <span class="math inline">\(I_1\)</span> and <span class="math inline">\(I_2\)</span> in <span class="math inline">\(\mathcal{I}\)</span>, if <span class="math inline">\(I_1\)</span> and <span class="math inline">\(I_2\)</span> are such that
+<span class="math display">\[
+\left\{
+\begin{array}{l}
+I_1(x)\leq I_2(x),\text{ for }x&lt;c,\\
+I_1(x)\geq I_2(x),\text{ for }x&gt;c,
+\end{array}
+\right.
+\]</span>
+then <span class="math inline">\(X-I_1(X)\preceq_{\text{TVaR,=}}X-I_2(X)\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-56" class="proof"><em>Proof</em>. </span>Let’s show that the cumulative distribution functions of <span class="math inline">\(X-I_1(X)\)</span> and <span class="math inline">\(X-I_2(X)\)</span> intersect at only one point, which is sufficient to prove the announced result using Property @ref(prp:2.c.2). For <span class="math inline">\(x&gt;c\)</span>, we have
+<span class="math display">\[\begin{eqnarray*}
+\Pr[X-I_1(X)\leq x-I_1(x)]&amp;=&amp;\Pr[X-I_2(X)\leq x-I_2(x)]\\
+&amp;\leq &amp;\Pr[X-I_2(X)\leq x-I_1(x)].
+\end{eqnarray*}\]</span>
+Similarly, for <span class="math inline">\(x&lt;c\)</span>,
+<span class="math display">\[\begin{eqnarray*}
+\Pr[X-I_1(X)\leq x-I_1(x)]&amp;=&amp;\Pr[X-I_2(X)\leq x-I_2(x)]\\
+&amp;\geq &amp;\Pr[X-I_2(X)\leq x-I_1(x)].
+\end{eqnarray*}\]</span>
+Hence, there exists a number <span class="math inline">\(t^*\)</span> defined by the equation
+<span class="math display">\[
+t^*=c-I_1(c)
+\]</span>
+such that
+<span class="math display">\[
+\left\{
+\begin{array}{l}
+\Pr[X-I_1(X)\leq t]\leq \Pr[X-I_2(X)\leq t],\text{ for }t\leq t^*,\\
+\Pr[X-I_1(X)\leq t]\geq \Pr[X-I_2(X)\leq t],\text{ for }t&gt;t^*,
+\end{array}
+\right.
+\]</span>
+which allows us to conclude, according to Property @ref(prp:2.c.2).</p>
+</div>
+</div>
+<div id="optimality-of-the-stop-loss-contract" class="section level3 hasAnchor" number="6.6.4">
+<h3><span class="header-section-number">6.6.4</span> Optimality of the Stop-Loss Contract<a href="chap5.html#optimality-of-the-stop-loss-contract" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Consider the policy providing a compulsory deductible of amount <span class="math inline">\(\delta\)</span>, i.e., <span class="math inline">\(I_\delta(x)=(x-\delta)_+\)</span>, where <span class="math inline">\(\delta\)</span> is such that
+<span class="math display">\[
+\mathbb{E}[(X-\delta)_+]=\frac{\pi}{1+\theta},
+\]</span>
+it is easy to see that <span class="math inline">\(I_\delta\in\mathcal{I}\)</span> and there exists <span class="math inline">\(c\)</span> for which we have
+<span class="math display">\[
+\left\{
+\begin{array}{l}
+I_\delta(x)\leq I(x),\text{ for }x&lt;c,\\
+I_\delta(x)\geq I(x),\text{ for }x&gt;c,
+\end{array}
+\right.
+\]</span>
+for all <span class="math inline">\(I\in\mathcal{I}\)</span>. Thus, Property <a href="chap5.html#prp:LemMarteau">6.16</a> gives
+<span class="math display">\[
+X-(X-\delta)_+\preceq_{\text{TVaR,=}}X-I(X)\text{ for all }I\in\mathcal{I}.
+\]</span>
+Therefore, the policy providing a compulsory deductible will always be optimal in the <span class="math inline">\(\preceq_{\text{TVaR,=}}\)</span> sense.</p>
+</div>
+</div>
+<div id="incomplete-information" class="section level2 hasAnchor" number="6.7">
+<h2><span class="header-section-number">6.7</span> Incomplete Information<a href="chap5.html#incomplete-information" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="context-2" class="section level3 hasAnchor" number="6.7.1">
+<h3><span class="header-section-number">6.7.1</span> Context<a href="chap5.html#context-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In many practical situations, actuaries have limited information. It is essential to develop formulas that allow optimal and cautious use of this partial information. This is done by constructing the least and most favorable risks consistent with the situation the actuary faces. Below, we detail an approximation method in line with <span class="math inline">\(\preceq_{\text{TVaR,=}}\)</span>.</p>
+</div>
+<div id="known-mean-and-support" class="section level3 hasAnchor" number="6.7.2">
+<h3><span class="header-section-number">6.7.2</span> Known Mean and Support<a href="chap5.html#known-mean-and-support" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>When the mean and support of a risk <span class="math inline">\(X\)</span> are known, it is possible to construct two risks <span class="math inline">\(X_-\)</span> and <span class="math inline">\(X_+\)</span> with the same mean as <span class="math inline">\(X\)</span>, such that the former is considered more favorable than <span class="math inline">\(X\)</span> in the <span class="math inline">\(\preceq_{\text{TVaR,=}}\)</span> sense, and the latter is less favorable in the <span class="math inline">\(\preceq_{\text{TVaR,=}}\)</span> sense. This is the subject of the following result.</p>
+<div class="proposition">
+<p><span id="prp:ExtCx" class="proposition"><strong>Proposition 6.17  </strong></span>Suppose we are faced with a risk <span class="math inline">\(X\)</span> such that <span class="math inline">\(\mathbb{E}[X]=\mu\)</span> and <span class="math inline">\(\Pr[a\leq X\leq b]=1\)</span>. In this case, defining <span class="math inline">\(X_-=\mu\)</span> and <span class="math inline">\(X_+\)</span> by
+<span class="math display">\[
+X_+=\left\{
+\begin{array}{l}
+a,\text{ with probability }\frac{b-\mu}{b-a},\\
+b,\text{ with probability }\frac{\mu-a}{b-a},
+\end{array}
+\right.
+\]</span>
+we have
+<span class="math display">\[
+X_-\preceq_{\text{TVaR,=}}X\preceq_{\text{TVaR,=}}X_+.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-57" class="proof"><em>Proof</em>. </span>It is indeed easy to verify that <span class="math inline">\(\mathbb{E}[X_+]=\mu\)</span> and that the cumulative distribution functions of <span class="math inline">\(X\)</span> and <span class="math inline">\(X_+\)</span> intersect at only one point, with that of <span class="math inline">\(X\)</span> dominating that of <span class="math inline">\(X_+\)</span> after the unique intersection. Similarly, the cumulative distribution functions associated with <span class="math inline">\(X_-\)</span> and <span class="math inline">\(X\)</span> intersect at only one point, with that of <span class="math inline">\(X_-\)</span> dominating that of <span class="math inline">\(X\)</span> after the unique intersection. The result then follows from Property @ref(prp:2.c.2).</p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-58" class="remark"><em>Remark</em>. </span>In particular, we can obtain an upper bound for the variance of <span class="math inline">\(X\)</span>, which is
+<span class="math display">\[
+\mathbb{V}[X]\leq\mathbb{V}[X_+]=a^2\frac{b-\mu}{b-a}+b^2\frac{\mu-a}{b-a}-\mu^2.
+\]</span>
+Note that <span class="math inline">\(\mathbb{V}[X]\geq\mathbb{V}[X_-]=0\)</span>, which is the expected result.</p>
+</div>
+</div>
+<div id="application-to-calculating-a-grouped-data-stop-loss-premium" class="section level3 hasAnchor" number="6.7.3">
+<h3><span class="header-section-number">6.7.3</span> Application to Calculating a Grouped Data Stop-Loss Premium<a href="chap5.html#application-to-calculating-a-grouped-data-stop-loss-premium" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s provide an application example. Suppose we have summarized information in Table <a href="#ExSLExt"><strong>??</strong></a> regarding the cumulative distribution function of the risk <span class="math inline">\(X\)</span> (In many cases, actuaries have grouped data available and presented in a table like this. Of course, it is always better to work with individual observations when available). It shows the proportion of amount in each interval as well as the average cost of those.</p>
+<table>
+<caption><span id="tab:ExSLExt">Table 6.2: </span>Description of claim amounts</caption>
+<thead>
+<tr class="header">
+<th align="center">Amounts</th>
+<th align="center">Average costs</th>
+<th align="center">Proportion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">less than 1,000€</td>
+<td align="center">560</td>
+<td align="center">30%</td>
+</tr>
+<tr class="even">
+<td align="center">1,000 - 2,000 €</td>
+<td align="center">1200</td>
+<td align="center">50%</td>
+</tr>
+<tr class="odd">
+<td align="center">2,000 - 10,000 €</td>
+<td align="center">3200</td>
+<td align="center">15%</td>
+</tr>
+<tr class="even">
+<td align="center">more than 10,000 €</td>
+<td align="center">11200</td>
+<td align="center">5%</td>
+</tr>
+</tbody>
+</table>
+<p>Let’s assume that we want to calculate <span class="math inline">\(\mathbb{E}[(X-t)_+]\)</span> for a certain value of <span class="math inline">\(t\)</span>. First, the last interval is open (it represents claims exceeding 10,000). To close it, a upper bound for the cost of a claim is needed. This can be set contractually (maximum insurer liability, or sum insured in the case of property insurance) or needs to be determined by the actuary in the case of unlimited coverage (as still practiced sometimes for third-party bodily injury in liability insurance). In the latter case, it’s referred to as the probable maximum loss (PML), and we’ll see later how to determine it. Let’s assume here that the PML is 20,000.</p>
+<p>Of course, we can assume that the claim amounts are uniformly distributed within each interval, but this amounts to neglecting the information about the average costs in each interval. Therefore, we proceed as follows:</p>
+<p><span class="math display">\[\begin{eqnarray*}
+&amp;&amp;\mathbb{E}[(X-t)_+]
+\\
+&amp;=&amp;\mathbb{E}[(X-t)_+|0&lt;X\leq 1000]\Pr[X\leq 1000]\\
+&amp;&amp;+\mathbb{E}[(X-t)_+|1000&lt;X\leq 2000]\Pr[1000&lt;X\leq 2000]\\
+&amp;&amp;+\mathbb{E}[(X-t)_+|2000&lt;X\leq 10000]\Pr[2000&lt;X\leq 10000]\\
+&amp;&amp;+\mathbb{E}[(X-t)_+|10000&lt;X\leq \text{PMP}]\Pr[10000&lt;X\leq \text{PMP}].
+\end{eqnarray*}\]</span></p>
+<p>Now, we bound each of the terms <span class="math inline">\(\mathbb{E}[(X-t)_+|a&lt;X\leq b]\)</span> using the upper bound <span class="math inline">\(X_+\)</span> based on the support <span class="math inline">\((a,b)\)</span> and the average provided in Table <a href="#ExSLExt"><strong>??</strong></a>; it follows:</p>
+<p><span class="math display">\[\begin{eqnarray*}
+\mathbb{E}[(X-t)_+] &amp;\leq &amp;(1000-t)_+\left(\frac{560}{1000}0.3+\frac{800}{1000}0.5\right)\\
+&amp;&amp;+(2000-t)_+\left(\frac{200}{1000}0.5+\frac{6800}{8000}0.15\right)\\
+&amp;&amp;+(10000-t)_+\left(\frac{1200}{8000}0.15+\frac{\text{PMP}-11200}{\text{PMP}-10000}0.05\right)\\
+&amp;&amp;+(\text{PMP}-t)_+\frac{1200}{\text{PMP}-10000}0.05.
+\end{eqnarray*}\]</span></p>
+<p>Similarly, we can obtain the following lower bound on <span class="math inline">\(\mathbb{E}[(X-t)_+]\)</span> by concentrating all probability mass of each interval at its mean:</p>
+<p><span class="math display">\[\begin{eqnarray*}
+\mathbb{E}[(X-t)_+] &amp;\geq &amp;0.3 (560-t)_++0.5(1200-t)_+\\
+&amp;&amp;+0.15(3200-t)_++0.05(11200-t)_+.
+\end{eqnarray*}\]</span></p>
+<p>Note that this lower bound does not require knowledge of the PMP.</p>
+</div>
+</div>
+<div id="exercises-2" class="section level2 hasAnchor" number="6.8">
+<h2><span class="header-section-number">6.8</span> Exercises<a href="chap5.html#exercises-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="exercise">
+<p><span id="exr:unlabeled-div-59" class="exercise"><strong>Exercise 6.1  </strong></span>Let $Xam(,) $. Show that for <span class="math inline">\(0&lt;p_1\leq p_2&lt;1\)</span>,</p>
+<ol style="list-style-type: decimal">
+<li>the difference
+<span class="math inline">\({\text{VaR}}[X;p_2]-{\text{VaR}}[X;p_1]\)</span> is increasing in $$.</li>
+<li>the ratio <span class="math inline">\(VaR[X;p_2]/{\text{VaR}}[X;p_1]\)</span> is decreasing in <span class="math inline">\(\alpha\)</span>.</li>
+<li>the difference <span class="math inline">\(VaR[X;p_2]-{\text{VaR}}[X;p_1]\)</span> is decreasing in $$.</li>
+</ol>
+</div>
+<div class="exercise">
+<p><span id="exr:unlabeled-div-60" class="exercise"><strong>Exercise 6.2  (Normal Transform Risk Measures) </strong></span>For <span class="math inline">\(0&lt; q&lt; 1\)</span>, let’s define the distortion function
+<span class="math display">\[\begin{equation}
+g_q(x)=\Phi \Big( \Phi ^{-1}(q)+\Phi ^{-1}(x)\Big) ,\qquad 0&lt;x&lt;1,
+\end{equation}\]</span>
+called the “Normal Transform” of level <span class="math inline">\(q\)</span>. The Wang risk measure associated with such distortion functions is called the Normal Transform risk measure, denoted by <span class="math inline">\(NT_q[X]\)</span>. Show that
+<span class="math display">\[
+X\sim\mathcal{N}or(\mu,\sigma^2)\Rightarrow NT_q[X]={\text{VaR}}[X;q].
+\]</span></p>
+</div>
+<p>::: {.exercise, name=“Risk Measures for Elliptical Distributions”}
+The elliptical case is relatively specific, as many generally false results become correct.</p>
+<ul>
+<li>(<em>Subadditivity of VaR</em>)
+Show that if $(X,Y) $ has an elliptical distribution, then
+<span class="math display">\[\begin{equation*}
+{\text{VaR}}[X+Y;\alpha] \leq VaR[X;\alpha]+{\text{VaR}}[Y;\alpha],
+\end{equation*}\]</span>
+and thus it is a coherent risk measure.</li>
+<li>(<em>Conditional Tail Expectation (CTE) for Univariate Elliptical Risks</em>)
+Let <span class="math inline">\(X\)</span> be a random variable with an elliptical distribution with generator <span class="math inline">\(g\)</span>, and parameters $$ and $$, whose density is given by <a href="chap5.html#eq:densiteelliptical1">(6.10)</a>, i.e.
+<span class="math display" id="eq:densiteelliptical1">\[\begin{equation}
+f_{X}\left( x\right) =\frac{c}{\sigma }g\left( \frac{1}{2}\left(
+\frac{x-\mu }{\sigma }\right) ^{2}\right) \text{,}
+\tag{6.10}
+\end{equation}\]</span>
+where <span class="math inline">\(c\)</span> is the normalization constant. Let <span class="math inline">\(G\)</span> be the cumulative generator, i.e.,
+<span class="math display">\[
+G\left(
+x\right) =\int_{0}^{x}g\left( t\right) dt.
+\]</span>
+Show then that
+<span class="math display">\[
+{\text{CTE}}[X;\alpha] =\mu +\lambda _{\alpha}(\mu,\sigma)\sigma ^{2}
+\]</span>
+where
+<span class="math display">\[
+\lambda _{\alpha}(\mu,\sigma)=
+\frac{1}{\sigma }\frac{\overline{G}\left( \left[ \left( {\text{VaR}}[X;\alpha] -\mu \right) /\sigma \right] ^{2}/2\right)
+}{\overline{F}_{X}\left( {\text{VaR}}[X;\alpha] \right) }.
+\]</span></li>
+<li>(<em>Gaussian Case</em>)
+If $Xor(
+,^{2}) $, show that</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>the cumulative generator is
+<span class="math display">\[
+G\left(
+t\right) =c\left( 1-e^{-t}\right),
+\]</span>
+with <span class="math inline">\(c=1/\sqrt{2\pi }\)</span>.</li>
+<li>the CTE is given by
+<span class="math display">\[\begin{equation*}
+{\text{CTE}}[X;\alpha] =\mu +\lambda _\alpha\sigma ^{2}\text{ where }\lambda _\alpha=%
+\frac{1}{\sigma }\frac{\phi \left( \Phi^{-1}(\alpha) \right)
+}{1-\alpha }.
+\end{equation*}\]</span></li>
+</ol>
+</div>
+</div>
+<div class="exercise" main="Main Parametric Models">
+<p><span id="exr:unlabeled-div-62" class="exercise"><strong>Exercise 6.3  </strong></span>For most parametric models used in actuarial science, when we increase (or decrease) the value of a parameter, the situation becomes more (or less) risky than before in the sense of <span class="math inline">\(\preceq_{\text{VaR}}\)</span>. Prove the following results:
+<span class="math display">\[\begin{eqnarray*}
+\mathcal{G}am(\alpha,\tau)&amp;\preceq_{\text{VaR}}&amp;\mathcal{G}am(\alpha &#39;,\tau),\text{ for }\alpha\leq\alpha &#39;,\\
+\mathcal{G}am(\alpha,\tau &#39;)&amp;\preceq_{\text{VaR}}&amp;\mathcal{G}am(\alpha,\tau),\text{ for }\tau\leq\tau &#39;,\\
+\mathcal{P}ar(\alpha,\theta)&amp;\preceq_{\text{VaR}}&amp;\mathcal{P}ar(\alpha,\theta &#39;),\text{ for }\theta\leq\theta &#39;,\\
+\mathcal{P}ar(\alpha &#39;,\theta)&amp;\preceq_{\text{VaR}}&amp;\mathcal{P}ar(\alpha,\theta),\text{ for }\alpha\leq\alpha &#39;,\\
+\mathcal{N}or(\mu,\sigma)&amp;\preceq_{\text{VaR}}&amp;\mathcal{N}or(\mu &#39;,\sigma),\text{ for }\mu\leq\mu &#39;,\\
+\mathcal{LN}or(\mu,\sigma)&amp;\preceq_{\text{VaR}}&amp;\mathcal{LN}or(\mu &#39;,\sigma),\text{ for }\mu\leq\mu &#39;.
+\end{eqnarray*}\]</span></p>
+</div>
+<div class="exercise" main="Comparison of Risks with Flat Deductibles">
+<p><span id="exr:unlabeled-div-63" class="exercise"><strong>Exercise 6.4  </strong></span>Consider a portfolio of insurance policies that lead to a flat deductible payment of amount <span class="math inline">\(s\)</span> with probability <span class="math inline">\(q\)</span>. The claim costs <span class="math inline">\(S_i\)</span> related to policy <span class="math inline">\(i\)</span> are given as in <a href="#eq:Siforfaitaire">(<strong>??</strong>)</a>. Compare this portfolio with a similar portfolio differing from the first one in the deductible amount and the claim probability, i.e., the reimbursement by the company to individual <span class="math inline">\(i\)</span> is given by
+<span class="math display">\[
+\widetilde{S}_i=\left\{
+\begin{array}{l}
+0,\text{ with probability }1-\widetilde{q},
+\\
+\widetilde{s},\text{ with probability }\widetilde{q}.
+\end{array}
+\right.
+\]</span>
+Show that</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(q=\widetilde{q}\Rightarrow S_i\preceq_{\text{VaR}}\widetilde{S}_i\)</span> when <span class="math inline">\(s\leq\widetilde{s}\)</span>.</li>
+<li>when <span class="math inline">\(s=\widetilde{s}\)</span> and <span class="math inline">\(q\leq\widetilde{q}\)</span>, then <span class="math inline">\(S_i\preceq_{\text{VaR}}\widetilde{S}_i\)</span>.</li>
+</ol>
+</div>
+<div class="exercise" main="Comparison of Risks with Indemnity Deductibles">
+<p><span id="exr:unlabeled-div-64" class="exercise"><strong>Exercise 6.5  </strong></span>Let’s now move to an indemnity deductible, i.e., the claim costs <span class="math inline">\(S_i\)</span> related to policy <span class="math inline">\(i\)</span> are given by <a href="#eq:Siindemnitaire">(<strong>??</strong>)</a>. Suppose that a company has to face costs per policy of
+<span class="math display">\[
+\widetilde{S}_i=\left\{
+\begin{array}{l}
+0,\text{ with probability }1-\widetilde{q},
+\\
+\widetilde{Z}_i,\text{ with probability }\widetilde{q}.
+\end{array}
+\right.
+\]</span>
+Show that</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(Z_i=_{\text{law}}\widetilde{Z}_i\Rightarrow S_i\preceq_{\text{VaR}}\widetilde{S}_i\)</span> when
+<span class="math inline">\(q\leq\widetilde{q}\)</span>.</li>
+<li>when <span class="math inline">\(q=\widetilde{q}\)</span> and <span class="math inline">\(Z_i\preceq_{\text{VaR}}\widetilde{Z}_i\)</span>, then <span class="math inline">\(S_i\preceq_{\text{VaR}}\widetilde{S}_i\)</span>.</li>
+</ol>
+</div>
+<div class="exercise">
+<p><span id="exr:unlabeled-div-65" class="exercise"><strong>Exercise 6.6  </strong></span>When <span class="math inline">\([X|a\leq X\leq b]\preceq_{\text{VaR}}[Y|a\leq Y\leq b]\)</span> for any <span class="math inline">\(a&lt;b\in\mathbb{R}\)</span>, show that
+<span class="math display">\[\begin{equation}
+\alpha\mapsto F_Y({\text{VaR}}[X;\alpha])\quad\text{is convex}.
+(\#eq:eq1.C.4)
+\end{equation}\]</span></p>
+</div>
+<div class="exercise">
+<p><span id="exr:unlabeled-div-66" class="exercise"><strong>Exercise 6.7  </strong></span>Consider the risk
+<span class="math display">\[
+S_h=\left\{
+\begin{array}{l}
+m-h,\text{ with probability }\frac{1}{2},\\
+m+h,\text{ with probability }\frac{1}{2}.
+\end{array}
+\right.
+\]</span>
+Show that</p>
+<ol style="list-style-type: decimal">
+<li>the variance of <span class="math inline">\(S_h\)</span> is an increasing function of <span class="math inline">\(h\)</span>.</li>
+<li><span class="math inline">\(S_h\preceq_{\text{TVaR,=}}S_{h&#39;}\)</span> when <span class="math inline">\(h\leq h&#39;\)</span>.</li>
+</ol>
+</div>
+<div class="exercise">
+<p><span id="exr:unlabeled-div-67" class="exercise"><strong>Exercise 6.8  </strong></span>Show that <span class="math inline">\(\left. \begin{array}{l} X\preceq_{\text{TVaR,=}}Y\\ \mathbb{V}[X]=\mathbb{V}[Y] \end{array} \right\} \Rightarrow X=_{\text{law}}Y\)</span>.</p>
+</div>
+<div class="exercise">
+<p><span id="exr:unlabeled-div-68" class="exercise"><strong>Exercise 6.9  </strong></span>For two risks <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> such that <span class="math inline">\(\mathbb{E}[X]=\mathbb{E}[Y]\)</span>, show that
+<span class="math display">\[
+X\preceq_{\text{TVaR,=}}Y\Leftrightarrow
+\mathbb{E}|X-a|\le \mathbb{E}|Y-a|\quad\text{for any}\quad a\in{\mathbb R}.
+\]</span></p>
+</div>
+<div class="exercise">
+<p><span id="exr:unlabeled-div-69" class="exercise"><strong>Exercise 6.10  </strong></span>For a risk <span class="math inline">\(X\)</span> and <span class="math inline">\(E\sim\mathcal{E}xp(1/\mathbb{E}[X])\)</span>, show that the following statements are equivalent:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(X\preceq_{\text{TVaR,=}}E\)</span></li>
+<li><span class="math inline">\(r_X\)</span> is non-decreasing (i.e. <span class="math inline">\(X\)</span> is IFR)</li>
+<li><span class="math inline">\(\overline{F}_X\)</span> is log-concave.</li>
+</ol>
+<p>Also, show that the following statements are equivalent:
+1. <span class="math inline">\(E\preceq_{\text{TVaR,=}}X\)</span>
+2. <span class="math inline">\(r_X\)</span> is non-increasing (i.e. <span class="math inline">\(X\)</span> is DFR)
+3. <span class="math inline">\(\overline{F}_X\)</span> is log-convex.</p>
+</div>
+<div class="exercise">
+<p><span id="exr:unlabeled-div-70" class="exercise"><strong>Exercise 6.11  </strong></span>For any risk <span class="math inline">\(X\)</span> with mean <span class="math inline">\(\mu\)</span>, variance <span class="math inline">\(\sigma^2\)</span>, and support included in <span class="math inline">\((a,b)\)</span>, show that</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(X_-\preceq_{\text{TVaR,=}}X\)</span> where
+<span class="math display">\[
+X_-=\left\{
+\begin{array}{l}
+\mu-\frac{\sigma^2}{b-\mu},\text{ with probability }\frac{b-\mu}{b},\\
+\frac{\sigma^2+\mu^2}{\mu},\text{ with probability }1-\frac{b-\mu}{b}.
+\end{array}
+\right.
+\]</span></li>
+<li><span class="math inline">\(X\preceq_{\text{TVaR,=}}X_+\)</span> where the cumulative distribution function of <span class="math inline">\(X_+\)</span> is given by
+<span class="math display">\[
+F_+(x)=\left\{
+\begin{array}{l}
+\frac{\sigma^2}{\mu^2+\sigma^2},\text{ if }0\leq x\leq\frac{\mu+\sigma^2}{2\mu},\\
+\frac{1}{2}+\frac{1}{2}\frac{x-\mu}{\sqrt{(x-\mu)^2+\sigma^2}},\text{ if }x&gt;\frac{\mu+\sigma^2}{2\mu}.
+\end{array}
+\right.
+\]</span></li>
+</ol>
+</div>
+<div class="exercise">
+<p><span id="exr:unlabeled-div-71" class="exercise"><strong>Exercise 6.12  </strong></span>Show that <span class="math inline">\(\mathcal{E}xp(\mathbb{E}[1/\Theta])\preceq_{\text{TVaR,=}}\mathcal{ME}xp(\Theta)\)</span>. Conclude that the coefficient of variation of any exponential mixture exceeds 1.</p>
+</div>
+<div class="exercise">
+<p><span id="exr:unlabeled-div-72" class="exercise"><strong>Exercise 6.13  (Laplace Transform Order) </strong></span>The positive random variable <span class="math inline">\(Y\)</span> dominates <span class="math inline">\(X\)</span> in terms of Laplace transform order (denoted <span class="math inline">\(X\prec _{LT}Y\)</span>) if and only if <span class="math inline">\(L_{X}\left( t\right) \geq L _{Y}\left( t\right)\)</span> for all <span class="math inline">\(t&gt;0\)</span>.
+Let <span class="math inline">\(E_{t}\sim\mathcal{E}xp(t)\)</span> be independent of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. Show that <span class="math inline">\(X\prec _{LT}Y\)</span> if and only if $$ for all <span class="math inline">\(t\geq 0\)</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="notes-bibliographiques" class="section level2 hasAnchor" number="6.9">
+<h2><span class="header-section-number">6.9</span> Notes bibliographiques<a href="chap5.html#notes-bibliographiques" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The coherent risk measures, whose applications in actuarial science were emphasized by <span class="citation">(<a href="#ref-artzner1999coherent" role="doc-biblioref"><strong>artzner1999coherent?</strong></a>)</span> are detailed in <span class="citation">(<a href="#ref-denuit2006actuarial" role="doc-biblioref">Denuit et al. 2006</a>)</span>. Also see <span class="citation">(<a href="#ref-tasche2002expected" role="doc-biblioref">Tasche 2002</a>)</span>. The risk measures by Shaun Wang are studied notably in <span class="citation">(<a href="#ref-wang1996premium" role="doc-biblioref">Wang 1996</a>)</span> and <span class="citation">(<a href="#ref-wang1998aggregation" role="doc-biblioref">Wang 1998</a>)</span>.</p>
+<p>This chapter prominently features stochastic orders. From a general perspective, a stochastic order refers to any method of comparing probability distributions (of random variables, random vectors, stochastic processes, etc.), meaning any binary relation defined on a set of probability distributions. Among the stochastic orders between real-valued random variables, there are relations that can be defined with reference to a class of measurable functions. These orders, also known as integral orders, often have a natural interpretation in the framework of expected utility theory. Examples include the distribution order, convex and concave orders, convex-increasing and concave-increasing orders, and the exponential order.</p>
+<p>Readers interested in stochastic orders will find a general introduction in <span class="citation">(<a href="#ref-shaked1994stochastic" role="doc-biblioref"><strong>shaked1994stochastic?</strong></a>)</span>, which also provides numerous applications in various fields. For a more advanced probabilistic analysis, consider <span class="citation">(<a href="#ref-szekli2012stochastic" role="doc-biblioref">Szekli 2012</a>)</span>, and for applications in economics, refer to <span class="citation">(<a href="#ref-levy1992stochastic" role="doc-biblioref">Levy 1992</a>)</span>. Applications of stochastic orders in insurance are described in <span class="citation">(<a href="#ref-goovaerts1990effective" role="doc-biblioref">Goovaerts et al. 1990</a>)</span>, as well as in <span class="citation">(<a href="#ref-kaas1994ordering" role="doc-biblioref">Kaas, Van Heerwaarden, and Goovaerts 1994</a>)</span> and <span class="citation">(<a href="#ref-gourieroux1999statistique" role="doc-biblioref">Gouriéroux 1999</a>)</span>. For a more theoretical approach, explore <span class="citation">(<a href="#ref-muller2002comparison" role="doc-biblioref">Müller and Stoyan 2002</a>)</span>.</p>
+
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-denuit2006actuarial" class="csl-entry">
+Denuit, Michel, Jan Dhaene, Marc Goovaerts, and Rob Kaas. 2006. <em>Actuarial Theory for Dependent Risks: Measures, Orders and Models</em>. John Wiley &amp; Sons.
+</div>
+<div id="ref-goovaerts1990effective" class="csl-entry">
+Goovaerts, Marc J, Rob Kaas, AE Van Heerwaarden, Thierry Bauwelinckx, et al. 1990. <em>Effective Actuarial Methods</em>. Amsterdam-North-Holland.
+</div>
+<div id="ref-gourieroux1999statistique" class="csl-entry">
+Gouriéroux, Christian. 1999. <span>“Statistique de l’assurance.”</span> <em>Economica, Paris</em>.
+</div>
+<div id="ref-kaas1994ordering" class="csl-entry">
+Kaas, Robert, Angela E Van Heerwaarden, and Marc Goovaerts. 1994. <em>Ordering of Actuarial Risks</em>. CAIRE.
+</div>
+<div id="ref-lehmann1955ordered" class="csl-entry">
+Lehmann, Erich Leo. 1955. <span>“Ordered Families of Distributions.”</span> <em>The Annals of Mathematical Statistics</em> 26: 399–419.
+</div>
+<div id="ref-levy1992stochastic" class="csl-entry">
+Levy, Haim. 1992. <span>“Stochastic Dominance and Expected Utility: Survey and Analysis.”</span> <em>Management Science</em> 38 (4): 555–93.
+</div>
+<div id="ref-muller2002comparison" class="csl-entry">
+Müller, Alfred, and Dietrich Stoyan. 2002. <em>Comparison Methods for Stochastic Models and Risks</em>. Wiley.
+</div>
+<div id="ref-szekli2012stochastic" class="csl-entry">
+Szekli, Ryszard. 2012. <em>Stochastic Ordering and Dependence in Applied Probability</em>. Vol. 97. Springer.
+</div>
+<div id="ref-tasche2002expected" class="csl-entry">
+Tasche, Dirk. 2002. <span>“Expected Shortfall and Beyond.”</span> <em>Journal of Banking &amp; Finance</em> 26 (7): 1519–33.
+</div>
+<div id="ref-wang1996premium" class="csl-entry">
+Wang, Shaun. 1996. <span>“Premium Calculation by Transforming the Layer Premium Density.”</span> <em>ASTIN Bulletin: The Journal of the IAA</em> 26 (1): 71–92.
+</div>
+<div id="ref-wang1998aggregation" class="csl-entry">
+———. 1998. <span>“Aggregation of Correlated Risk Portfolios: Models and Algorithms.”</span> In <em>Proceedings of the Casualty Actuarial Society</em>, 85:848–939. 163. Citeseer.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="chap4.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chap6.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/06-Risk-Measure.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
