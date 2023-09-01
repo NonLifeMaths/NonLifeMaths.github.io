@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 From Pure to Net Premium | Non Life Insurance Mathematics</title>
+  <meta name="description" content="Chapter 5 From Pure to Net Premium | Non Life Insurance Mathematics" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 From Pure to Net Premium | Non Life Insurance Mathematics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 From Pure to Net Premium | Non Life Insurance Mathematics" />
+  
+  
+  
+
+<meta name="author" content="Arthur Charpentier and Michel Denuit" />
+
+
+<meta name="date" content="2023-09-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="chap3.html"/>
+<link rel="next" href="chap5.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Non Life Insurance Mathematics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="chap1.html"><a href="chap1.html"><i class="fa fa-check"></i><b>2</b> The risk and its contractual coverage</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="chap1.html"><a href="chap1.html#risk"><i class="fa fa-check"></i><b>2.1</b> Risk</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="chap1.html"><a href="chap1.html#did-you-say-risk"><i class="fa fa-check"></i><b>2.1.1</b> Did you say risk?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="chap1.html"><a href="chap1.html#the-reason-for-insurance-risquophobia"><i class="fa fa-check"></i><b>2.1.2</b> The reason for insurance: risquophobia</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="chap1.html"><a href="chap1.html#risk-management-methods"><i class="fa fa-check"></i><b>2.2</b> Risk management methods</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="chap1.html"><a href="chap1.html#caution-and-self-insurance"><i class="fa fa-check"></i><b>2.2.1</b> Caution and self-insurance</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="chap2.html"><a href="chap2.html"><i class="fa fa-check"></i><b>3</b> Actuarial risk modeling</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="chap2.html"><a href="chap2.html#introduction"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="chap2.html"><a href="chap2.html#probabilistic-description-of-risk"><i class="fa fa-check"></i><b>3.2</b> Probabilistic description of risk</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="chap2.html"><a href="chap2.html#events"><i class="fa fa-check"></i><b>3.2.1</b> Events</a></li>
+<li class="chapter" data-level="3.2.2" data-path="chap2.html"><a href="chap2.html#elementary-events"><i class="fa fa-check"></i><b>3.2.2</b> Elementary events</a></li>
+<li class="chapter" data-level="3.2.3" data-path="chap2.html"><a href="chap2.html#set-formalism"><i class="fa fa-check"></i><b>3.2.3</b> Set formalism</a></li>
+<li class="chapter" data-level="3.2.4" data-path="chap2.html"><a href="chap2.html#properties-satisfied-by-the-set-of-events"><i class="fa fa-check"></i><b>3.2.4</b> Properties satisfied by the set of events</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="chap2.html"><a href="chap2.html#probability-calculation-and-lack-of-arbitrage-opportunity"><i class="fa fa-check"></i><b>3.3</b> Probability calculation and lack of arbitrage opportunity</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="chap2.html"><a href="chap2.html#the-notion-of-probability"><i class="fa fa-check"></i><b>3.3.1</b> The notion of probability</a></li>
+<li class="chapter" data-level="3.3.2" data-path="chap2.html"><a href="chap2.html#risk-and-uncertainty"><i class="fa fa-check"></i><b>3.3.2</b> Risk and uncertainty</a></li>
+<li class="chapter" data-level="3.3.3" data-path="chap2.html"><a href="chap2.html#probability-and-insurance-premium"><i class="fa fa-check"></i><b>3.3.3</b> Probability and insurance premium</a></li>
+<li class="chapter" data-level="3.3.4" data-path="chap2.html"><a href="chap2.html#absence-of-arbitrage-opportunity"><i class="fa fa-check"></i><b>3.3.4</b> Absence of arbitrage opportunity</a></li>
+<li class="chapter" data-level="3.3.5" data-path="chap2.html"><a href="chap2.html#property-of-additivity-for-incompatible-events"><i class="fa fa-check"></i><b>3.3.5</b> Property of additivity for incompatible events</a></li>
+<li class="chapter" data-level="3.3.6" data-path="chap2.html"><a href="chap2.html#premiums-grow-with-risk"><i class="fa fa-check"></i><b>3.3.6</b> Premiums grow with risk</a></li>
+<li class="chapter" data-level="3.3.7" data-path="chap2.html"><a href="chap2.html#fairness-property"><i class="fa fa-check"></i><b>3.3.7</b> Fairness property</a></li>
+<li class="chapter" data-level="3.3.8" data-path="chap2.html"><a href="chap2.html#subadditivity-property"><i class="fa fa-check"></i><b>3.3.8</b> Subadditivity property</a></li>
+<li class="chapter" data-level="3.3.9" data-path="chap2.html"><a href="chap2.html#poincaré-equality"><i class="fa fa-check"></i><b>3.3.9</b> Poincaré equality</a></li>
+<li class="chapter" data-level="3.3.10" data-path="chap2.html"><a href="chap2.html#conditional-probability"><i class="fa fa-check"></i><b>3.3.10</b> Conditional probability</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="chap2.html"><a href="chap2.html#independent-events"><i class="fa fa-check"></i><b>3.4</b> Independent events</a></li>
+<li class="chapter" data-level="3.5" data-path="chap2.html"><a href="chap2.html#multiplication-rule-bayes"><i class="fa fa-check"></i><b>3.5</b> Multiplication rule (Bayes)</a></li>
+<li class="chapter" data-level="3.6" data-path="chap2.html"><a href="chap2.html#conditionally-independent-events"><i class="fa fa-check"></i><b>3.6</b> Conditionally independent events</a></li>
+<li class="chapter" data-level="3.7" data-path="chap2.html"><a href="chap2.html#total-probability-theorem"><i class="fa fa-check"></i><b>3.7</b> Total probability theorem</a></li>
+<li class="chapter" data-level="3.8" data-path="chap2.html"><a href="chap2.html#bayes-theorem"><i class="fa fa-check"></i><b>3.8</b> Bayes’ theorem</a></li>
+<li class="chapter" data-level="3.9" data-path="chap2.html"><a href="chap2.html#random-variables"><i class="fa fa-check"></i><b>3.9</b> Random variables</a>
+<ul>
+<li class="chapter" data-level="3.9.1" data-path="chap2.html"><a href="chap2.html#definition"><i class="fa fa-check"></i><b>3.9.1</b> Definition</a></li>
+<li class="chapter" data-level="3.9.2" data-path="chap2.html"><a href="chap2.html#distribution-function"><i class="fa fa-check"></i><b>3.9.2</b> Distribution function</a></li>
+<li class="chapter" data-level="3.9.3" data-path="chap2.html"><a href="chap2.html#support-of-a-random-variable"><i class="fa fa-check"></i><b>3.9.3</b> Support of a random variable</a></li>
+<li class="chapter" data-level="3.9.4" data-path="chap2.html"><a href="chap2.html#tail-or-survival-function"><i class="fa fa-check"></i><b>3.9.4</b> Tail (or Survival) function</a></li>
+<li class="chapter" data-level="3.9.5" data-path="chap2.html"><a href="chap2.html#equality-in-distribution"><i class="fa fa-check"></i><b>3.9.5</b> Equality in distribution</a></li>
+<li class="chapter" data-level="3.9.6" data-path="chap2.html"><a href="chap2.html#quantiles-and-generalized-inverses"><i class="fa fa-check"></i><b>3.9.6</b> Quantiles and generalized inverses</a></li>
+</ul></li>
+<li class="chapter" data-level="3.10" data-path="chap2.html"><a href="chap2.html#discrete-random-variables-and-counts"><i class="fa fa-check"></i><b>3.10</b> Discrete random variables and counts</a>
+<ul>
+<li class="chapter" data-level="3.10.1" data-path="chap2.html"><a href="chap2.html#notion"><i class="fa fa-check"></i><b>3.10.1</b> Notion</a></li>
+<li class="chapter" data-level="3.10.2" data-path="chap2.html"><a href="chap2.html#uniform-discrete-variable"><i class="fa fa-check"></i><b>3.10.2</b> Uniform discrete variable</a></li>
+<li class="chapter" data-level="3.10.3" data-path="chap2.html"><a href="chap2.html#bernoulli-variables"><i class="fa fa-check"></i><b>3.10.3</b> Bernoulli variables</a></li>
+<li class="chapter" data-level="3.10.4" data-path="chap2.html"><a href="chap2.html#binomial-variable"><i class="fa fa-check"></i><b>3.10.4</b> Binomial variable</a></li>
+<li class="chapter" data-level="3.10.5" data-path="chap2.html"><a href="chap2.html#geometric-variable"><i class="fa fa-check"></i><b>3.10.5</b> Geometric variable</a></li>
+<li class="chapter" data-level="3.10.6" data-path="chap2.html"><a href="chap2.html#negative-binomial-variable"><i class="fa fa-check"></i><b>3.10.6</b> Negative binomial variable</a></li>
+<li class="chapter" data-level="3.10.7" data-path="chap2.html"><a href="chap2.html#poissons-distribution"><i class="fa fa-check"></i><b>3.10.7</b> Poisson’s distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="3.11" data-path="chap2.html"><a href="chap2.html#continuous-random-variables"><i class="fa fa-check"></i><b>3.11</b> Continuous random variables</a>
+<ul>
+<li class="chapter" data-level="3.11.1" data-path="chap2.html"><a href="chap2.html#notion-1"><i class="fa fa-check"></i><b>3.11.1</b> Notion</a></li>
+<li class="chapter" data-level="3.11.2" data-path="chap2.html"><a href="chap2.html#continuous-uniform-distribution"><i class="fa fa-check"></i><b>3.11.2</b> Continuous uniform distribution</a></li>
+<li class="chapter" data-level="3.11.3" data-path="chap2.html"><a href="chap2.html#beta-distribution"><i class="fa fa-check"></i><b>3.11.3</b> Beta Distribution</a></li>
+<li class="chapter" data-level="3.11.4" data-path="chap2.html"><a href="chap2.html#normal-or-gaussian-distribution"><i class="fa fa-check"></i><b>3.11.4</b> Normal (or Gaussian) distribution</a></li>
+<li class="chapter" data-level="3.11.5" data-path="chap2.html"><a href="chap2.html#log-normal-variable"><i class="fa fa-check"></i><b>3.11.5</b> Log-normal variable</a></li>
+<li class="chapter" data-level="3.11.6" data-path="chap2.html"><a href="chap2.html#negative-exponential-distribution"><i class="fa fa-check"></i><b>3.11.6</b> (Negative) exponential distribution</a></li>
+<li class="chapter" data-level="3.11.7" data-path="chap2.html"><a href="chap2.html#gamma-distribution"><i class="fa fa-check"></i><b>3.11.7</b> Gamma distribution</a></li>
+<li class="chapter" data-level="3.11.8" data-path="chap2.html"><a href="chap2.html#pareto-distribution"><i class="fa fa-check"></i><b>3.11.8</b> Pareto distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="3.12" data-path="chap2.html"><a href="chap2.html#random-vector"><i class="fa fa-check"></i><b>3.12</b> Random vector</a>
+<ul>
+<li class="chapter" data-level="3.12.1" data-path="chap2.html"><a href="chap2.html#definition-1"><i class="fa fa-check"></i><b>3.12.1</b> Definition</a></li>
+<li class="chapter" data-level="3.12.2" data-path="chap2.html"><a href="chap2.html#distribution-function-1"><i class="fa fa-check"></i><b>3.12.2</b> Distribution function</a></li>
+<li class="chapter" data-level="3.12.3" data-path="chap2.html"><a href="chap2.html#support-of-vector-xvec"><i class="fa fa-check"></i><b>3.12.3</b> Support of vector <span class="math inline">\(\Xvec\)</span></a></li>
+<li class="chapter" data-level="3.12.4" data-path="chap2.html"><a href="chap2.html#independence"><i class="fa fa-check"></i><b>3.12.4</b> Independence</a></li>
+<li class="chapter" data-level="3.12.5" data-path="chap2.html"><a href="chap2.html#gaussian-vector"><i class="fa fa-check"></i><b>3.12.5</b> Gaussian vector</a></li>
+<li class="chapter" data-level="3.12.6" data-path="chap2.html"><a href="chap2.html#ellipticpart"><i class="fa fa-check"></i><b>3.12.6</b> Elliptical vectors</a></li>
+<li class="chapter" data-level="3.12.7" data-path="chap2.html"><a href="chap2.html#definition-2"><i class="fa fa-check"></i><b>3.12.7</b> Definition</a></li>
+<li class="chapter" data-level="3.12.8" data-path="chap2.html"><a href="chap2.html#multinomial-vector"><i class="fa fa-check"></i><b>3.12.8</b> Multinomial vector</a></li>
+</ul></li>
+<li class="chapter" data-level="3.13" data-path="chap2.html"><a href="chap2.html#conditional-variables"><i class="fa fa-check"></i><b>3.13</b> Conditional Variables</a>
+<ul>
+<li class="chapter" data-level="3.13.1" data-path="chap2.html"><a href="chap2.html#the-case-of-counting-variables"><i class="fa fa-check"></i><b>3.13.1</b> The case of counting variables</a></li>
+<li class="chapter" data-level="3.13.2" data-path="chap2.html"><a href="chap2.html#the-case-of-continuous-variables"><i class="fa fa-check"></i><b>3.13.2</b> The case of continuous variables</a></li>
+<li class="chapter" data-level="3.13.3" data-path="chap2.html"><a href="chap2.html#the-mixed-case-one-counting-variable-and-another-continuous"><i class="fa fa-check"></i><b>3.13.3</b> The mixed case: one counting variable and another continuous</a></li>
+<li class="chapter" data-level="3.13.4" data-path="chap2.html"><a href="chap2.html#conditional-independence"><i class="fa fa-check"></i><b>3.13.4</b> Conditional independence</a></li>
+</ul></li>
+<li class="chapter" data-level="3.14" data-path="chap2.html"><a href="chap2.html#compound-distributions"><i class="fa fa-check"></i><b>3.14</b> Compound distributions</a>
+<ul>
+<li class="chapter" data-level="3.14.1" data-path="chap2.html"><a href="chap2.html#definition-4"><i class="fa fa-check"></i><b>3.14.1</b> Definition</a></li>
+<li class="chapter" data-level="3.14.2" data-path="chap2.html"><a href="chap2.html#SecProdConv"><i class="fa fa-check"></i><b>3.14.2</b> Convolution product</a></li>
+<li class="chapter" data-level="3.14.3" data-path="chap2.html"><a href="chap2.html#distribution-function-associated-with-a-compound-distribution"><i class="fa fa-check"></i><b>3.14.3</b> Distribution function associated with a compound distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="3.15" data-path="chap2.html"><a href="chap2.html#RiskTransformations"><i class="fa fa-check"></i><b>3.15</b> Transformations of risks and conventional damage clauses</a>
+<ul>
+<li class="chapter" data-level="3.15.1" data-path="chap2.html"><a href="chap2.html#concept"><i class="fa fa-check"></i><b>3.15.1</b> Concept</a></li>
+<li class="chapter" data-level="3.15.2" data-path="chap2.html"><a href="chap2.html#DecOblig"><i class="fa fa-check"></i><b>3.15.2</b> The compulsory overdraft</a></li>
+<li class="chapter" data-level="3.15.3" data-path="chap2.html"><a href="chap2.html#the-deductible"><i class="fa fa-check"></i><b>3.15.3</b> The deductible</a></li>
+<li class="chapter" data-level="3.15.4" data-path="chap2.html"><a href="chap2.html#upper-limit-of-indemnity"><i class="fa fa-check"></i><b>3.15.4</b> (Upper) limit of indemnity</a></li>
+<li class="chapter" data-level="3.15.5" data-path="chap2.html"><a href="chap2.html#technical-consequence-censored-data"><i class="fa fa-check"></i><b>3.15.5</b> Technical consequence: censored data</a></li>
+<li class="chapter" data-level="3.15.6" data-path="chap2.html"><a href="chap2.html#poissons-distribution-and-damage-clauses"><i class="fa fa-check"></i><b>3.15.6</b> Poisson’s distribution and damage clauses</a></li>
+<li class="chapter" data-level="3.15.7" data-path="chap2.html"><a href="chap2.html#perverse-effects-of-contractual-damage-clauses"><i class="fa fa-check"></i><b>3.15.7</b> Perverse effects of contractual damage clauses</a></li>
+</ul></li>
+<li class="chapter" data-level="3.16" data-path="chap2.html"><a href="chap2.html#exercises"><i class="fa fa-check"></i><b>3.16</b> Exercises</a></li>
+<li class="chapter" data-level="3.17" data-path="chap2.html"><a href="chap2.html#bibliographical-notes"><i class="fa fa-check"></i><b>3.17</b> Bibliographical notes</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="chap3.html"><a href="chap3.html"><i class="fa fa-check"></i><b>4</b> Pure Premium</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="chap3.html"><a href="chap3.html#introduction-1"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
+<li class="chapter" data-level="4.2" data-path="chap3.html"><a href="chap3.html#pure-premium-and-mathematical-expectation"><i class="fa fa-check"></i><b>4.2</b> Pure Premium and Mathematical Expectation</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="chap3.html"><a href="chap3.html#mathematical-expectation"><i class="fa fa-check"></i><b>4.2.1</b> Mathematical Expectation</a></li>
+<li class="chapter" data-level="4.2.2" data-path="chap3.html"><a href="chap3.html#probabilities-and-expectations-of-indicators"><i class="fa fa-check"></i><b>4.2.2</b> Probabilities and Expectations of Indicators</a></li>
+<li class="chapter" data-level="4.2.3" data-path="chap3.html"><a href="chap3.html#determination-of-the-pure-premium"><i class="fa fa-check"></i><b>4.2.3</b> Determination of the Pure Premium</a></li>
+<li class="chapter" data-level="4.2.4" data-path="chap3.html"><a href="chap3.html#mean-squared-error-is-it-a-must"><i class="fa fa-check"></i><b>4.2.4</b> Mean Squared Error, Is It a Must?</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="chap3.html"><a href="chap3.html#variance"><i class="fa fa-check"></i><b>4.3</b> Variance</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="chap3.html"><a href="chap3.html#definition-5"><i class="fa fa-check"></i><b>4.3.1</b> Definition</a></li>
+<li class="chapter" data-level="4.3.2" data-path="chap3.html"><a href="chap3.html#actuarial-interpretation"><i class="fa fa-check"></i><b>4.3.2</b> Actuarial Interpretation</a></li>
+<li class="chapter" data-level="4.3.3" data-path="chap3.html"><a href="chap3.html#some-examples"><i class="fa fa-check"></i><b>4.3.3</b> Some Examples</a></li>
+<li class="chapter" data-level="4.3.4" data-path="chap3.html"><a href="chap3.html#properties"><i class="fa fa-check"></i><b>4.3.4</b> Properties</a></li>
+<li class="chapter" data-level="4.3.5" data-path="chap3.html"><a href="chap3.html#variance-of-common-distributions"><i class="fa fa-check"></i><b>4.3.5</b> Variance of Common Distributions</a></li>
+<li class="chapter" data-level="4.3.6" data-path="chap3.html"><a href="chap3.html#variance-of-composite-distributions"><i class="fa fa-check"></i><b>4.3.6</b> Variance of Composite Distributions</a></li>
+<li class="chapter" data-level="4.3.7" data-path="chap3.html"><a href="chap3.html#coefficient-of-variation-and-risk-pooling"><i class="fa fa-check"></i><b>4.3.7</b> Coefficient of Variation and Risk Pooling</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="chap3.html"><a href="chap3.html#insurance-and-bienaymé-chebyshev-inequality"><i class="fa fa-check"></i><b>4.4</b> Insurance and Bienaymé-Chebyshev Inequality</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="chap3.html"><a href="chap3.html#markovs-inequality"><i class="fa fa-check"></i><b>4.4.1</b> Markov’s Inequality</a></li>
+<li class="chapter" data-level="4.4.2" data-path="chap3.html"><a href="chap3.html#bienaymé-chebyshev-inequality"><i class="fa fa-check"></i><b>4.4.2</b> Bienaymé-Chebyshev Inequality</a></li>
+<li class="chapter" data-level="4.4.3" data-path="chap3.html"><a href="chap3.html#actuarial-interpretation-of-the-bienaymé-chebyshev-inequality"><i class="fa fa-check"></i><b>4.4.3</b> Actuarial Interpretation of the Bienaymé-Chebyshev Inequality</a></li>
+<li class="chapter" data-level="4.4.4" data-path="chap3.html"><a href="chap3.html#conservative-nature-of-the-bienaymé-chebyshev-inequality"><i class="fa fa-check"></i><b>4.4.4</b> Conservative Nature of the Bienaymé-Chebyshev Inequality</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="chap3.html"><a href="chap3.html#insurance-and-law-of-large-numbers"><i class="fa fa-check"></i><b>4.5</b> Insurance and Law of Large Numbers</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="chap3.html"><a href="chap3.html#convergence-in-probability"><i class="fa fa-check"></i><b>4.5.1</b> Convergence in Probability</a></li>
+<li class="chapter" data-level="4.5.2" data-path="chap3.html"><a href="chap3.html#convergence-of-average-claim-amount-per-policy-to-the-pure-premium"><i class="fa fa-check"></i><b>4.5.2</b> Convergence of Average Claim Amount per Policy to the Pure Premium</a></li>
+<li class="chapter" data-level="4.5.3" data-path="chap3.html"><a href="chap3.html#case-of-flat-indemnity"><i class="fa fa-check"></i><b>4.5.3</b> Case of Flat Indemnity</a></li>
+<li class="chapter" data-level="4.5.4" data-path="chap3.html"><a href="chap3.html#case-of-indemnity-compensation"><i class="fa fa-check"></i><b>4.5.4</b> Case of Indemnity Compensation</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="chap3.html"><a href="chap3.html#characteristic-functions"><i class="fa fa-check"></i><b>4.6</b> Characteristic Functions</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="chap3.html"><a href="chap3.html#probability-generating-function"><i class="fa fa-check"></i><b>4.6.1</b> Probability Generating Function</a></li>
+<li class="chapter" data-level="4.6.2" data-path="chap3.html"><a href="chap3.html#laplace-transform"><i class="fa fa-check"></i><b>4.6.2</b> Laplace Transform</a></li>
+<li class="chapter" data-level="4.6.3" data-path="chap3.html"><a href="chap3.html#moment-generating-function"><i class="fa fa-check"></i><b>4.6.3</b> Moment Generating Function</a></li>
+<li class="chapter" data-level="4.6.4" data-path="chap3.html"><a href="chap3.html#hazard-rate"><i class="fa fa-check"></i><b>4.6.4</b> Hazard Rate</a></li>
+<li class="chapter" data-level="4.6.5" data-path="chap3.html"><a href="chap3.html#stop-loss-premiums"><i class="fa fa-check"></i><b>4.6.5</b> Stop-Loss Premiums</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="chap3.html"><a href="chap3.html#Hetero"><i class="fa fa-check"></i><b>4.7</b> Heterogeneity and Mixtures</a></li>
+<li class="chapter" data-level="4.8" data-path="chap3.html"><a href="chap3.html#context"><i class="fa fa-check"></i><b>4.8</b> Context</a>
+<ul>
+<li class="chapter" data-level="4.8.1" data-path="chap3.html"><a href="chap3.html#a-simple-example"><i class="fa fa-check"></i><b>4.8.1</b> A Simple Example…</a></li>
+<li class="chapter" data-level="4.8.2" data-path="chap3.html"><a href="chap3.html#poisson-mixtures"><i class="fa fa-check"></i><b>4.8.2</b> Poisson Mixtures</a></li>
+<li class="chapter" data-level="4.8.3" data-path="chap3.html"><a href="chap3.html#shakeds-theorem"><i class="fa fa-check"></i><b>4.8.3</b> Shaked’s Theorem</a></li>
+<li class="chapter" data-level="4.8.4" data-path="chap3.html"><a href="chap3.html#composite-mixed-poisson-distributions"><i class="fa fa-check"></i><b>4.8.4</b> Composite Mixed Poisson Distributions</a></li>
+<li class="chapter" data-level="4.8.5" data-path="chap3.html"><a href="chap3.html#exponential-mixtures"><i class="fa fa-check"></i><b>4.8.5</b> Exponential Mixtures</a></li>
+<li class="chapter" data-level="4.8.6" data-path="chap3.html"><a href="chap3.html#identifiability-of-exponential-mixtures"><i class="fa fa-check"></i><b>4.8.6</b> Identifiability of Exponential Mixtures</a></li>
+</ul></li>
+<li class="chapter" data-level="4.9" data-path="chap3.html"><a href="chap3.html#pure-premium-in-segmented-universe"><i class="fa fa-check"></i><b>4.9</b> Pure Premium in Segmented Universe</a>
+<ul>
+<li class="chapter" data-level="4.9.1" data-path="chap3.html"><a href="chap3.html#segmentation-techniques"><i class="fa fa-check"></i><b>4.9.1</b> Segmentation Techniques</a></li>
+<li class="chapter" data-level="4.9.2" data-path="chap3.html"><a href="chap3.html#conditional-expectation"><i class="fa fa-check"></i><b>4.9.2</b> Conditional Expectation</a></li>
+<li class="chapter" data-level="4.9.3" data-path="chap3.html"><a href="chap3.html#customization-of-premiums"><i class="fa fa-check"></i><b>4.9.3</b> Customization of Premiums</a></li>
+<li class="chapter" data-level="4.9.4" data-path="chap3.html"><a href="chap3.html#segmentation-pooling-and-solidarity"><i class="fa fa-check"></i><b>4.9.4</b> Segmentation, Pooling, and Solidarity</a></li>
+<li class="chapter" data-level="4.9.5" data-path="chap3.html"><a href="chap3.html#DeWit"><i class="fa fa-check"></i><b>4.9.5</b> Formalization of the Segmentation Concept</a></li>
+<li class="chapter" data-level="4.9.6" data-path="chap3.html"><a href="chap3.html#drawbacks-resulting-from-extensive-segmentation"><i class="fa fa-check"></i><b>4.9.6</b> Drawbacks Resulting from Extensive Segmentation</a></li>
+<li class="chapter" data-level="4.9.7" data-path="chap3.html"><a href="chap3.html#segmentation-and-information-asymmetry"><i class="fa fa-check"></i><b>4.9.7</b> Segmentation and Information Asymmetry</a></li>
+</ul></li>
+<li class="chapter" data-level="4.10" data-path="chap3.html"><a href="chap3.html#exercises-1"><i class="fa fa-check"></i><b>4.10</b> Exercises</a></li>
+<li class="chapter" data-level="4.11" data-path="chap3.html"><a href="chap3.html#bibliographical-notes-1"><i class="fa fa-check"></i><b>4.11</b> Bibliographical notes</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="chap4.html"><a href="chap4.html"><i class="fa fa-check"></i><b>5</b> From Pure to Net Premium</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="chap4.html"><a href="chap4.html#introduction-2"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="chap4.html"><a href="chap4.html#insurance-and-the-central-limit-theorem"><i class="fa fa-check"></i><b>5.2</b> Insurance and the Central Limit Theorem</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="chap4.html"><a href="chap4.html#central-limit-theorem"><i class="fa fa-check"></i><b>5.2.1</b> Central Limit Theorem</a></li>
+<li class="chapter" data-level="5.2.2" data-path="chap4.html"><a href="chap4.html#quality-of-the-approximation-based-on-the-central-limit-theorem"><i class="fa fa-check"></i><b>5.2.2</b> Quality of the Approximation Based on the Central Limit Theorem</a></li>
+<li class="chapter" data-level="5.2.3" data-path="chap4.html"><a href="chap4.html#central-limit-theorem-and-law-of-large-numbers"><i class="fa fa-check"></i><b>5.2.3</b> Central Limit Theorem and Law of Large Numbers</a></li>
+<li class="chapter" data-level="5.2.4" data-path="chap4.html"><a href="chap4.html#central-limit-theorem-for-the-compound-poisson-distribution"><i class="fa fa-check"></i><b>5.2.4</b> Central Limit Theorem for the Compound Poisson Distribution</a></li>
+<li class="chapter" data-level="5.2.5" data-path="chap4.html"><a href="chap4.html#tail-function-approximation-in-the-case-of-fixed-forfaiture-policy"><i class="fa fa-check"></i><b>5.2.5</b> Tail Function Approximation in the Case of Fixed-Forfaiture Policy</a></li>
+<li class="chapter" data-level="5.2.6" data-path="chap4.html"><a href="chap4.html#tail-function-approximation-in-the-case-of-indemnity-policy"><i class="fa fa-check"></i><b>5.2.6</b> Tail Function Approximation in the Case of Indemnity Policy</a></li>
+<li class="chapter" data-level="5.2.7" data-path="chap4.html"><a href="chap4.html#pure-premium-as-the-minimum-price-for-risk"><i class="fa fa-check"></i><b>5.2.7</b> Pure Premium as the Minimum Price for Risk</a></li>
+<li class="chapter" data-level="5.2.8" data-path="chap4.html"><a href="chap4.html#sensitivity-of-results-to-possible-dependence"><i class="fa fa-check"></i><b>5.2.8</b> Sensitivity of Results to Possible Dependence</a></li>
+<li class="chapter" data-level="5.2.9" data-path="chap4.html"><a href="chap4.html#stable-distributions"><i class="fa fa-check"></i><b>5.2.9</b> Stable Distributions</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="chap4.html"><a href="chap4.html#probability-of-ruin-over-a-period"><i class="fa fa-check"></i><b>5.3</b> Probability of Ruin over a Period</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="chap4.html"><a href="chap4.html#definition-14"><i class="fa fa-check"></i><b>5.3.1</b> Definition</a></li>
+<li class="chapter" data-level="5.3.2" data-path="chap4.html"><a href="chap4.html#approximation-based-on-the-central-limit-theorem"><i class="fa fa-check"></i><b>5.3.2</b> Approximation based on the central limit theorem</a></li>
+<li class="chapter" data-level="5.3.3" data-path="chap4.html"><a href="chap4.html#the-case-of-the-flat-rate-deductible"><i class="fa fa-check"></i><b>5.3.3</b> The case of the flat-rate deductible</a></li>
+<li class="chapter" data-level="5.3.4" data-path="chap4.html"><a href="chap4.html#the-case-of-indemnity-based-claims"><i class="fa fa-check"></i><b>5.3.4</b> The case of indemnity-based claims</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="chap4.html"><a href="chap4.html#security-loading"><i class="fa fa-check"></i><b>5.4</b> Security Loading</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="chap4.html"><a href="chap4.html#concept-1"><i class="fa fa-check"></i><b>5.4.1</b> Concept</a></li>
+<li class="chapter" data-level="5.4.2" data-path="chap4.html"><a href="chap4.html#determining-the-security-loading-based-on-the-central-limit-theorem"><i class="fa fa-check"></i><b>5.4.2</b> Determining the security loading Based on the Central Limit Theorem</a></li>
+<li class="chapter" data-level="5.4.3" data-path="chap4.html"><a href="chap4.html#the-absolute-necessity-of-security-load"><i class="fa fa-check"></i><b>5.4.3</b> The Absolute Necessity of Security Load</a></li>
+<li class="chapter" data-level="5.4.4" data-path="chap4.html"><a href="chap4.html#PrincCalculPrim"><i class="fa fa-check"></i><b>5.4.4</b> Premium Calculation Principle</a></li>
+<li class="chapter" data-level="5.4.5" data-path="chap4.html"><a href="chap4.html#comments"><i class="fa fa-check"></i><b>5.4.5</b> Comments</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="chap4.html"><a href="chap4.html#security-coefficient"><i class="fa fa-check"></i><b>5.5</b> Security Coefficient</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="chap4.html"><a href="chap4.html#companys-technical-result"><i class="fa fa-check"></i><b>5.5.1</b> Company’s Technical Result</a></li>
+<li class="chapter" data-level="5.5.2" data-path="chap4.html"><a href="chap4.html#determining-the-security-coefficient"><i class="fa fa-check"></i><b>5.5.2</b> Determining the Security Coefficient</a></li>
+<li class="chapter" data-level="5.5.3" data-path="chap4.html"><a href="chap4.html#determining-the-safety-loading-based-on-the-bienaymé-chebyshev-inequality"><i class="fa fa-check"></i><b>5.5.3</b> Determining the Safety Loading Based on the Bienaymé-Chebyshev Inequality</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="chap4.html"><a href="chap4.html#the-normal-power-np-approximation"><i class="fa fa-check"></i><b>5.6</b> The Normal-Power (NP) Approximation</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="chap4.html"><a href="chap4.html#skewness-coefficient"><i class="fa fa-check"></i><b>5.6.1</b> Skewness Coefficient</a></li>
+<li class="chapter" data-level="5.6.2" data-path="chap4.html"><a href="chap4.html#edgeworth-expansion"><i class="fa fa-check"></i><b>5.6.2</b> Edgeworth Expansion</a></li>
+<li class="chapter" data-level="5.6.3" data-path="chap4.html"><a href="chap4.html#esscher-approximation"><i class="fa fa-check"></i><b>5.6.3</b> Esscher Approximation</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="chap4.html"><a href="chap4.html#using-the-np-approximation-to-determine-the-safety-loading-rate-rho-in-the-expected-value-principle"><i class="fa fa-check"></i><b>5.7</b> Using the NP Approximation to Determine the Safety Loading Rate <span class="math inline">\(\rho\)</span> in the Expected Value Principle</a>
+<ul>
+<li class="chapter" data-level="5.7.1" data-path="chap4.html"><a href="chap4.html#concluding-remarks-on-esscher-and-np-approximations"><i class="fa fa-check"></i><b>5.7.1</b> Concluding Remarks on Esscher and NP Approximations</a></li>
+</ul></li>
+<li class="chapter" data-level="5.8" data-path="chap4.html"><a href="chap4.html#the-premium"><i class="fa fa-check"></i><b>5.8</b> The Premium</a></li>
+<li class="chapter" data-level="5.9" data-path="chap4.html"><a href="chap4.html#calculation-of-the-commercial-premium"><i class="fa fa-check"></i><b>5.9</b> Calculation of the Commercial Premium</a></li>
+<li class="chapter" data-level="5.10" data-path="chap4.html"><a href="chap4.html#exercises-2"><i class="fa fa-check"></i><b>5.10</b> Exercises</a></li>
+<li class="chapter" data-level="5.11" data-path="chap4.html"><a href="chap4.html#bibliographical-notes-2"><i class="fa fa-check"></i><b>5.11</b> Bibliographical Notes</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="chap5.html"><a href="chap5.html"><i class="fa fa-check"></i><b>6</b> Measurement and Comparison of Risks</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="chap5.html"><a href="chap5.html#introduction-3"><i class="fa fa-check"></i><b>6.1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="chap5.html"><a href="chap5.html#measuring-risk-an-essential-task-for-actuaries"><i class="fa fa-check"></i><b>6.1.1</b> Measuring Risk: An Essential Task for Actuaries</a></li>
+<li class="chapter" data-level="6.1.2" data-path="chap5.html"><a href="chap5.html#comparing-risks-another-specialty-of-actuaries"><i class="fa fa-check"></i><b>6.1.2</b> Comparing Risks: Another Specialty of Actuaries</a></li>
+<li class="chapter" data-level="6.1.3" data-path="chap5.html"><a href="chap5.html#measuring-and-then-comparing-risks-two-related-tasks"><i class="fa fa-check"></i><b>6.1.3</b> Measuring and then Comparing Risks, Two Related Tasks</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="chap5.html"><a href="chap5.html#risk-measures"><i class="fa fa-check"></i><b>6.2</b> Risk Measures</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="chap5.html"><a href="chap5.html#definition-17"><i class="fa fa-check"></i><b>6.2.1</b> Definition</a></li>
+<li class="chapter" data-level="6.2.2" data-path="chap5.html"><a href="chap5.html#coherence"><i class="fa fa-check"></i><b>6.2.2</b> Coherence</a></li>
+<li class="chapter" data-level="6.2.3" data-path="chap5.html"><a href="chap5.html#value-at-risk"><i class="fa fa-check"></i><b>6.2.3</b> Value-at-Risk</a></li>
+<li class="chapter" data-level="6.2.4" data-path="chap5.html"><a href="chap5.html#tail-var-and-related-measures"><i class="fa fa-check"></i><b>6.2.4</b> Tail-VaR and Related Measures</a></li>
+<li class="chapter" data-level="6.2.5" data-path="chap5.html"><a href="chap5.html#esscher-risk-measure"><i class="fa fa-check"></i><b>6.2.5</b> Esscher Risk Measure</a></li>
+<li class="chapter" data-level="6.2.6" data-path="chap5.html"><a href="chap5.html#wang-risk-measures"><i class="fa fa-check"></i><b>6.2.6</b> Wang Risk Measures</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="chap5.html"><a href="chap5.html#main-properties-of-wangs-risk-measures"><i class="fa fa-check"></i><b>6.3</b> Main Properties of Wang’s Risk Measures</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="chap5.html"><a href="chap5.html#concavity-of-the-distortion-function"><i class="fa fa-check"></i><b>6.3.1</b> Concavity of the Distortion Function</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="chap5.html"><a href="chap5.html#uniform-comparison-of-var"><i class="fa fa-check"></i><b>6.4</b> Uniform Comparison of VaR</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="chap5.html"><a href="chap5.html#definition-22"><i class="fa fa-check"></i><b>6.4.1</b> Definition</a></li>
+<li class="chapter" data-level="6.4.2" data-path="chap5.html"><a href="chap5.html#equivalent-conditions"><i class="fa fa-check"></i><b>6.4.2</b> Equivalent Conditions</a></li>
+<li class="chapter" data-level="6.4.3" data-path="chap5.html"><a href="chap5.html#properties-3"><i class="fa fa-check"></i><b>6.4.3</b> Properties</a></li>
+<li class="chapter" data-level="6.4.4" data-path="chap5.html"><a href="chap5.html#hazard-rate-and-ph-risk-measure"><i class="fa fa-check"></i><b>6.4.4</b> Hazard Rate and PH Risk Measure</a></li>
+<li class="chapter" data-level="6.4.5" data-path="chap5.html"><a href="chap5.html#likelihood-ratio-and-esscher-principle"><i class="fa fa-check"></i><b>6.4.5</b> Likelihood Ratio and Esscher Principle</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="chap5.html"><a href="chap5.html#uniform-comparison-of-tvars"><i class="fa fa-check"></i><b>6.5</b> Uniform Comparison of TVaRs</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="chap5.html"><a href="chap5.html#definition-24"><i class="fa fa-check"></i><b>6.5.1</b> Definition</a></li>
+<li class="chapter" data-level="6.5.2" data-path="chap5.html"><a href="chap5.html#equivalent-conditions-1"><i class="fa fa-check"></i><b>6.5.2</b> Equivalent Conditions</a></li>
+<li class="chapter" data-level="6.5.3" data-path="chap5.html"><a href="chap5.html#sufficient-condition"><i class="fa fa-check"></i><b>6.5.3</b> Sufficient Condition</a></li>
+<li class="chapter" data-level="6.5.4" data-path="chap5.html"><a href="chap5.html#properties-4"><i class="fa fa-check"></i><b>6.5.4</b> Properties</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="chap5.html"><a href="chap5.html#optimal-form-of-risk-transfer"><i class="fa fa-check"></i><b>6.6</b> Optimal Form of Risk Transfer</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="chap5.html"><a href="chap5.html#the-problem"><i class="fa fa-check"></i><b>6.6.1</b> The Problem</a></li>
+<li class="chapter" data-level="6.6.2" data-path="chap5.html"><a href="chap5.html#admissible-indemnity-functions"><i class="fa fa-check"></i><b>6.6.2</b> Admissible Indemnity Functions</a></li>
+<li class="chapter" data-level="6.6.3" data-path="chap5.html"><a href="chap5.html#ordering-of-contracts"><i class="fa fa-check"></i><b>6.6.3</b> Ordering of Contracts</a></li>
+<li class="chapter" data-level="6.6.4" data-path="chap5.html"><a href="chap5.html#optimality-of-the-stop-loss-contract"><i class="fa fa-check"></i><b>6.6.4</b> Optimality of the Stop-Loss Contract</a></li>
+</ul></li>
+<li class="chapter" data-level="6.7" data-path="chap5.html"><a href="chap5.html#incomplete-information"><i class="fa fa-check"></i><b>6.7</b> Incomplete Information</a>
+<ul>
+<li class="chapter" data-level="6.7.1" data-path="chap5.html"><a href="chap5.html#context-2"><i class="fa fa-check"></i><b>6.7.1</b> Context</a></li>
+<li class="chapter" data-level="6.7.2" data-path="chap5.html"><a href="chap5.html#known-mean-and-support"><i class="fa fa-check"></i><b>6.7.2</b> Known Mean and Support</a></li>
+<li class="chapter" data-level="6.7.3" data-path="chap5.html"><a href="chap5.html#application-to-calculating-a-grouped-data-stop-loss-premium"><i class="fa fa-check"></i><b>6.7.3</b> Application to Calculating a Grouped Data Stop-Loss Premium</a></li>
+</ul></li>
+<li class="chapter" data-level="6.8" data-path="chap5.html"><a href="chap5.html#exercises-3"><i class="fa fa-check"></i><b>6.8</b> Exercises</a></li>
+<li class="chapter" data-level="6.9" data-path="chap5.html"><a href="chap5.html#bibliographical-notes-3"><i class="fa fa-check"></i><b>6.9</b> Bibliographical notes</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="chap6.html"><a href="chap6.html"><i class="fa fa-check"></i><b>7</b> Collective Model</a></li>
+<li class="chapter" data-level="8" data-path="chap7.html"><a href="chap7.html"><i class="fa fa-check"></i><b>8</b> Solvency</a></li>
+<li class="chapter" data-level="9" data-path="chap8.html"><a href="chap8.html"><i class="fa fa-check"></i><b>9</b> Multiple Risks</a></li>
+<li class="chapter" data-level="10" data-path="chap9.html"><a href="chap9.html"><i class="fa fa-check"></i><b>10</b> Prior Ratemaking</a></li>
+<li class="chapter" data-level="11" data-path="chap10.html"><a href="chap10.html"><i class="fa fa-check"></i><b>11</b> Credibility</a></li>
+<li class="chapter" data-level="12" data-path="chap11.html"><a href="chap11.html"><i class="fa fa-check"></i><b>12</b> Bonus-Malus</a></li>
+<li class="chapter" data-level="13" data-path="chap12.html"><a href="chap12.html"><i class="fa fa-check"></i><b>13</b> Economics of Insurance</a></li>
+<li class="chapter" data-level="14" data-path="chap13.html"><a href="chap13.html"><i class="fa fa-check"></i><b>14</b> Claims Reserving</a></li>
+<li class="chapter" data-level="15" data-path="chap14.html"><a href="chap14.html"><i class="fa fa-check"></i><b>15</b> Large Risks</a></li>
+<li class="chapter" data-level="16" data-path="chap15.html"><a href="chap15.html"><i class="fa fa-check"></i><b>16</b> Monte Carlo</a></li>
+<li class="chapter" data-level="17" data-path="chap16.html"><a href="chap16.html"><i class="fa fa-check"></i><b>17</b> Conclusion</a></li>
+<li class="chapter" data-level="" data-path="postface.html"><a href="postface.html"><i class="fa fa-check"></i>Postface</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Non Life Insurance Mathematics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="chap4" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> From Pure to Net Premium<a href="chap4.html#chap4" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction-2" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Introduction<a href="chap4.html#introduction-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>At this stage, we are able to calculate the price of risk, known as the pure premium. Of course, the amount paid by the insured to benefit from the insurer’s coverage significantly exceeds the pure premium. This amount, known as the commercial premium or tariff premium, is obtained by adding various loadings to the pure premium. First, a safety loading is added to the pure premium. This loading is assumed to absorb the deviations between the claims experience and the pure premium collected by the company. These inevitable deviations are mainly caused by the fact that the assumptions underlying the calculation of the pure premium (i.e., the validity conditions of the law of large numbers) are only approximately satisfied in practice. The insurer then incorporates various loadings covering its overhead expenses and the profit it may intend to distribute to its shareholders, not to mention taxes and other legal levies.</p>
+<p>This chapter is dedicated to the calculation of the net premium (or loaded premium in English), composed of the pure premium and a safety loading that safeguards the company from ruin. Of course, the company still faces a risk of insolvency. The actuary will adjust the magnitude of the safety loading and the solvency margin provided by the shareholders to reduce this risk to an acceptable level. The reasoning in this chapter relies mostly on asymptotic results (with the central limit theorem in the lead) or on approximations based on a few moments. We will see later in this work how to calculate this loading more precisely, albeit at the cost of sometimes heavier calculations.</p>
+</div>
+<div id="insurance-and-the-central-limit-theorem" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Insurance and the Central Limit Theorem<a href="chap4.html#insurance-and-the-central-limit-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="central-limit-theorem" class="section level3 hasAnchor" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Central Limit Theorem<a href="chap4.html#central-limit-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The central limit theorem (which actually comes in various forms, so it’s better to talk about central limit type results, depending on the assumptions considered) explains the fundamental importance of the normal distribution in statistics. Under fairly general conditions, a sum of centered and scaled random variables exhibits a Gaussian behavior when the number of terms is sufficiently large. A result of this kind when each of the terms follows a <span class="math inline">\(\mathcal{B}er(q)\)</span> distribution had already been obtained by Bernoulli and de Moivre in the 18th century. However, it wasn’t until the early 20th century that this result was generalized by Levy and Lindeberg.</p>
+<p>Here, we state the classical version of the central limit theorem (In order to explicitly show the number <span class="math inline">\(n\)</span> of terms in the sum, we will use the notation <span class="math inline">\(S^{(n)}\)</span>; subsequently, we will often use <span class="math inline">\(S\)</span> when there is no possible confusion).</p>
+<div class="theorem">
+<p><span id="thm:TheoTCL" class="theorem"><strong>Theorem 5.1  (Levy-Lindeberg Central Limit Theorem) </strong></span>Let <span class="math inline">\(S^{(n)}=\sum_{i=1}^nS_i\)</span> be the sum of independent and identically distributed random variables <span class="math inline">\(S_1, S_2, \ldots, S_n\)</span> with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2&lt;+\infty\)</span>. Then, we have
+<span class="math display">\[
+\frac{S^{(n)}-n\mu}{\sqrt{n}\sigma}\to_{\text{dist}}\mathcal{N}or(0,1),
+\]</span>
+where <span class="math inline">\(\to_{\text{dist}}\)</span> denotes convergence in distribution, ensuring
+<span class="math display">\[
+\Pr\left[\frac{S^{(n)}-n\mu}{\sqrt{n}\sigma}\leq x\right]\to\Phi(x),\text{ for any }x\text{ as }n\to+\infty.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-1" class="proof"><em>Proof</em>. </span>Let’s write the Laplace transform <span class="math inline">\(L_{T_n}\)</span> of the random variable
+<span class="math display">\[
+T_n=\frac{S^{(n)}-n\mu}{\sqrt{n}\sigma},
+\]</span>
+which is just the centered and scaled version of <span class="math inline">\(S^{(n)}\)</span>:
+<span class="math display">\[\begin{eqnarray*}
+L_{T_n}(t)&amp;=&amp;\mathbb{E}\left[\exp\left(-\frac{t}{\sqrt{n}}\sum_{i=1}^n\frac{X_i-\mu}{\sigma}\right)\right]\\
+&amp;=&amp;\left\{\mathbb{E}\left[\exp\left(-\frac{t}{\sqrt{n}}\cdot\frac{X_1-\mu}{\sigma}\right)\right]\right\}^n\\
+&amp;=&amp;\left\{1+\frac{t^2}{2n}+o\left(\frac{t^2}{n}\right)\right\}^n.
+\end{eqnarray*}\]</span>
+This shows that
+<span class="math display">\[
+\lim_{n\to +\infty}L_{T_n}(t)=\lim_{n\to +\infty}\left\{1+\frac{t^2}{2n}\right\}^n=\exp(t^2/2),
+\]</span>
+and thus, the Laplace transform of <span class="math inline">\(T_n\)</span> converges to that of the standard normal distribution. This ensures that
+<span class="math display">\[
+\lim_{n\to+\infty}\Pr[T_n\leq t]=\Phi(t),
+\]</span>
+concluding the proof.</p>
+</div>
+<p>When the conditions of the Levy-Lindeberg theorem are met, we will now write <span class="math inline">\(T_n\approx_{\text{dist}}\mathcal{N}or(0,1)\)</span> or <span class="math inline">\(S^{(n)}\approx_{\text{dist}}\mathcal{N}or(n\mu,n\sigma^2)\)</span> to express that <span class="math inline">\(T_n\)</span> is approximately normally distributed or that <span class="math inline">\(S^{(n)}\)</span> is approximately normal. Consequently, for sufficiently large <span class="math inline">\(n\)</span>, the approximation
+<span class="math display">\[
+\Pr[S^{(n)}\leq t]=\Pr\left[T_n\leq \frac{t-n\mu}{\sqrt{n}\sigma}\right]\approx\Phi\left(\frac{t-n\mu}{\sqrt{n}\sigma}\right),
+\]</span>
+provides a good estimate of the probability that the aggregate claims <span class="math inline">\(S_n\)</span> for the <span class="math inline">\(n\)</span> policies are below the threshold <span class="math inline">\(t\)</span>.</p>
+</div>
+<div id="quality-of-the-approximation-based-on-the-central-limit-theorem" class="section level3 hasAnchor" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Quality of the Approximation Based on the Central Limit Theorem<a href="chap4.html#quality-of-the-approximation-based-on-the-central-limit-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>One might wonder about the threshold <span class="math inline">\(n\)</span> beyond which the approximation of the distribution of <span class="math inline">\(S^{(n)}\)</span> by the normal distribution is of satisfactory quality. This can be addressed through the following result, which we will accept without proof.</p>
+<div class="theorem">
+<p><span id="thm:BarryEsseen" class="theorem"><strong>Theorem 5.2  (Berry-Esséen Inequality) </strong></span>Under the conditions of Theorem <a href="chap4.html#thm:TheoTCL">5.1</a>, the inequality
+<span class="math display">\[
+\sup_x\left|\Pr\left[\frac{S^{(n)}-n\mu}{\sqrt{n}\sigma}\leq x\right]-\Phi(x)\right|\leq
+c\frac{\mathbb{E}[|S_1-\mu|^3]}{\sigma^3\sqrt{n}(1+|x|)^3}
+\]</span>
+holds for any <span class="math inline">\(x\in\mathbb{R}\)</span>. In particular,
+<span class="math display">\[
+\sup_x\left|\Pr\left[\frac{S^{(n)}-n\mu}{\sqrt{n}\sigma}\leq x\right]-\Phi(x)\right|\leq
+c\frac{\mathbb{E}[|S_1-\mu|^3]}{\sigma^3\sqrt{n}},
+\]</span>
+where <span class="math inline">\(c\)</span> is a constant (evaluated to 0.7975).</p>
+</div>
+</div>
+<div id="central-limit-theorem-and-law-of-large-numbers" class="section level3 hasAnchor" number="5.2.3">
+<h3><span class="header-section-number">5.2.3</span> Central Limit Theorem and Law of Large Numbers<a href="chap4.html#central-limit-theorem-and-law-of-large-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>It is interesting to compare the two asymptotic results seen so far, namely the law of large numbers and the central limit theorem. The former teaches us that <span class="math inline">\(\frac{S^{(n)}}{n}\)</span> tends to <span class="math inline">\(\mu\)</span> as <span class="math inline">\(n\to+\infty\)</span>. The latter complements this information by describing the behavior of this ratio when the number of terms is sufficiently large, i.e., <span class="math inline">\(\frac{S^{(n)}}{n}\approx_{\text{dist}}\mathcal{N}or(\mu,\frac{\sigma^2}{n})\)</span>. The variance of <span class="math inline">\(\frac{S^{(n)}}{n}\)</span> is <span class="math inline">\(\frac{\sigma^2}{n}\)</span> and indeed tends to 0 as <span class="math inline">\(n\to+\infty\)</span>.</p>
+<p>In the chapter dedicated to large risks, we will study the asymptotic behavior of <span class="math inline">\(M_n=\max_{1\leq i\leq n}S_i\)</span> as <span class="math inline">\(n\to+\infty\)</span>. In many practical situations, the actuary is as interested in <span class="math inline">\(M_n\)</span> as in <span class="math inline">\(\frac{S^{(n)}}{n}\)</span>.</p>
+</div>
+<div id="central-limit-theorem-for-the-compound-poisson-distribution" class="section level3 hasAnchor" number="5.2.4">
+<h3><span class="header-section-number">5.2.4</span> Central Limit Theorem for the Compound Poisson Distribution<a href="chap4.html#central-limit-theorem-for-the-compound-poisson-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s demonstrate that <span class="math inline">\(S\sim\mathcal{CP}oi(\lambda,F_X)\)</span> is approximately normally distributed when the average number of claims <span class="math inline">\(\lambda\)</span> is sufficiently large.</p>
+<div class="{proposition}">
+<p>If <span class="math inline">\(S\sim\mathcal{CP}oi(\lambda,F_X)\)</span> then
+<span class="math display">\[
+\frac{S-\mathbb{E}[S]}{\sqrt{\mathbb{V}[S]}}\to_{\text{dist}}\mathcal{N}or(0,1)\text{ as }\lambda\to+\infty.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-2" class="proof"><em>Proof</em>. </span>Let’s assume <span class="math inline">\(\lambda\)</span> is an integer and denote <span class="math inline">\(N_1,N_2,\ldots,N_\lambda\)</span> as independent random variables following the <span class="math inline">\(\mathcal{P}oi(1)\)</span> distribution. It’s easy to see that <span class="math inline">\(S\sim\mathcal{CP}oi(\lambda,F_X)\)</span> has the same distribution as <span class="math inline">\(\sum_{i=1}^\lambda\sum_{j=1}^{N_i}X_{ij}\)</span>, where the <span class="math inline">\(\sum_{j=1}^{N_i}X_{ij}\)</span> are independent and identically distributed with the <span class="math inline">\(\mathcal{CP}oi(1,F_X)\)</span> distribution. Therefore, we can apply the central limit theorem to their sum <span class="math inline">\(S\)</span> and obtain the stated result.</p>
+</div>
+</div>
+<div id="tail-function-approximation-in-the-case-of-fixed-forfaiture-policy" class="section level3 hasAnchor" number="5.2.5">
+<h3><span class="header-section-number">5.2.5</span> Tail Function Approximation in the Case of Fixed-Forfaiture Policy<a href="chap4.html#tail-function-approximation-in-the-case-of-fixed-forfaiture-policy" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s consider claim costs <span class="math inline">\(S_i\)</span> of the form <a href="#eq:Siforfaitaire">(<strong>??</strong>)</a>. Note that the total cost <span class="math inline">\(S\)</span> for the portfolio can be approximated as
+<span class="math display">\[
+S=\sum_{i=1}^nS_i=s\mathcal{B}in(n,q)\approx_{\text{dist}}\mathcal{N}or\big(nqs,s\sqrt{nq(1-q)}\big)
+\]</span>
+when <span class="math inline">\(n\)</span> is sufficiently large, due to the central limit theorem. This allows us to approximate the probability that <span class="math inline">\(S\)</span> exceeds a level <span class="math inline">\(t\)</span> as follows:
+<span class="math display">\[
+\Pr[S&gt;t]\approx\overline{\Phi}\left(\frac{t/s-nq}{\sqrt{nq(1-q)}}\right).
+\]</span></p>
+</div>
+<div id="tail-function-approximation-in-the-case-of-indemnity-policy" class="section level3 hasAnchor" number="5.2.6">
+<h3><span class="header-section-number">5.2.6</span> Tail Function Approximation in the Case of Indemnity Policy<a href="chap4.html#tail-function-approximation-in-the-case-of-indemnity-policy" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Now, let’s move on to claim costs <span class="math inline">\(S_i\)</span> of the form <a href="#eq:Siindemnitaire">(<strong>??</strong>)</a>.
+In this case,
+<span class="math display">\[
+S\approx_{\text{dist}}\mathcal{N}or\big(nq\mu,\sigma\sqrt{nq}+\mu\sqrt{nq(1-q)}\big),
+\]</span>
+so that the approximation
+<span class="math display">\[
+\Pr[S&gt;t]\approx\overline{\Phi}\left(\frac{t-nq\mu}{\sqrt{nq\sigma^2+n\mu^2q(1-q)}}\right)
+\]</span>
+should be of good quality for sufficiently large <span class="math inline">\(n\)</span>.</p>
+</div>
+<div id="pure-premium-as-the-minimum-price-for-risk" class="section level3 hasAnchor" number="5.2.7">
+<h3><span class="header-section-number">5.2.7</span> Pure Premium as the Minimum Price for Risk<a href="chap4.html#pure-premium-as-the-minimum-price-for-risk" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s now show that the pure premium constitutes in any case a minimum threshold below which the insurer cannot reasonably venture, lest it be unable to meet its obligations. Let <span class="math inline">\(S_i\)</span> be the cost of claims related to policy <span class="math inline">\(i\)</span>; suppose the costs <span class="math inline">\(S_i\)</span> are independent and identically distributed with a mean <span class="math inline">\(\mu\)</span>. If <span class="math inline">\(p&lt;\mu\)</span> is the amount of the premium charged by the company, then we have
+<span class="math display" id="eq:Lim1">\[\begin{equation}
+\lim_{n\to+\infty}\Pr\left[\sum_{i=1}^nS_i&gt;np\right]=1.
+\tag{5.1}
+\end{equation}\]</span>
+The probability whose limit is taken in the left-hand side of <a href="chap4.html#eq:Lim1">(5.1)</a> is called the probability of ruin or deficit probability. Indeed, if the total cost of claims <span class="math inline">\(\sum_{i=1}^nS_i\)</span> exceeds the revenue <span class="math inline">\(np\)</span>, there is a technical deficit. We can establish the equality <a href="chap4.html#eq:Lim1">(5.1)</a> by invoking the central limit theorem. In fact, we can write
+<span class="math display">\[\begin{eqnarray*}
+&amp;&amp;\lim_{n\to+\infty}\Pr\left[\sum_{i=1}^nS_i&gt;np\right]\\
+&amp;=&amp;\lim_{n\to+\infty}\Pr\left[\frac{\sum_{i=1}^nS_i-n\mu}{\sqrt{n}\sigma}
+&gt;\frac{\sqrt{n}(p-\mu)}{\sigma}\right]\\
+&amp;=&amp;\lim_{n\to+\infty}\overline{\Phi}\left(\frac{\sqrt{n}(p-\mu)}{\sigma}\right)=1.
+\end{eqnarray*}\]</span>
+Thus, according to <a href="chap4.html#eq:Lim1">(5.1)</a>, as the size of the portfolio increases, the probability of deficit tends to 1 when <span class="math inline">\(p&lt;\mu\)</span>. On the other hand, if <span class="math inline">\(p&gt;\mu\)</span>, the reasoning leading to <a href="chap4.html#eq:Lim1">(5.1)</a> teaches us that
+<span class="math display" id="eq:Lim0">\[\begin{equation}
+\lim_{n\to+\infty}\Pr\left[\sum_{i=1}^nS_i&gt;np\right]=0,
+\tag{5.2}
+\end{equation}\]</span>
+which tends to ensure the solvency of the company as the size <span class="math inline">\(n\)</span> of its portfolio increases.</p>
+</div>
+<div id="sensitivity-of-results-to-possible-dependence" class="section level3 hasAnchor" number="5.2.8">
+<h3><span class="header-section-number">5.2.8</span> Sensitivity of Results to Possible Dependence<a href="chap4.html#sensitivity-of-results-to-possible-dependence" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The assumption of independence is essential to the above results. To convince ourselves, let’s suppose that <span class="math inline">\(S_i=T_i+V\)</span>, where the <span class="math inline">\(T_i\)</span> are independent and identically distributed with the same distribution, and independent of <span class="math inline">\(V\)</span>, the latter being assumed to follow a normal distribution. There’s thus a Gaussian shock <span class="math inline">\(V\)</span> superimposed on all the <span class="math inline">\(T_i\)</span>; <span class="math inline">\(V\)</span> could represent the consequences of a catastrophic event (flood or earthquake) affecting all policies in the portfolio. Let <span class="math inline">\(\mu_T\)</span>, <span class="math inline">\(\mu_V\)</span>, <span class="math inline">\(\sigma_T^2\)</span>, and <span class="math inline">\(\sigma_V^2\)</span> be the means and variances of <span class="math inline">\(T_i\)</span> and <span class="math inline">\(V\)</span>, respectively. If the insurer charges a premium of amount <span class="math inline">\(p\)</span>, then the probability of deficit is
+<span class="math display">\[\begin{eqnarray*}
+&amp;&amp;\Pr\left[\sum_{i=1}^nS_i&gt;np\right]\\
+&amp;=&amp;\Pr\left[\frac{\sum_{i=1}^nT_i+nV-n(\mu_T+\mu_V)}{\sqrt{n\sigma_T^2+n^2\sigma_V^2}}
+&gt;\frac{n(p-\mu_T-\mu_V)}{\sqrt{n\sigma_T^2+n^2\sigma_V^2}}\right]\\
+&amp;\approx&amp;\overline{\Phi}\left(\frac{n(p-\mu_T-\mu_V)}{\sqrt{n\sigma_T^2+n^2\sigma_V^2}}\right).
+\end{eqnarray*}\]</span>
+Thus, as the portfolio grows,
+<span class="math display">\[
+\lim_{n\to+\infty}\Pr\left[\sum_{i=1}^nS_i&gt;np\right]=\overline{\Phi}\left(\frac{p-\mu_T-\mu_V}
+{\sigma_V}\right)&gt;0.
+\]</span>
+Hence, there’s no complete disappearance of risk asymptotically. We will revisit the topic of the dependence between insured risks and its consequences in risk management in Chapter <a href="chap8.html#chap8">9</a>.</p>
+</div>
+<div id="stable-distributions" class="section level3 hasAnchor" number="5.2.9">
+<h3><span class="header-section-number">5.2.9</span> Stable Distributions<a href="chap4.html#stable-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A crucial assumption underlying the central limit theorem is that the variance of the random variables being summed must be finite. We’ve seen earlier that the law of large numbers remains valid even when the variance becomes infinite. In the case of the central limit theorem, stable distributions come into play when variances become infinite: these are the limiting distributions for <span class="math inline">\(\frac{S^{(n)}}{n}\)</span> as <span class="math inline">\(n\to +\infty\)</span>. That’s why we briefly explain this concept at this stage of the exposition.</p>
+<div class="{definition}">
+<p>A random variable <span class="math inline">\(X\)</span> is said to have a stable distribution if, for any positive integer <span class="math inline">\(n\)</span>, there exist <span class="math inline">\(n\)</span> independent random variables with the same distribution as <span class="math inline">\(X\)</span>, denoted as <span class="math inline">\(X_{1},X_2,...,X_{n}\)</span>, and constants <span class="math inline">\(\alpha _{n}&gt;0\)</span> and <span class="math inline">\(\beta _{n}\)</span> such that
+<span class="math display">\[
+S_{n}=X_{1}+...+X_{n}=_{\text{law}}\alpha _{n}X+\beta _{n}.
+\]</span></p>
+</div>
+<div class="remark">
+<p><span id="unlabeled-div-3" class="remark"><em>Remark</em>. </span>Note that if <span class="math inline">\(X\)</span> has a stable distribution, then <span class="math inline">\(X\)</span> is infinitely divisible, meaning that <span class="math inline">\(X\)</span> can be written as the sum of <span class="math inline">\(n\)</span> independent variables with the same distribution. Indeed, for any <span class="math inline">\(n&gt;0\)</span>, <span class="math inline">\(X\)</span> follows the same distribution as
+<span class="math display">\[\begin{eqnarray*}
+\frac{S_{n}-\beta _{n}}{\alpha _{n}}&amp;=&amp;\frac{X_{1}+...+X_{n}-\beta _{n}}{\alpha _{n}}\\
+&amp;=&amp;\sum_{k=1}^{n}\left( \frac{X_{k}}{\alpha _{n}}-\frac{\beta_{n}}{\alpha _{n}}\right)\\
+&amp;=&amp;\sum_{k=1}^{n}Y_{k},
+\end{eqnarray*}\]</span>
+where <span class="math inline">\(Y_{k}=(X_{k}-\beta _{n}) /\alpha _{n}\)</span> are independent random variables with the same distribution.</p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-4" class="example"><strong>Example 5.1  </strong></span>If $Xoi() $ then <span class="math inline">\(X\)</span> is not stable. Indeed, let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be two independent variables with the same distribution $oi() $. If the Poisson distribution were stable, then there would exist <span class="math inline">\(\alpha &gt;0\)</span> and $$ such that
+<span class="math display">\[
+X+Y=_{\text{law}}\alpha X+\beta.
+\]</span>
+In particular, these two distributions should have the same mean and variance, which would lead to
+<span class="math display">\[
+2\lambda =\alpha \lambda +\beta
+\]</span>
+for mean equality, and
+<span class="math display">\[
+2\lambda =\alpha ^{2}\lambda
+\]</span>
+for variance equality. Hence <span class="math inline">\(\alpha =\sqrt{2}\)</span> and $=( 2-) $. But in this case, <span class="math inline">\(X+Y\)</span> takes integer values, while $X+$ takes values in ${ n+( 2-) ,n} $. We obtain a contradiction: the Poisson distribution is not stable.</p>
+</div>
+<p>More generally, it can be shown that any stable distribution must be continuous. The following example shows that the normal distribution is stable.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-5" class="example"><strong>Example 5.2  </strong></span>If <span class="math inline">\(X\sim\mathcal{N}or\left(\mu,\sigma ^{2}\right)\)</span> then <span class="math inline">\(X\)</span> is stable. Let <span class="math inline">\(X_{1},...,X_{n}\)</span> be <span class="math inline">\(n\)</span> independent random variables with the same distribution <span class="math inline">\(\mathcal{N}or\left( \mu,\sigma ^{2}\right)\)</span>. Then <span class="math inline">\(X_{1}+...+X_{n}\sim\mathcal{N}or\left(n\mu,n\sigma ^{2}\right)\)</span>, which has the same distribution as <span class="math inline">\(Y=\sqrt{n}X+\left(n-\sqrt{n}\right)\mu\)</span>, where <span class="math inline">\(X\sim\mathcal{N}or\left(\mu,\sigma ^{2}\right)\)</span>: the normal distribution is stable.</p>
+</div>
+<p>Although stable, the normal distribution is very special, in the sense that it is the only stable distribution with finite variance. This better explains the importance of the central limit theorem, which shows that the normal distribution is the only possible limit when variances are finite. In the case of infinite variances, stable distributions then come into play.</p>
+<div class="{proposition}">
+<p>The only stable distribution with finite (non-zero) variance is the normal distribution.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-6" class="proof"><em>Proof</em>. </span>Let <span class="math inline">\(X_{1},...,X_{n}\)</span> be <span class="math inline">\(n\)</span> independent random variables with the same stable distribution, having mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma ^{2}\)</span>. Then there exist <span class="math inline">\(\alpha _{n}&gt;0\)</span> and <span class="math inline">\(\beta _{n}\)</span> such that
+<span class="math display">\[
+X_{1}+...+X_{n}=_{\text{law}}\alpha _{n}X_{1}+\beta _{n}.
+\]</span>
+By equating expectations and variances, we obtain%
+<span class="math display">\[\begin{equation*}
+\left\{
+\begin{array}{l}
+n\mu =\alpha _{n}\mu +\beta _{n} \\
+n\sigma ^{2}=\alpha _{n}^{2}\sigma ^{2}%
+\end{array}%
+\right.
+\end{equation*}\]</span>%
+which implies <span class="math inline">\(\alpha _{n}=\sqrt{n}\)</span> and $<em>{n}=( n-) $. Thus, for all <span class="math inline">\(n\)</span>, we have
+<span class="math display">\[\begin{equation*}
+\frac{X_{1}+...X_{n}-\left( n-\sqrt{n}\right) \mu }{\sqrt{n}}=_{\text{law}} X_{1}.
+\end{equation*}\]</span>%
+By defining $Y=X</em>{1}-$ to center <span class="math inline">\(X_{1}\)</span>, we obtain%
+<span class="math display">\[\begin{equation*}
+\frac{X_{1}+...+X_{n}-n\mu }{\sqrt{n}}=_{\text{law}} Y.
+\end{equation*}\]</span>%
+However, according to the central limit theorem, we know that%
+<span class="math display">\[\begin{equation*}
+\frac{X_{1}+...+X_{n}-n\mu }{\sqrt{n}}\to_{\text{law}}
+\mathcal{N}or\left( 0,\sigma ^{2}\right) \text{ as }n\rightarrow \infty.
+\end{equation*}\]</span>
+Therefore, $Yor( 0,^{2}) $, and consequently $X_{1}or( ,^{2}) $.</p>
+</div>
+<p>We will revisit stable distributions later, especially in the context of Levy processes.</p>
+</div>
+</div>
+<div id="probability-of-ruin-over-a-period" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Probability of Ruin over a Period<a href="chap4.html#probability-of-ruin-over-a-period" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This section introduces the concept of solvency using a first, simplistic model of ruin over a period. A more realistic approach will be developed in Chapter @ref{chap8}.</p>
+<div id="definition-14" class="section level3 hasAnchor" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Definition<a href="chap4.html#definition-14" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The probability of ruin is a risk indicator appreciated by actuaries. It represents the probability that the total claim amount over a period exceeds the corresponding premium received, increased by the capital amount <span class="math inline">\(\kappa\)</span> that the company has at its disposal, if any. More precisely,
+<span class="math display">\[
+\text{probability of ruin}=\Pr\left[\sum_{i=1}^nS_i&gt;np+\kappa\right].
+\]</span></p>
+<p>Insurance companies typically have two parameters at their disposal, the premium amount <span class="math inline">\(p\)</span> and the capital amount <span class="math inline">\(\kappa\)</span>, to bring the probability of ruin to an acceptable level <span class="math inline">\(\epsilon\)</span> (often <span class="math inline">\(\epsilon=1\%\)</span> or 0.1%). The probability of ruin can be evaluated either exactly by calculating the distribution of <span class="math inline">\(\sum_{i=1}^nS_i\)</span>, or approximately by approximating this distribution based on the central limit theorem, for example (or based on other techniques often involving a few moments of <span class="math inline">\(\sum_{i=1}^nS_i\)</span>).</p>
+</div>
+<div id="approximation-based-on-the-central-limit-theorem" class="section level3 hasAnchor" number="5.3.2">
+<h3><span class="header-section-number">5.3.2</span> Approximation based on the central limit theorem<a href="chap4.html#approximation-based-on-the-central-limit-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The approximation of the probability of ruin based on the central limit theorem gives
+<span class="math display">\[\begin{eqnarray*}
+\Pr\left[\sum_{i=1}^nS_i&gt;np+\kappa\right]&amp;\approx&amp;\overline{\Phi}\left(\frac{n(p-\mu)+\kappa}{\sqrt{n}\sigma}\right).
+\end{eqnarray*}\]</span>
+As a first approximation, the probability of ruin thus decreases with the difference <span class="math inline">\(p-\mu\)</span> between the premium amount <span class="math inline">\(p\)</span> charged to policyholders and the pure premium <span class="math inline">\(\mu\)</span>, as well as with the capital <span class="math inline">\(\kappa\)</span> and the portfolio size. On the other hand, the probability of deficit increases with the variance of claim costs, which serves as a risk indicator.</p>
+</div>
+<div id="the-case-of-the-flat-rate-deductible" class="section level3 hasAnchor" number="5.3.3">
+<h3><span class="header-section-number">5.3.3</span> The case of the flat-rate deductible<a href="chap4.html#the-case-of-the-flat-rate-deductible" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s consider the claim amounts <a href="#eq:Siforfaitaire">(<strong>??</strong>)</a> and assume that the company charges its policyholders an amount equal to the pure premium but has capital <span class="math inline">\(\kappa\)</span>. It can only meet its obligations if
+<span class="math display">\[
+\sum_{i=1}^nS_i\leq nqs+\kappa.
+\]</span>
+Under the conditions of the law of large numbers, the central limit theorem allows us to estimate the probability of ruin for large <span class="math inline">\(n\)</span> as
+<span class="math display">\[\begin{eqnarray*}
+&amp;&amp;\Pr\left[\sum_{i=1}^nS_i&gt;nqs+\kappa\right]\\
+&amp; = &amp;
+\Pr\left[\frac{\sum_{i=1}^nS_i-nqs}{s\sqrt{nq(1-q)}}&gt;\frac{\kappa}{s\sqrt{nq(1-q)}}\right]\\
+&amp; \approx &amp; \overline{\Phi}\left(\frac{\kappa}{\sqrt{q(1-q)}s\sqrt{n}}\right).
+\end{eqnarray*}\]</span></p>
+<p>If the company wants the probability of ruin not to exceed a pre-set threshold <span class="math inline">\(\epsilon\)</span>, then based on the above approximation, it must possess capital of at least
+<span class="math display" id="eq:CapTCL">\[\begin{equation}
+\kappa_{\epsilon}=\sqrt{q(1-q)}s\sqrt{n}\Phi^{-1}(1-\epsilon).
+\tag{5.3}
+\end{equation}\]</span>
+In our simplistic model, the company’s revenue is directly proportional to the number <span class="math inline">\(n\)</span> of its clients (it is <span class="math inline">\(nqs\)</span>). It can be observed that the minimum capital amount <span class="math inline">\(\kappa_\epsilon\)</span> grows less rapidly than <span class="math inline">\(n\)</span> (and thus the revenue), meaning that the insurance business provides increasing returns. Consistent with these types of results, regulatory authorities impose a solvency margin on companies, the amount of which grows at a slower rate than their obligations.</p>
+<p>Suppose the company is content with <span class="math inline">\(\epsilon=1\%\)</span> and determines the capital amount <span class="math inline">\(\kappa_\epsilon\)</span> according to the formula <a href="chap4.html#eq:CapTCL">(5.3)</a> based on the central limit theorem. Let’s examine the evolution of the probability of ruin as a function of the number of policies in the portfolio, i.e. the behavior of the function
+<span class="math display" id="eq:ProbaDeficit1">\[\begin{eqnarray}
+n &amp; \mapsto &amp; \Pr\left[\sum_{i=1}^nS_i&gt;nqs+\sqrt{nq(1-q)}s\Phi^{-1}(0.99)\right]\nonumber\\
+&amp; = &amp; \Pr\left[\mathcal{B}in(n,q)&gt;nq+\sqrt{nq(1-q)}\Phi^{-1}(0.99)\right].
+\tag{5.4}
+\end{eqnarray}\]</span>
+Note that</p>
+<ol style="list-style-type: decimal">
+<li>the annual deficit probability does not depend on the amount of the flat-rate deductible <span class="math inline">\(s\)</span>;</li>
+<li>the asymptotic value of this probability is $=$1%.</li>
+</ol>
+<p>Let’s start by observing what happens for <span class="math inline">\(n=1,2,\ldots,100\)</span>. The evolution of the probability of ruin for <span class="math inline">\(q=0.1\)</span> and <span class="math inline">\(q=0.01\)</span> can be seen in Figure <a href="#fig:EvolProbDef100"><strong>??</strong></a>. It can be observed that adding new policies to the portfolio does not necessarily lead to a decrease in the annual deficit probability. This is due to the fact that the integer part of <span class="math inline">\(nq+\sqrt{nq(1-q)}\Phi^{-1}(0.01)\)</span> is piecewise constant as <span class="math inline">\(n\)</span> increases, while the function <span class="math inline">\(n\mapsto\Pr[\mathcal{B}in(n,q)&gt;t]\)</span> is clearly increasing. Thus, as <span class="math inline">\(q\)</span> decreases, the insurer needs to add a significant number of new policies to decrease its annual deficit probability.</p>
+<p>This can be intuitively understood as follows. The insurer needs to underwrite several policies before the premiums paid by each of them are sufficient to cover a claim of amount <span class="math inline">\(s\)</span>. As long as the extra premium is not sufficient to cover an additional claim, the probability of deficit increases when a new policy is added to the portfolio.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:EvolProbDef100-1"></span>
+<img src="FIG/ProbDefEvol1.png" alt="Evolution of the probability of ruin as a function of the portfolio size ($n$) when $q=0.1$ and $q=0.01$" width="370" />
+<p class="caption">
+Figure 5.1: Evolution of the probability of ruin as a function of the portfolio size (<span class="math inline">\(n\)</span>) when <span class="math inline">\(q=0.1\)</span> and <span class="math inline">\(q=0.01\)</span>
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:EvolProbDef100-2"></span>
+<img src="FIG/ProbDefEvol2.png" alt="Evolution of the probability of ruin as a function of the portfolio size ($n$) when $q=0.1$ and $q=0.01$" width="370" />
+<p class="caption">
+Figure 5.2: Evolution of the probability of ruin as a function of the portfolio size (<span class="math inline">\(n\)</span>) when <span class="math inline">\(q=0.1\)</span> and <span class="math inline">\(q=0.01\)</span>
+</p>
+</div>
+<p>Now let’s consider larger values of <span class="math inline">\(n\)</span>. Figure <a href="#fig:EvolProbDef100000"><strong>??</strong></a> describes the evolution of the probability of ruin as a function of the portfolio size <span class="math inline">\(n\)</span> when <span class="math inline">\(n\)</span> varies from 1 to 100,000. Again, the same type of phenomenon can be observed, namely that the insurer needs to underwrite batches of new policies to decrease its annual deficit probability, which increases between two batches. It is also clear that the asymptotic value of 1% is consistently exceeded, especially when <span class="math inline">\(n\)</span> is small.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:EvolProbDef1000-1"></span>
+<img src="FIG/ProbDefEvol3.png" alt="Evolution of the probability of ruin as a function of the portfolio size ($n$) when $q=0.1$ and $q=0.01$" width="370" />
+<p class="caption">
+Figure 5.3: Evolution of the probability of ruin as a function of the portfolio size (<span class="math inline">\(n\)</span>) when <span class="math inline">\(q=0.1\)</span> and <span class="math inline">\(q=0.01\)</span>
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:EvolProbDef1000-2"></span>
+<img src="FIG/ProbDefEvol4.png" alt="Evolution of the probability of ruin as a function of the portfolio size ($n$) when $q=0.1$ and $q=0.01$" width="370" />
+<p class="caption">
+Figure 5.4: Evolution of the probability of ruin as a function of the portfolio size (<span class="math inline">\(n\)</span>) when <span class="math inline">\(q=0.1\)</span> and <span class="math inline">\(q=0.01\)</span>
+</p>
+</div>
+</div>
+<div id="the-case-of-indemnity-based-claims" class="section level3 hasAnchor" number="5.3.4">
+<h3><span class="header-section-number">5.3.4</span> The case of indemnity-based claims<a href="chap4.html#the-case-of-indemnity-based-claims" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s now consider the case where the annual claim amounts themselves are random; this is the case of indemnity-based claims. Consider claim amounts <span class="math inline">\(S_i\)</span> of the form <a href="#eq:Siindemnitaire">(<strong>??</strong>)</a>. In this case,
+<span class="math display">\[
+\sum_{i=1}^nS_i=_{\text{law}}\sum_{k=1}^NZ_k\text{ where }N\sim\mathcal{B}in(n,q).
+\]</span>
+It’s important to emphasize that the index <span class="math inline">\(i\)</span> on the left-hand side refers to the <span class="math inline">\(i\)</span>-th policy in the portfolio, and the index <span class="math inline">\(k\)</span> on the right-hand side refers to the <span class="math inline">\(k\)</span>-th claim that affects the portfolio (without reference to the policy that generated it). Similarly, <span class="math inline">\(n\)</span> on the left-hand side represents the number of policies in the portfolio, while <span class="math inline">\(N\)</span> on the right-hand side represents the (random) number of claims affecting the portfolio. This prefigures the individual and collective modeling of insurance portfolios, which we will discuss in detail in Chapter 6.</p>
+<p>If the company charges policyholders an amount equal to the pure premium and wants to limit its deficit risk to a level <span class="math inline">\(\epsilon\)</span>, it must have a capital based on the approximation of the central limit theorem
+<span class="math display" id="eq:ApproxMargeTCL">\[\begin{eqnarray}
+\kappa_\epsilon&amp;\approx&amp;\sqrt{\mathbb{V}[S_1]}\sqrt{n}\Phi^{-1}(1-\epsilon)\nonumber\\
+&amp;=&amp;\sqrt{q\mathbb{V}[Z_1]+q(1-q)\big\{\mathbb{E}[Z_1]\big\}^2}\sqrt{n}\Phi^{-1}(1-\epsilon).\tag{5.5}
+\end{eqnarray}\]</span></p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Ex285c-1"></span>
+<img src="FIG/Exemple285c.png" alt="Evolution of the probability of ruin as a function of the portfolio size ($n$) when $a=\tau=1$, $q=0.01$ and $\epsilon=1\%$" width="370" />
+<p class="caption">
+Figure 5.5: Evolution of the probability of ruin as a function of the portfolio size (<span class="math inline">\(n\)</span>) when <span class="math inline">\(a=\tau=1\)</span>, <span class="math inline">\(q=0.01\)</span> and <span class="math inline">\(\epsilon=1\%\)</span>
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:Ex285c-2"></span>
+<img src="FIG/Exemple285d.png" alt="Evolution of the probability of ruin as a function of the portfolio size ($n$) when $a=\tau=1$, $q=0.01$ and $\epsilon=1\%$" width="370" />
+<p class="caption">
+Figure 5.6: Evolution of the probability of ruin as a function of the portfolio size (<span class="math inline">\(n\)</span>) when <span class="math inline">\(a=\tau=1\)</span>, <span class="math inline">\(q=0.01\)</span> and <span class="math inline">\(\epsilon=1\%\)</span>
+</p>
+</div>
+<p>In Figure <a href="#fig:Ex285c"><strong>??</strong></a>, you can see the evolution of the probability of ruin as a function of the number of policies in the portfolio when <span class="math inline">\(Z_1\sim\mathcal{G}am(1,1)\)</span> (thus <span class="math inline">\(\mathbb{E}[Z_1]=\mathbb{V}[Z_1]=1\)</span>), <span class="math inline">\(\epsilon=1\%\)</span>, <span class="math inline">\(q=0.01\)</span>, and the capital was calculated based on the normal approximation <a href="chap4.html#eq:ApproxMargeTCL">(5.5)</a>. It’s interesting to note the growth of this probability for small values of <span class="math inline">\(n\)</span>, followed by a steady decrease. Thus, there is a minimum portfolio size beyond which the probability of ruin decreases with the number <span class="math inline">\(n\)</span> of policies. This threshold must be reached for the insurer to reduce its risk of ruin by underwriting new policies.</p>
+</div>
+</div>
+<div id="security-loading" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Security Loading<a href="chap4.html#security-loading" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="concept-1" class="section level3 hasAnchor" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> Concept<a href="chap4.html#concept-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In practice, insurers do not settle for the pure premium; they add a security loading to it, which is assumed to correct the discrepancies between the observed reality and the approximation induced by the law of large numbers. The term “net premium” refers to the pure premium to which the security loading has been added. The size of the security loading depends on the premium calculation principle adopted by the company.</p>
+<p>Traditionally, this security loading is expressed as a percentage of the pure premium, so that
+<span class="math display">\[
+p_{\text{net}}=(1+\rho)p_{\text{pure}},
+\]</span>
+where <span class="math inline">\(\rho\)</span> is referred to as the security loading rate. Note that this practice is essentially justified for its convenience and is not without question (especially due to the distortions it introduces in a segmented universe).</p>
+</div>
+<div id="determining-the-security-loading-based-on-the-central-limit-theorem" class="section level3 hasAnchor" number="5.4.2">
+<h3><span class="header-section-number">5.4.2</span> Determining the security loading Based on the Central Limit Theorem<a href="chap4.html#determining-the-security-loading-based-on-the-central-limit-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The height of the security loading is often chosen by limiting the probability of ruin to an acceptable threshold <span class="math inline">\(\epsilon\)</span> for the insurer, i.e., such that the inequality
+<span class="math display">\[
+\Pr\left[\sum_{i=1}^nS_i&gt;(1+\rho)n\mu+\kappa\right]\leq\epsilon
+\]</span>
+is satisfied. Then, according to the central limit theorem,
+<span class="math display">\[
+\Pr\left[\sum_{i=1}^nS_i&gt;(1+\rho)n\mu+\kappa\right]\approx \overline{\Phi}
+\left(\frac{\rho n\mu+\kappa}{\sigma\sqrt{n}}\right),
+\]</span>
+or equivalently,
+<span class="math display">\[
+\rho=\frac{\Phi^{-1}(1-\epsilon)\sigma\sqrt{n}-\kappa}{n\mu}.
+\]</span>
+It’s noticeable that the security loading <span class="math inline">\(\rho\)</span> increases as the chosen threshold <span class="math inline">\(\epsilon\)</span> limiting the probability of deficit decreases. The security loading also increases with the variance of claim costs but decreases as the capital <span class="math inline">\(\kappa\)</span> available to the company increases.</p>
+<p>Finally, the security loading rate <span class="math inline">\(\rho\)</span> decreases with the size <span class="math inline">\(n\)</span> of the portfolio. As the number of policies grows, the insurer must allocate more resources to reduce the probability of deficit to <span class="math inline">\(\epsilon\)</span>, but the relative contribution of each policyholder to the formation of these resources decreases.</p>
+</div>
+<div id="the-absolute-necessity-of-security-load" class="section level3 hasAnchor" number="5.4.3">
+<h3><span class="header-section-number">5.4.3</span> The Absolute Necessity of Security Load<a href="chap4.html#the-absolute-necessity-of-security-load" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>An insurer subscribing to new business sees the variance of its result increase, since
+<span class="math display">\[\begin{eqnarray*}
+\mathbb{V}\left[np+\kappa-\sum_{i=1}^nS_i\right]&amp;=&amp;n\sigma^2\\
+&amp;\leq &amp;(n+1)\sigma^2\\
+&amp;=&amp;\mathbb{V}\left[(n+1)p+\kappa-\sum_{i=1}^{n+1}S_i\right],
+\end{eqnarray*}\]</span>
+when risks are independent. If variance is used as a decision criterion, the insurer has no incentive to underwrite new business. Even though the average cost per policy becomes less variable as the portfolio size increases (cf. <span class="math inline">\(\mathbb{V}[\overline{S}^{(n)}]=\frac{\sigma^2}{n}\)</span> under the conditions of the law of large numbers), the overall result of the company becomes more and more variable.</p>
+<p>Suppose <span class="math inline">\(S_i=\mu+Z_i\)</span>, where the <span class="math inline">\(Z_i\)</span> are independent and identically distributed random variables with a normal distribution <span class="math inline">\(\mathcal{N}or(0,\sigma^2)\)</span>. If <span class="math inline">\(p=\mu\)</span>, then the probability of ruin
+<span class="math display">\[
+\Pr\left[\sum_{i=1}^nS_i&gt;n\mu+\kappa\right]=\overline{\Phi}\left(\frac{\kappa}{\sigma\sqrt{n}}\right)
+\]</span>
+increases with <span class="math inline">\(n\)</span> and tends toward 0.5. This simple example illustrates that the annual deficit probability does not always decrease with the portfolio size <span class="math inline">\(n\)</span>. It only decreases as <span class="math inline">\(n\)</span> increases in the above example if the insurer has added a security loading (i.e., if <span class="math inline">\(p&gt;\mu\)</span>). Indeed, the deficit probability then becomes
+<span class="math display">\[
+\Pr\left[\sum_{i=1}^nS_i&gt;np+\kappa\right]=\overline{\Phi}\left(\frac{n(p-\mu)+\kappa}{\sigma\sqrt{n}}\right),
+\]</span>
+which tends to 0 as <span class="math inline">\(n\to +\infty\)</span> if <span class="math inline">\(p&gt;\mu\)</span>. Therefore, what allows the insurer to operate is the accumulation of security loads, which absorb the variability of claims.</p>
+</div>
+<div id="PrincCalculPrim" class="section level3 hasAnchor" number="5.4.4">
+<h3><span class="header-section-number">5.4.4</span> Premium Calculation Principle<a href="chap4.html#PrincCalculPrim" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="definition-15" class="section level4 hasAnchor" number="5.4.4.1">
+<h4><span class="header-section-number">5.4.4.1</span> Definition<a href="chap4.html#definition-15" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A premium calculation principle is a functional <span class="math inline">\(\mathbb{H}\)</span> that associates a net premium with (the cumulative distribution function of) a risk <span class="math inline">\(S\)</span>. It is a rule adopted by the insurance company to determine the security loading (given by <span class="math inline">\(\mathbb{H}[S]-\mathbb{E}[S]\)</span>) and, consequently, set the price of the risk.</p>
+<div class="remark">
+<p><span id="unlabeled-div-7" class="remark"><em>Remark</em>. </span>Premium calculation principles are closely linked to risk measures, which will be studied in the following chapter.</p>
+</div>
+</div>
+<div id="desirable-properties-of-premium-calculation-principles" class="section level4 hasAnchor" number="5.4.4.2">
+<h4><span class="header-section-number">5.4.4.2</span> Desirable Properties of Premium Calculation Principles<a href="chap4.html#desirable-properties-of-premium-calculation-principles" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Generally, a series of important properties are established that premium calculation principles should satisfy. Let’s detail some of these for reference:</p>
+<ul>
+<li>(<strong>P1</strong>)
+For any risks <span class="math inline">\(S\)</span> and <span class="math inline">\(T\)</span>, the inequality
+<span class="math display">\[
+\mathbb{H}[S+T]\leq \mathbb{H}[S]+\mathbb{H}[T]
+\]</span>
+must be satisfied. This requirement ensures that the policyholder has no incentive to split the risk. On the contrary, their premium will be reduced if they place the entire risk with the same company.</li>
+<li>(<strong>P2</strong>)
+For any risks <span class="math inline">\(S\)</span> and <span class="math inline">\(T\)</span>, the inequality
+<span class="math display">\[
+\mathbb{H}[S]\leq \mathbb{H}[S+T]
+\]</span>
+must be satisfied. This guarantees that a policy offering more protection than another must be accompanied by a higher premium.</li>
+<li>(<strong>P3</strong>)
+For any risk <span class="math inline">\(S\)</span> for which there exists a constant <span class="math inline">\(M\)</span> such that <span class="math inline">\(\Pr[S\leq M]=1\)</span>, the inequality
+<span class="math display">\[
+\mathbb{H}[S]\leq M
+\]</span>
+must be satisfied. This condition is very natural: no rational policyholder would be willing to pay a premium greater than the maximum loss they could incur.</li>
+</ul>
+</div>
+<div id="examples-of-premium-calculation-principles" class="section level4 hasAnchor" number="5.4.4.3">
+<h4><span class="header-section-number">5.4.4.3</span> Examples of Premium Calculation Principles<a href="chap4.html#examples-of-premium-calculation-principles" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Below, we detail some classical premium calculation principles.</p>
+<p>::: {definition name=“Expectation Premium Principle”}
+According to this principle,
+<span class="math display">\[
+\mathbb{H}[S]=(1+\rho)\mathbb{E}[S],\hspace{2mm}\rho&gt;0.
+\]</span>
+:::</p>
+<p>The expectation premium principle is the simplest one: the net premium depends only on a numerical characteristic associated with the risk, its mean, while the security loading is proportional to the mean. However, two risks <span class="math inline">\(S\)</span> and <span class="math inline">\(T\)</span> with the same mean can still represent very different dangers for the insurance company.</p>
+<p>Properties <strong>P1</strong> and <strong>P2</strong> are trivially satisfied. However, <strong>P3</strong> is not necessarily satisfied, as the following example shows. Consider a constant risk <span class="math inline">\(S=M\)</span>; then
+<span class="math display">\[
+\mathbb{H}[S]=(1+\rho)M&gt;M.
+\]</span></p>
+<p>::: {definition name=“Standard Deviation Premium Principle”}
+According to this principle,
+<span class="math display">\[
+\mathbb{H}[S]=\mathbb{E}[S]+\theta\sqrt{\mathbb{V}[S]},\hspace{2mm}\theta&gt;0.
+\]</span>
+:::</p>
+<p>In this case, the security loading is proportional to the standard deviation of the risk, thus taking into account its variability. This principle satisfies P1 since the inequality
+<span class="math display" id="eq:InegVar">\[\begin{equation}
+\sqrt{\mathbb{V}[S+T]}\leq\sqrt{\mathbb{V}[S]}+
+\sqrt{\mathbb{V}[T]}
+\tag{5.6}
+\end{equation}\]</span>
+is always fulfilled.
+Using <a href="chap4.html#eq:InegVar">(5.6)</a>, it follows that
+<span class="math display">\[\begin{eqnarray*}
+\mathbb{H}[S+T] &amp; = &amp; \mathbb{E}[S+T]+\theta\sqrt{\mathbb{V}[S+T]}\\
+&amp; =&amp; \mathbb{E}[S]+\mathbb{E}[T]+\theta\sqrt{\mathbb{V}[S+T]}\\
+&amp; \leq &amp; \mathbb{E}[S]+\mathbb{E}[T]+\theta\Big\{\sqrt{\mathbb{V}[S]}+
+\sqrt{\mathbb{V}[T]}\Big\}\\
+&amp; = &amp; \mathbb{H}[S]+\mathbb{H}[T].
+\end{eqnarray*}\]</span></p>
+<p>P2 is not satisfied. To convince ourselves of this, let’s consider a risk <span class="math inline">\(S_p\)</span> such that
+<span class="math display" id="eq:DefSp">\[\begin{equation}
+S_p=\begin{cases}
+0, &amp; \text{with probability } 1-p,\\
+M, &amp; \text{with probability } p.
+\end{cases}
+\tag{5.7}
+\end{equation}\]</span>
+In this case, the first two moments of <span class="math inline">\(S_p\)</span> are given by
+<span class="math display">\[
+\mathbb{E}[S_p] = Mp \quad \text{and} \quad \text{Var}[S_p] = M^2p(1-p).
+\]</span>
+Consequently, the premium demanded for coverage of <span class="math inline">\(S_p\)</span> is
+<span class="math display">\[
+\mathbb{H}[S_p] = Mh(p) \quad \text{where} \quad h(p) = p+\theta\sqrt{p(1-p)}.
+\]</span>
+Let’s take a closer look at the function <span class="math inline">\(h(\cdot)\)</span>. Through differentiation, we have
+<span class="math display">\[
+\frac{d}{dp}h(p) = 1+\frac{\theta(1-2p)}{2 \sqrt{p(1-p)}},
+\]</span>
+and it can be easily observed that
+<span class="math display">\[
+\lim_{p\to 1}\frac{d}{dp}h(p)=-\infty.
+\]</span>
+As <span class="math inline">\(h\)</span> is continuous from the left at 1 and since <span class="math inline">\(S_1=M\)</span>, there must exist a value <span class="math inline">\(p_0&lt;1\)</span> for which <span class="math inline">\(\mathbb{H}[S_{p_0}]&gt;\mathbb{H}[S_1]=M\)</span>. Since <span class="math inline">\(M-S_{p_0}\geq 0\)</span>,
+<span class="math display">\[
+\mathbb{H}[S_{p_0}]&gt;\mathbb{H}[S_1]=\mathbb{H}[S_{p_0}+(M-S_{p_0})],
+\]</span>
+and P2 cannot be satisfied. Similarly, P3 is also not satisfied since <span class="math inline">\(\mathbb{H}[S_{p_0}]&gt;M\)</span>.</p>
+<div class="remark">
+<p><span id="unlabeled-div-8" class="remark"><em>Remark</em> (Choice of $\theta$ for the standard deviation principle). </span>Consider a portfolio of <span class="math inline">\(n\)</span> policies, with claim amounts <span class="math inline">\(S_1,S_2,\ldots,S_n\)</span>, assumed to be independent and identically distributed. To determine the level of safety loading <span class="math inline">\(\theta\)</span>, we can require that the inequality
+<span class="math display">\[
+\Pr\left[\sum_{i=1}^nS_i&gt;\sum_{i=1}^n\mathbb{H}[S_i]+\kappa\right]\leq\epsilon
+\]</span>
+holds, ensuring that the company will only be in deficit with a very low probability <span class="math inline">\(\epsilon\)</span>. Consequently, by the central limit theorem, we have approximately
+<span class="math display">\[\begin{align*}
+&amp;\Pr\left[\sum_{i=1}^nS_i&gt;\sum_{i=1}^n\mathbb{H}[S_i]+\kappa\right] \\
+&amp;\quad \approx 1-\Phi\left(\rho\frac{\sum_{i=1}^n\sqrt{\text{Var}[S_i]}}{\sqrt{\sum_{i=1}^n\text{Var}[S_i]}} +\frac{\kappa}{\sqrt{\sum_{i=1}^n\text{Var}[S_i]}}\right),
+\end{align*}\]</span>
+leading to
+<span class="math display">\[
+\theta=\frac{z_\epsilon\sqrt{\text{Var}\left[\sum_{i=1}^nS_i\right]}-\kappa}{\sum_{i=1}^n\sqrt{\text{Var}[S_i]}} =\frac{z_\epsilon\sigma\sqrt{n}-\kappa}{n\sigma}.
+\]</span></p>
+</div>
+</div>
+</div>
+<div id="comments" class="section level3 hasAnchor" number="5.4.5">
+<h3><span class="header-section-number">5.4.5</span> Comments<a href="chap4.html#comments" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>As we can see, the current premium calculation principles have theoretical drawbacks. Nevertheless, this does not question their practical relevance, and this for two reasons: firstly, the counterexamples constructed above are relatively artificial, and secondly, companies are never obliged to cover the risks available to them. This can be important for P1, for instance. Thus, it could be imagined that a company using a principle <span class="math inline">\(\mathbb{H}\)</span> that does not satisfy P1 refuses to separately cover the risks <span class="math inline">\(S\)</span> and <span class="math inline">\(T\)</span> for which <span class="math inline">\(\mathbb{H}[S+T]&gt;\mathbb{H}[S]+\mathbb{H}[T]\)</span>. If the company adopts such a strategy, there is no longer a need to limit oneself to principles satisfying P1.</p>
+</div>
+</div>
+<div id="security-coefficient" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Security Coefficient<a href="chap4.html#security-coefficient" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="companys-technical-result" class="section level3 hasAnchor" number="5.5.1">
+<h3><span class="header-section-number">5.5.1</span> Company’s Technical Result<a href="chap4.html#companys-technical-result" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="consequences-of-the-bienaymé-chebyshev-inequality" class="section level4 hasAnchor" number="5.5.1.1">
+<h4><span class="header-section-number">5.5.1.1</span> Consequences of the Bienaymé-Chebyshev Inequality<a href="chap4.html#consequences-of-the-bienaymé-chebyshev-inequality" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The mean of <span class="math inline">\(R\)</span> is
+<span class="math display">\[
+\mathbb{E}[R] = (1+\rho)n\mu - n\mu = \rho n\mu,
+\]</span>
+which is the sum of the safety loadings. Denoting <span class="math inline">\(\sigma^2\)</span> as the common variance of <span class="math inline">\(S_i\)</span>, the variance of <span class="math inline">\(R\)</span> is
+<span class="math display">\[
+\mathbb{V}[R] = n\sigma^2,
+\]</span>
+due to the independence of <span class="math inline">\(S_i\)</span>.</p>
+<p>Now, let’s define the security coefficient.</p>
+<div class="{definition}">
+<p>The security coefficient, denoted as <span class="math inline">\(\beta\)</span>, is defined as
+<span class="math display">\[
+\beta = \frac{\kappa + \rho n \mu}{\sigma\sqrt{n}}.
+\]</span></p>
+</div>
+<p>Defined this way, the security coefficient appears as the ratio between, on one hand, the average technical result of the insurer <span class="math inline">\(\mathbb{E}[R] = \rho n\mu\)</span> increased by the capital <span class="math inline">\(\kappa\)</span> allocated to the insurance branch, and on the other hand, the standard deviation of the insurer’s result <span class="math inline">\(R\)</span>. Thus, it is the ratio between the insurer’s safety (numerator) and the risk (denominator).</p>
+<p>Then we have
+<span class="math display">\[\begin{align*}
+&amp;\Pr\Big[|R-\rho n\mu|\leq t\sigma\sqrt{n}\Big]\\
+&amp;= \Pr\Big[\rho n \mu-t\sigma\sqrt{n}\leq R\leq \rho n \mu+t\sigma\sqrt{n}\Big]\\
+&amp;&gt; 1-\frac{1}{t^2}.
+\end{align*}\]</span>
+Choosing <span class="math inline">\(t\)</span> such that
+<span class="math display">\[
+\kappa = t\sigma\sqrt{n} - \rho n\mu \Leftrightarrow t = \beta,
+\]</span>
+we then have
+<span class="math display">\[
+\Pr\Big[R&lt;-\kappa\text{ or }R&gt;\kappa+2\rho n\mu\Big] \leq \frac{1}{\beta^2}.
+\]</span>
+We can see that
+<span class="math display">\[
+\max\Big\{\Pr[R&lt;-\kappa], \Pr[R&gt;\kappa+2\rho n\mu]\Big\} \leq \frac{1}{\beta^2},
+\]</span>
+so <span class="math inline">\(1/\beta^2\)</span> does indeed provide an upper bound on the probability of the unfavorable event <span class="math inline">\(\{R&lt;-\kappa\}\)</span> and the overly favorable event <span class="math inline">\(\{R&gt;\kappa+2\rho n\mu\}\)</span>: this illustrates the necessary stability of the insurer’s results, which cannot fall below a threshold of <span class="math inline">\(-\kappa\)</span> without facing bankruptcy, but also cannot be too high, as the pure premium must enable the insurer to compensate for claims without excess or deficit.</p>
+</div>
+</div>
+<div id="determining-the-security-coefficient" class="section level3 hasAnchor" number="5.5.2">
+<h3><span class="header-section-number">5.5.2</span> Determining the Security Coefficient<a href="chap4.html#determining-the-security-coefficient" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To ensure the ability to meet its commitments, the insurer adds a safety loading to the pure premium and plans for sufficient solvency margin to deal with certain deficit periods. Note that the probability of ruin can be rewritten as
+<span class="math display">\[
+\Pr\left[\sum_{i=1}^nS_i-(1+\rho)n\mu &gt; \kappa\right] = \Pr\left[\frac{\sum_{i=1}^nS_i-n\mu}{\sigma\sqrt{n}} &gt; \underbrace{\frac{\kappa+\rho n\mu}{\sigma\sqrt{n}}}_{=\beta}\right],
+\]</span>
+so according to the central limit theorem, the probability of ruin is approximately
+<span class="math display">\[
+\Pr\left[\sum_{i=1}^nS_i-(1+\rho)n\mu &gt; \kappa\right] \approx \overline{\Phi}(\beta).
+\]</span>
+In practice, it is often considered that <span class="math inline">\(\beta = 4\)</span> is sufficient since <span class="math inline">\(\Phi(4) = 0.999968\)</span>, which corresponds to a deficit probability on the order of <span class="math inline">\(\overline{\Phi}(4) = 3.2 \times 10^{-5}\)</span>. This gives us
+<span class="math display">\[
+\rho = \frac{4\sigma\sqrt{n} - \kappa}{n\mu}.
+\]</span></p>
+</div>
+<div id="determining-the-safety-loading-based-on-the-bienaymé-chebyshev-inequality" class="section level3 hasAnchor" number="5.5.3">
+<h3><span class="header-section-number">5.5.3</span> Determining the Safety Loading Based on the Bienaymé-Chebyshev Inequality<a href="chap4.html#determining-the-safety-loading-based-on-the-bienaymé-chebyshev-inequality" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The Bienaymé-Chebyshev inequality gives
+<span class="math display">\[\begin{eqnarray*}
+\Pr\Big[\rho n \mu-t\sigma\sqrt{n}\leq R\leq \rho n \mu+t\sigma\sqrt{n}\Big] &amp;&gt;&amp; 1-\frac{1}{t^2}.
+\end{eqnarray*}\]</span>
+Let’s once again choose <span class="math inline">\(t=\beta\)</span>, which yields
+<span class="math display">\[
+\Pr\Big[R&lt;-\kappa\text{ or }R&gt;\kappa+2\rho n\mu\Big] \leq \frac{1}{\beta^2}.
+\]</span></p>
+<p>If
+<span class="math display">\[
+1/\beta^2 \leq \epsilon \Leftrightarrow \beta \geq 1/\sqrt{\epsilon},
+\]</span>
+then we will indeed have <span class="math inline">\(\Pr[R&lt;-\kappa] \leq \epsilon\)</span>. The condition <span class="math inline">\(\beta \geq 1/\sqrt{\epsilon}\)</span> allows us to determine <span class="math inline">\(\rho\)</span>.</p>
+</div>
+</div>
+<div id="the-normal-power-np-approximation" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> The Normal-Power (NP) Approximation<a href="chap4.html#the-normal-power-np-approximation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this section, we will discuss certain approximations used in reinsurance, particularly the NP (Normal Power) approximation, which improves upon the Gaussian approximation by taking into account skewness (third-order moment). The Edgeworth approximation allows for consideration of higher-order moments in a similar manner (especially kurtosis, the tail flattening coefficient). These approximations were studied in the 1930s, driven by the work of Haldane, Wilson, or Hilferty (following Edgeworth’s work at the beginning of the century), and used in insurance by Seal and Pentikäinen as early as 1977. Other numerical approximation methods (simulation methods or fast Fourier transform-based methods, in particular) will be discussed later.</p>
+<div id="skewness-coefficient" class="section level3 hasAnchor" number="5.6.1">
+<h3><span class="header-section-number">5.6.1</span> Skewness Coefficient<a href="chap4.html#skewness-coefficient" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="definition-16" class="section level4 hasAnchor" number="5.6.1.1">
+<h4><span class="header-section-number">5.6.1.1</span> Definition<a href="chap4.html#definition-16" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The skewness coefficient is obtained by comparing the third centered moment to the cube of the standard deviation (to make it dimensionless).</p>
+<div class="{definition}">
+<p>Given a random variable <span class="math inline">\(X\)</span> with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>, the skewness coefficient, denoted as <span class="math inline">\(\gamma[X]\)</span>, is defined as
+<span class="math display">\[
+\gamma[X] = \frac{\mathbb{E}[(X-\mu)^3]}{\sigma^3} = \frac{\mathbb{E}[X^3] - 3\mathbb{E}[X]\mathbb{E}[X^2] + 2\{\mathbb{E}[X]\}^3}{\sigma^3}.
+\]</span></p>
+</div>
+<p>If the probability density of <span class="math inline">\(X\)</span> is symmetric around the mean, then <span class="math inline">\(\gamma[X] = 0\)</span>. A positive value of <span class="math inline">\(\gamma[X]\)</span> indicates a distribution that assigns a greater probability mass to “small” values. Conversely, a negative value of <span class="math inline">\(\gamma[X]\)</span> indicates a distribution where a significant probability mass is concentrated on “large” values.</p>
+<p>Skewness coefficients associated with continuous distributions are listed in Table <a href="#tab:LoiSkewness"><strong>??</strong></a>.</p>
+</div>
+</div>
+<div id="edgeworth-expansion" class="section level3 hasAnchor" number="5.6.2">
+<h3><span class="header-section-number">5.6.2</span> Edgeworth Expansion<a href="chap4.html#edgeworth-expansion" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let <span class="math inline">\(S\)</span> represent the amount of claims related to an insurance policy in the portfolio, with a cumulative distribution function <span class="math inline">\(F_S\)</span>. Let’s define
+<span class="math display">\[
+Z=\frac{S-\mathbb{E}[S]}{\sqrt{\mathbb{V}[S]}},
+\]</span>
+the centered-reduced claim amount. Clearly, the cumulative distribution function <span class="math inline">\(F_Z\)</span> of <span class="math inline">\(Z\)</span> and the cumulative distribution function <span class="math inline">\(F_S\)</span> of <span class="math inline">\(S\)</span> are related by the relation
+<span class="math display">\[
+F_Z(x) = F_S\left(\mathbb{E}[S]+x\sqrt{\mathbb{V}[S]}\right),\hspace{2mm}
+x\in \mathbb{R}.
+\]</span>
+Note that <span class="math inline">\(\mathbb{E}[Z]=0\)</span>, <span class="math inline">\(\mathbb{E}[Z^2]=1\)</span>, and <span class="math inline">\(\mathbb{E}[Z^3]=\gamma[S]\)</span>. Let <span class="math inline">\(M_Z(t)=\mathbb{E}[\exp(tZ)]\)</span> be the moment generating function of <span class="math inline">\(Z\)</span>, and define
+<span class="math display">\[
+\widetilde{M}(t)=\exp(-t^2/2)M_Z(t).
+\]</span>
+By Taylor expanding <span class="math inline">\(\widetilde{M}\)</span> as <span class="math inline">\(\sum_{k=0}^{+\infty}a_kt^k\)</span>, we get
+<span class="math display" id="eq:eqA1">\[\begin{equation}
+M_Z(t)=\sum_{k=0}^{+\infty}a_kt^k\exp(t^2/2).
+\tag{5.8}
+\end{equation}\]</span></p>
+<p>Now, let’s prove the following result.</p>
+<div class="lemma">
+<p><span id="lem:LemOutil" class="lemma"><strong>Lemma 5.1  </strong></span>The identity
+<span class="math display">\[
+t^k\exp(t^2/2)=(-1)^k\int_{z=-\infty}^{+\infty}\exp(tz)
+\phi^{(k)}(z)dz,
+\]</span>
+holds for any <span class="math inline">\(t\in \mathbb{R}\)</span> and <span class="math inline">\(k\in \mathbb{N}\)</span>, where <span class="math inline">\(\phi^{(k)}\)</span> denotes the <span class="math inline">\(k\)</span>th derivative of the probability density <span class="math inline">\(\phi\)</span> associated with the <span class="math inline">\(\mathcal{N}or(0,1)\)</span> distribution.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-9" class="proof"><em>Proof</em>. </span>Let’s prove the result for <span class="math inline">\(k=0\)</span>:
+<span class="math display">\[\begin{eqnarray*}
+&amp;&amp;\int_{z=-\infty}^{+\infty}\exp(tz)
+\phi(z)dz\\
+&amp;=&amp;\frac{1}{\sqrt{2\pi}}\exp(t^2/2)
+\int_{z=-\infty}^{+\infty}\exp(-(z-t)^2/2)dz
+\\
+&amp;=&amp;\exp(t^2/2).
+\end{eqnarray*}\]</span>
+Now, let’s proceed by induction. Assume the result holds for <span class="math inline">\(k=n\)</span>. Then we have
+<span class="math display">\[\begin{eqnarray*}
+&amp;&amp;\int_{z=-\infty}^{+\infty}\exp(tz)
+(-1)^{n+1}\phi^{(n+1)}(z)dz \\
+&amp; = &amp;
+(-1)^{n+1}\left\{\left[\exp(tz)\phi^{(n)}
+(z)\right]_{z=-\infty}^{+\infty}\right.
+\\
+&amp;  &amp; \hspace{10mm}\left.
+-\int_{z=-\infty}^{+\infty}t\exp(tz)\phi^{(n)}(z)dz\right\}
+\\
+&amp; = &amp; (-1)^nt\int_{z=-\infty}^{+\infty}\exp(tz)
+\phi^{(n)}(z)dz
+\\
+&amp; = &amp; t^{k+1}\exp(t^2/2),
+\end{eqnarray*}\]</span>
+which completes the proof.</p>
+</div>
+<p>Thanks to Lemma <a href="chap4.html#lem:LemOutil">5.1</a>, <a href="chap4.html#eq:eqA1">(5.8)</a> becomes
+<span class="math display">\[\begin{eqnarray*}
+M_Z(t) &amp; = &amp; \sum_{k=0}^{+\infty}a_k
+\int_{z=-\infty}^{+\infty}\exp(tz)
+(-1)^k\phi^{(k)}(z)dz \\
+&amp; = &amp; \int_{z=-\infty}^{+\infty}\exp(tz)
+\left\{\sum_{k=0}^{+\infty}a_k(-1)^k\phi^{(k)}(z)\right\}dz.
+\end{eqnarray*}\]</span>
+Therefore, <span class="math inline">\(M_Z\)</span> is the moment generating function of a probability distribution with density <span class="math inline">\(\sum_{k=0}^{+\infty}a_k(-1)^k\phi^{(k)}(x)\)</span>. As the moment generating function is unique, it follows that
+<span class="math display" id="eq:eqA2">\[\begin{equation}
+F_Z(z)=\sum_{k=0}^{+\infty}(-1)^ka_k\Phi^{(k)}(z).
+\tag{5.9}
+\end{equation}\]</span>
+Formula (<span class="math inline">\(\ref{eq:eqA2}\)</span>) is known as the Edgeworth expansion of <span class="math inline">\(F_Z\)</span>. Emphasize the fact that (<span class="math inline">\(\ref{eq:eqA2}\)</span>) was obtained in a very informal manner. In fact, we haven’t paid much attention to convergence issues (in fact, the series (<span class="math inline">\(\ref{eq:eqA2}\)</span>) diverges in many cases). The Edgeworth approximation consists of truncating the series (<span class="math inline">\(\ref{eq:eqA2}\)</span>) to a finite number of terms, say <span class="math inline">\(\nu\)</span>, i.e. using the approximation
+<span class="math display">\[
+F_Z(z)\approx \sum_{k=0}^\nu(-1)^ka_k\Phi^{(k)}(z).
+\]</span>
+By definition,
+<span class="math display">\[
+a_k=\frac{1}{k!}\widetilde{M}^{(k)}(0),\hspace{2mm}k=0,1,2,\ldots,
+\]</span>
+so that
+<span class="math display">\[\begin{eqnarray*}
+a_0 &amp; = &amp; 1,\\
+a_1 &amp; = &amp; 0,\\
+a_2 &amp; = &amp; 0,\\
+a_3 &amp; = &amp; \frac{\mathbb{E}[Z^3]}{6}, \\
+a_4 &amp; = &amp; \frac{\mathbb{E}[Z^4]-3}{24},\\
+a_5 &amp; = &amp; 0, \\
+a_6 &amp; = &amp; \frac{(\mathbb{E}[Z^3])^2}{72}.
+\end{eqnarray*}\]</span>
+Thus, for <span class="math inline">\(\nu=6\)</span>, the Edgeworth approximation reduces to
+<span class="math display" id="eq:ApproxEdg">\[\begin{eqnarray}
+F_Z(z)&amp;\approx&amp;\Phi(z)-\frac{\mathbb{E}[Z^3]}{6}\Phi^{(3)}(z)+
+\frac{\mathbb{E}[Z^4]-3}{24}\Phi^{(4)}(z)\nonumber\\
+&amp;&amp;+\frac{(\mathbb{E}[Z^3])^2}{72}
+\Phi^{(6)}(z).
+\tag{5.10}
+\end{eqnarray}\]</span>
+Often, only the first two terms of <a href="chap4.html#eq:ApproxEdg">(5.10)</a> are used, yielding
+<span class="math display" id="eq:ApproxEsscherTT">\[\begin{equation}
+F_S(x)\approx\Phi\left(\frac{x-\mathbb{E}[S]}{\sqrt{\mathbb{V}[S]}}\right)
+-\frac{\gamma[S]}{6}\Phi^{(3)}\left(\frac{x-\mathbb{E}[S]}{\sqrt{\mathbb{V}[S]}}\right).
+\tag{5.11}
+\end{equation}\]</span>
+As
+<span class="math display">\[\begin{eqnarray*}
+\Phi^{(1)} (z) &amp;=&amp; \frac{1}{\sqrt{2 \pi}} \exp (-z^2/2),\\
+\Phi^{(2)} (z) &amp;=&amp; \frac{-1}{\sqrt{2 \pi}} z \exp (-z^2/2),\\
+\Phi^{(3)} (z) &amp;=&amp; \frac{1}{\sqrt{2 \pi}} \Big(- \exp (- z^2/2) + z^2 \exp (- z^2/2)\Big)\\
+&amp;=&amp;(z^2-1)\Phi^{(1)}(z),
+\end{eqnarray*}\]</span>
+the approximation <a href="chap4.html#eq:ApproxEsscherTT">(5.11)</a> can be rewritten as
+<span class="math display" id="eq:ApproxEdg2">\[\begin{equation}
+F_S(x)\approx\Phi\left(\frac{x-\mathbb{E}[S]}{\sqrt{\mathbb{V}[S]}}\right)
+-\frac{\gamma[S]}{6}\left(\left(\frac{x-\mathbb{E}[S]}{\sqrt{\mathbb{V}[S]}}\right)^2-1\right)
+\phi\left(\frac{x-\mathbb{E}[S]}{\sqrt{\mathbb{V}[S]}}\right).
+\tag{5.12}
+\end{equation}\]</span></p>
+<div class="remark">
+<p><span id="unlabeled-div-10" class="remark"><em>Remark</em>. </span>It is interesting to make the following comments:</p>
+<ol style="list-style-type: decimal">
+<li>As soon as more than one term is used in the Edgeworth approximation, negative values can be obtained for certain values of <span class="math inline">\(z\)</span>. Thus, the approximation provided in <a href="chap4.html#eq:ApproxEdg">(5.10)</a> or <a href="chap4.html#eq:ApproxEsscherTT">(5.11)</a> is not a cumulative distribution function.</li>
+<li>The approximation provided by <a href="chap4.html#eq:ApproxEdg">(5.10)</a> is generally good when <span class="math inline">\(z\)</span> is close to 0. However, the error grows rapidly as <span class="math inline">\(|z|\)</span> increases. In other words, the Edgeworth approximation <a href="chap4.html#eq:ApproxEdg2">(5.12)</a> is considered good around the mean, but deteriorates significantly in the tails of the distribution. A clever way to avoid this drawback is to use the Esscher transform, presented later.</li>
+<li>As the Edgeworth series often diverges, adding an extra term doesn’t necessarily improve the quality of the approximation.</li>
+</ol>
+</div>
+</div>
+<div id="esscher-approximation" class="section level3 hasAnchor" number="5.6.3">
+<h3><span class="header-section-number">5.6.3</span> Esscher Approximation<a href="chap4.html#esscher-approximation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="esscher-transformation" class="section level4 hasAnchor" number="5.6.3.1">
+<h4><span class="header-section-number">5.6.3.1</span> Esscher Transformation<a href="chap4.html#esscher-transformation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The Esscher transformation is defined for distributions possessing a moment-generating function (also known as Cramér distributions in risk theory). It involves replacing the original distribution with another distribution that is more severe for the insurer. When used in conjunction with the Edgeworth approximation, the Esscher technique often yields accurate approximations.</p>
+<div class="{definition}">
+<p>Let <span class="math inline">\(S\)</span> be a real random variable with distribution function <span class="math inline">\(F_S\)</span> and moment-generating function <span class="math inline">\(M_S\)</span>. For each <span class="math inline">\(h\in{\mathbb{R}}\)</span>, associate a random variable <span class="math inline">\(S_h\)</span> with distribution function <span class="math inline">\(F_h\)</span> defined by
+<span class="math display" id="eq:DefEsscher2">\[\begin{equation}
+F_h(t)=\frac{1}{M_S(h)}\int_{\xi=-\infty}^t\exp(h\xi)dF_S(\xi).
+\tag{5.13}
+\end{equation}\]</span>
+The distribution function <span class="math inline">\(F_h\)</span> is called the Esscher transform of <span class="math inline">\(F_S\)</span> with parameter <span class="math inline">\(h\)</span>.</p>
+</div>
+<p>::: {proposition #FGMEsscher}
+It is easy to see that the moment-generating function <span class="math inline">\(M_h\)</span> associated with the distribution function <span class="math inline">\(F_h\)</span> is given by
+<span class="math display">\[\begin{eqnarray*}
+M_h(t)&amp;=&amp;\mathbb{E}[\exp(tS_h)]\\
+&amp;=&amp;\frac{1}{M_S(h)}\int_{s\in{\mathbb{R}}}\exp\big((h+t)s\big)dF_S(s)\\
+&amp;=&amp;\frac{M_S(t+h)}{M_S(h)}.
+\end{eqnarray*}\]</span>
+:::</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-11" class="example"><strong>Example 5.3  </strong></span>Consider <span class="math inline">\(N\sim\mathcal{P}oi(\lambda)\)</span> and let’s focus on the distribution of <span class="math inline">\(N_h\)</span>. To do this, let’s calculate its moment-generating function, given according to Property <span class="math inline">\(\ref{FGMEsscher}\)</span> by
+<span class="math display">\[\begin{eqnarray*}
+M_h(t)&amp;=&amp;\frac{\mathbb{E}[\exp((t+h)N)]}{\mathbb{E}[\exp(hN)]}\\
+&amp;=&amp;\frac{\varphi_N(\exp(t+h))}{\varphi_N(\exp(h))}\\
+&amp;=&amp;\frac{\exp\Big(\lambda(\exp(t+h)-1)\Big)}{\exp\Big(\lambda(\exp(h)-1)\Big)}\\
+&amp;=&amp;\exp\Big(\lambda \exp(h)(\exp(t)-1)\Big)
+\end{eqnarray*}\]</span>
+where we recognize the moment-generating function associated with the Poisson distribution with mean <span class="math inline">\(\lambda\exp(h)\)</span>. Thus, <span class="math inline">\(N_h\sim\mathcal{P}oi(\lambda\exp(h))\)</span>.</p>
+</div>
+</div>
+<div id="esscher-transformation-and-pure-premium" class="section level4 hasAnchor" number="5.6.3.2">
+<h4><span class="header-section-number">5.6.3.2</span> Esscher Transformation and Pure Premium<a href="chap4.html#esscher-transformation-and-pure-premium" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The Esscher transformation does not affect the support of <span class="math inline">\(S\)</span>: thus, <span class="math inline">\(S\)</span> and <span class="math inline">\(S_h\)</span> take values in the same set. However, the values of <span class="math inline">\(S_h\)</span> are more towards the right as <span class="math inline">\(h\)</span> increases, as shown by the following result (we will revisit this aspect in Chapter <span class="math inline">\(\ref{ChapMicroEcon}\)</span>).</p>
+<div class="proposition">
+<p><span id="prp:unlabeled-div-12" class="proposition"><strong>Proposition 5.1  </strong></span><span class="math inline">\(\mathbb{E}[S_h]\)</span> is an increasing function of <span class="math inline">\(h\)</span>.</p>
+</div>
+<div class="proof">
+<p><span id="unlabeled-div-13" class="proof"><em>Proof</em>. </span>Indeed,
+<span class="math display">\[
+\mathbb{E}[S_h]=M_h&#39;(0)=\frac{M_S&#39;(h)}{M_S(h)}
+\]</span>
+from which we derive
+<span class="math display">\[\begin{eqnarray*}
+\frac{d}{dh}\mathbb{E}[S_h]&amp;=&amp;\frac{M_S&#39;&#39;(h)M_S(h)-\{M_S&#39;(h)\}^2}{\{M_S(h)\}^2}\\
+&amp;=&amp;M_h&#39;&#39;(0)-\{M_h&#39;(0)\}^2=\mathbb{V}[S_h]&gt;0.
+\end{eqnarray*}\]</span></p>
+</div>
+</div>
+<div id="esscher-approximation-1" class="section level4 hasAnchor" number="5.6.3.3">
+<h4><span class="header-section-number">5.6.3.3</span> Esscher Approximation<a href="chap4.html#esscher-approximation-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Now let’s demonstrate the utility of the Esscher transformation for actuaries. Suppose we are interested in <span class="math inline">\(F_S(x)=\Pr[S\leq x]\)</span> for a certain value of <span class="math inline">\(x\)</span>. The main idea of the Esscher method is to choose <span class="math inline">\(h\)</span> such that
+<span class="math display">\[
+\mathbb{E}[S_h]=\frac{M_S&#39;(h)}{M_S(h)}=x
+\]</span>
+and then apply the Edgeworth approximation <a href="chap4.html#eq:ApproxEsscherTT">(5.11)</a> to <span class="math inline">\(S_h\)</span> rather than <span class="math inline">\(S\)</span>. This leads to
+<span class="math display" id="eq:ApproxEsscher">\[\begin{equation}
+f_h(y)dy\approx\phi(z)dz-\frac{\mathbb{E}[(S_h-x)^3]}{6\{\mathbb{V}[S_h]\}^{3/2}}\phi^{(3)}(z)dz,
+\tag{5.14}
+\end{equation}\]</span>
+where
+<span class="math display">\[
+z=\frac{y-x}{\sqrt{\mathbb{V}[S_h]}}.
+\]</span>
+Returning to <a href="chap4.html#eq:DefEsscher2">(5.13)</a>, we see that
+<span class="math display">\[
+f_S(y)=M_S(h)f_h(y)\exp(-hy),
+\]</span>
+which upon integration yields
+<span class="math display" id="eq:ChoixE1">\[\begin{equation}
+\overline{F}_S(x)=M_S(h)\int_{y=x}^{+\infty}\exp(-hy)f_h(y)dy,
+\tag{5.15}
+\end{equation}\]</span>
+and
+<span class="math display" id="eq:ChoixE2">\[\begin{equation}
+F_S(x)=M_S(h)\int_{y=-\infty}^x\exp(-hy)f_h(y)dy.
+\tag{5.16}
+\end{equation}\]</span>
+The question now is whether it is better to insert the approximation <a href="chap4.html#eq:ApproxEsscher">(5.14)</a> into <a href="chap4.html#eq:ChoixE1">(5.15)</a> or into <a href="chap4.html#eq:ChoixE2">(5.16)</a> to obtain the desired approximation for <span class="math inline">\(F_S(x)\)</span>. The answer to this question depends on the sign of <span class="math inline">\(h\)</span>:</p>
+<p>1.If <span class="math inline">\(h&gt;0\)</span> (i.e. <span class="math inline">\(x&gt;\mathbb{E}[S]\)</span>), using <a href="chap4.html#eq:ChoixE1">(5.15)</a> is preferable;
+2. If <span class="math inline">\(h&lt;0\)</span> (i.e. <span class="math inline">\(x&lt;\mathbb{E}[S]\)</span>), <a href="chap4.html#eq:ChoixE2">(5.16)</a> should yield better results.</p>
+</div>
+<div id="np-approximation" class="section level4 hasAnchor" number="5.6.3.4">
+<h4><span class="header-section-number">5.6.3.4</span> NP Approximation<a href="chap4.html#np-approximation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Due to the limited applicability of the Edgeworth expansion (which provides a reasonable approximation only around the mean), actuaries have proposed the NP method. This method serves as an alternative to using both the Edgeworth and Esscher approximations described above together.</p>
+<p>Starting with the approximation <a href="chap4.html#eq:ApproxEdg">(5.10)</a> limited to the first two terms:
+<span class="math display">\[
+F_Z(z)\approx\Phi(z)-\frac{\mathbb{E}[Z^3]}{6}\Phi^{(3)}(z).
+\]</span>
+The above approximation can actually be expressed as:
+<span class="math display">\[
+F_Z(z)\approx\Phi(z)-\frac{\mathbb{E}[Z^3]}{6}(z^2-1)\Phi^{(1)}(z).
+\]</span>
+Now, using a Taylor expansion, we have
+<span class="math display">\[\begin{eqnarray*}
+F_Z(z+\Delta z) &amp; \approx &amp; F_Z(z)+f_Z(z)\Delta z
+\\
+&amp; \approx &amp; \Phi(z)-\frac{\mathbb{E}[Z^3]}{6}(z^2-1)\Phi^{(1)}(z)
++\Phi^{(1)}(z)\Delta z,
+\end{eqnarray*}\]</span>
+which ultimately gives the formula
+<span class="math display">\[
+F_Z(z+\Delta z)\approx\Phi(z)-\left(\frac{\mathbb{E}[Z^3]}{6}(z^2-1)-\Delta z
+\right)\Phi^{(1)}(z).
+\]</span>
+By setting <span class="math inline">\(\Delta z=\mathbb{E}[Z^3](z^2-1)/6\)</span>, the coefficient of
+<span class="math inline">\(\Phi^{(1)}(z)\)</span> cancels out, leaving only
+<span class="math display">\[
+F_Z\left(z+\frac{\mathbb{E}[Z^3]}{6}(z^2-1)\right)\approx\Phi(z);
+\]</span>
+this latter relation is known as the NP (“Normal Power”) approximation.</p>
+<div class="remark">
+<p><span id="unlabeled-div-14" class="remark"><em>Remark</em>. </span>Note that when <span class="math inline">\(\mathbb{E}[Z^3]=0\)</span>, the NP approximation reduces to assuming that <span class="math inline">\(S\)</span> follows a normal distribution.</p>
+</div>
+<p>Assuming <span class="math inline">\(\mathbb{E}[Z^3]\neq 0\)</span>, let’s seek an approximation for <span class="math inline">\(F_Z(y)\)</span>. We have
+<span class="math display">\[
+F_Z(y)\approx\Phi(z)
+\]</span>
+where <span class="math inline">\(z\)</span> satisfies
+<span class="math display">\[
+z+\frac{\mathbb{E}[Z^3]}{6}(z^2-1)=y
+\]</span>
+and hence
+<span class="math display">\[
+z=\sqrt{\frac{9}{(\mathbb{E}[Z^3])^2}+1+\frac{6}{\mathbb{E}[Z^3]}y}-\frac{3}{\mathbb{E}[Z^3]},
+\]</span>
+as long as the term under the square root is non-negative. The approximation for <span class="math inline">\(F_S\)</span> follows immediately by substituting
+<span class="math display">\[
+y=\frac{x-\mathbb{E}[S]}{\sqrt{\mathbb{V}[S]}},
+\]</span>
+yielding
+<span class="math display">\[
+F_S(x)\approx\Phi\left(\frac{-3}{\gamma[S]}
++\sqrt{\frac{9}{(\gamma[S])^2}+1+\frac{6(x-\mathbb{E}[S])}
+{\gamma[S]\sqrt{\mathbb{V}[S]}}}\right),
+\]</span>
+which is valid for
+<span class="math display">\[
+x&gt;\mathbb{E}[S]+\sqrt{\mathbb{V}[S]},
+\]</span>
+and sufficiently accurate as long as <span class="math inline">\(0\leq \gamma[S]\leq 2\)</span>; the quality of the approximation diminishes as <span class="math inline">\(\gamma_S\)</span> increases.</p>
+</div>
+<div id="np-approximation-of-quantiles" class="section level4 hasAnchor" number="5.6.3.5">
+<h4><span class="header-section-number">5.6.3.5</span> NP Approximation of Quantiles<a href="chap4.html#np-approximation-of-quantiles" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>The NP approximation also allows for the approximation of quantiles of <span class="math inline">\(S\)</span>. If <span class="math inline">\(z_\alpha\)</span> represents the <span class="math inline">\(100(1-\alpha)\)</span>th quantile of the standard normal distribution, we have
+<span class="math display">\[\begin{eqnarray*}
+1-\alpha &amp; = &amp; \Phi(z_\alpha) \\
+&amp; \approx &amp; F_Z\left(z_\alpha+\frac{\mathbb{E}[Z^3]}{6}(z_\alpha^2-1)\right)\\
+&amp; = &amp; F_S\left(\mathbb{E}[S]+\sqrt{\mathbb{V}[S]}
+\left(z_\alpha+\frac{\mathbb{E}[Z^3]}{6}(z_\alpha^2-1)\right)
+\right) \\
+&amp; = &amp; F_S\left(\mathbb{E}[S]+\sqrt{\mathbb{V}[S]}
+\left(z_\alpha+\frac{\gamma[S]}{6}(z_\alpha^2-1)\right)
+\right), \\
+\end{eqnarray*}\]</span>
+providing the following approximation for the quantile
+<span class="math inline">\(q_{1-\alpha}\)</span> of <span class="math inline">\(S\)</span>
+<span class="math display" id="eq:ApproxQuantileNP">\[\begin{equation}
+q_{1-\alpha}\approx \mathbb{E}[S]+\sqrt{\mathbb{V}[S]}
+\left(z_\alpha+\frac{\gamma[S]}{6}(z_\alpha^2-1)\right).
+\tag{5.17}
+\end{equation}\]</span></p>
+<div class="example">
+<p><span id="exm:unlabeled-div-15" class="example"><strong>Example 5.4  (Calculation of Solvency Margin) </strong></span>The NP approximation can be used to estimate the minimum amount of technical provisions for non-life insurance lines. Let <span class="math inline">\(S\)</span> be the total amount of claims related to the policies that the company has underwritten. Regulatory authorities require that the amount of technical provisions ensures the company’s solvency with a probability of <span class="math inline">\(1-\epsilon\)</span>: the amount <span class="math inline">\(\kappa_\epsilon\)</span> of provisions must satisfy
+<span class="math display">\[
+\Pr[S&gt;\kappa_\epsilon]\leq\epsilon.
+\]</span>
+In other words, <span class="math inline">\(\kappa_\epsilon\)</span> must be at least equal to <span class="math inline">\(\kappa_{\min}\)</span> where
+<span class="math display">\[
+\Pr[S&gt;\kappa_{\min}]=\epsilon.
+\]</span>
+The NP approximation allows evaluating <span class="math inline">\(\kappa_{\min}\)</span> as
+<span class="math display">\[
+\kappa_{\min}\approx \mathbb{E}[S]+\sqrt{\mathbb{V}[S]}\left(z_\epsilon+
+\frac{\gamma[S]}{6}(z_\epsilon^2-1)\right).
+\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-16" class="example"><strong>Example 5.5  (Quantiles of Compound Poisson Distributions) </strong></span>The NP approximation is often used with <span class="math inline">\(S=\sum_{i=1}^NX_i\sim\mathcal{CP}oi(\lambda,F_X)\)</span>. In this case,
+<span class="math display">\[
+\mathbb{E}[S]=\lambda \mathbb{E}[X_1],\hspace{2mm}\mathbb{V}[S]
+=\lambda \mathbb{E}[X_1^2],
+\]</span>
+and
+<span class="math display">\[
+\mathbb{E}\Big(S-\mathbb{E}[S]\Big)^3=\lambda \mathbb{E}[X_1^3],
+\]</span>
+so that the quantile <span class="math inline">\(q_{1-\alpha}\)</span> of <span class="math inline">\(S\)</span> is approximated by
+<span class="math display">\[
+q_{1-\alpha}\approx\lambda \mathbb{E}[X_1]+z_\alpha\sqrt{\lambda
+\mathbb{E}[X_1^2]}+\frac{1}{6}(z_\alpha^2-1)\frac{\mathbb{E}[X_1^3]}{\mathbb{E}[X_1^2]}.
+\]</span>
+This approximation is considered to be of good quality as long as
+<span class="math display">\[
+\gamma[S]=\frac{\mathbb{E}\Big[\Big(S-\mathbb{E}[S]\Big)^3\Big]}{(\mathbb{V}[S])^{3/2}}
+=\frac{\mathbb{E}[X_1^3]}{\sqrt{\lambda}(\mathbb{E}[X_1^2])^{3/2}}\leq 2.
+\]</span></p>
+</div>
+</div>
+<div id="np-approximation-of-stop-loss-premiums" class="section level4 hasAnchor" number="5.6.3.6">
+<h4><span class="header-section-number">5.6.3.6</span> NP Approximation of Stop-Loss Premiums<a href="chap4.html#np-approximation-of-stop-loss-premiums" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Let’s begin by establishing the expression of stop-loss premiums associated with the normal distribution. Consider $Yor( 0,1) $, and $X=Y+or( ,^{2}) $. Then,
+<span class="math display">\[\begin{eqnarray*}
+\mathbb{E}\left[ \left( X-d\right)_{+}\right] &amp;=&amp;\mathbb{E}\left[ \left(
+\sigma Y+\mu -d\right)_{+}\right]
+\\
+&amp;=&amp;\sigma \mathbb{E}\left[ \left( Y-\frac{d-\mu }{\sigma }\right)_{+}\right].
+\end{eqnarray*}\]</span>%
+We can then compute the stop-loss premium in the case of the standard normal distribution and deduce the result in the general case. The stop-loss premium associated with <span class="math inline">\(Y\)</span> is then
+<span class="math display">\[\begin{eqnarray*}
+\mathbb{E}\left[ \left( Y-d \right)_{+}\right] &amp;=&amp;\int_{y\in{\mathbb{R}}%
+}\left( y-d\right)_{+}\phi \left( y\right) dy \\
+&amp;=&amp;\int_{d }^{+\infty }\left( y-d\right) \phi \left( y\right)
+dy\\
+&amp;=&amp;\int_{d }^{+\infty }y\phi \left( y\right) dy-d \int_{d}^{+\infty }\phi \left( y\right) dy \\
+&amp;=&amp;\phi \left( d \right) -d\overline{\Phi} \left( d\right),
+\end{eqnarray*}\]</span>%
+since $’( t) =t( t) $. The stop-loss premium for <span class="math inline">\(X\)</span> is then obtained from
+<span class="math display">\[\begin{equation*}
+\mathbb{E}[ \left( X-d\right)_+] =\sigma \phi \left( \frac{%
+d-\mu }{\sigma }\right) -\left( d-\mu \right)\overline{\Phi} \left( \frac{%
+d-\mu }{\sigma }\right).
+\end{equation*}\]</span></p>
+<p>Now, let’s define
+<span class="math display">\[
+a\left( s\right) =s+\frac{\gamma[X]}{6}\left( s^{2}-1\right),
+\]</span>
+and
+<span class="math display">\[
+b\left( t\right) =-\frac{3}{\gamma[X]}+\sqrt{\frac{9}{\gamma[X]^{2}}+1+%
+\frac{6}{\gamma[X]}t}.
+\]</span>
+It’s easy to notice that these functions are inverses of each other, meaning they satisfy
+<span class="math display">\[
+a\left( b\left( t\right) \right) =t\text{ and }b\left( a\left( u\right)
+\right) =u,
+\]</span>
+and these functions are monotonic, increasing, such that
+<span class="math display">\[
+a\left(
+s\right) \geq t\Leftrightarrow b\left( t\right) \leq s.
+\]</span></p>
+<p>Let <span class="math inline">\(Z\)</span> be a standardized normal random variable, i.e. $
+_{Z}=0 $, <span class="math inline">\(\sigma _{Z}=1\)</span>. The <span class="math inline">\(NP\)</span> approximation applied to <span class="math inline">\(Z\)</span> is%
+<span class="math display">\[\begin{equation*}
+\Pr[ Z\leq a\left( z\right) ] =\Pr[b\left(
+Z\right) \leq z] \thickapprox \Phi \left( z\right) \text{,}
+\end{equation*}\]</span>%
+which, in terms of tail probability, is%
+<span class="math display">\[\begin{equation*}
+\Pr[ Z&gt; a\left( z\right) ] =\Pr[b\left(
+Z\right) &gt; z] \thickapprox \overline{\Phi} \left( z\right).
+\end{equation*}\]</span>%
+Let <span class="math inline">\(Y\sim\mathcal{N}or(0,1)\)</span>, and define
+<span class="math display">\[\begin{equation*}
+Y^{\ast }=a\left( \max \left\{ Y,1\right\} \right)=\left\{
+\begin{array}{ll}
+a\left( Y\right), &amp; \text{if }Y\geq 1, \\
+1, &amp; \text{otherwise},%
+\end{array}%
+\right.  
+\end{equation*}\]</span>%
+then%
+<span class="math display">\[\begin{equation*}
+\Pr[ Y^{\ast }&gt;a\left( z\right)] =\Pr[Y&gt;z] \thickapprox 1-\Phi \left( z\right), \text{ if }z\geq 1,
+\end{equation*}\]</span>%
+and thus, finally, considering the fact that the <span class="math inline">\(NP\)</span> approximation assumes that <span class="math inline">\(Z\)</span> can be approximated by $a( Y) $ where <span class="math inline">\(Y\)</span> is a Gaussian variable (as long as <span class="math inline">\(Y\geq 1\)</span>)<span class="math inline">\(,\)</span> i.e. 
+<span class="math display">\[
+\Pr[ Z\leq s] \thickapprox \Pr[ Y^{\ast }\leq s].
+\]</span>
+We then obtain%
+<span class="math display">\[\begin{equation*}
+\Pr[Z&gt;s] \thickapprox \Pr[Y^{\ast }&gt;s]
+\thickapprox 1-\Phi \left( b\left( s\right) \right), \text{ for all }s\geq 1.
+\end{equation*}\]</span></p>
+<p>The stop-loss premium associated with <span class="math inline">\(Z\)</span> can be written as
+<span class="math display">\[\begin{eqnarray*}
+\mathbb{E}[ \left( Z-d\right)_{+}] &amp;=&amp;\int_{d}^{\infty }\Pr[ Z&gt;s] ds\\
+&amp;\thickapprox &amp;\int_{d}^{\infty }\Pr[Y^{\ast}&gt;s] ds\\
+&amp;=&amp;\mathbb{E}[ \left( Y^{\ast }-d\right)_{+}] \\
+&amp;=&amp;\int_{{\mathbb{R}}}\left( a\left( \max \left\{ y,1\right\} \right)
+-1\right) _{+}\phi \left( y\right) dy \\
+&amp;=&amp;\int_{b\left( d\right) }^{+\infty }\left( a\left( y\right) -d\right) \phi
+\left( y\right) dy\\
+&amp;=&amp;\int_{b\left( d\right) }^{+\infty }\left( y+\frac{\gamma[Z]}{6}\left( y^{2}-1\right) -d\right) \phi \left( y\right) dy \\
+&amp;=&amp;\int_{b\left( d\right) }^{+\infty }\frac{\gamma[Z]}{6}\left(
+y^{2}-1\right) \phi \left( y\right) dy+\int_{b\left( d\right) }^{+\infty
+}y\phi \left( y\right) dy\\
+&amp;&amp;-d\int_{b\left( d\right) }^{+\infty }\phi \left(
+y\right) dy,
+\end{eqnarray*}\]</span>
+from which finally,
+<span class="math display">\[\begin{equation*}
+\mathbb{E}[ \left( Z-d\right)_{+}] \thickapprox \frac{\gamma[Z]
+}{6}b\left( d\right) \phi \left( b\left( d\right) \right) +\phi \left(
+b\left( d\right) \right) -d\big( 1-\Phi \left( b\left( d\right) \right)\big).
+\end{equation*}\]</span></p>
+<p>The stop-loss premium for the variable <span class="math inline">\(X\sim\mathcal{N}or(\mu,\sigma^2)\)</span> is then given by,
+<span class="math display">\[\begin{eqnarray*}
+\mathbb{E}[ \left( X-d\right) _{+}] &amp;\thickapprox &amp; \sigma _{X}\frac{%
+\gamma[X]}{6}b\left( \frac{d-\mu _{X}}{\sigma _{X}}\right) \phi \left(
+b\left( \frac{d-\mu _{X}}{\sigma _{X}}\right) \right) \\
+&amp;&amp;+\sigma _{X}\phi
+\left( b\left( \frac{d-\mu _{X}}{\sigma _{X}}\right) \right) \\
+&amp;&amp;-\left( d-\mu
+_{X}\right) \left\{ 1-\Phi \left( b\left( \frac{d-\mu _{X}}{\sigma _{X}}%
+\right) \right) \right\}.
+\end{eqnarray*}\]</span></p>
+</div>
+<div id="determination-of-the-safety-loading-based-on-the-np-approximation" class="section level4 hasAnchor" number="5.6.3.7">
+<h4><span class="header-section-number">5.6.3.7</span> Determination of the Safety Loading Based on the NP Approximation<a href="chap4.html#determination-of-the-safety-loading-based-on-the-np-approximation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</div>
+</div>
+</div>
+<div id="using-the-np-approximation-to-determine-the-safety-loading-rate-rho-in-the-expected-value-principle" class="section level2 hasAnchor" number="5.7">
+<h2><span class="header-section-number">5.7</span> Using the NP Approximation to Determine the Safety Loading Rate <span class="math inline">\(\rho\)</span> in the Expected Value Principle<a href="chap4.html#using-the-np-approximation-to-determine-the-safety-loading-rate-rho-in-the-expected-value-principle" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The NP approximation can also be employed to fix the safety loading rate <span class="math inline">\(\rho\)</span> appearing in the principle of mathematical expectation. Specifically, from the approximation <a href="chap4.html#eq:ApproxQuantileNP">(5.17)</a>, we deduce that
+<span class="math display">\[\begin{align}
+\Pr\left[\sum_{i=1}^nS_i&gt;(1+\rho)n\mu+\kappa\right]=\epsilon \\
+\Rightarrow
+(1+\rho)n\mu+\kappa\approx
+n\mu+\sqrt{n}\sigma\left(z_\epsilon+
+\frac{\gamma[S]}{6}(z_\epsilon^2-1)\right)
+\end{align}\]</span>
+which allows us to derive an approximation for <span class="math inline">\(\rho\)</span> as follows:
+<span class="math display">\[\begin{align}
+\rho\approx\frac{\sqrt{n}\sigma\left(z_\epsilon+\frac{\gamma[S]}{6}(z_\epsilon^2-1)\right)-\kappa}
+{n\mu}.
+\end{align}\]</span></p>
+<div id="concluding-remarks-on-esscher-and-np-approximations" class="section level3 hasAnchor" number="5.7.1">
+<h3><span class="header-section-number">5.7.1</span> Concluding Remarks on Esscher and NP Approximations<a href="chap4.html#concluding-remarks-on-esscher-and-np-approximations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Although the practical implications of the Esscher and NP formulas are likely fewer nowadays compared to the past (particularly due to the rise of numerical methods, notably simulation, which are widely used today and will be detailed in the final chapter), these approximations remain quite valuable for the following reasons:</p>
+<ol style="list-style-type: decimal">
+<li>These approximations are easy to compute and rapidly provide insights into the solution of the considered problem.</li>
+<li>The techniques underlying the Esscher approximation often contribute to enhancing simulation methods.</li>
+<li>The NP approximation can be incorporated into simulation programs for the entire company (or even the group) within the framework of Dynamic Financial Analysis (DFA) to account for claims experience.</li>
+</ol>
+</div>
+</div>
+<div id="the-premium" class="section level2 hasAnchor" number="5.8">
+<h2><span class="header-section-number">5.8</span> The Premium<a href="chap4.html#the-premium" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Unfortunately, the transfer of risk from the insured to the company cannot occur without cost. Added to the net premium are the portion of the company’s overhead costs plus the profit that the insurer intends to retain; the sum yields the commercial premium, or tariff premium, that the insured must pay to access the coverage offered by the insurer. Therefore, the commercial premium enables the insurer to fulfill its commitment to settle claims and also to cover its administrative costs and generate profits.</p>
+<p>The company’s overhead costs encompass contract acquisition expenses (compensation for intermediaries), premium collection expenses, management costs (rent, employee compensation, expert and legal fees, etc.), and taxes.</p>
+<p>Certain expenses are essential for the proper functioning of insurance. For instance, reducing claims assessment efforts leads to either an increase in fraud or a loss of quality in the matching of claims costs and indemnities. In both cases, policyholders suffer.</p>
+<p>Lastly, the mechanism for determining the commercial premium also involves marketing considerations. There’s no reason to offer a product at a lower price than what the consumer is willing to pay. Conversely, the company might decide to significantly reduce its profit margins in a market niche it aims to dominate. It’s evident that we are departing from the technical realm and entering the domain of commercial endeavors, where authors are careful not to lead their dear readers.</p>
+</div>
+<div id="calculation-of-the-commercial-premium" class="section level2 hasAnchor" number="5.9">
+<h2><span class="header-section-number">5.9</span> Calculation of the Commercial Premium<a href="chap4.html#calculation-of-the-commercial-premium" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Concretely, the commercial premium <span class="math inline">\(p_{\text{com}}\)</span> is obtained using the following formula:
+<span class="math display">\[\begin{eqnarray*}
+p_{\text{com}} &amp;=&amp; p_{\text{net}} + \text{overhead costs} + \text{commissions} \\
+&amp;&amp; + \text{anticipated profits} + \text{taxes}.
+\end{eqnarray*}\]</span>
+To gain an understanding of the relative significance of the different components of the commercial premium, reference can be made to Table <span class="math inline">\(\ref{ComPrimComm}\)</span>.</p>
+<p>Quite often in practice, all these loadings are calculated proportionally to the net premium. However, these proportional loadings are highly debatable in certain cases. It’s not clear why a broker or an agent should be better compensated if they bring in a risky case (corresponding to a high net premium), or why aggravated risks (such as young drivers) should contribute more to the profit or overhead costs than others.</p>
+</div>
+<div id="exercises-2" class="section level2 hasAnchor" number="5.10">
+<h2><span class="header-section-number">5.10</span> Exercises<a href="chap4.html#exercises-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="exercise">
+<p><span id="exr:unlabeled-div-17" class="exercise"><strong>Exercise 5.1  </strong></span>The amount of a claim caused by a policy in the portfolio takes the form:
+<span class="math display">\[
+S=\left\{
+\begin{array}{l}
+0\text{ with probability }0.9\\
+X\text{ with probability }0.1
+\end{array}
+\right.
+\]</span>
+where
+<span class="math display">\[
+\Pr[X&gt;x]=\left(\frac{1}{x+1}\right)^{3/2},\hspace{2mm}x&gt;0.
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li>Calculate the pure premium for this policy.</li>
+<li>Calculate the amount of the net premium in such a way that the probability that the amount of the claim <span class="math inline">\(S\)</span> exceeds this amount is at most 1%.</li>
+</ol>
+</div>
+<div class="exercise">
+<p><span id="exr:unlabeled-div-18" class="exercise"><strong>Exercise 5.2  </strong></span>An insurer has a portfolio of <span class="math inline">\(n\)</span> policies, where the annual costs of claims <span class="math inline">\(S_1,\ldots,S_n\)</span> are independent and identically distributed, with a mean of 200 and a standard deviation of 2000. The insurer has a capital of <span class="math inline">\(\kappa\)</span> and prices based on the principle of mathematical expectation, with a rate of <span class="math inline">\(\varrho\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>What is the safety loading factor <span class="math inline">\(\beta\)</span> when <span class="math inline">\(\kappa=100000\)</span>, <span class="math inline">\(\varrho=5\%\)</span>, and <span class="math inline">\(n=5000\)</span>? How do you assess the insurer’s situation?</li>
+<li>We want to achieve <span class="math inline">\(\beta\geq 4\)</span>. To do this:</li>
+</ol>
+<ul>
+<li>What should the capital <span class="math inline">\(\kappa\)</span> be for <span class="math inline">\(\varrho=5\%\)</span> and <span class="math inline">\(n=5000\)</span>?</li>
+<li>What should the loading rate <span class="math inline">\(\varrho\)</span> be for <span class="math inline">\(\kappa=100000\)</span> and <span class="math inline">\(n=5000\)</span>?</li>
+<li>What is the minimum number of policies in the portfolio required for <span class="math inline">\(\kappa=100000\)</span> and <span class="math inline">\(\varrho=5\%\)</span>?</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>In light of the previous question, what do you advise the insurer to achieve <span class="math inline">\(\beta\geq 4\)</span>?</li>
+</ol>
+</div>
+<div class="exercise">
+<p><span id="exr:unlabeled-div-19" class="exercise"><strong>Exercise 5.3  </strong></span>The total claim amount <span class="math inline">\(S\)</span> for an insurance portfolio is given by <span class="math inline">\(S=\sum_{i=1}^NX_i\)</span>, where <span class="math inline">\(N\sim\mathcal{P}oi(\lambda)\)</span> and <span class="math inline">\(X_i\)</span> are independent and identically distributed exponential random variables with parameter <span class="math inline">\(\theta\)</span>. The <span class="math inline">\(X_i\)</span> and <span class="math inline">\(N\)</span> are also assumed to be independent.</p>
+<ol style="list-style-type: decimal">
+<li>Calculate the pure premium for the portfolio.</li>
+<li>at most <span class="math inline">\(\epsilon\)</span> if the insurer has capital <span class="math inline">\(\kappa\)</span>:</li>
+</ol>
+<ul>
+<li>based on the central limit theorem.</li>
+<li>based on the NP approximation.</li>
+</ul>
+</div>
+<div class="exercise">
+<p><span id="exr:unlabeled-div-20" class="exercise"><strong>Exercise 5.4  </strong></span>Consider a portfolio of 10,000 policies, where the annual total claim amount <span class="math inline">\(S\)</span> has the following mean, variance, and skewness:
+<span class="math display">\[
+\mathbb{E}[S]=10\hspace{1mm}000,\hspace{2mm}\mathbb{V}[S]=1\hspace{1mm}000\hspace{1mm}000,
+\text{ and }\gamma[S]=2.
+\]</span></p>
+<ol style="list-style-type: decimal">
+<li>Calculate the probability that <span class="math inline">\(S\)</span> exceeds 15,000:</li>
+</ol>
+<ul>
+<li>using the central limit theorem;</li>
+<li>using the Normal-Power approximation.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Comment on the two answers you obtained.</li>
+<li>Calculate the threshold above which <span class="math inline">\(S\)</span> will not exceed with a probability of 0.1% (i.e., the 0.999 quantile of <span class="math inline">\(S\)</span>):</li>
+</ol>
+<ul>
+<li>using the central limit theorem;</li>
+<li>using the Normal-Power approximation.</li>
+</ul>
+<ol start="4" style="list-style-type: decimal">
+<li>Comment on the two answers you obtained. (Reminder: the 0.999 quantile of the standard normal distribution is 3.09)</li>
+</ol>
+</div>
+<div class="exercise">
+<p><span id="exr:unlabeled-div-21" class="exercise"><strong>Exercise 5.5  </strong></span></p>
+<ol style="list-style-type: decimal">
+<li>Show that for any positive random variable <span class="math inline">\(S\)</span> with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>,
+<span class="math display">\[
+\overline{F}_S(x)\leq\left\{
+\begin{array}{l}
+\frac{1}{1+\left(\frac{x-\mu}{\sigma}\right)^2}\text{ if }x&gt;\mu+\frac{\sigma^2}{\mu}\\
+\frac{\mu}{x}\text{ if }\mu&lt;x&lt;\mu+\frac{\sigma^2}{\mu}.
+\end{array}
+\right.
+\]</span></li>
+<li>By applying these inequalities to the total claim amount <span class="math inline">\(S=\sum_{i=1}^nS_i\)</span>, show that the inequality
+<span class="math display">\[
+\Pr\left[\sum_{i=1}^nS_i&gt;\kappa+(1+\rho)n\mu\right]\leq\frac{1}{1+\beta^2}
+\]</span>
+is valid provided that
+<span class="math display">\[
+\kappa+(1+\rho)n\mu&gt;n\mu+\frac{\sigma^2}{\mu}\Leftrightarrow
+\beta&gt;\frac{\sigma}{\sqrt{n}\mu}\Leftrightarrow
+\beta&gt;CV[\overline{S}^{(n)}].
+\]</span></li>
+</ol>
+</div>
+</div>
+<div id="bibliographical-notes-2" class="section level2 hasAnchor" number="5.11">
+<h2><span class="header-section-number">5.11</span> Bibliographical Notes<a href="chap4.html#bibliographical-notes-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Readers can refer to the books mentioned at the end of the previous chapter for more details, namely <span class="citation">(<a href="#ref-beard1984risk" role="doc-biblioref">Beard and Pentikäinen 1984</a>)</span>, <span class="citation">(<a href="#ref-borch1990economics" role="doc-biblioref">Borch 1990</a>)</span>, <span class="citation">(<a href="#ref-buhlmann2007mathematical" role="doc-biblioref">Bühlmann 2007</a>)</span>,<span class="citation">(<a href="#ref-daykin1993practical" role="doc-biblioref">Daykin, Pentikainen, and Pesonen 1993</a>)</span>, <span class="citation">(<a href="#ref-gerber1979introduction" role="doc-biblioref">Gerber 1979</a>)</span>, <span class="citation">(<a href="#ref-petauton2000theorie" role="doc-biblioref">Pétauton 2000</a>)</span>, <span class="citation">(<a href="#ref-seal1969stochastic" role="doc-biblioref">Seal 1969</a>)</span>, <span class="citation">(<a href="#ref-straub1988non" role="doc-biblioref">Straub and Actuaries (Zürich) 1988</a>)</span>, <span class="citation">(<a href="#ref-sundt1999introduction" role="doc-biblioref">Sundt 1999</a>)</span>, and <span class="citation">(<a href="#ref-tosetti2000assurance" role="doc-biblioref">Tosetti et al. 2000</a>)</span>.</p>
+<p>The principles of premium calculation are now a separate branch of actuarial mathematics. It is not the objective of this chapter to exhaust the subject by any means. Readers can refer to <span class="citation">(<a href="#ref-goovaerts1984insurance" role="doc-biblioref">M. Goovaerts, De Vylder, and Haezendonck 1984</a>)</span> and <span class="citation">(<a href="#ref-goovaerts1990effective" role="doc-biblioref">M. J. Goovaerts et al. 1990</a>)</span> for more detailed information. However, it is worth noting that despite all the mathematical developments (sometimes quite sophisticated), the premium calculation principles used in practice often remain limited to those succinctly presented in Section <a href="chap4.html#PrincCalculPrim">5.4.4</a>.</p>
+
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-beard1984risk" class="csl-entry">
+Beard, Robert, and M. Pentikäinen T. And Pesonen. 1984. <em>Risk Theory: The Stochastic Basis of Insurance</em>. Springer.
+</div>
+<div id="ref-borch1990economics" class="csl-entry">
+Borch, Karl. 1990. <em>Economics of Insurance</em>. Springer.
+</div>
+<div id="ref-buhlmann2007mathematical" class="csl-entry">
+Bühlmann, Hans. 2007. <em>Mathematical Methods in Risk Theory</em>. Vol. 172. Springer.
+</div>
+<div id="ref-daykin1993practical" class="csl-entry">
+Daykin, Chris D, Teivo Pentikainen, and Martti Pesonen. 1993. <em>Practical Risk Theory for Actuaries</em>. CRC Press.
+</div>
+<div id="ref-gerber1979introduction" class="csl-entry">
+Gerber, Hans. 1979. <em>An Introduction to Mathematical Risk Theory</em>. Huebner Foundation for Insurance Education.
+</div>
+<div id="ref-goovaerts1990effective" class="csl-entry">
+Goovaerts, Marc J, Rob Kaas, AE Van Heerwaarden, Thierry Bauwelinckx, et al. 1990. <em>Effective Actuarial Methods</em>. Amsterdam-North-Holland.
+</div>
+<div id="ref-goovaerts1984insurance" class="csl-entry">
+Goovaerts, Marc, Florent Etienne De Vylder, and Jean Haezendonck. 1984. <em>Insurance Premiums: Theory and Applications</em>. North-Holland.
+</div>
+<div id="ref-petauton2000theorie" class="csl-entry">
+Pétauton, Pierre. 2000. <em>Th<span>é</span>orie de l’assurance Dommages</em>. Dunod.
+</div>
+<div id="ref-seal1969stochastic" class="csl-entry">
+Seal, Hilary L. 1969. <em>Stochastic Theory of a Risk Business</em>. Wiley.
+</div>
+<div id="ref-straub1988non" class="csl-entry">
+Straub, Erwin, and Swiss Association of Actuaries (Zürich). 1988. <em>Non-Life Insurance Mathematics</em>. Springer.
+</div>
+<div id="ref-sundt1999introduction" class="csl-entry">
+Sundt, Bjørn. 1999. <em>An Introduction to Non-Life Insurance Mathematics</em>. Vol. 28. VVW GmbH.
+</div>
+<div id="ref-tosetti2000assurance" class="csl-entry">
+Tosetti, Alain, Thomas Béhar, Michel Fromenteau, and Stéphane Ménart. 2000. <em>Assurance: Comptabilit<span>é</span> r<span>é</span>glementation Actuariat</em>. Economica.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="chap3.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chap5.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/05-Net-Premium.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
