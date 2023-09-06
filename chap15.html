@@ -1623,12 +1623,24 @@ this provides the polar algorithm, allowing the simulation of a centered, reduce
 <span id="cb6-3"><a href="chap15.html#cb6-3" aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">runif</span>(n)<span class="sc">*</span>pi</span>
 <span id="cb6-4"><a href="chap15.html#cb6-4" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> t<span class="sc">*</span><span class="fu">cos</span>(theta)</span>
 <span id="cb6-5"><a href="chap15.html#cb6-5" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> t<span class="sc">*</span><span class="fu">sin</span>(theta)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:simGauss"></span>
+<img src="bookdown-demo_files/figure-html/simGauss-1.png" alt="Histogram of simulated normal sample" width="768" />
+<p class="caption">
+Figure 16.1: Histogram of simulated normal sample
+</p>
+</div>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="chap15.html#cb7-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n, <span class="at">mu=</span><span class="dv">0</span>, <span class="at">sigma=</span><span class="dv">1</span>)</span></code></pre></div>
 </div>
 <div id="lognormal-distribution" class="section level3 hasAnchor" number="16.4.3">
 <h3><span class="header-section-number">16.4.3</span> Lognormal Distribution<a href="chap15.html#lognormal-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Simulating a log-normal distribution <span class="math inline">\(\mathcal{LN}or(\mu,\sigma^2)\)</span> is done based on the simulation of a normal distribution <span class="math inline">\(\mathcal{N}or(\mu,\sigma^2)\)</span>: <span class="math inline">\(Y = \exp(X)\)</span>, where <span class="math inline">\(X \sim \mathcal{N}or(\mu,\sigma^2)\)</span>.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="chap15.html#cb8-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rlnorm</span>(n)</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:simLNorm"></span>
+<img src="bookdown-demo_files/figure-html/simLNorm-1.png" alt="Histogram of simulated lognormal sample" width="768" />
+<p class="caption">
+Figure 16.2: Histogram of simulated lognormal sample
+</p>
+</div>
 </div>
 <div id="gamma-distribution-1" class="section level3 hasAnchor" number="16.4.4">
 <h3><span class="header-section-number">16.4.4</span> Gamma Distribution<a href="chap15.html#gamma-distribution-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1746,6 +1758,12 @@ where <span class="math inline">\(\kappa\)</span> is a normalization constant. C
 <span id="cb9-2"><a href="chap15.html#cb9-2" aria-hidden="true" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">runif</span>(n)<span class="sc">^</span>(<span class="dv">1</span><span class="sc">/</span>b)</span>
 <span id="cb9-3"><a href="chap15.html#cb9-3" aria-hidden="true" tabindex="-1"></a>idx <span class="ot">&lt;-</span> ((u<span class="sc">+</span>v)<span class="sc">&lt;=</span><span class="dv">1</span>)</span>
 <span id="cb9-4"><a href="chap15.html#cb9-4" aria-hidden="true" tabindex="-1"></a>s <span class="ot">&lt;-</span> (u<span class="sc">/</span>(u<span class="sc">+</span>v))[idx]</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:simbeta"></span>
+<img src="bookdown-demo_files/figure-html/simbeta-1.png" alt="Histogram of simulated beta sample" width="768" />
+<p class="caption">
+Figure 16.3: Histogram of simulated beta sample
+</p>
+</div>
 </div>
 <div id="poisson-distribution" class="section level3 hasAnchor" number="16.4.6">
 <h3><span class="header-section-number">16.4.6</span> Poisson Distribution<a href="chap15.html#poisson-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>

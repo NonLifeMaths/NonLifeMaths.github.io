@@ -1564,3 +1564,6 @@ tab:StatDescCout
 tab:TabSinGrave
 tab:ModelRegCout
 tab:genfinal
+fig:simGauss
+fig:simLNorm
+fig:simbeta
