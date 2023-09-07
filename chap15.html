@@ -23,7 +23,7 @@
 <meta name="author" content="Arthur Charpentier and Michel Denuit" />
 
 
-<meta name="date" content="2023-09-05" />
+<meta name="date" content="2023-09-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -1078,8 +1078,8 @@ s _{n}^{2}=\frac{1}{n-1}\sum_{i=1}^{n}\left(
 x_{i}-\overline{x}\right) ^{2}.
 \end{equation*}\]</span>
 This allows us to determine the number <span class="math inline">\(n\)</span> of simulations required to achieve the desired level of precision.</p>
-<p>In general, Monte Carlo methods have been widely used to approximate integrals of the form <span class="math inline">\(\int_{0}^{1}g\left( x\right) dx\)</span>. Notably, if <span class="math inline">\(U\sim\mathcal{U}ni(0,1)\)</span>, then $<em>{0}^{1}g( x) dx=$ can be approximated by $( g( u</em>{1})+…+g( u_{n}) ) $, where the <span class="math inline">\(u_{i}\)</span> are random samples from $ni( 0,1) $, demonstrating the close relationship between evaluating integrals through simulation and mathematical expectations.
-If the convergence rate is slower compared to standard numerical methods (on the order of <span class="math inline">\(\sigma /\sqrt{n}\)</span>), it’s important to note that here, no regularity properties are assumed for <span class="math inline">\(g\)</span> (unlike standard numerical methods). The convergence in $O( 1/) $ is a drawback, but it can be shown that for multiple integrals, the speed remains the same (unlike standard numerical methods). Specifically, if <span class="math inline">\(U_1,U_2,\ldots,U_d\)</span> are independent random variables with <span class="math inline">\(\mathcal{U}ni(0,1)\)</span> distribution, then
+<p>In general, Monte Carlo methods have been widely used to approximate integrals of the form <span class="math inline">\(\int_{0}^{1}g\left( x\right) dx\)</span>. Notably, if <span class="math inline">\(U\sim\mathcal{U}ni(0,1)\)</span>, then <span class="math inline">\(\int_{0}^{1}g\left(x\right)dx=\mathbb{E}\left[ g\left(U\right)\right]\)</span> can be approximated by <span class="math inline">\(\frac{1}{n}\left(g\left(u_{1}\right)+...+g\left( u_{n}\right) \right)\)</span>, where the <span class="math inline">\(u_{i}\)</span> are random samples from $ni(0,1) $, demonstrating the close relationship between evaluating integrals through simulation and mathematical expectations.
+If the convergence rate is slower compared to standard numerical methods (on the order of <span class="math inline">\(\sigma/\sqrt{n}\)</span>), it’s important to note that here, no regularity properties are assumed for <span class="math inline">\(g\)</span> (unlike standard numerical methods). The convergence in $O(1/) $ is a drawback, but it can be shown that for multiple integrals, the speed remains the same (unlike standard numerical methods). Specifically, if <span class="math inline">\(U_1,U_2,\ldots,U_d\)</span> are independent random variables with <span class="math inline">\(\mathcal{U}ni(0,1)\)</span> distribution, then
 <span class="math display">\[\begin{eqnarray*}
 \int_0^1\ldots\int_0^1g(x_{1},...,x_{d})dx_{1}...dx_{d}
 &amp;=&amp;\mathbb{E}[ g\left( U_{1},...,U_{d}\right) ]  \\
@@ -1098,7 +1098,7 @@ Also, if $( X,Y) $ is uniformly distributed over the square $$, then we have
 \pi =\Pr\left[ X^{2}+Y^{2}\leq 1\right].
 \end{equation*}\]</span>
 This leads to the result presented in Figure
-<span class="math inline">\(\ref{FIG-Pi}\)</span>, where we calculate the ratio of the number of realizations falling within the disk of radius 1 to the total number of simulations.</p>
+<a href="#fig:FIG-Pi"><strong>??</strong></a>, where we calculate the ratio of the number of realizations falling within the disk of radius 1 to the total number of simulations.</p>
 </div>
 <div class="remark">
 <p><span id="unlabeled-div-3" class="remark"><em>Remark</em>. </span>Note that Georges Louis Leclerc Buffon proposed a different method to calculate $$ in 1777, giving rise to the first historical example of using Monte Carlo methods. Consider a series of evenly spaced lines (strips of a smooth floor, a tiled floor, or a checkerboard) and a needle or a thin rod that is balanced such that its length matches the spacing between the lines. Toss the needle randomly onto the floor, recording <span class="math inline">\(X=1\)</span>
@@ -1141,7 +1141,7 @@ g\left( u\right) =\left( Au+B\right) \text{ modulo }M.
 \end{equation*}\]</span></p>
 <p>The modulus <span class="math inline">\(M\)</span> is often a power of 2 (<span class="math inline">\(2^{16}\)</span> or <span class="math inline">\(2^{32}\)</span>) because division by <span class="math inline">\(M\)</span> is numerically easier. Another common choice is <span class="math inline">\(2^{32}-1\)</span>, which has the advantage of being a prime number. The period is the largest number of integers in <span class="math inline">\({0,...,M-1}\)</span> that can be generated. Arithmetic conditions on <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(M\)</span> are imposed to achieve the largest possible period.</p>
 <div class="remark">
-<p><span id="unlabeled-div-4" class="remark"><em>Remark</em>. </span>The choice of constants <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(M\)</span> is a fundamental issue in simulation. Figure <span class="math inline">\(\ref{RANDU}\)</span> shows a three-dimensional plot of points $( U_{i+1},U_{i},U_{i-1}) $ - 3000 simulations - using the <span class="math inline">\(RANDU\)</span> algorithm from IBM (<span class="math inline">\(A=65539\)</span>, <span class="math inline">\(B=0\)</span>, and <span class="math inline">\(M=2^{31}\)</span>) and one of those proposed by <span class="citation">(<a href="#ref-l1994uniform" role="doc-biblioref">L’Ecuyer 1994</a>)</span> (<span class="math inline">\(A=41358\)</span>, <span class="math inline">\(B=0\)</span>, and <span class="math inline">\(M=2^{31}-1\)</span>). Note that <span class="math inline">\(65539=2^{16}+3\)</span>, and it can be shown that for the <span class="math inline">\(RANDU\)</span> algorithm,
+<p><span id="unlabeled-div-4" class="remark"><em>Remark</em>. </span>The choice of constants <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(M\)</span> is a fundamental issue in simulation. Figure <a href="#fig:RANDU"><strong>??</strong></a> shows a three-dimensional plot of points $( U_{i+1},U_{i},U_{i-1}) $ - 3000 simulations - using the <span class="math inline">\(RANDU\)</span> algorithm from IBM (<span class="math inline">\(A=65539\)</span>, <span class="math inline">\(B=0\)</span>, and <span class="math inline">\(M=2^{31}\)</span>) and one of those proposed by <span class="citation">(<a href="#ref-l1994uniform" role="doc-biblioref">L’Ecuyer 1994</a>)</span> (<span class="math inline">\(A=41358\)</span>, <span class="math inline">\(B=0\)</span>, and <span class="math inline">\(M=2^{31}-1\)</span>). Note that <span class="math inline">\(65539=2^{16}+3\)</span>, and it can be shown that for the <span class="math inline">\(RANDU\)</span> algorithm,
 <span class="math display">\[
 U_{n+1}-6U_{n}+9U_{n-1}=0\text{ mod }1,
 \]</span>
@@ -1245,11 +1245,11 @@ where $Uni( 0,1) $. It is sufficient to implement the following algorithm:</p>
 </ul>
 <hr />
 </div>
-<p>However, Example <span class="math inline">\(\ref{Exo127V0}\)</span> is not the optimal method for
+<p>However, Example <a href="chap15.html#exm:Exo127V0">16.7</a> is not the optimal method for
 simulating a realization of the uniform distribution on $$, especially
 if $$ is small. Indeed, the number of iterations
 required follows a geometric distribution with parameter
-$$, whose expectation is $1/$. In Example <span class="math inline">\(\ref{Exo128V0}\)</span>,
+$$, whose expectation is $1/$. In Example <a href="chap15.html#exm:Exo128V0">16.8</a>,
 the average number of iterations is%
 <span class="math display">\[\begin{equation*}
 n=\frac{\text{Area of the unit disk} }{\text{Area of the unit square}}=\frac{\pi }{4}\approx 1.27.
@@ -1301,7 +1301,6 @@ The rejection algorithm is then written as follows:</p>
 <p><span id="exm:unlabeled-div-9" class="example"><strong>Example 16.9  </strong></span></p>
 Consider the random variable <span class="math inline">\(Y\)</span> with density
 <span class="math display">\[\begin{equation}
-\label{DensFig15.3}
 g\left( x\right) =\left\{
 \begin{array}{l}
 3\left( 1-x^{2}\right) /4,\text{ on }\left[
@@ -1309,11 +1308,12 @@ g\left( x\right) =\left\{
 0,\text{ otherwise.}
 \end{array}
 \right.
+(\#eq:DensFig15.3)
 \end{equation}\]</span>
 It is then possible to use either of the two following methods to simulate such a distribution:
 </div>
 <div class="example">
-<p><span id="exm:unlabeled-div-10" class="example"><strong>Example 16.10  </strong></span>As we have seen in Example <span class="math inline">\(\ref{ExoSimulExpo}\)</span>, it is straightforward to
+<p><span id="exm:unlabeled-div-10" class="example"><strong>Example 16.10  </strong></span>As we have seen in Example <a href="chap15.html#exm:ExoSimulExpo">16.3</a>, it is straightforward to
 simulate an exponential distribution using the inversion of the
 cumulative distribution function. Noting that for all <span class="math inline">\(x\geq 0\)</span>,
 <span class="math display">\[\begin{equation*}
@@ -1331,7 +1331,7 @@ This inequality can also be simplified by taking the logarithm: <span class="mat
  Therefore, to simulate a variable with <span class="math inline">\(\mathcal{N}or(0,1)\)</span> distribution, we simulate two independent random variables from <span class="math inline">\(\mathcal{E}xp(1)\)</span>, <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, until <span class="math inline">\(\left( 1-X\right) ^{2}\leq 2Y\)</span> since <span class="math inline">\(-\ln U\sim\mathcal{E}xp(1)\)</span>.
 We randomly select the
 sign <span class="math inline">\(S\)</span> according to the <span class="math inline">\(\mathcal{B}er(1/2)\)</span> distribution, and the product <span class="math inline">\(S\times X\)</span> then follows the <span class="math inline">\(\mathcal{N}or(0,1)\)</span> distribution.
-Figure <span class="math inline">\(\ref{FIG-Rejet-2}\)</span> illustrates this procedure.
+Figure <a href="#fig:FIG-Rejet-2"><strong>??</strong></a> illustrates this procedure.
 We will see later that there are
 faster methods for simulating normal distributions.</p>
 </div>
@@ -1414,7 +1414,7 @@ we approximate <span class="math inline">\(G^{\ast }\)</span> by%
 \widehat{G}^{\ast }\left( x\right) =\frac{1}{m}\sum_{i=1}^{m}\mathbb{I}%
 \left[ T_{i}^{\ast }-T\leq u\right] .
 \end{equation*}\]</span></p>
-<p>Now, as we saw in Chapter <span class="math inline">\(\ref{ChapExtremes}\)</span>, if
+<p>Now, as we saw in Chapter <a href="chap14.html#chap14">15</a>, if
 <span class="math inline">\(X_{1},...,X_{n}\)</span> are independent random variables with the same distribution function <span class="math inline">\(F_X\)</span>, an
 estimator of $F_X^{-1}( ) $ is <span class="math inline">\(X_{[\left( n+1\right) \alpha] :n}\)</span>. Therefore, <span class="math inline">\(T_{\alpha }\)</span> can be
 approximated by <span class="math inline">\(\widehat{T}_{\alpha }=T_{\left( m+1\right) \alpha :m}^{\ast }\)</span> (by choosing $$ and <span class="math inline">\(m\)</span> such that $( m+1) $ and $( m+1) (
@@ -1430,7 +1430,7 @@ convergence rate is to
 use studentized bootstrap (yielding an $O( n^{-1}) $ rate).</p>
 <p>The use of bootstrap for heavy-tailed claims can pose several practical issues. Very large values tend to appear too frequently. As a result, bootstrap cannot be used to estimate an average or a probability of exceeding a value far from the mean.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-11" class="example"><strong>Example 16.11  </strong></span>Figure <span class="math inline">\(\ref{Fig-ex-Pareto}\)</span> shows the estimation of the mean of <span class="math inline">\(n=100\)</span> claims following
+<p><span id="exm:unlabeled-div-11" class="example"><strong>Example 16.11  </strong></span>Figure <a href="#fig:Fig-ex-Pareto"><strong>??</strong></a> shows the estimation of the mean of <span class="math inline">\(n=100\)</span> claims following
 $ar( 1,0) $ - on the left - and
 $ar(
 2,0) $ - on the right. In the first case, the distribution does not have a finite mean, and in the second, the variance is not finite. The dashed curve represents the density of the normal distribution associated with the empirical mean and variance.</p>
@@ -1447,7 +1447,7 @@ $ar(
 </div>
 <div id="application-to-loss-reserving" class="section level3 hasAnchor" number="16.3.5">
 <h3><span class="header-section-number">16.3.5</span> Application to Loss Reserving<a href="chap15.html#application-to-loss-reserving" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Consider the example of the log-Poisson regression (yielding the same estimators as the Chain Ladder method). For the data in Example <span class="math inline">\(\ref{ExPro1323}\)</span>, the graphical outputs of the regression are presented in Figure <span class="math inline">\(\ref{Fig-CL-log-Poisson}\)</span>, including the deviance residuals and Pearson residuals. The Pearson residuals <span class="math inline">\(r_{i,j}^P\)</span> are given in Table <span class="math inline">\(\ref{tab-resid-CL-1}\)</span>, and the deviance residuals <span class="math inline">\(r_{i,j}^D\)</span> are given in Table <span class="math inline">\(\ref{tab-resid-CL-2}\)</span>.</p>
+<p>Consider the example of the log-Poisson regression (yielding the same estimators as the Chain Ladder method). For the data in Example <a href="#exm:ExPro1323"><strong>??</strong></a>, the graphical outputs of the regression are presented in Figure <a href="#fig:Fig-CL-log-Poisson"><strong>??</strong></a>, including the deviance residuals and Pearson residuals. The Pearson residuals <span class="math inline">\(r_{i,j}^P\)</span> are given in Table <a href="#tab:tab-resid-CL-1"><strong>??</strong></a>, and the deviance residuals <span class="math inline">\(r_{i,j}^D\)</span> are given in Table <a href="#tab:tab-resid-CL-2"><strong>??</strong></a>.</p>
 <p>FIG</p>
 <p>Most stochastic models, as we have noted, have been implemented with the aim of replicating the Chain-Ladder method, to provide the same amount of reserves but allowing for error margin assessment. Using Monte Carlo methods, it is sufficient to independently simulate the increment errors, generate new triangles, and then use the Chain-Ladder method to obtain reserve amounts for this simulated triangle. If Pearson residuals are used, as recommended by <span class="citation">(<a href="#ref-england1999analytic" role="doc-biblioref">England and Verrall 1999</a>)</span>, the bootstrapped increment is given by</p>
 <p><span class="math display">\[
@@ -1462,17 +1462,17 @@ Y_{i,j}^* = r_{i,j}^{P*} \cdot \sqrt{\mu_{i,j}} + \mu_{i,j}
 </div>
 <div id="application-to-loss-reserving-1" class="section level3 hasAnchor" number="16.3.7">
 <h3><span class="header-section-number">16.3.7</span> Application to Loss Reserving<a href="chap15.html#application-to-loss-reserving-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Let’s consider the example of the log-Poisson regression (providing the same estimators as the Chain Ladder method). For the data in Example <span class="math inline">\(\ref{ExPro1323}\)</span>, the graphical outputs of the regression are presented in Figure <span class="math inline">\(\ref{Fig-CL-log-Poisson}\)</span>, including the deviance residuals and Pearson residuals. The Pearson residuals <span class="math inline">\(r_{i,j}^P\)</span> are given in Table <span class="math inline">\(\ref{tab-resid-CL-1}\)</span>, and the deviance residuals <span class="math inline">\(r_{i,j}^D\)</span> are given in Table <span class="math inline">\(\ref{tab-resid-CL-2}\)</span>.</p>
+<p>Let’s consider the example of the log-Poisson regression (providing the same estimators as the Chain Ladder method). For the data in Example <a href="#exm:ExPro1323"><strong>??</strong></a>, the graphical outputs of the regression are presented in Figure <a href="#fig:Fig-CL-log-Poisson"><strong>??</strong></a>, including the deviance residuals and Pearson residuals. The Pearson residuals <span class="math inline">\(r_{i,j}^P\)</span> are given in Table <a href="#tab:tab-resid-CL-1"><strong>??</strong></a>, and the deviance residuals <span class="math inline">\(r_{i,j}^D\)</span> are given in Table <a href="#tab:tab-resid-CL-2"><strong>??</strong></a>.</p>
 <p>FIG</p>
 <p>Most stochastic models, as we have noted, have been implemented with the aim of replicating the Chain-Ladder method, providing the exact same amount of reserves while allowing for error margin assessment. Using Monte Carlo methods, it is sufficient to independently simulate the increment errors, generate new triangles, and then use the Chain-Ladder method to obtain reserve amounts for this simulated triangle. If Pearson residuals are used, as recommended by <span class="citation">(<a href="#ref-england1999analytic" role="doc-biblioref">England and Verrall 1999</a>)</span>, the bootstrapped increment is given by</p>
 <p><span class="math display">\[
 Y_{i,j}^* = r_{i,j}^{P*} \cdot \sqrt{\mu_{i,j}}+\mu_{i,j}
 \]</span></p>
 <p>where <span class="math inline">\(r_{i,j}^{P*}\)</span> is the value of the bootstrapped Pearson residual.</p>
-<p>In the case of the log-Poisson regression, the Pearson residuals are given in Table <span class="math inline">\(\ref{tab-resid-CL-1}\)</span>. A bootstrap simulation of the error yields the bootstrap residuals triangle in Table <span class="math inline">\(\ref{tab-resid-CL-boot-1}\)</span>. If we return to the increments, defining
-<span class="math inline">\(Y_{i,j}^* = r_{i,j}^{P*}\sqrt{\mu_{i,j}}+\mu_{i,j}\)</span>, we obtain the values in Table <span class="math inline">\(\ref{tab-resid-CL-boot-2}\)</span>.</p>
-<p>Switching to the cumulative triangle, which can finally be completed using the standard Chain-Ladder method, we obtain the values in Table <span class="math inline">\(\ref{tab-resid-CL-3}\)</span>.</p>
-<p>For this simulation, the required reserve amount amounts to <span class="math inline">\(425,160\)</span>. By repeating a large number of times (here <span class="math inline">\(50,000\)</span>), we obtain the values in Table <span class="math inline">\(\ref{Tab-dist-boot-CL}\)</span>.</p>
+<p>In the case of the log-Poisson regression, the Pearson residuals are given in Table <a href="#tab:tab-resid-CL-1"><strong>??</strong></a>. A bootstrap simulation of the error yields the bootstrap residuals triangle in Table <a href="#tab:tab-resid-CL-boot-1"><strong>??</strong></a>. If we return to the increments, defining
+<span class="math inline">\(Y_{i,j}^* = r_{i,j}^{P*}\sqrt{\mu_{i,j}}+\mu_{i,j}\)</span>, we obtain the values in Table <a href="#tab:tab-resid-CL-boot-2"><strong>??</strong></a>.</p>
+<p>Switching to the cumulative triangle, which can finally be completed using the standard Chain-Ladder method, we obtain the values in Table <a href="#tab:tab-resid-CL-3"><strong>??</strong></a>.</p>
+<p>For this simulation, the required reserve amount amounts to <span class="math inline">\(425,160\)</span>. By repeating a large number of times (here <span class="math inline">\(50,000\)</span>), we obtain the values in Table <a href="#tab:Tab-dist-boot-CL"><strong>??</strong></a>.</p>
 <div class="remark">
 <p><span id="unlabeled-div-12" class="remark"><em>Remark</em>. </span>However, using the bootstrap on the triangle relies on very strong assumptions: the residuals must be independent and identically distributed. From a practical</p>
 </div>
@@ -2077,14 +2077,14 @@ sphere of radius <span class="math inline">\(r\)</span> in <span class="math inl
 \mathcal{S}=\left\{ \mathbf{z}\in\mathbb{R}^d|z_{1}^{2}+...+z_{d}^{2}=r^{2}\right\},
 \end{equation*}\]</span>
 with density given by
-<span class="math display">\[\begin{equation}
+<span class="math display" id="eq:density-sphere">\[\begin{equation}
 f\left( \mathbf{z}\right) =\frac{\Gamma \left( d/2\right) }{\left( 2\pi
 \right) ^{d/2}r^{d-1}},\qquad \mathbf{z}\in \mathcal{S},
-\label{density-sphere}
+\tag{16.1}
 \end{equation}\]</span>
 we note that if <span class="math inline">\(\mathbf{X}\sim\mathcal{Nor}(\boldsymbol{0},\mathbf{I})\)</span>,
 and if we let <span class="math inline">\(W=\sqrt{X_{1}^{2}+...+X_{d}^{2}}\)</span>, then the vector <span class="math inline">\(\mathbf{Z}\)</span>, where
-<span class="math inline">\(Z_{i}=X_{i}/W\)</span> for <span class="math inline">\(i=1,...,d\)</span>, follows the density in Equation (<span class="math inline">\(\ref{density-sphere}\)</span>). Hence, the algorithm is as follows:</p>
+<span class="math inline">\(Z_{i}=X_{i}/W\)</span> for <span class="math inline">\(i=1,...,d\)</span>, follows the density in Equation <a href="chap15.html#eq:density-sphere">(16.1)</a>. Hence, the algorithm is as follows:</p>
 <hr />
 <p><strong>Algorithm</strong>: Simulating Uniform Distribution on the Sphere</p>
 <hr />
@@ -2146,7 +2146,7 @@ In the case where this transformation does not depend on <span class="math inlin
 <span class="math display">\[\begin{equation*}
 X_{n+1}=X_{n}+U_{n},\hspace{3mm} n\in \mathbb{N}.
 \end{equation*}\]</span>
-A special case is when <span class="math inline">\(X_{0}\)</span> is an integer, and <span class="math inline">\(\Pr\left[ U_{n}=-1\right] =\Pr\left[ U_{n}=+1\right] =1/2\)</span>, corresponding to the coin toss game. Figure <span class="math inline">\(\ref{FIG-brownien2}\)</span> shows a trajectory of such a process in 2D. Similarly, Figure <span class="math inline">\(\ref{MA-Sphere}\)</span> illustrates the evolution of a random walk on the unit sphere in <span class="math inline">\(\mathbb{R}^{3}\)</span>.</p>
+A special case is when <span class="math inline">\(X_{0}\)</span> is an integer, and <span class="math inline">\(\Pr\left[ U_{n}=-1\right] =\Pr\left[ U_{n}=+1\right] =1/2\)</span>, corresponding to the coin toss game.</p>
 </div>
 </div>
 <div id="simulation-of-a-poisson-process" class="section level3 hasAnchor" number="16.5.2">
@@ -2193,7 +2193,7 @@ which can be easily inverted. The simulation algorithm for such a process is as 
 <span class="math display">\[
 R_t=\kappa+ct-S_t=\kappa+ct-\sum_{i=1}^{N_t}X_i,
 \]</span>
-where <span class="math inline">\(c\)</span> is the premium rate, and <span class="math inline">\(\kappa\)</span> is an initial capital. We assume that <span class="math inline">\(S_t\sim\mathcal{CP}oi(\lambda t,F)\)</span>. We will assume that <span class="math inline">\(F\)</span> has a finite mean <span class="math inline">\(\mu\)</span>. Figure <span class="math inline">\(\ref{FIG-simul-ruine}\)</span> presents simulations of <span class="math inline">\(6\)</span> trajectories of such a process over <span class="math inline">\(25\)</span> years.</p>
+where <span class="math inline">\(c\)</span> is the premium rate, and <span class="math inline">\(\kappa\)</span> is an initial capital. We assume that <span class="math inline">\(S_t\sim\mathcal{CP}oi(\lambda t,F)\)</span>. We will assume that <span class="math inline">\(F\)</span> has a finite mean <span class="math inline">\(\mu\)</span>. Figure <a href="#fig:IG-simul-ruine"><strong>??</strong></a> presents simulations of <span class="math inline">\(6\)</span> trajectories of such a process over <span class="math inline">\(25\)</span> years.</p>
 <p>FIG</p>
 <p>The ruin time of the insurance company is defined as the stopping time:
 <span class="math display">\[
@@ -2398,7 +2398,7 @@ X_{t} ,&amp; \text{otherwise.}%
 \end{array}%
 \right.
 \]</span>%
-Here, we encounter an algorithm similar to the rejection method presented in Section <span class="math inline">\(\ref{Section-rejection}\)</span>.</p>
+Here, we encounter an algorithm similar to the rejection method presented in Section <a href="#Section-rejection"><strong>??</strong></a>.</p>
 <div class="example">
 <p><span id="exm:unlabeled-div-29" class="example"><strong>Example 16.18  </strong></span>To simulate a Gamma distribution with parameters $$ and $$, where $$ is not an integer, it is possible to combine a rejection method with a simulation of a Gamma distribution with integer parameters. Denoting <span class="math inline">\(a=[ \alpha ]\)</span> as the integer part of <span class="math inline">\(\alpha\)</span>, we consider the following algorithm:</p>
 <hr />
@@ -2446,9 +2446,9 @@ and <span class="math inline">\(X_{t+1}\Longleftarrow X_{t}\)</span> otherwise<s
 +...+h\left( U_{n}\right) \Big) =\widehat{\theta },
 \end{equation*}\]</span>%
 but considering the relationship
-<span class="math display">\[\begin{equation}
-\int_{0}^{1}h\left( x\right) dx=\frac{1}{2}\int_{0}^{1}\big(h\left( x\right) +h\left( 1-x\right) \big) dx,  \label{relation
-antithetique}
+<span class="math display" id="eq:relationantithetique">\[\begin{equation}
+\int_{0}^{1}h\left( x\right) dx=\frac{1}{2}\int_{0}^{1}\big(h\left( x\right) +h\left( 1-x\right) \big) dx,  
+\tag{16.2}
 \end{equation}\]</span>
 we can also approximate $$ using the relation%
 <span class="math display">\[\begin{equation*}
@@ -2486,8 +2486,7 @@ a monotonic function since <span class="math inline">\(U\)</span> and <span clas
 \]</span>
 which allows us to reduce it to the uniform case.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-30" class="example"><strong>Example 16.19  </strong></span>
-Consider the textbook example (in the sense that the value of $$ is known and equals <span class="math inline">\(e-1\)</span>) where we want to estimate <span class="math inline">\(\theta =\mathbb{E}[\exp U]\)</span> with <span class="math inline">\(U\sim\mathcal{U}ni(0,1)\)</span>. Since the function
+<p><span id="exm:exempleantithetique" class="example"><strong>Example 16.19  </strong></span>Consider the textbook example (in the sense that the value of $$ is known and equals <span class="math inline">\(e-1\)</span>) where we want to estimate <span class="math inline">\(\theta =\mathbb{E}[\exp U]\)</span> with <span class="math inline">\(U\sim\mathcal{U}ni(0,1)\)</span>. Since the function
 $uh(u) $ is increasing, the use of antithetic variables
 will reduce the variance. Note that%
 <span class="math display">\[\begin{eqnarray*}
@@ -2511,7 +2510,7 @@ while using antithetic variables results in%
 &amp;\approx &amp;0.0039,
 \end{eqnarray*}\]</span>
 meaning that with the same number of simulations, the variance obtained using antithetic variables is only 1.6% of the variance obtained by a standard Monte Carlo method. The gain in convergence speed can be visualized in Figure
-<span class="math inline">\(\ref{FIG-antithetic}\)</span>.</p>
+<a href="#fig:FIG-antithetic"><strong>??</strong></a>.</p>
 </div>
 <p>FIG</p>
 </div>
@@ -2523,20 +2522,20 @@ $, and we aim to minimize its variance. It can be noted that the variance is min
 c^{\ast }=-\frac{\mathbb{C}\left[ X,Y\right] }{\mathbb{V}\left[ Y\right]},
 \end{equation*}\]</span>%
 and the variance of $ _{C}=X+c^{}( Y-) $ is then%
-<span class="math display">\[\begin{equation}
+<span class="math display" id="eq:VARIANCE-control">\[\begin{equation}
 \mathbb{V}\left[ \widehat{\theta }_{C}\right] =\mathbb{V}[ X] -\frac{%
 \mathbb{C}\left[ X,Y\right] ^{2}}{\mathbb{V}\left[ Y\right] }
-\label{VARIANCE-control}
+\tag{16.3}
 \end{equation}\]</span></p>
 <div class="example">
-<p><span id="exm:unlabeled-div-31" class="example"><strong>Example 16.20  </strong></span>Taking Example <span class="math inline">\(\ref{exempleantithetique}\)</span> where the goal was to estimate <span class="math inline">\(\theta =\mathbb{E}[\exp U]\)</span>, it can be noted that the use of control variables also reduces the variance.
+<p><span id="exm:unlabeled-div-30" class="example"><strong>Example 16.20  </strong></span>Taking Example <a href="chap15.html#exm:exempleantithetique">16.19</a> where the goal was to estimate <span class="math inline">\(\theta =\mathbb{E}[\exp U]\)</span>, it can be noted that the use of control variables also reduces the variance.
 Indeed, consider that%
 <span class="math display">\[\begin{eqnarray*}
 \mathbb{C}\left[ \exp U,U\right]  &amp;=&amp;\mathbb{E}[U\exp U]-\mathbb{E}[\exp U]\mathbb{E%
 }[U] \\
 &amp;=&amp;1-\frac{e-1}{2}.
 \end{eqnarray*}\]</span>%
-Equation <span class="math inline">\((\ref{VARIANCE-control})\)</span> then becomes, for
+Equation <a href="chap15.html#eq:VARIANCE-control">(16.3)</a> then becomes, for
 <span class="math inline">\(X=\exp U\)</span> and $Y=U
 $%
 <span class="math display">\[\begin{eqnarray*}
@@ -2569,7 +2568,7 @@ In other words, the estimation based on simulations of <span class="math inline"
 provides better results than simulations of <span class="math inline">\(Y\)</span>
 (as long as the simulations are not too complex).</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-32" class="example"><strong>Example 16.21  </strong></span>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be two independent variables, each following exponential distributions $xp(
+<p><span id="exm:unlabeled-div-31" class="example"><strong>Example 16.21  </strong></span>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be two independent variables, each following exponential distributions $xp(
 1) $ and $xp(
 1/2) $, respectively. Suppose we want to calculate $=%
 $. Rewritten in terms of expectation, we want
@@ -2670,7 +2669,7 @@ Z_{i}) $. The estimator for <span class="math inline">\(\theta\)</span> is the e
 Y_{i}=h^( Z_{i}^) $. The considered estimator is then the mean of the <span class="math inline">\(Y_{i}\)</span>.</p>
 <p>The choice of the density <span class="math inline">\(f_{Z^\star}\)</span> is crucial here, as shown in the following example.</p>
 <div class="example">
-<p><span id="exm:unlabeled-div-33" class="example"><strong>Example 16.22  </strong></span>Let <span class="math inline">\(X\)</span> have a Cauchy distribution. The goal here is to estimate
+<p><span id="exm:unlabeled-div-32" class="example"><strong>Example 16.22  </strong></span>Let <span class="math inline">\(X\)</span> have a Cauchy distribution. The goal here is to estimate
 <span class="math display">\[
 \theta =\Pr[ X&gt;2] =\int_{2}^{\infty }\frac{dx}{\pi
 \left( 1+x^{2}\right) }.
@@ -2741,7 +2740,7 @@ where <span class="math inline">\(V_{1},...,V_{n}\)</span> are independent and h
 \]</span>
 Therefore, the same
 precision is achieved using <span class="math inline">\(1000\)</span> times fewer
-simulations. Figure <span class="math inline">\(\ref{FIG-IS-1}\)</span> shows the evolution of
+simulations. Figure <a href="#fig:FIG-IS-1"><strong>??</strong></a> shows the evolution of
 the estimation with respect to <span class="math inline">\(n\)</span>.</p>
 </div>
 <p>FIG</p>
@@ -2750,17 +2749,17 @@ the estimation with respect to <span class="math inline">\(n\)</span>.</p>
 <div id="convergence-control-and-stopping-criteria" class="section level2 hasAnchor" number="16.8">
 <h2><span class="header-section-number">16.8</span> Convergence Control and Stopping Criteria<a href="chap15.html#convergence-control-and-stopping-criteria" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We previously noted that it is possible to determine the error of the approximation made using simulations using the central limit theorem. Suppose we want to calculate $==$, and let <span class="math inline">\(\sigma ^{2}\)</span> be the variance of <span class="math inline">\(Y\)</span>. A <span class="math inline">\(95\%\)</span> confidence interval is given by
-<span class="math display">\[\begin{equation}
+<span class="math display" id="eq:confidenceintervalsimulations">\[\begin{equation}
 \left[ \widehat{\theta }_{n}-1.96\frac{\widehat{\sigma }_{n}}{\sqrt{n}};%
 \widehat{\theta }_{n}+1.96\frac{\widehat{\sigma
-}_{n}}{\sqrt{n}}\right] , \label{confidence interval simulations}
+}_{n}}{\sqrt{n}}\right] ,
+\tag{16.4}
 \end{equation}\]</span>
 where
 <span class="math inline">\(\widehat{\theta }_{n}=\left( Y_{1}+...+Y_{n}\right) /n\)</span>
 and
 <span class="math display">\[
-\widehat{%
-\sigma }_{n}^{2}=\left( \left( Y_{1}-\widehat{\theta }_{n}\right)
+\widehat{\sigma }_{n}^{2}=\left( \left( Y_{1}-\widehat{\theta }_{n}\right)
 ^{2}+...+\left( Y_{n}-\widehat{\theta }_{n}\right) ^{2}\right)
 /\left( n-1\right).
 \]</span>
@@ -2772,7 +2771,7 @@ This means that for a fixed <span class="math inline">\(n\)</span>, we can deter
 \Pr\left[ |\widehat{\theta }_{n}-\theta | / \theta \leq \varepsilon \right] =95\%
 \]</span>
 should be satisfied. The method is as follows:</p>
-<p><span class="math inline">\((i)\)</span> Perform a small number <span class="math inline">\(n\)</span> (<span class="math inline">\(\geq 50\)</span>) of simulations to obtain estimates of $$ and <span class="math inline">\(\sigma ^{2}\)</span>, denoted <span class="math inline">\(\widehat{\theta }_{n}\)</span> and <span class="math inline">\(\widehat{\sigma }_{n}^2\)</span>, for example. Using the confidence interval <span class="math inline">\((\ref{confidence interval simulations})\)</span>, we can calculate <span class="math inline">\(n^{\ast }\)</span>
+<p><span class="math inline">\((i)\)</span> Perform a small number <span class="math inline">\(n\)</span> (<span class="math inline">\(\geq 50\)</span>) of simulations to obtain estimates of $$ and <span class="math inline">\(\sigma ^{2}\)</span>, denoted <span class="math inline">\(\widehat{\theta }_{n}\)</span> and <span class="math inline">\(\widehat{\sigma }_{n}^2\)</span>, for example. Using the confidence interval @ref(eq:confidence interval simulations), we can calculate <span class="math inline">\(n^{\ast }\)</span>
 <span class="math display">\[\begin{equation*}
 n^{\ast }=\frac{1.96^{2}\widehat{\sigma }_{n}^{2}}{\widehat{\theta }%
 _{n}^{2}\varepsilon ^{2}}.
@@ -2801,7 +2800,7 @@ and%
 <div id="exercises-9" class="section level2 hasAnchor" number="16.10">
 <h2><span class="header-section-number">16.10</span> Exercises<a href="chap15.html#exercises-9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="exercise">
-<p><span id="exr:unlabeled-div-34" class="exercise"><strong>Exercise 16.1  </strong></span>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be two independent variables with <span class="math inline">\(\mathcal{E}xp(1)\)</span> distribution.</p>
+<p><span id="exr:unlabeled-div-33" class="exercise"><strong>Exercise 16.1  </strong></span>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be two independent variables with <span class="math inline">\(\mathcal{E}xp(1)\)</span> distribution.</p>
 <ol style="list-style-type: decimal">
 <li>Give the expression for the conditional density of <span class="math inline">\(X\)</span> given <span class="math inline">\(\{2Y&gt;(1-X^2)\}\)</span>.</li>
 <li>Let <span class="math inline">\(Z\)</span> follow such a distribution, and <span class="math inline">\(T\)</span> be a variable taking values <span class="math inline">\(+1\)</span> and <span class="math inline">\(-1\)</span> with probability <span class="math inline">\(1/2\)</span>. Determine the distribution of <span class="math inline">\(TZ\)</span>.</li>
@@ -2809,21 +2808,21 @@ and%
 </ol>
 </div>
 <div class="exercise">
-<p><span id="exr:unlabeled-div-35" class="exercise"><strong>Exercise 16.2  </strong></span>Consider a density function <span class="math inline">\(f\)</span> on <span class="math inline">\(\mathbb{R}\)</span>.</p>
+<p><span id="exr:unlabeled-div-34" class="exercise"><strong>Exercise 16.2  </strong></span>Consider a density function <span class="math inline">\(f\)</span> on <span class="math inline">\(\mathbb{R}\)</span>.</p>
 <ol style="list-style-type: decimal">
 <li>Let <span class="math inline">\((U,V)\)</span> be uniformly distributed on <span class="math inline">\(\mathcal{A}=\{(u,v)\in\mathbb{R}^2| 0\leq u\leq f(u+v)\}\)</span>. Show that <span class="math inline">\(U+V\)</span> has a density proportional to <span class="math inline">\(f\)</span>.</li>
 <li>Let <span class="math inline">\((U,V)\)</span> be uniformly distributed on <span class="math inline">\(\mathcal{B}=\{(u,v)\in\mathbb{R}^2| 0\leq u\leq f(v/\sqrt{u})^{2/3}\}\)</span>. Show that <span class="math inline">\(V/\sqrt{U}\)</span> has a density proportional to <span class="math inline">\(f\)</span>.</li>
 </ol>
 </div>
 <div class="exercise">
-<p><span id="exr:unlabeled-div-36" class="exercise"><strong>Exercise 16.3  </strong></span>Let <span class="math inline">\(U\sim\mathcal{U}ni[-\pi/2,\pi/2]\)</span>, and <span class="math inline">\(Z\)</span> be exponentially distributed. Show that
+<p><span id="exr:unlabeled-div-35" class="exercise"><strong>Exercise 16.3  </strong></span>Let <span class="math inline">\(U\sim\mathcal{U}ni[-\pi/2,\pi/2]\)</span>, and <span class="math inline">\(Z\)</span> be exponentially distributed. Show that
 <span class="math display">\[
 \mu + c\cdot \frac{\sin(\alpha U)}{(\cos(U))^{1/\alpha}}\left(\frac{\cos((1-\alpha)U)}{Z}\right)^{(1-\alpha)/\alpha}
 \]</span>
 follows an <span class="math inline">\(\alpha\)</span>-stable distribution. Deduce a method for generating stable distributions.</p>
 </div>
 <div class="exercise">
-<p><span id="exr:unlabeled-div-37" class="exercise"><strong>Exercise 16.4  </strong></span>Consider the following algorithm,</p>
+<p><span id="exr:unlabeled-div-36" class="exercise"><strong>Exercise 16.4  </strong></span>Consider the following algorithm,</p>
 <hr />
 <p><strong>Algorithm</strong>: xxxx</p>
 <hr />
@@ -2849,7 +2848,7 @@ follows an <span class="math inline">\(\alpha\)</span>-stable distribution. Dedu
 <p>Noting that this is a rejection algorithm, show that <span class="math inline">\(X\)</span> follows a Student’s <span class="math inline">\(t\)</span>-distribution with <span class="math inline">\(\nu\)</span> degrees of freedom.</p>
 </div>
 <div class="exercise">
-<p><span id="exr:unlabeled-div-38" class="exercise"><strong>Exercise 16.5  </strong></span>Let <span class="math inline">\(F\)</span> and <span class="math inline">\(G\)</span> be two distribution functions on <span class="math inline">\(\mathbb{R}^+\)</span>, with hazard rates denoted <span class="math inline">\(r_F\)</span> and <span class="math inline">\(r_G\)</span> respectively.</p>
+<p><span id="exr:unlabeled-div-37" class="exercise"><strong>Exercise 16.5  </strong></span>Let <span class="math inline">\(F\)</span> and <span class="math inline">\(G\)</span> be two distribution functions on <span class="math inline">\(\mathbb{R}^+\)</span>, with hazard rates denoted <span class="math inline">\(r_F\)</span> and <span class="math inline">\(r_G\)</span> respectively.</p>
 <ol style="list-style-type: decimal">
 <li>Suppose <span class="math inline">\(r_F\leq r_G\)</span>, and that the cumulative hazard rate
 <span class="math display">\[
@@ -2895,7 +2894,7 @@ is easily invertible. Show that the following rejection algorithm can be used to
 </ol>
 </div>
 <div class="exercise">
-<p><span id="exr:unlabeled-div-39" class="exercise"><strong>Exercise 16.6  </strong></span>To simulate an Ali-Mikhail-Haq copula (introduced in Exercise 8.9.16) with parameter <span class="math inline">\(\theta\)</span>, show that the following algorithm can be used:</p>
+<p><span id="exr:unlabeled-div-38" class="exercise"><strong>Exercise 16.6  </strong></span>To simulate an Ali-Mikhail-Haq copula (introduced in Exercise 8.9.16) with parameter <span class="math inline">\(\theta\)</span>, show that the following algorithm can be used:</p>
 </div>
 
 </div>
